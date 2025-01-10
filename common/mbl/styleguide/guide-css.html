@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <title>퍼블리싱 스타일 가이드</title>
+  <link rel="stylesheet" href="/styleguide/assets/css/index.css">
+  <link rel="stylesheet" href="/styleguide/assets/styles/shCore.css"/>
+	<link rel="Stylesheet" href="/styleguide/assets/styles/shCoreEclipse.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <script src="/styleguide/assets/scripts/XRegExp.js"></script> <!-- XRegExp is bundled with the final shCore.js during build -->
+	<script src="/styleguide/assets/scripts/shCore.js"></script>
+	<script src="/styleguide/assets/scripts/shBrushJScript.js"></script>
+	<script src="/styleguide/assets/scripts/shBrushXml.js"></script>
+	<script src="/styleguide/assets/scripts/shBrushCss.js"></script>
+  <script type="text/javascript">SyntaxHighlighter.all();</script>
+</head>
+<body>
+  <div id="wrap">
+    <header id="header">
+      <h1>Rotem Catalog 가이드</h1>
+      <div class="btn-wrap">
+        <a href="../worklist.html">작업현황판  <i class="fas fa-angle-right"></i></a>
+      </div>
+    </header>
+    <div id="contents">
+      <aside>
+        <a href="/styleguide/guide-intro.html">기본 정책 <i class="fas fa-angle-right"></i></a>
+        <a href="/styleguide/guide-markup.html">마크업 규칙 <i class="fas fa-angle-right"></i></a>
+        <a href="javascript:" class="active">CSS 규칙 <i class="fas fa-angle-right"></i></a>
+        <a href="/styleguide/guide-naming.html">네이밍 규칙 <i class="fas fa-angle-right"></i></a>
+        <a href="/styleguide/guide/form.html">스타일 가이드 <i class="fas fa-angle-right"></i></a>
+      </aside>
+      <div class="content-area">
+        <h2>CSS 규칙</h2>
+        <section>
+          <h3>문법</h3>
+          <ul class="list">
+            <li>들여쓰기는 1점식을 사용(1칸 공백)</li>
+            <li>중첩된 요소는 들여쓰기 한번 사용</li>
+            <li>가독성을 위해 선언 블록의 여는 중괄호 앞에 하나의 공백을 포함합니다</li>
+            <li>각 선언마다 : 뒤에 하나의 공백을 포함합니다</li>
+            <li>세미콜론으로 모든 선언을 끝냅니다. 마지막 속성 뒤에도 세미콜론을 붙여줍니다.</li>
+            <li>쉼표로 구분 된 속성 값은 각 쉼표 뒤에 공백을 포함해야합니다 (예 : box-shadow)</li>
+            <li>속성 값이나 색상 매개 변수 앞에 0을 붙이지 마세요 (예 : 0.5 대신 .5, -0.5px 대신 -.5px)</li>
+            <li>모든 16 진수 값을 소문자로 지정합니다 (예 : #fff)</li>
+            <li>가능한 경우 속기 16 진수 값을 사용합니다 (예 : #ffffff 대신 #fff)</li>
+            <li>메일폼에서는 속기 16 진수가 아닌 #ffffff으로 사용합니다.</li>
+            <li>값에 대한 단위를 지정하지 마십시오 (예 : margin: 0)</li>
+          </ul>
+        </section>
+        <section>
+          <h3>속성 순서</h3>
+          <ul class="list">
+            <li>관련 속성 선언은 순서에 따라 함께 그룹화되어야합니다.</li>
+          </ul>
+          <ul class="list no-dash">
+            <li>1. Positioning</li>
+            <li>2. Box model</li>
+            <li>3. Typographic</li>
+            <li>4. Visual</li>
+            <li>5. 기타</li>
+          </ul>
+          <script type="syntaxhighlighter" class="brush: css;">
+            .declaration-order {
+              /* Positioning */
+              position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: 100;
+            
+              /* Box-model */
+              display: block; float: right; width: 100px; height: 100px;
+            
+              /* Typography */
+              font-family: "Helvetica Neue", sans-serif; line-height: 1.5; color: #333; text-align: center;
+            
+              /* Visual */
+              border: 1px solid #e5e5e5; border-radius: 3px; background-color: #f5f5f5;
+            
+              /* Misc */
+              opacity: 1;
+            }
+          </script>
+        </section>
+        <section>
+          <h3>@import 사용금지</h3>
+          <ul class="list">
+            <li>&lt;link&gt;에 비해 @import는 더 느리고 추가 페이지 요청을 추가하며 다른 예상치 못한 문제를 일으킬 수 있습니다. 이를 피하고 대신 대체 접근 방식을 선택하십시오.</li>
+          </ul>
+          <script type="syntaxhighlighter" class="brush: xml;">
+            <!-- 올바른 사용 방법 -->
+            <link rel="stylesheet" href="core.css">
+
+            <!-- 피해야 되는 사용 방법 -->
+            <style>
+              @import url("more.css");
+            </style>
+          </script>
+        </section>
+        <section>
+          <h3>문자 인코딩</h3>
+          <ul class="list">
+            <li>명시적 문자 인코딩을 선언하여 빠르고 쉽게 콘텐츠의 적절한 렌더링을 보장합니다</li>
+            <li>인코딩이 문서의 인코딩과 일치한다면 (일반적으로 UTF-8) HTML에서 문자 엔티티를 사용하지 않을 수 있습니다</li>
+          </ul>
+          <script type="syntaxhighlighter" class="brush: xml;">
+            <head>
+              <meta charset="utf-8">
+            </head>
+          </script>
+        </section>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

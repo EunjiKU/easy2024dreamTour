@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <title>퍼블리싱 스타일 가이드</title>
+  <link rel="stylesheet" href="/styleguide/assets/css/index.css">
+  <link rel="stylesheet" href="/styleguide/assets/styles/shCore.css"/>
+	<link rel="Stylesheet" href="/styleguide/assets/styles/shCoreEclipse.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <script src="/styleguide/assets/scripts/XRegExp.js"></script> <!-- XRegExp is bundled with the final shCore.js during build -->
+	<script src="/styleguide/assets/scripts/shCore.js"></script>
+	<script src="/styleguide/assets/scripts/shBrushJScript.js"></script>
+	<script src="/styleguide/assets/scripts/shBrushXml.js"></script>
+	<script src="/styleguide/assets/scripts/shBrushCss.js"></script>
+  <script type="text/javascript">SyntaxHighlighter.all();</script>
+</head>
+<body>
+  <div id="wrap">
+    <header id="header">
+      <h1>Rotem Catalog 가이드</h1>
+      <div class="btn-wrap">
+        <a href="../worklist.html">작업현황판  <i class="fas fa-angle-right"></i></a>
+      </div>
+    </header>
+    <div id="contents">
+      <aside>
+        <a href="/styleguide/guide-intro.html">기본 정책 <i class="fas fa-angle-right"></i></a>
+        <a href="/styleguide/guide-markup.html">마크업 규칙 <i class="fas fa-angle-right"></i></a>
+        <a href="/styleguide/guide-css.html">CSS 규칙 <i class="fas fa-angle-right"></i></a>
+        <a href="javascript:" class="active">네이밍 규칙 <i class="fas fa-angle-right"></i></a>
+        <a href="/styleguide/guide/form.html">스타일 가이드 <i class="fas fa-angle-right"></i></a>
+      </aside>
+      <div class="content-area">
+        <h2>네이밍 규칙</h2>
+        <section>
+          <h3>네이밍은 유의미한 뜻을 지니며, 제 3작업자가 보더라도 한눈에 이해하기 쉽게 설계해야한다.</h3>
+        </section>
+        <section>
+          <h3>표기법</h3>
+          <div class="table-type1">
+            <table>
+              <caption>네이밍 규칙에 관한 설명</caption>
+              <colgroup>
+                <col width="20%">
+                <col width="30%">
+                <col width="">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th>종류</th>
+                  <th>표기방식</th>
+                  <th>비고</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>ID</td>
+                  <td>카멜 표기법(calmelName)</td>
+                  <td>#wrapId</td>
+                </tr>
+                <tr>
+                  <td>CLASS</td>
+                  <!-- <td>하이픈 표기법(hyphen-name)</td>
+                  <td>.list-area</td> -->
+                  <td>언더바 표기법(underbar_name)</td>
+                  <td>.list_area</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+        <section>
+          <h3>이미지 네이밍</h3>
+          <div class="table-type1">
+            <table>
+              <caption>이미지 네이밍 규칙에 관한 설명</caption>
+              <colgroup>
+                <col width="20%">
+                <col width="30%">
+                <col width="">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th>구분</th>
+                  <th>예약어</th>
+                  <th>비고</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>일반</td>
+                  <td>img-</td>
+                  <td>img-banner.jpg</td>
+                </tr>
+                <tr>
+                  <td>비주얼</td>
+                  <td>visual-</td>
+                  <td>visual-mainsection.jpg</td>
+                </tr>
+                <tr>
+                  <td>배경</td>
+                  <td>bg-</td>
+                  <td>bg-subvisual1.jpg</td>
+                </tr>
+                <tr>
+                  <td>아이콘</td>
+                  <td>icon-</td>
+                  <td>icon-product1.png</td>
+                </tr>
+                <tr>
+                  <td>임시</td>
+                  <td>@</td>
+                  <td>img-img-area-swiper.jpg</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

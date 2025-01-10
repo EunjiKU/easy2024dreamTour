@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>퍼블리싱 스타일 가이드</title>
+  <link rel="stylesheet" href="./assets/css/index.css">
+  <link rel="stylesheet" href="./assets/styles/shCore.css"/>
+	<link rel="Stylesheet" href="./assets/styles/shCoreEclipse.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <script src="./assets/scripts/XRegExp.js"></script> <!-- XRegExp is bundled with the final shCore.js during build -->
+	<script src="./assets/scripts/shCore.js"></script>
+	<script src="./assets/scripts/shBrushJScript.js"></script>
+	<script src="./assets/scripts/shBrushXml.js"></script>
+</head>
+<body>
+  <div id="wrap">
+    <header>
+      <h1>현대드림투어 가이드</h1>
+      <div class="btn-wrap">
+        <a href="../worklist.html">작업현황판  <i class="fas fa-angle-right"></i></a>
+      </div>
+    </header>
+    <div id="contents">
+      <aside>
+        <a href="javascript:" class="active">기본 정책 <i class="fas fa-angle-right"></i></a>
+        <a href="./guide-markup.html">마크업 규칙 <i class="fas fa-angle-right"></i></a>
+        <a href="./guide-css.html">CSS 규칙 <i class="fas fa-angle-right"></i></a>
+        <a href="./guide-naming.html">네이밍 규칙 <i class="fas fa-angle-right"></i></a>
+        <a href="./guide/typography.html">스타일 가이드 <i class="fas fa-angle-right"></i></a>
+      </aside>
+      <div class="content-area">
+        <h2>기본 정책</h2>
+        <section>
+          <h3>프로젝트 환경</h3>
+          <div class="table-type2">
+            <table>
+              <caption>프로젝트 환경의 설명</caption>
+              <colgroup>
+                <col width="20%" />
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th>작성 버전</th>
+                  <td>HTML5, CSS3</td>
+                </tr>
+                <tr>
+                  <th>인코딩</th>
+                  <td>UTF-8</td>
+                </tr>
+                <tr>
+                  <th>작업 유형</th>
+                  <td>Web, Mobile</td>
+                </tr>
+                <tr>
+                  <th>지원 브라우저</th>
+                  <td>
+                    <div>IE11</div>
+                    <div>Edge</div>
+                    <div>Chrome</div>
+                  </td>
+                </tr>
+                <tr>
+                  <th>모바일</th>
+                  <td>
+                    <div>Samsung browser</div>
+                    <div>Chrome</div>
+                    <div>Safari</div>
+                  </td>
+                </tr>
+                <tr>
+                  <th>App</th>
+                  <td>
+                    <div>안드로이드 9.0 이상만 지원(API 레벨 28)</div>
+                    <div>IOS 13.0 이상만 지원</div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section>
+          <h3>파일/폴더 구조</h3>
+          <div class="table-type1">
+            <table>
+              <caption>파일, 폴더의 구조 설명</caption>
+              <colgroup>
+                <col width="15%" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th>분류</th>
+                  <th>PATH</th>
+                  <th>파일 이름</th>
+                  <th>파일 설명</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>css</td>
+                  <td>/common/web/kr/css/</td>
+                  <td>
+                    <div>swiper.css</div>
+                    <div>jQuery.mCustomScrollbar.css</div>
+                    <div>common.css</div>
+                    <!-- <div>main.css</div>
+                    <div>sub.css</div>
+                    <div>sub1.css</div> -->
+                  </td>
+                  <td>
+                    <div>스와이퍼 lib</div>
+                    <div>커스텀 스크롤바 lib</div>
+                    <div>공통 스타일</div>
+                    <!-- <div>메인 스타일</div>
+                    <div>서브 스타일</div>
+                    <div>서브 스타일</div> -->
+                  </td>
+                </tr>
+                <tr>
+                  <td>js</td>
+                  <td>/common/web/kr/js/</td>
+                  <td>
+                    <div>jquery-1.12.4.min</div>
+                    <div>gsap.min.js</div>
+                    <div>ScrollTrigger.min.js</div>
+                    <div>swiper.min.js</div>
+                    <div>jquery.mCustomScrollbar.js</div>
+                    <div>script.js</div>
+                    <!-- <div>main.js</div>
+                    <div>sub.js</div> -->
+                  </td>
+                  <td>
+                    <div>jquery lib</div>
+                    <div>모션 lib</div>
+                    <div>스크롤모션 lib</div>
+                    <div>스와이퍼 lib</div>
+                    <div>커스텀 스크롤바 lib</div>
+                    <div>공통 컨텐츠</div>
+                    <!-- <div>메인에서 사용하는 콘텐츠</div>
+                    <div>서브에서 사용하는 콘텐츠</div> -->
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

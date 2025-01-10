@@ -1,0 +1,683 @@
+@charset "UTF-8";
+
+/* 게이트 페이지 */
+.cont-wrap:has(.gate-page){padding-bottom:50px;}
+.gate-page{padding:40px 20px 0;}
+.gate-page .gate-con{display:flex; flex-direction: column; justify-content: center; width:100%; background:var(--Color-Gray-White)}
+.gate-page .gate-con .logo{margin-bottom:16px; text-align: center;}
+.gate-page .gate-con .logo img{height:28px;}
+.gate-page .gate-con .f-body-b3{margin-bottom:32px; text-align: center;}
+.gate-page .gate-con .gate-btn > a{display:flex; flex-direction: column; align-items: center; justify-content: center; position:relative; width:100%; height:250px; border-radius:12px;}
+.gate-page .gate-con .gate-btn .rail{background:url("/common/mbl/images/bg-gate-rail-reservation.jpg") no-repeat center center/cover}
+.gate-page .gate-con .gate-btn .hotel{margin-top:20px; background:url("/common/mbl/images/bg-gate-hotel-reservation.jpg") no-repeat center center/cover}
+.gate-page .gate-con .gate-btn > a .f-t2{position:relative; padding-top:44px; color:var(--Color-Gray-White);}
+.gate-page .gate-con .gate-btn .rail .f-t2{background:url("/common/mbl/images/icon-rail-white.svg") no-repeat center top}
+.gate-page .gate-con .gate-btn .hotel .f-t2{background:url("/common/mbl/images/icon-hotel-white.svg") no-repeat center top}
+.gate-page .gate-con .f-body-r3{margin-top:40px; text-align: center; color:var(--Color-Gray-70)}
+.gate-page .gate-con .gate-btn .btn-border-round{margin-top:24px;}
+
+/* --------------------------------------------- 호텔 예약 - START --------------------------------------------- */
+/* 안내 배너 */
+.notice-area {position: relative; margin-top: 12px; padding: 16px 20px 16px 44px; border-radius: 8px; overflow: hidden;}
+.notice-area::before {content: ""; position: absolute; top: 19px; left: 20px; width: 16px; height: 16px; border-radius: 100%;}
+.notice-area.blue {background-color: #EEF3F6; border: 1px solid #9FC6DF;}
+.notice-area.yellow {background-color: #FCFBE5; border: 1px solid #F2EE93;;}
+.notice-area.red {background-color: #FFEAEF; border: 1px solid #F5959E;}
+.notice-area.black {background-color: #F1F2F3; border: 1px solid #C7CBD1;}
+.notice-area.blue::before {background-color: #004C80;}
+.notice-area.yellow::before {background-color: var(--Color-Yellow-700);}
+.notice-area.red::before {background-color: var(--Color-Red-400);}
+.notice-area.black::before {background-color: var(--Color-Gray-90);}
+.notice-area .tit {overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;}
+.notice-area .link {margin-top: 4px; text-decoration: underline; text-underline-offset: 2px;}
+
+/* 취소 불가 예약진행 안내 팝업 */
+.layer-popup .info-btn-wrap{margin-top:24px;}
+
+
+/* 호텔 예약 */
+/* 제목 영역 */
+.product-tit-wrap {margin-bottom: 16px;}
+.product-tit-wrap .srch-tit .name {display: block;}
+.product-tit-wrap .txt-wrap {display: flex; flex-wrap:wrap; align-items: flex-end; justify-content: space-between; margin-top: 8px;}
+.product-tit-wrap .txt-wrap .txt {color: var(--Color-Gray-90);}
+.product-tit-wrap .txt-wrap .count {margin-left: 4px; margin-right: 2px; color: var(--Color-Primary-800);}
+.product-tit-wrap .fix-btn {position: fixed; bottom: 20px; left: 50%; z-index: 20; transform: translate(-50%);}
+.product-tit-wrap .fix-btn .btn-wrap button {display: inline-flex; align-items: center; height: 44px; padding: 0 20px; border-radius: 999px; background: var(--Color-Gray-90);}
+.product-tit-wrap .fix-btn .btn-wrap button span {color: var(--Color-Gray-White); font-size:15px; line-height:1; letter-spacing:-0.3px; font-family: "NotoSansKR-Medium"; padding-left:24px; background:url("/common/mbl/images/icon-location-btn-white.svg") no-repeat left center / 16px auto;}
+.product-align {display: flex; justify-content: space-between; align-items: center; padding: 14px 0; margin-top: 18px;}
+/* .filter-group-area {position: relative; left: -20px; padding-right:67px; margin-top: 20px; width: calc(100% + 40px);}
+/* .filter-group-area .filter-group-wrap {overflow:visible; width: 100%; padding: 14px 0 14px 20px;}
+.filter-group-area .filter-group-wrap::before {content: ""; position: absolute; left: -1px; top: 0; z-index: 2; width: 50px; height: 100%; background: linear-gradient(90deg, #fff 0%, rgba(255, 255, 255, 0) 100%); pointer-events: none; opacity: 1; transition: opacity .2s ease;}
+.filter-group-area .filter-group-wrap::after {content: ""; position: absolute; right: 0; top: 0; z-index: 2; width: 50px; height: 100%; background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 100%); pointer-events: none; opacity: 1; transition: opacity .2s ease;}
+.filter-group-area .filter-group-wrap.left::before {opacity: 0;}
+.filter-group-area .filter-group-wrap.right::after {opacity: 0;}
+.filter-group-area .filter-group-wrap .swiper-slide {width: auto; margin-right: 8px;}
+.filter-group-area .filter-group-wrap .swiper-slide.on .bg-select{background:var(--Color-Gray-90)}
+.filter-group-area .filter-group-wrap .swiper-slide.on .bg-select:before{background:url("/common/mbl/images/icon-select-small-white.svg") no-repeat center center}
+.filter-group-area .filter-group-wrap .swiper-slide.on .bg-select select{color:var(--Color-Gray-White);}
+.filter-group-area .filter-group-wrap .swiper-slide.on .bg-select select option{color:var(--Color-Gray-90);}
+.filter-group-area .filter-group-wrap .swiper-slide:last-child {margin-right:0;}
+.filter-group-area .filter-btn-wrap {position: absolute; bottom: 0; right:0; flex-shrink: 0; display: flex; justify-content: flex-end; align-items: center; padding-left:3px; width: 67px; min-height: 100%; background:var(--Color-Gray-White); z-index:1;}
+.filter-group-area .filter-btn-wrap .filter-btn {margin: 4px 20px 0 0;} */
+
+/* 안내 영역 */
+/* .filter-group-area ~ .notice-area {margin-top: 24px;} */
+
+/* 필터 영역 */
+.filter-area .tit-wrap {display: flex; align-items: center; justify-content: space-between;}
+.filter-area .reset-btn::after {content: ""; display: block; width: 24px; height: 24px; background: url("/common/mbl/images/icon-input-reset.svg") no-repeat center center;}
+.filter-list .filter {padding: 24px 0;}
+.filter-list .filter ~ .filter {border-top: 1px solid var(--Color-Gray-20);}
+.filter-list .filter:first-child {padding-top: 0;}
+.filter-list .filter:last-child {padding-bottom: 0;}
+.filter-list .filter .tit-wrap {margin-bottom: 20px;}
+.filter-list .filter .filter-wrap .btn-wrap {margin-top: 20px;}
+.filter-list .filter.chk .tit-wrap .tit {position: relative;}
+.filter-list .filter.chk .tit-wrap .tit::after {content: "*"; position: absolute; left: calc(100% + 2px); top: 0;}
+/* 목록영역 */
+.product-list .item {overflow:hidden; position: relative; margin-top:12px; border:1px solid var(--Color-Gray-20); border-radius: 8px;}
+.product-list .item:first-child {margin-top:0;}
+.product-list .item .top-div .img-wrap{position:relative; width:100%; height:160px; background: url("/common/mbl/images/icon-no-img.svg") no-repeat center center var(--Color-Primary-25);}
+.product-list .item .top-div .img-wrap img{width:100%; height:100%; object-fit: cover;}
+.product-list .item .top-div .txt-wrap {position: relative; padding:20px;}
+.product-list .item .top-div .txt-wrap .e-name{overflow:hidden; text-overflow: ellipsis; white-space: nowrap;}
+.product-list .item .top-div .txt-wrap .k-name{overflow:hidden; margin-top:4px; text-overflow: ellipsis; white-space: nowrap; color: var(--Color-Gray-70);}
+.product-list .item .top-div .txt-wrap .line-txt{margin-top: 12px;}
+.product-list .item .top-div .txt-wrap .location {display: flex; margin-top: 8px;}
+.product-list .item .top-div .txt-wrap .location .txt {padding-left: 24px; color: var(--Color-Gray-70); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; text-decoration: underline; text-underline-offset: 2px; background: url("../images/icon-map-marker-gray20.svg") no-repeat top left / 20px auto;}
+.product-list .item .top-div .txt-wrap .infos {display: flex; justify-content: space-between; align-items: flex-end; margin-top:12px;}
+.product-list .item .top-div .txt-wrap .infos .prices .txt {margin-bottom: 2px; color: var(--Color-Gray-70);}
+.product-list .item .top-div .txt-wrap .infos .prices .price .money {margin-right: 2px; word-break: break-all;}
+.product-list .item .top-div .txt-wrap .infos .btn-wrap {flex-shrink: 0; margin-left: auto;}
+.product-list .item .bottom-div {position: relative; /*padding: 12px 20px;*/ /*border-top: 1px solid var(--Color-Gray-20);*/ background:var(--Color-Neutral-25)}
+.product-list .item .bottom-div::before {content: ""; position: absolute; top: 0; left: 0; right: 0; width: 100%; height: 1px; background: var(--Color-Gray-20);;}
+.product-list .item .btns {position: absolute; top: 16px; right: 16px;}
+.compare-btn {position: absolute; top: 12px; left: 20px;}
+
+/* 비교하기 버튼에 따른 버튼 유무 */
+.product-area {margin-top: 16px;}
+.product-area .product-list .item .bottom-div {height: 0; transition: height .4s ease;}
+.product-area:has(.product-tit-wrap .toggle-btn.on) .product-list .item .bottom-div {height: 48px; transition: height .4s ease;}
+
+/* [팝업] 지도에서 숙소보기 */
+.layer-popup:has(.pop-map-area) .pop-area .pop-wrap{padding-bottom: 0;}
+.layer-popup:has(.pop-map-area) .pop-area .pop-wrap .pop-fixed{margin-bottom:0;}
+.layer-popup:has(.pop-map-area) .pop-area .pop-wrap .scroll-area{overflow:hidden; margin-right:0; padding:0; height:calc(100vh - 52px);}
+.layer-popup:has(.pop-map-area) .pop-area .pop-wrap .pop-cont{height:100%;}
+.pop-map-area{position:relative; width:100%; height:100%;}
+.pop-map-area .map-area{width:100%; height:100%;}
+.pop-map-area .map-area img{width:100%; height:100%; object-fit: cover;}
+.pop-map-area .no-data-area{width:100%; background:var(--Color-Gray-White); border:0;}
+
+.pop-map-area .marker-btn{width:40px; height:40px;  background:url("/common/mbl/images/icon-map-marker.svg") no-repeat center center;}
+.pop-map-area .marker-btn.on{background-image:url("/common/mbl/images/icon-map-marker-selected.svg")}
+.pop-map-area .marker-btn:has(span){position:relative; padding:4px 16px; width:auto; height:36px; color: var(--Color-Gray-White); font-size:14px; font-family: "NotoSansKR-Medium"; background:var(--Color-Primary-800); border:1px solid var(--Color-Primary-800); border-radius:4px; box-shadow: 0 4px 4px 0 rgba(0,0,0,0.1);}
+.pop-map-area .marker-btn:has(span):after{display:block; content:""; position:absolute; bottom:-7px; left:50%; transform:translateX(-50%); width:15px; height:8px; background:url("/common/mbl/images/icon-price-marker-green.svg") no-repeat center center / 100% auto;}
+.pop-map-area .marker-btn span {margin-right: 1px; font-family: "Inter-Bold", "NotoSansKR-Bold";}
+.pop-map-area .marker-btn.on:has(span){color: var(--Color-Gray-90); background:var(--Color-Yellow-700); border:1px solid var(--Color-Gray-White)}
+.pop-map-area .marker-btn.on:has(span):after{background-image:url("/common/mbl/images/icon-price-marker-yellow.svg");}
+.pop-map-area .marker-btn .skeleton-loading{display:block; left:50%; top:50%; transform:translate(-50%, -50%); width:calc(100% - 10px); height:80%; background:none;}
+.pop-map-area .marker-btn .skeleton-loading .skeleton-txt{display:block; height:100%;}
+
+.pop-map-area .room-area{display:flex; flex-direction: column; row-gap: 16px; align-items: flex-end; position:absolute; bottom:0; left:0; width:100%}
+.pop-map-area .room-area .filter-btn{margin-right:20px; width:40px; height:40px; background:url("/common/mbl/images/btn-pop-filter.svg") no-repeat center center; border:0;}
+.pop-map-area .room-area > div{width:100%;}
+.pop-map-area .room-area .half-hotel-item{display:none; padding:16px 16px 32px; width:100%; background:var(--Color-Gray-White);}
+.pop-map-area .room-area .half-hotel-item.on{display:block;}
+.pop-map-area .room-area .half-hotel-item .top-div .img-wrap{width:80px; height:80px;}
+.pop-map-area .room-area .half-hotel-item .top-div .txt-wrap{width:calc(100% - 80px)}
+.pop-map-area .room-area .half-hotel-item .top-div .txt-wrap .names{padding-right:32px;}
+.pop-map-area .room-area .half-hotel-item .top-div .txt-wrap .infos {margin-top: 8px;}
+
+/* [팝업] 전체 이미지 목록 */
+.layer-popup .gray-border-swiper{margin:16px 0 8px;}
+.layer-popup .hotel-img-div{margin-top:4px;}
+.layer-popup .hotel-img{display:none; flex-wrap: wrap; align-items: center; gap:8px;}
+.layer-popup .hotel-img.on{display:flex;}
+.layer-popup .hotel-img .img{overflow:hidden; position:relative; padding-top:60%; width:100%; border-radius: 8px;}
+.layer-popup .hotel-img .img img{position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); width:100%; height:100%; object-fit: cover;}
+
+/* [팝업] 전체 이미지 상세 */
+.layer-popup:has(.hotel-img-detail) .pop-wrap{background:#2E3238}
+.layer-popup:has(.hotel-img-detail) .pop-area .pop-wrap .pop-fixed{margin-bottom:0;}
+.layer-popup:has(.hotel-img-detail) .pop-wrap .pop-head .f-t2{color:var(--Color-Gray-White)}
+.layer-popup:has(.hotel-img-detail):not(.main-pop) .pop-area .pop-btn-wrap .popclose-btn{background:url("/common/mbl/images/icon-close-btn-white.svg") no-repeat center center;}
+.layer-popup .hotel-img-detail{display:flex; flex-direction: column; align-items: center; padding:96px 0 156px;}
+.layer-popup .hotel-img-detail .f-t3{margin-bottom:60px; text-align: center; color:var(--Color-Gray-White)}
+.layer-popup .hotel-img-swiper{position:relative; padding-bottom:60px; width:848px; height:566px;}
+.layer-popup .hotel-img-swiper .swiper-container{height:100%;}
+.layer-popup .hotel-img-swiper .swiper-container .img{width:100%; height:100%;}
+.layer-popup .hotel-img-swiper .swiper-container .img img{width:100%; height:100%; object-fit: cover;}
+.layer-popup .hotel-img-swiper .swiper-button-prev{left:-80px; width:40px; height:40px; background:url("/common/mbl/images/icon-swiper-prev-white.svg") no-repeat center center;}
+.layer-popup .hotel-img-swiper .swiper-button-next{right:-80px; width:40px; height:40px; background:url("/common/mbl/images/icon-swiper-next-white.svg") no-repeat center center;}
+.layer-popup .hotel-img-swiper .swiper-pagination{color:var(--Color-Gray-White)}
+.layer-popup .hotel-img-swiper .swiper-pagination .swiper-pagination-current{margin-right:4px;}
+.layer-popup .hotel-img-swiper .swiper-pagination .swiper-pagination-total{margin-left:4px;}
+
+/* [팝업] 비교하기 */
+.layer-popup.chk-pop {z-index: 29;}
+.layer-popup.chk-pop .pop-btn-wrap .btn-wrap {align-items: center; gap: 16px;}
+.layer-popup.chk-pop.on.fix .pop-area {bottom: -368px; border-radius: 0;}
+.layer-popup.chk-pop.on.fix .pop-area .pop-btn-wrap .popclose-btn{transform:rotate(180deg);}
+.layer-popup.chk-pop .pop-area .pop-wrap .scroll-area{padding:0 0 20px;}
+.compare-list .half-hotel-item:first-child {padding-top: 0; margin-top: 0 !important;}
+.compare-list .half-hotel-item {position: relative; margin-top: 32px; padding-top: 32px;}
+.compare-list .half-hotel-item ~ .half-hotel-item::before {content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 1px; background: var(--Color-Gray-20);}
+.compare-list .half-hotel-item:not(.on) :is(.top-div, .bottom-div) {display: none;}
+.compare-list .half-hotel-item:not(.on)::before {top: -33px;}
+.compare-list .half-hotel-item:not(.on) {position: relative; height: 144px; padding: 0; margin-top: 64px; border: 1px dashed var(--Color-Blue-100); border-radius: 8px; background: var(--Color-Blue-50);}
+.compare-list .half-hotel-item:not(.on)::after {content: "비교할 호텔을 추가해주세요."; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%; font-size:15px; text-align: center; line-height:140%; letter-spacing: -0.3px; font-family: "NotoSansKR-Regular"; color: var(--Color-Gray-70); padding-top: 58px; background: url("/common/mbl/images/icon-no-item-48.svg") no-repeat top center / 48px auto;}
+.compare-list .half-hotel-item .top-div .img-wrap {width: 96px; height: 96px; border-radius: 8px;}
+.compare-list .half-hotel-item .top-div .txt-wrap {width: calc(100% - 96px); padding-left: 12px;}
+.compare-list .half-hotel-item .bottom-div {display: flex; flex-direction: column; row-gap: 20px; padding-top: 20px; margin-top: 20px; border-top: 1px dashed var(--Color-Gray-20);}
+.compare-list .half-hotel-item .top-div .like-btn {left: 8px; top: 8px; right: unset;}
+.compare-list .half-hotel-item .infos .prices {margin-left: auto;}
+
+/* [팝업] 비교하기 선택 */
+.chk-list{overflow-x:hidden}
+.chk-list .swiper-container{overflow:visible; padding:0 20px;}
+.chk-list .item {position: relative; margin-right:8px; width:60%; height: 228px; border: 1px solid var(--Color-Gray-20); border-radius: 8px; overflow: hidden;}
+.chk-list .item:last-child{margin-right:0;}
+.chk-list .item a {display:block; height: 100%;}
+.chk-list .item:not(.on) {border: 1px dashed var(--Color-Blue-100); background-color: var(--Color-Blue-50); pointer-events: none;}
+.chk-list .item:not(.on)::after {content: "비교할 숙박 시설을\A선택 해주세요."; white-space: pre-line; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%; font-size:13px; text-align: center; line-height:140%; letter-spacing: -0.3px; font-family: "NotoSansKR-Regular"; color: var(--Color-Gray-70); padding-top: 58px; background: url("/common/mbl/images/icon-no-item-48.svg") no-repeat top center / 48px auto;}
+.chk-list .item:not(.on) :is(.img-wrap, .txt-wrap, .delete-btn) {display: none;}
+.chk-list .item a .img-wrap {width: 100%; height: 145px; background: url("/common/mbl/images/icon-no-img-s.svg") no-repeat center center / 24px auto var(--Color-Blue-50);}
+.chk-list .item a .img-wrap img {width: 100%; height: 100%; object-fit: cover;}
+.chk-list .item a .txt-wrap {display:flex; flex-direction: column; row-gap: 4px; padding: 16px 12px;}
+.chk-list .item a .txt-wrap .e-name {white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+.chk-list .item a .txt-wrap .k-name {color: var(--Color-Gray-70); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+.chk-list .item .delete-btn {position: absolute; top: 8px; right: 8px; width: 20px; height: 20px; background: url("/common/mbl/images/icon-delete-btn-gray-bg.svg") no-repeat center center / 100% auto;}
+
+/* 호텔 예약하기 */
+.cancel-deadline-wrap{display:flex; align-items: center; flex-direction: column; row-gap: 4px; margin-top:16px; padding:8px 16px; border:1px solid var(--Color-Primary-800); border-radius:4px; background:var(--Color-Primary-25)}
+.cancel-deadline-wrap .f-body-r2{color:var(--Color-Primary-800)}
+.cancel-deadline-wrap.impossible{border:1px solid var(--Color-Red-400); background:#fff5f7}
+.cancel-deadline-wrap.impossible .f-body-r2{color:var(--Color-Red-400)}
+.reserve-info-wrap{margin-top:24px;}
+.reserve-info-wrap .hotel-room-info .info-wrap .img{overflow:hidden; width:100%; border-radius: 8px;}
+.reserve-info-wrap .hotel-room-info .info-wrap .img img{width:100%;}
+.reserve-info-wrap .hotel-room-info .info-wrap .right{margin-top:20px;}
+.reserve-info-wrap .hotel-room-info .info-wrap .right .f-body-r3{margin-top:4px;}
+.reserve-info-wrap .hotel-room-info .info-wrap .right .f-body-r3 a{color: var(--Color-Gray-70);}
+.reserve-info-wrap .hotel-room-info .info-wrap .right .location-icon{margin-top:12px; background-position: left top 4px;}
+.reserve-info-wrap .hotel-room-info .info-wrap .right .price-box{display:flex; justify-content: space-between; column-gap: 24px; align-items: center; margin-top:24px}
+.stay-info{display:flex; align-items: center; justify-content: space-between; column-gap: 16px; margin-top:20px; padding:20px 16px; width:100%; border-radius:12px; background:var(--Color-Neutral-50)}
+.stay-info .date-wrap{display:flex; row-gap: 8px; flex-direction: column; justify-content: center; text-align: center;}
+.stay-info .date-wrap .f-body-b5{color:var(--Color-Gray-60);}
+.stay-info .date-wrap .f-body-m3{margin-top:2px;}
+.stay-info .stay{display:flex; justify-content: center;}
+.stay-info .stay span{padding:4px 8px; color:var(--Color-Gray-White); background:var(--Color-Primary-800); border-radius:4px;}
+.reserve-info-wrap .hotel-room-info .black-border-list{margin-top: 40px;}
+/* .cont-wrap:has(.reserve-info-wrap) .input-wrap .input-div.full .form-input{flex:none; width:295px;} */
+.reserve-info-wrap .white-acco-area + .blue-info-box{margin-top:24px;}
+.reserve-info-wrap .special-request{padding-top:24px; border-top:1px solid var(--Color-Gray-90); border-bottom:1px solid var(--Color-Gray-10)}
+.reserve-info-wrap .special-request .blue-info-box{border-radius: 0;}
+.reserve-info-wrap .special-request .check-wrap{padding:34px 0 21px;}
+.reserve-info-wrap .special-request .check-wrap .opt-group{display:flex;}
+.reserve-info-wrap .special-request .check-wrap .form-select{margin-top:34px;}
+.reserve-info-wrap .special-request .check-wrap .form-textarea{margin-top:8px;}
+.reserve-info-wrap .gray-bg-box.price{display:flex; justify-content: space-between; align-items: flex-start;column-gap: 20px;}
+.reserve-info-wrap .gray-bg-box.price .right{display:flex; column-gap: 2px; align-items: flex-end;}
+.reserve-info-wrap .gray-bg-box.price .right .f-body-b2{position:relative; top:-2px}
+.reserve-info-wrap .cancel-info{margin-top: 24px;}
+.reserve-info-wrap .cancel-info .form-table{margin-top: 20px;}
+.reserve-info-wrap .opt-group:has(.agree-acco){width:100%;}
+.reserve-info-wrap .agree-acco{overflow:hidden; display:block; padding:0; width:100%; border:1px solid var(--Color-Gray-20); border-radius: 12px;}
+.reserve-info-wrap .agree-acco .form-checkbox input + label{font-size:15px; color:var(--Color-Gray-90); font-family: "Inter-Medium", "NotoSansKR-Medium";}
+.reserve-info-wrap .agree-acco .form-checkbox input + label span{display:inline; margin-left:4px;}
+.reserve-info-wrap .all .Chk-All + label{padding:0 32px 0 0; background-position:right top}
+.reserve-info-wrap .all .Chk-All + label span{font-size:18px; font-family: "Inter-Bold", "NotoSansKR-Bold"; color:var(--Color-Gray-90)}
+.reserve-info-wrap .agree-acco .check-list .click-div{display: block; position:relative; padding:20px 52px 20px 16px; border-bottom: 1px solid var(--Color-Neutral-100);}
+.reserve-info-wrap .agree-acco .check-list.on .click-div{border-bottom:0;}
+.reserve-info-wrap .agree-acco .check-list:last-child .click-div{border-bottom:0;}
+.reserve-info-wrap .agree-acco .check-list .click-div:after{display:block; content:""; position:absolute; right:16px; top:50%; transform:translateY(-50%) rotate(0deg); width:20px; height:20px; background: url("/common/mbl/images/icon-white-accordian-arrow.svg") no-repeat center center/cover; transition:var(--transition-icon)}
+.reserve-info-wrap .agree-acco .check-list.on .click-div:after{transform:translateY(-50%) rotate(180deg)}
+.reserve-info-wrap .agree-acco .check-list .check-list-con{display:none; border-bottom:1px solid var(--Color-Neutral-100)}
+.reserve-info-wrap .agree-acco .check-list:last-child .check-list-con{border-bottom:0}
+.reserve-info-wrap .agree-acco .check-list .check-con{display:flex; overflow:hidden; padding:2px; max-height:220px; background:var(--Color-Neutral-50)}
+.reserve-info-wrap .agree-acco .check-list .check-con .scroll-area{overflow-y: auto; overflow-x:hidden; padding:16px; width:100%;}
+.reserve-info-wrap .agree-acco .check-list .check-con .scroll-area::-webkit-scrollbar{width: 6px; height: 6px; background: transparent;}
+.reserve-info-wrap .agree-acco .check-list .check-con .scroll-area::-webkit-scrollbar-thumb{background: var(--Color-Gray-30); border-radius: 3px;}
+.reserve-info-wrap .acco-info-txt{margin-top:20px;}
+.reserve-info-wrap .acco-info-txt .f-body-r3{color:var(--Color-Gray-70)}
+.reserve-info-wrap .acco-info-txt .form-checkbox{margin-top:16px;}
+.reserve-info-wrap .btn-wrap{margin-top:40px;}
+
+/* 아코디언 공통 */
+.agree-acco{display:block; overflow:hidden; padding:4px 16px 12px; border:1px solid var(--Color-Gray-20); border-radius: 12px;}
+.agree-acco .form-checkbox input + label{font-size:15px; color:var(--Color-Gray-90); font-family: "Inter-Medium", "NotoSansKR-Medium";}
+.agree-acco .form-checkbox input + label span{display:inline; margin-left:4px;}
+.agree-acco .all{padding:20px 0; border-bottom:1px solid var(--Color-Gray-20)}
+.agree-acco .all .Chk-All + label{background-position:left top 2px}
+.agree-acco .all .Chk-All + label span{font-size:18px; font-family: "Inter-Bold", "NotoSansKR-Bold"; color:var(--Color-Gray-90)}
+.agree-acco .check-list .click-div{display: block; position:relative; padding:18px 30px 18px 16px;}
+.agree-acco .check-list .click-div:after{display:block; content:""; position:absolute; right:16px; top:50%; transform:translateY(-50%) rotate(0deg); width:20px; height:20px; background: url("/common/mbl/images/icon-white-accordian-arrow.svg") no-repeat center center/cover; transition:var(--transition-icon)}
+.agree-acco .check-list.on .click-div:after{transform:translateY(-50%) rotate(180deg)}
+.agree-acco .check-list .check-list-con{display:none; border-top:1px solid var(--Color-Neutral-100)}
+.agree-acco .check-list .check-con{display:flex; overflow:hidden; padding:2px; max-height:220px; background:var(--Color-Neutral-50)}
+.agree-acco .check-list .check-con .scroll-area{overflow-y: auto; padding:16px; width:100%;}
+.agree-acco .check-list .check-con .scroll-area::-webkit-scrollbar{width: 6px; height: 6px; background: transparent;}
+.agree-acco .check-list .check-con .scroll-area::-webkit-scrollbar-thumb{background: var(--Color-Gray-30); border-radius: 3px;}
+.agree-acco .check-list .check-con .reserve-pop-con{padding-top:0;}
+.agree-acco .check-list .check-con .reserve-pop-con .f-body-b3,
+.agree-acco .check-list .check-con .reserve-pop-con .f-body-m3
+{margin-bottom:12px;}
+.agree-acco .check-list .check-con .reserve-pop-con .f-body-m3,
+.agree-acco .check-list .check-con .reserve-pop-con .f-body-r3
+{color:var(--Color-Gray-70)}
+.agree-acco .check-list .check-con .reserve-pop-con .f-body-r3.num{padding-left:16px; text-indent: -16px;}
+.agree-acco .check-list .check-con .reserve-pop-con .f-body-r3 + .f-body-r3{margin-top:6px;}
+.agree-acco .check-list .check-con .reserve-pop-con .f-body-r4{margin-top:6px; color: var(--Color-Gray-50);}
+.agree-acco .check-list .check-con .reserve-pop-con .table-scroll{padding:0 16px;}
+.agree-acco .check-list .check-con .reserve-pop-con .form-table.green-bg tbody td{background:var(--Color-Gray-White)}
+
+
+.reserve-pop-con{padding-top:136px;}
+.reserve-pop-con:has(.form-table .arrow){padding-top:48px;}
+.reserve-pop-con > .f-body-b2,
+.reserve-pop-con > .f-body-m2{margin-bottom:16px;}
+.reserve-pop-con .f-body-m2,
+.reserve-pop-con .f-body-r2{color:var(--Color-Gray-70)}
+.reserve-pop-con .f-body-r2 + .f-body-r2{margin-top:7px; text-align: center;}
+.reserve-pop-con .top-icon-txt{padding-top:72px; text-align: center;}
+.reserve-pop-con .top-icon-txt .f-body-m2{color:var(--Color-Gray-90)}
+.reserve-pop-con .top-icon-txt.alarm{background:url("/common/mbl/images/icon-redundant-schedule-notification.svg") no-repeat center top}
+.reserve-pop-con .top-icon-txt.price{background:url("/common/mbl/images/icon-room-rate-change-notice.svg") no-repeat center top}
+.reserve-pop-con .top-icon-txt.cancel{background:url("/common/mbl/images/icon-notice-change-cancellation-period.svg") no-repeat center top}
+.reserve-pop-con .txt-wrap{text-align: center;}
+.reserve-pop-con .txt-wrap .f-body-m2{margin-bottom:8px; color:var(--Color-Gray-90)}
+.reserve-pop-con .txt-wrap .f-body-r3{color:var(--Color-Gray-60)}
+/* --------------------------------------------- 호텔 예약 - END --------------------------------------------- */
+
+
+
+
+/* --------------------------------------------- 호텔 상세 - START --------------------------------------------- */
+/* 호텔 상세 */
+.cont-wrap:has(.hotel-area) .new-reserve-bar{margin-bottom:12px;}
+.hotel-view-area .hotel-view {position: relative; padding-bottom: 40px;}
+.hotel-view-area .hotel-view .like-btn {position: absolute; top: 16px; right: -4px;}
+.hotel-view-area .hotel-view .thumb-wrap {position: relative; left: -20px; width: calc(100% + 40px); height: 246px;}
+.hotel-view-area .hotel-view .thumb-wrap .img {height: 100%; background: url("/common/mbl/images/icon-no-img.svg") no-repeat center center var(--Color-Primary-25);}
+.hotel-view-area .hotel-view .thumb-wrap .img img {width: 100%; height: 100%; object-fit: cover;}
+.hotel-view-area .hotel-view .info-wrap {margin-top: 20px;}
+.hotel-view-area .hotel-view .info-wrap .top-div .names .e-name {letter-spacing: 0;}
+.hotel-view-area .hotel-view .info-wrap .top-div .names .k-name {margin-top: 4px; color: var(--Color-Gray-70);}
+.hotel-view-area .hotel-view .info-wrap .top-div .line-txt {margin-top: 12px;}
+.hotel-view-area .hotel-view .info-wrap .bottom-div {margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--Color-Gray-20);}
+.hotel-view-area .hotel-view .info-wrap .bottom-div .headline-icon {margin-top: 8px;}
+.hotel-view-area .notice-area {margin-bottom: 40px;}
+.hotel-info .info-line {display: flex; flex-direction: column; gap: 32px;}
+.hotel-info .info-line .line .line-tit {margin-bottom: 20px;}
+.hotel-info .info-line .line .line-cont .txt-chk {max-height: 42px; overflow: hidden;}
+.hotel-info .info-line .line .line-cont .txt-chk .txt {color: var(--Color-Gray-70);}
+.hotel-info .info-line .line .line-cont .btn-wrap {display: none; margin-top: 16px;}
+.hotel-info .map-btn {display:block; width: 100%; height: 150px; border: 1px solid var(--Color-Gray-20); border-radius: 8px; overflow: hidden; background:url("/common/mbl/images/@img-hotel-detail-map-view.jpg") no-repeat center center/cover}
+.hotel-info .map-btn #hotelDtlMap{height:150px;}
+.hotel-info .map-btn img {width: 100%; height: 100%; object-fit: cover;}
+.hotel-detail-area .total-count {margin-bottom: 16px;}
+.hotel-detail-area .tab-conts .tab-cont:last-child {padding-bottom: 120px;}
+.hotel-detail-area .white-acco-area .acco-list{overflow:hidden; border:0; border-radius:0;}
+.hotel-detail-area .white-acco-area .acco-list .acco-tit{display:block; position:relative; padding:0 20px 20px 0; border-bottom: 1px solid var(--Color-Gray-90);}
+.hotel-detail-area .white-acco-area .acco-list .acco-tit:after{top:2px; right:0;}
+.hotel-detail-area .white-acco-area .acco-list .acco-con{display:none; padding: 20px 0 0 0;}
+.hotel-detail-area .like-list-swiper .swiper-slide .txt-wrap{min-height: 0;}
+.checkin-list {display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;}
+.checkin-list .item {display: flex; align-items: flex-start; gap: 12px;}
+.checkin-list .item .icon {flex-shrink: 0; width: 22px;}
+.checkin-list .item .icon img {width: 100%;}
+.checkin-list .item .txt-wrap {width: 100%;}
+.checkin-list .item .txt-wrap .tit {margin-bottom: 2px; color: var(--Color-Gray-60);}
+.checkin-list .item .txt-wrap .txt {letter-spacing: 0;}
+
+.spinner-wrap{display:flex; justify-content: center;}
+.spinner {display: grid; width: 16px; height: 16px; border-radius: 50%; -webkit-mask: radial-gradient(farthest-side,#0000 60%,#000 41%); background: linear-gradient(0deg ,rgba(0,0,0,0.1) 50%,rgba(0,0,0,1) 0) center/1px 100%, linear-gradient(90deg,rgba(0,0,0,0.25) 50%,rgba(0,0,0,0.75) 0) center/100% 1px; background-repeat: no-repeat; animation: spinnerMotion 1.5s infinite steps(12);}
+.spinner::before,
+.spinner::after {content: ""; grid-area: 1/1; border-radius: 50%; background: inherit; opacity: 0.915; transform: rotate(30deg);}
+.spinner::after {opacity: 0.83; transform: rotate(60deg);}
+@keyframes spinnerMotion {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+/* --------------------------------------------- 호텔 상세 - END --------------------------------------------- */
+
+
+
+
+/* --------------------------------------------- Promotion - START --------------------------------------------- */
+.promotion-list{display:flex; flex-direction: column; row-gap: 56px;}
+.promotion-list .list{position:relative; width:100%;}
+.promotion-list .list .done{display:flex; align-items: center; justify-content: center; position:absolute; top:0; left:0; width:100%; height:180px; color:var(--Color-Gray-White); background:rgba(0,0,0,0.6); border-radius:10px; z-index:1;}
+.promotion-list .list .done span{padding:18px 0 17px; width:60px; text-align: center; background: var(--Color-Primary-800); border-radius: 50%;}
+.promotion-list .list .img{overflow:hidden; position:relative; width:100%; height:180px; background:url("/common/mbl/images/no-img.svg") no-repeat center center var(--Color-Primary-25); border-radius:10px;}
+.promotion-list .list .img img{width:100%; height:100%; object-fit: cover;}
+.promotion-list .list .txt-wrap{margin-top:20px;}
+.promotion-list .list .txt-wrap .f-t2{overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;}
+.promotion-list .list .txt-wrap .f-body-r2{overflow:hidden; margin-top:2px; text-overflow: ellipsis; white-space: nowrap;}
+.promotion-list .list .txt-wrap .date{margin-top:8px; color: var(--Color-Gray-50);}
+.promotion-list + .btn-wrap{display:flex; justify-content: center; margin-top: 40px;}
+.promotion-list .no-data-area{width:100%;}
+
+.view-detail-area .tit-wrap{position:relative; margin-bottom:24px;}
+.view-detail-area .tit-wrap:has(.url-copy){padding-right:46px;}
+.view-detail-area .tit-wrap .green-bg-label{margin-bottom:12px;}
+.view-detail-area .tit-wrap .date{margin-top:8px; color:var(--Color-Gray-60); letter-spacing: 0;}
+.url-copy{display:block; position:absolute; right:0; top:0; width:32px; height:32px; background:url("/common/mbl/images/icon-url-copy.svg") no-repeat center center / 100% auto;}
+.view-detail-area .tit-wrap:has(.green-bg-label) .url-copy{top:38px;}
+
+.view-detail-area .view-con{padding:40px 0; color: var(--Color-Gray-70); border-top:1px solid var(--Color-Gray-90)}
+.view-detail-area:has(.page-move) .view-con{border-bottom:1px solid var(--Color-Gray-10);}
+.view-detail-area .view-con + .btn-wrap{margin-top:0; padding-top:40px; border-top:1px solid var(--Color-Gray-10)}
+.view-detail-area .view-con .img{margin-bottom:60px; width:100%;}
+.view-detail-area .view-con .img img{width:100%; max-width:100%;}
+.view-detail-area .view-con img{width:100%; max-width:100%;}
+.view-detail-area .btn-wrap{justify-content: center; margin-top:40px;}
+.view-detail-area .detail-file-wrap{margin-top: 40px;}
+.view-detail-area .detail-file-wrap .file-wrap{display:flex; flex-direction: column; row-gap: 8px; padding:20px 16px; background:var(--Color-Neutral-50); border-radius: 8px;}
+.view-detail-area .detail-file-wrap .file-wrap > p{padding-left:24px; background:url("/common/mbl/images/icon-file.svg") no-repeat left top 3px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+/* --------------------------------------------- Promotion - END --------------------------------------------- */
+
+
+
+
+/* --------------------------------------------- 고객지원 - START --------------------------------------------- */
+/* 온라인 문의 */
+.online-page .blue-info-box .dot-txt{color:var(--Color-Gray-70)}
+.online-page .essential-txt{margin:32px 0 16px; text-align: right; color:var(--Color-Gray-70)}
+.online-page .agree-acco {margin-top: 40px; padding:0;}
+.online-page .agree-acco .check-list .check-con .scroll-area{overflow-x:hidden;}
+.online-page .agree-acco .reserve-pop-con{padding-top:0;}
+.online-page .btn-wrap{justify-content: center; margin-top:40px;}
+
+/* 공지사항 */
+.notice-page .notice-list .item.fixed .info .num-type .num {width: 20px; height: 20px; background: url("/common/mbl/images/icon-notice-top-fixed.svg") no-repeat center center / 100% auto;}
+.notice-page .notice-list {border-top: 1px solid var(--Color-Gray-90);}
+.notice-page .notice-list .item {display: block; padding: 24px 0; border-bottom: 1px solid var(--Color-Gray-20);}
+.notice-page .notice-list .item .info {display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;}
+.notice-page .notice-list .item .info .num-type {display: flex; align-items: center; gap: 4px;}
+.notice-page .notice-list .item .info .num-type .num span {color: var(--Color-Gray-60);}
+.notice-page .notice-list .item .info .date {color: var(--Color-Gray-60);}
+.notice-page .notice-list .item .title span {display: inline-block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 100%;}
+.notice-page .notice-list .item .title.file span {padding-right: 24px; background: url("/common/mbl/images/icon-file.svg") no-repeat right center / 20px auto;}
+
+/* FAQ */
+.faq-page .faq-select {margin-bottom: 24px;}
+.faq-page .faq-acco-area{border-top:1px solid var(--Color-Gray-90)}
+.faq-page .faq-acco-area .acco-tit{display:flex; padding:20px 0; border-bottom:1px solid var(--Color-Gray-20)}
+.faq-page .faq-acco-area .acco-tit .q{position:relative; top:-3px; flex-shrink: 0; margin-right: 8px; color:var(--Color-Primary-800);}
+.faq-page .faq-acco-area .acco-list.fixed .acco-tit .q{color:var(--Color-Red-400);}
+.faq-page .faq-acco-area .acco-tit .tits {flex: 1;}
+.faq-page .faq-acco-area .acco-tit .tits .type {margin-bottom: 8px;}
+.faq-page .faq-acco-area .acco-con{display:none;}
+.faq-page .faq-acco-area .acco-con .acco-inner{padding:24px 24px 32px; background:var(--Color-Gray-5)}
+.faq-page .faq-acco-area .acco-con .acco-inner .txt-con {min-width: 0;}
+.faq-page .faq-acco-area .acco-con .q{flex-shrink: 0; margin-bottom: 8px; color: var(--Color-Primary-800);}
+.faq-page .faq-acco-area .acco-con .txt-con .txt{color:var(--Color-Gray-70)}
+.faq-page .faq-acco-area .acco-con .txt-con > *{color:var(--Color-Gray-70)}
+.faq-page .faq-acco-area .acco-con .txt-con img{max-width:100%;}
+.faq-page .faq-acco-area .acco-con .txt-con .file-area{display:flex; flex-direction: column; row-gap: 8px; margin-top:20px;}
+.faq-page .faq-acco-area .acco-con .txt-con .file-area .file{padding-left:24px; background:url("/common/mbl/images/icon-file.svg") no-repeat left top -1px;}
+.faq-page .faq-acco-area .acco-con .txt-con .file-area .file a {text-decoration: underline; text-underline-position: under; display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+.faq-page .btn-wrap{justify-content: center; margin-top: 40px;}
+/* --------------------------------------------- 고객지원 - END --------------------------------------------- */
+
+
+
+
+
+/* --------------------------------------------- 마이페이지 - START --------------------------------------------- */
+/* 목록 */
+.cont-wrap:has(.reserve-date .filter-btn){padding-bottom:0;}
+.mypage-area .reserve-date{position:relative; padding-right:56px; margin-bottom:32px; min-height:39px;}
+.mypage-area .reserve-date .filter-btn{position:absolute; right:0; top:50%; transform:translateY(-50%);}
+.mypage-area .reserve-date .date-txt{display:flex; align-items: center; column-gap: 16px;}
+.mypage-area .reserve-date .date-txt .f-body-r3{overflow:hidden; color:var(--Color-Gray-70); white-space: nowrap; text-overflow: ellipsis;}
+.mypage-area .reserve-date .status{display:flex; flex-wrap:wrap; column-gap: 10px; margin-top:2px;}
+.mypage-area .reserve-date .status .f-body-r5{position:relative; color:var(--Color-Gray-70)}
+.mypage-area .reserve-date .status .f-body-r5:after{display:block; content:""; position:absolute; right:-6px; top:7px; width:2px; height:2px; background:var(--Color-Gray-70); border-radius: 50%;}
+.mypage-area .reserve-date .status .f-body-r5:last-child:after{display:none;}
+.mypage-area .border-btn-box{display:flex; flex-wrap:wrap; gap: 8px 8px;}
+.mypage-area .border-btn-box > *{width:calc((100% - 8px) / 2); text-align: center;}
+.mypage-area .mypage-sec{position:relative; padding:24px 0; margin-top:24px;}
+.mypage-area .mypage-sec:after{display:block; content:""; position:absolute; top:0; left:50%; transform:translateX(-50%); width:100vw; height:100%; background: var(--Color-Blue-25); z-index:-1;}
+.mypage-area .mypage-sec + .cont-div{margin-top:40px;}
+.mypage-area:has(.reserve-date .filter-btn) .mypage-sec{padding-bottom: 120px;}
+.mypage-sec > .f-t2{margin-bottom:20px;}
+.mypage-sec .reserve-result-list{width:100%; gap: 0;}
+.mypage-sec .reserve-result-list > div{width:100%;}
+.mypage-sec .reserve-result-list .top-info{display:flex; flex-wrap:wrap; gap:16px 12px; align-items: center; justify-content: space-between; width:100%;}
+.mypage-sec .reserve-result-list .top-info .btn-wrap{flex-wrap:wrap; gap:4px 4px; width:100%;}
+.mypage-sec .reserve-result-list .booking-history-list{margin-top:24px; width:100%;}
+.mypage-sec .reserve-result-list .result-list{padding:16px; width:100%; background:var(--Color-Gray-White); border-radius: 8px; box-shadow: 0 4px 4px 0 rgba(0,0,0,0.1);}
+.mypage-sec .reserve-result-list .result-list:not(:nth-of-type(1)){margin-top:12px;}
+.mypage-sec .reserve-result-list .result-list .top{display:flex; column-gap: 12px; padding-bottom:18px; margin-bottom: 20px; border-bottom:1px solid var(--Color-Gray-20);}
+.mypage-sec .reserve-result-list .result-list .top .res-num{width:calc(100% - 108px)}
+.mypage-sec .reserve-result-list .result-list .top .label-div{margin-top:4px;}
+.mypage-sec .reserve-result-list .result-list .top .btn-border-square{height:38px}
+.mypage-sec .reserve-result-list .result-list .hotel-name{margin-bottom:18px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;}
+.mypage-sec .reserve-result-list .result-list .flex-box{display:flex; align-items: center; justify-content: space-between; column-gap: 8px;}
+.mypage-sec .reserve-result-list .result-list .flex-box .f-body-r4{color:var(--Color-Gray-70)}
+.mypage-sec .reserve-result-list .result-list .flex-box .icon-txt-btn.plus span{color: var(--Color-Gray-50);}
+.mypage-sec .reserve-result-list .result-list .info-row-wrap{margin:20px 0;}
+.mypage-sec .reserve-result-list .white-acco-area .no-data{padding:60px 0;}
+.mypage-sec .gray-detail-acco .info-row-wrap{padding:16px 0 0 0; margin:0 !important; border:0; border-top:1px solid var(--Color-Gray-20)}
+.mypage-sec .gray-detail-acco .info-row-wrap + .info-row-wrap{margin-top:16px !important; border-top:2px dashed var(--Color-Gray-20)}
+.mypage-sec .gray-detail-acco .info-row-wrap .f-body-m4{flex-shrink: 0; width:72px;}
+.mypage-sec .gray-detail-acco .info-row-wrap .f-body-r4{width:calc(100% - 104px); color: var(--Color-Gray-70);}
+.mypage-sec .reserve-result-list .no-data-area{margin-top:16px; width:100%;}
+.info-row-wrap{display:flex; flex-direction: column; row-gap: 8px; padding:20px 0; border-top:2px dashed var(--Color-Gray-20); border-bottom:2px dashed var(--Color-Gray-20)}
+.info-row-wrap .info-row{display:flex; column-gap: 32px;}
+.info-row-wrap .info-row .f-body-m3{width:90px;}
+.info-row-wrap .info-row .f-body-r3{width:calc(100% - 102px); color:var(--Color-Gray-70)}
+.info-row-wrap.card{row-gap: 12px; padding:20px 16px; border:1px solid var(--Color-Gray-20); border-radius: 8px;}
+.info-row-wrap.card .info-row {gap: 12px;}
+.info-row-wrap.card .info-row .f-body-m3{flex-shrink: 0; width:82px;}
+.info-row-wrap.card .info-row .f-body-r3{width:calc(100% - 94px);}
+.mypage-filter .srch-input{margin-top:8px;}
+
+/* 상세 */
+.mypage-area:has(.white-acco-area) .f-t1{margin-bottom:20px;}
+.mypage-sec .white-acco-area{margin-top:16px; width:100%;}
+.mypage-sec .white-acco-area .acco-list{overflow:visible; border:0; box-shadow: 0 4px 4px 0 rgba(0,0,0,0.1);}
+.mypage-sec .white-acco-area .acco-list .acco-tit{padding:16px 40px 16px 16px;}
+.mypage-sec .white-acco-area .acco-list .acco-tit:after{top:17px; right:16px;}
+.mypage-sec .white-acco-area .acco-list .acco-tit .flex-box{display:flex; column-gap: 12px;}
+.mypage-sec .white-acco-area .acco-list .acco-tit .flex-box .res-num-tit{display:flex; flex-direction: column; row-gap: 4px; padding-top: 3px;}
+.mypage-sec .white-acco-area .acco-list .acco-tit .flex-box .res-num-tit .row{display:flex;}
+.mypage-sec .white-acco-area .acco-list .acco-tit .flex-box .res-num-tit .row .f-body-b3{width:56px;}
+.mypage-sec .white-acco-area .acco-list .acco-tit .flex-box .res-num-tit .row .f-body-b3 + *{width:calc(100% - 56px)}
+.mypage-sec .white-acco-area .acco-list .acco-tit .flex-box .res-num-tit .row .f-body-r3{overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;}
+.mypage-sec .white-acco-area .acco-list .acco-tit .flex-box .res-num-tit .label-div{margin-top:4px;}
+.mypage-sec .white-acco-area .acco-list .acco-tit .flex-box .res-num-tit .label-div .txt-label{font-size:12px;}
+.mypage-sec .white-acco-area .acco-list .acco-con{position:relative; margin-top:4px; padding-top:20px; border-top:0;}
+.mypage-sec .white-acco-area .acco-list .acco-con:before{display:block; content:""; position:absolute; top:0; left:16px; width:calc(100% - 32px); height:1px; background:var(--Color-Gray-20)}
+.mypage-sec .white-acco-area .acco-list .acco-con .cont-div > .link-txt{font-size:15px;}
+.mypage-sec .white-acco-area .acco-list .acco-con .link-txt + .f-body-r3{margin-top:4px; color:var(--Color-Gray-70)}
+.mypage-sec .white-acco-area .acco-list .acco-con .f-body-r3 + .f-body-b3{margin-top:12px;}
+.mypage-sec .white-acco-area .acco-list .acco-con .location-icon{margin-top:12px;}
+.mypage-sec .white-acco-area .black-border-list{margin-top:20px;}
+.mypage-sec .white-acco-area .black-border-list .list .f-body-b3{margin-bottom:8px;}
+.mypage-sec .white-acco-area .black-border-list .list .link-txt{color:var(--Color-Gray-70)}
+.mypage-sec .white-acco-area .acco-list .acco-con .table-scroll .form-table.green-bg tbody td .f-body-r3{word-break: break-all;}
+.mypage-sec .white-acco-area .acco-list .acco-con .info-row-wrap .info-row {column-gap: 12px;}
+.mypage-sec .white-acco-area .acco-list .acco-con .info-row-wrap .info-row .f-body-m3{flex-shrink: 0; width:52px;}
+.mypage-sec .white-acco-area .acco-list .acco-con .info-row-wrap .info-row .f-body-r3{width:calc(100% - 64px);}
+.mypage-sec .white-acco-area .acco-list .acco-con .gray-detail-acco .detail-btn{position:relative; padding:16px 46px 16px 16px; text-align: left;}
+.mypage-sec .white-acco-area .acco-list .acco-con .gray-detail-acco .detail-btn:after{display:block; content:""; position:absolute; top:16px; right:16px; transform:rotate(0deg); width:20px; height:20px; background:url("/common/mbl/images/icon-white-accordian-arrow-gray.svg") no-repeat center center; transition:var(--transition-icon)}
+.mypage-sec .white-acco-area .acco-list .acco-con .gray-detail-acco.on .detail-btn:after{transform:rotate(180deg);}
+.mypage-sec .white-acco-area .acco-list .acco-con .gray-detail-acco .detail-btn span{padding-right:0;}
+.mypage-sec .white-acco-area .acco-list .acco-con .gray-detail-acco .detail-btn span:after{display:none;}
+.mypage-sec .white-acco-area .acco-list .acco-con .gray-detail-acco .detail-btn .f-body-b2{color:var(--Color-Primary-800)}
+.mypage-sec .white-acco-area .acco-list .acco-con .gray-detail-acco .detail-btn .f-body-m2{color:var(--Color-Gray-90)}
+.mypage-sec .white-acco-area .acco-list .acco-con .gray-detail-acco .detail-btn .f-body-r4{margin-top:4px}
+.mypage-sec .payment-method{display:flex; flex-direction: column; row-gap: 8px;}
+.hidden-data .form-table.green-bg tr:nth-child(3) ~ tr{display:none;}
+.hidden-data .black-border-list .list:nth-child(3) ~ .list{display:none;}
+.hidden-data .btn-wrap{margin-top:8px;}
+.hidden-data .btn-wrap .more-btn span{position:relative; padding-right:24px;}
+.hidden-data .btn-wrap .more-btn span:after{display:block; content:""; position:absolute; right:0; top:2px; transform:rotate(0deg); width:20px; height:20px; background:url("/common/mbl/images/icon-white-accordian-arrow.svg") no-repeat center center}
+.hidden-data .btn-wrap .more-btn.on span:after{transform:rotate(180deg);}
+.hidden-data.show .form-table.green-bg tr:nth-child(3) ~ tr{display:table-row;}
+.hidden-data.show .black-border-list .list:nth-child(3) ~ .list{display:block;}
+
+/* 결제하기 */
+.mypage-sec + .inner .cont-div{margin-top:40px;}
+.mypage-area .pay-area{position:relative;}
+.mypage-area .pay-area .tab-btn-area{display:flex; flex-direction: column; row-gap: 4px;}
+.mypage-area .pay-area .tab-btn-area .tab-btn{display:flex; align-items: center; justify-content: center; flex:1; padding:28px 5px; text-align: center; transition:var(--transition-icon); border:1px solid var(--Color-Gray-20); border-radius:8px;}
+.mypage-area .pay-area .tab-btn-area .tab-btn.on{border:1px solid var(--Color-Primary-800); box-shadow: 0 4px 4px 0 rgba(0,0,0,0.1);}
+.mypage-area .pay-area .tab-btn-area .tab-btn .f-body-b2{padding-left:28px; line-height:170%; transition:var(--transition-icon)}
+.mypage-area .pay-area .tab-btn-area .tab-btn:nth-child(1) .f-body-b2{background:url("/common/mbl/images/icon-transfer-black.svg") no-repeat left center;}
+.mypage-area .pay-area .tab-btn-area .tab-btn:nth-child(2) .f-body-b2{background:url("/common/mbl/images/icon-credit-card-black.svg") no-repeat left center;}
+.mypage-area .pay-area .tab-btn-area .tab-btn:nth-child(3) .f-body-b2{background:url("/common/mbl/images/icon-payment-request-black.svg") no-repeat left center;}
+.mypage-area .pay-area .tab-btn-area .tab-btn.on .f-body-b2{color:var(--Color-Primary-800)}
+.mypage-area .pay-area .tab-btn-area .tab-btn.on:nth-child(1) .f-body-b2{background:url("/common/mbl/images/icon-transfer-green.svg") no-repeat left center;}
+.mypage-area .pay-area .tab-btn-area .tab-btn.on:nth-child(2) .f-body-b2{background:url("/common/mbl/images/icon-credit-card-green.svg") no-repeat left center;}
+.mypage-area .pay-area .tab-btn-area .tab-btn.on:nth-child(3) .f-body-b2{background:url("/common/mbl/images/icon-payment-request-green.svg") no-repeat left center;}
+.mypage-area .pay-area .tab-con-area .tab-con:nth-child(2){position:absolute; top:-17px; right:0;}
+.mypage-area .pay-area .icon-txt{display:inline-block; margin-top:16px; padding-right:24px; background:url("/common/mbl/images/icon-btn-tooltip.svg") no-repeat right top 3px}
+.mypage-area .pay-area .icon-txt span{color:var(--Color-Gray-70);}
+.mypage-area .pay-area .gray-bg-box{margin-top:16px; padding:20px;}
+.mypage-area .pay-area .gray-bg-box > .f-body-r3{color:var(--Color-Gray-70)}
+.mypage-area .pay-area .gray-bg-box .flex-box{display:flex; flex-direction: column; row-gap: 4px; margin-top:16px;}
+.mypage-area .pay-area .gray-bg-box .flex-box .form-input{width:100%;}
+.mypage-area .black-border-list .list{padding:20px 0;}
+.mypage-area .black-border-list .list .flex-box{display:flex; justify-content: space-between; margin-top:4px;}
+.mypage-area .black-border-list .list .flex-box .left .f-body-r3 + .f-body-r3{position:relative; margin-top:4px; padding-left:20px;}
+.mypage-area .black-border-list .list .flex-box .left .f-body-r3 + .f-body-r3:after{display:block; content:"└"; position:absolute; top:0; left:0;}
+.mypage-area .black-border-list .list .f-body-m2{margin-bottom:0;}
+.mypage-area .black-border-list .list:has(.red-txt) .f-body-m2:not(.red-txt){text-decoration: line-through;}
+.mypage-area .black-border-list .list .f-body-r3{color:var(--Color-Gray-70)}
+.mypage-area .pay-price-wrap > .f-body-r3{margin:20px 0 16px; color:var(--Color-Gray-70)}
+.mypage-area .pay-price-wrap .gray-bg-box{display:flex; align-items: center; justify-content: space-between; column-gap: 16px; margin-top:12px;}
+.mypage-area .pay-price-wrap .gray-bg-box{display:flex; align-items: center; justify-content: space-between; column-gap: 16px; margin-top:12px;}
+.mypage-area .pay-price-wrap + .btn-wrap{margin-top:40px;}
+.mypage-area .pay-price-wrap + .btn-wrap .f-body-b2{text-align: right;}
+.mypage-area .pay-area .form-table.green-bg + .f-body-r3{margin-top:16px; color: var(--Color-Gray-70)}
+.mypage-area:has(.pay-area) .btn-wrap .btn-round-l span:nth-child(2){display: none;}
+.guide-area{margin-top:32px;}
+.guide-area .cont-div .f-body-b2{margin-bottom:6px;}
+.guide-area .cont-div .f-body-r2{color:var(--Color-Gray-70); line-height:160%;}
+.guide-area .cont-div .f-body-r2 span{color:var(--Color-Gray-50)}
+.guide-area .cont-div .form-table{margin-top:20px;}
+.guide-area .cont-div .step-box{display:flex; gap:10px 10px; flex-wrap:wrap; align-items: flex-start; margin-top:20px;}
+.guide-area .cont-div .step-box .step-wrap{display:flex; gap:10px 10px; flex-wrap:wrap; width:100%;}
+.guide-area .cont-div .step-box .step-wrap .step-div{min-height:150px;}
+.guide-area .cont-div .step-box .step-div{padding:16px 16px 24px; min-height:150px; width:calc((100% - 10px) / 2); border:1px solid var(--Color-Gray-20); border-radius: 8px;}
+.guide-area .cont-div .step-box .step-div .f-body-m2{margin-bottom:4px;}
+.guide-area .cont-div .step-box .step-div .f-body-r4{margin-top:2px; color: var(--Color-Gray-70);}
+.guide-area .cont-div .step-box .step-txt{position:relative; width:100%; text-align: center; border-left:1px solid var(--Color-Primary-50); border-right:1px solid var(--Color-Primary-50);}
+.guide-area .cont-div .step-box .step-txt:after{display:block; content:""; position:absolute; bottom:0; left:-1px; width:calc(100% + 2px); height:50%; background:var(--Color-Gray-White); border-top:1px solid var(--Color-Primary-50)}
+.guide-area .cont-div .step-box .step-txt span{display:inline-block; position:relative; z-index: 1; padding:0 16px; max-width:85%; text-align: center; color: var(--Color-Gray-50); background:var(--Color-Gray-White);}
+.guide-area .cont-div .etc-txt{margin-top:12px; color:var(--Color-Gray-50)}
+
+/* 찜 내역 */
+.mypage-area{margin-top:16px;}
+.mypage-area:has(.mypage-sec:first-child){margin-top:0;}
+.mypage-area .info-txt.f-body-r3{background-position:left top 1px;}
+.mypage-area .list-top-div .form-select{margin:24px 0;}
+
+/* !! 마이페이지 결제하기, 결제완료 새 창 페이지 미디어쿼리 필요 */
+#wrap:has(.media-query){min-width:100%;}
+.mypage-area.media-query .acco-table .form-table.green-bg table{min-width:1000px;}
+.mypage-area.media-query .form-table.green-bg table th{padding:16px 8px;}
+.mypage-area.media-query .form-table.green-bg table td{padding:16px 8px;}
+
+.mypage-area.media-query .booking-history-list .list:not(:last-child){margin:0 0 12px 0;}
+.mypage-area.media-query .booking-history-list .list .tit-area .right .label-div .txt-label{font-size:12px;}
+.mypage-area.media-query .booking-history-list .list .con-area .f-body-m1{overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;}
+.mypage-area.media-query .booking-history-list .list .con-area .book-info-wrap{margin:0; padding:16px 0 0 0; border:0;}
+.mypage-area.media-query .booking-history-list .list .con-area .detail{display:none; margin-top:24px; border-top:1px solid var(--Color-Gray-20)}
+.mypage-area.media-query .pay-area .tab-btn-area .tab-btn{display:flex; align-items: center; justify-content: center; flex:1; height:80px; transition:var(--transition-icon); border:1px solid var(--Color-Gray-20); border-radius:8px;}
+.mypage-area.media-query .pay-area .tab-btn-area .tab-btn.on{border:1px solid var(--Color-Primary-800); box-shadow: 0 4px 4px 0 rgba(0,0,0,0.1);}
+.mypage-area.media-query .pay-area .tab-btn-area .tab-btn .f-body-b1{padding-left:30px; line-height:32px; transition:var(--transition-icon)}
+.mypage-area.media-query .pay-area .tab-btn-area .tab-btn:nth-child(1) .f-body-b1{background:url("/common/mbl/images/icon-transfer-black.svg") no-repeat left center;}
+.mypage-area.media-query .pay-area .tab-btn-area .tab-btn:nth-child(2) .f-body-b1{background:url("/common/mbl/images/icon-credit-card-black.svg") no-repeat left center;}
+.mypage-area.media-query .pay-area .tab-btn-area .tab-btn:nth-child(3) .f-body-b1{background:url("/common/mbl/images/icon-payment-request-black.svg") no-repeat left center;}
+.mypage-area.media-query .pay-area .tab-btn-area .tab-btn.on .f-body-b1{color:var(--Color-Primary-800)}
+.mypage-area.media-query .pay-area .tab-btn-area .tab-btn.on:nth-child(1) .f-body-b1{background:url("/common/mbl/images/icon-transfer-green.svg") no-repeat left center;}
+.mypage-area.media-query .pay-area .tab-btn-area .tab-btn.on:nth-child(2) .f-body-b1{background:url("/common/mbl/images/icon-credit-card-green.svg") no-repeat left center;}
+.mypage-area.media-query .pay-area .tab-btn-area .tab-btn.on:nth-child(3) .f-body-b1{background:url("/common/mbl/images/icon-payment-request-green.svg") no-repeat left center;}
+.mypage-area.media-query .pay-price-wrap{border-top:1px solid var(--Color-Gray-90)}
+.mypage-area.media-query .pay-price-wrap .row{display:flex; align-items: center; justify-content: space-between; column-gap: 32px; padding:12px 16px; border-bottom:1px solid var(--Color-Gray-10)}
+.mypage-area.media-query .pay-price-wrap .row:last-child{display:block; padding:24px 16px;}
+.mypage-area.media-query .pay-price-wrap .row .left{display:flex; column-gap: 32px;}
+.mypage-area.media-query .pay-price-wrap .row.bg{background:var(--Color-Neutral-50);}
+.mypage-area.media-query .pay-price-wrap .row.no-bdb{border-bottom:0;}
+.mypage-area.media-query .pay-price-wrap .row .f-body-r4{color:var(--Color-Gray-70)}
+.mypage-area.media-query .pay-price-wrap .row .right{display:flex; flex-direction: column; row-gap: 4px; max-width:352px; text-align: right; flex-grow: 1;}
+.mypage-area.media-query .pay-price-wrap .row .right .f-body-r4{color: var(--Color-Gray-70);}
+.mypage-area.media-query .pay-price-wrap .row .right .price{color: var(--Color-Gray-70);}
+.mypage-area.media-query .pay-price-wrap .row .right .price.f-body-b3{color: var(--Color-Gray-90);}
+.mypage-area.media-query .pay-price-wrap .row .right .price span{color: var(--Color-Gray-90);}
+.mypage-area.media-query .pay-price-wrap .row .right:has(.red-txt) .price:not(.red-txt){text-decoration: line-through;}
+.mypage-area.media-query .pay-price-wrap .row .form-checkbox{margin-top:16px;}
+.mypage-area.media-query .pay-price-wrap .row .form-checkbox input + label span{color:var(--Color-Gray-90)}
+.mypage-area.media-query .pay-price-wrap .row:has(.price-div){flex-direction: column; gap: 8px 0;}
+.mypage-area.media-query .pay-price-wrap .row .price-div{display:flex; justify-content: space-between; width:100%;}
+.mypage-area.media-query .mypage-sec > .btn-wrap:last-child{justify-content: center; margin-top:60px;}
+.mypage-area.media-query .mypage-sec > .btn-wrap.full {gap: 16px;}
+.mypage-area.media-query .mypage-sec > .btn-wrap.full > a{width: 524px; min-height:64px; border-radius:32px;}
+.mypage-area.media-query .mypage-sec > .btn-wrap.full > a span{font-size:18px;}
+.mypage-area.media-query .mypage-sec > .btn-wrap.full > a span .unit{display:inline-block; margin:0 8px 0 2px; font-size:15px;}
+
+.cont-wrap:has(.media-query){padding-bottom:36px;}
+.mypage-area.media-query{width:100%;}
+.mypage-area.media-query .mypage-sec{margin-top:0;}
+.mypage-area.media-query .mypage-sec:after{display:none;}
+.mypage-area.media-query .table-scroll{overflow-x:auto; position:relative; left:-20px; padding:0 20px 0 20px; width:calc(100% + 40px)}
+.mypage-area.media-query .table-scroll .acco-table{min-width:985px; width:100%;}
+.mypage-area.media-query .table-scroll > .form-table{min-width:985px; width:100%;}
+.mypage-area.media-query .acco-table .form-table.green-bg table{min-width:0;}
+.mypage-area.media-query .pay-area .pay-price-wrap .row .right .price span{word-break: break-all;}
+
+.mypage-area.media-query .pay-area > div{width:100%;}
+.mypage-area.media-query .pay-area .tab-btn-area{flex-wrap:wrap; row-gap: 10px;; width:100%;}
+.mypage-area.media-query .pay-area .tab-btn-area .tab-btn{width:100%; flex:auto;}
+.mypage-area.media-query .pay-area{flex-wrap:wrap; gap:40px 0;}
+.mypage-area.media-query .pay-area + .btn-wrap{width:100%;}
+.mypage-area.media-query .pay-area + .btn-wrap > a{width:100%;}
+.mypage-area.media-query .pay-area .pay-price-wrap .row{column-gap: 12px;}
+.mypage-area.media-query .pay-area .pay-price-wrap .row > .f-body-m3{white-space: nowrap;}
+.mypage-area.media-query .pay-area .pay-price-wrap .row .right{width:auto;}
+.mypage-area.media-query .booking-history-list .list .tit-area{padding:12px 16px; flex-wrap:nowrap; justify-content: space-between;}
+.mypage-area.media-query .booking-history-list .list .tit-area .left{display:flex; column-gap: 8px; flex-wrap:wrap;}
+.mypage-area.media-query .booking-history-list .list .tit-area .right{display:flex; column-gap: 16px;}
+.mypage-area.media-query .booking-history-list .list .tit-area .right .label-div{justify-content: flex-end;}
+.mypage-area.media-query .booking-history-list .list .tit-area .right button{transform:rotate(0); transition:var(--transition-icon)}
+.mypage-area.media-query .booking-history-list .list.on .tit-area .right button{transform:rotate(180deg);}
+.mypage-area.media-query .booking-history-list .list .con-area{padding:16px;}
+.mypage-area.media-query .booking-history-list .list .con-area .book-info-wrap .book-info{width:100%;}
+.mypage-area.media-query .booking-history-list .list .con-area .book-info-wrap .book-info .f-body-m3{width:130px;}
+.mypage-area.media-query .booking-history-list .list .con-area .book-info-wrap .book-info .f-body-r3{width:calc(100% - 154px);}
+.mypage-area.media-query .booking-history-list .list .con-area .detail .book-info-wrap{width:100%;}
+.mypage-area.media-query .mypage-sec > .btn-wrap.full > a{width:100%;}
+/* --------------------------------------------- 마이페이지 - END --------------------------------------------- */
+
+
+
+
+
+/* --------------------------------------------- ETC - START --------------------------------------------- */
+/* 이용약관 */
+.etc-area .etc-tit-area {position:relative;}
+.etc-area .etc-tit-area .etc-tit {text-align: center;}
+.etc-area .etc-tit-area .blue-info-box{margin:32px 0;}
+.etc-area .etc-tit-area .form-select-w .f-body-m2{margin-bottom:12px;}
+.etc-area .etc-cont .tit {margin: 40px 0 32px;}
+.etc-area .etc-cont .tit:first-child {margin: 24px 0 32px;}
+.etc-area .etc-cont .sub-tit {margin: 24px 0 12px;}
+.etc-area .etc-cont .txt-box {color: var(--Color-Gray-70);}
+.etc-area .etc-cont .txt-box .txts ~ .txts {margin-top: 6px;}
+.etc-area .etc-cont .txt-box .txts:has(.num) {display: flex;}
+.etc-area .etc-cont .txt-box .txts .num {position:relative; top:-2px; flex-shrink: 0; margin-right: 4px; font-family: "NotoSansKR-Regular";}
+.etc-area .etc-cont .txt-box .txts .dot{position:relative; padding-left:12px;}
+.etc-area .etc-cont .txt-box .txts .dot ~ .dot{margin-top:2px;}
+.etc-area .etc-cont .txt-box .txts .dot:before{display:block; content: ""; position:absolute; top:7px; left:0; width:3px; height:3px; background:var(--Color-Gray-70); border-radius: 50%;}
+.etc-area .etc-cont .txt-box .infos {margin-top: 4px;}
+.etc-area .etc-cont .txt-box .infos .info {display: flex; line-height: 160%;}
+.etc-area .etc-cont .txt-box .infos .info .num {flex-shrink: 0; width: 16px; margin-right: 0;}
+/* --------------------------------------------- ETC - END --------------------------------------------- */

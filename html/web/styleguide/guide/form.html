@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>퍼블리싱 스타일 가이드</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  <link rel="stylesheet" href="../..//common/web/css/swiper.css"/>
+  <link rel="stylesheet" href="../assets/styles/shCore.css"/>
+	<link rel="Stylesheet" href="../assets/styles/shCoreEclipse.css"/>
+  <link rel="stylesheet" href="../assets/css/index.css"/>
+  <link rel="stylesheet" href="../..//common/web/css/common.css"/>
+  <link rel="stylesheet" href="../..//common/web/css/fonts.css"/>
+  <script type="text/javascript" src="../..//common/web/js/jquery-1.12.4.min.js"></script>
+  <script src="../assets/scripts/XRegExp.js"></script> <!-- XRegExp is bundled with the final shCore.js during build -->
+	<script src="../assets/scripts/shCore.js"></script>
+	<script src="../assets/scripts/shBrushJScript.js"></script>
+	<script src="../assets/scripts/shBrushXml.js"></script>
+	<script src="../assets/scripts/shBrushCss.js"></script>
+  <script type="text/javascript" src="../..//common/web/js/gsap.min.js"></script>
+  <script type="text/javascript" src="../..//common/web/js/ScrollTrigger.min.js"></script>
+  <script type="text/javascript" src="../..//common/web/js/Draggable.min.js"></script>
+  <script type="text/javascript" src="../..//common/web/js/script.js"></script>
+  <script type="text/javascript">SyntaxHighlighter.all();</script>
+
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+  <style>
+    body{background:#fff;}
+    #wrap{overflow:visible; top:auto; left:auto; height:auto; transform: none; min-width:100%; max-height: none;}
+
+    .form-input {width: 240px;}
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <header>
+      <h1>현대드림투어 가이드</h1>
+      <div class="btn-wrap">
+        <a href="../../worklist.html">작업현황판  <i class="fas fa-angle-right"></i></a>
+      </div>
+    </header>
+    <div id="contents">
+      <aside>
+        <a href="../guide-intro.html">기본 정책 <i class="fas fa-angle-right"></i></a>
+        <a href="../guide-markup.html">마크업 규칙 <i class="fas fa-angle-right"></i></a>
+        <a href="../guide-css.html">CSS 규칙 <i class="fas fa-angle-right"></i></a>
+        <a href="../guide-naming.html">네이밍 규칙 <i class="fas fa-angle-right"></i></a>
+        <a href="javascript:" class="active">스타일 가이드 <i class="fas fa-angle-right"></i></a>
+        <ul class="guide-list">
+          <li><a href="./form.html" class="active">FORM</a></li>
+          <li><a href="./typography.html">TYPOGRAPHY</a></li>
+          <li><a href="./color.html">COLOR</a></li>
+          <li><a href="./button.html">BUTTON</a></li>
+          <li><a href="./popup.html">POPUP</a></li>
+          <li><a href="./table.html">TABLE</a></li>
+        </ul>
+      </aside>
+      <!-- 가이드 Start -->
+      <div class="content-area">
+        <h2>폼 스타일 가이드</h2>
+
+        <!-- *** 셀렉트 박스 *** -->
+        <section>
+          <div class="ex-box">
+            <h3>Select</h3>
+            <p class="info">
+              웹스타일 가이드에서는 Width=240px로 하였으나 실제 제작 시 넓이값은 조정할 수 있습니다. 일관성 있는 크기의 정의는 필요합니다.<br/>
+              일반적으로 사용되는 Dropbox와 필터에 사용되는 경우 등으로 나뉩니다.
+            </p>
+            <div class="exs">
+              <h4>Dropdown</h4>
+              <p class="info">보통은 Small(높이 48px) 사이즈의 Selectbox를 사용합니다.</p>
+              <div class="ex">
+                <h5>◾ Basic</h5>
+                <div class="form-area">
+                  <div class="form-select">
+                    <select>
+                      <option value="1">텍스트</option>
+                      <option value="2">텍스트</option>
+                    </select>
+                  </div>
+                  <p class="noti">Help text</p>
+                </div>
+                <br/><br/>
+                <div class="form-select">
+                  <select>
+                    <option value="1">텍스트</option>
+                    <option value="2">텍스트</option>
+                  </select>
+                </div>
+                <script type="syntaxhighlighter" class="brush: xml;">
+                  <div class="form-area">
+                    <div class="form-select">
+                      <select>
+                        <option value="1">텍스트</option>
+                        <option value="2">텍스트</option>
+                      </select>
+                    </div>
+                    <p class="noti">Help text</p>
+                  </div>
+                  <div class="form-select">
+                    <select>
+                      <option value="1">텍스트</option>
+                      <option value="2">텍스트</option>
+                    </select>
+                  </div>
+                </script>
+              </div>
+              <div class="ex">
+                <h5>◾ Error</h5>
+                <div class="form-area">
+                  <!-- @ err 클래스 추가 -->
+                  <div class="err form-select">
+                    <select>
+                      <option value="1">텍스트</option>
+                      <option value="2">텍스트</option>
+                    </select>
+                  </div>
+                  <p class="noti">Help text</p>
+                </div>
+                <br/><br/>
+                <!-- @ err 클래스 추가 -->
+                <div class="err form-select">
+                  <select>
+                    <option value="1">텍스트</option>
+                    <option value="2">텍스트</option>
+                  </select>
+                </div>
+                <script type="syntaxhighlighter" class="brush: xml;">
+                  <div class="form-area">
+                    <!-- @ err 클래스 추가 -->
+                    <div class="err form-select">
+                      <select>
+                        <option value="1">텍스트</option>
+                        <option value="2">텍스트</option>
+                      </select>
+                    </div>
+                    <p class="noti">Help text</p>
+                  </div>
+                  <!-- @ err 클래스 추가 -->
+                  <div class="err form-select">
+                    <select>
+                      <option value="1">텍스트</option>
+                      <option value="2">텍스트</option>
+                    </select>
+                  </div>
+                </script>
+              </div>
+              <div class="ex">
+                <h5>◾ Disabled</h5>
+                <div class="form-area">
+                  <!-- @ disabled 속성 추가 -->
+                  <div class="form-select">
+                    <select disabled>
+                      <option value="1">텍스트</option>
+                      <option value="2">텍스트</option>
+                    </select>
+                  </div>
+                  <p class="noti">Help text</p>
+                </div>
+                <br/><br/>
+                <!-- @ disabled 속성 추가 -->
+                <div class="form-select">
+                  <select disabled>
+                    <option value="1">텍스트</option>
+                    <option value="2">텍스트</option>
+                  </select>
+                </div>
+                <script type="syntaxhighlighter" class="brush: xml;">
+                  <div class="form-area">
+                    <!-- @ disabled 속성 추가 -->
+                    <div class="form-select">
+                      <select disabled>
+                        <option value="1">텍스트</option>
+                        <option value="2">텍스트</option>
+                      </select>
+                    </div>
+                    <p class="noti">Help text</p>
+                  </div>
+                  <!-- @ disabled 속성 추가 -->
+                  <div class="form-select">
+                    <select disabled>
+                      <option value="1">텍스트</option>
+                      <option value="2">텍스트</option>
+                    </select>
+                  </div>
+                </script>
+              </div>
+            </div>
+            <div class="exs">
+              <h4>Dropdown (Large)</h4>
+              <p class="info">메인의 검색창과 재검색의 경우엔 Large 사이즈를 사용합니다.</p>
+              <div class="ex">
+                <div class="form-area">
+                  <!-- @ large 클래스 추가 -->
+                  <div class="large form-select">
+                    <select>
+                      <option value="1">텍스트</option>
+                      <option value="2">텍스트</option>
+                    </select>
+                  </div>
+                  <p class="noti">Help text</p>
+                </div>
+                <br/><br/>
+                <!-- @ large 클래스 추가 -->
+                <div class="large form-select">
+                  <select>
+                    <option value="1">텍스트</option>
+                    <option value="2">텍스트</option>
+                  </select>
+                </div>
+                <script type="syntaxhighlighter" class="brush: xml;">
+                  <div class="form-area">
+                    <!-- @ large 클래스 추가 -->
+                    <div class="large form-select">
+                      <select>
+                        <option value="1">텍스트</option>
+                        <option value="2">텍스트</option>
+                      </select>
+                    </div>
+                    <p class="noti">Help text</p>
+                  </div>
+                  <!-- @ large 클래스 추가 -->
+                  <div class="large form-select">
+                    <select>
+                      <option value="1">텍스트</option>
+                      <option value="2">텍스트</option>
+                    </select>
+                  </div>
+                </script>
+              </div>
+            </div>
+            <div class="exs">
+              <h4>Dropdown (Group)</h4>
+              <p class="info">
+                Default 상태일때 Placeholder Text는 '선택' 또는 '전체' 로 설정되어 있습니다.<br/>
+                셀렉트박스가 활성화 시 Active 상태에 선택한 Value값이 노출됩니다.
+              </p>
+              <div class="ex">
+                <div class="form-group">
+                  <div class="form-select">
+                    <select>
+                      <option value="1">선택</option>
+                      <option value="2">선택된 항목</option>
+                    </select>
+                  </div>
+                  <div class="form-select">
+                    <select>
+                      <option value="1">전체</option>
+                      <option value="2">선택된 항목</option>
+                    </select>
+                  </div>
+                </div>
+                <script type="syntaxhighlighter" class="brush: xml;">
+                  <div class="form-group">
+                    <div class="form-select">
+                      <select>
+                        <option value="1">선택</option>
+                        <option value="2">선택된 항목</option>
+                      </select>
+                    </div>
+                    <div class="form-select">
+                      <select>
+                        <option value="1">전체</option>
+                        <option value="2">선택된 항목</option>
+                      </select>
+                    </div>
+                  </div>
+                </script>
+              </div>
+            </div>
+            <div class="exs">
+              <h4>Filter Dropdown</h4>
+              <p class="info">
+                상품상세페이지의 '객실정보'에서 룸 카테고리 선택을 위해 사용합니다. Radius값을 둥글게 하고 최대 여덟자까지 사용합니다.<br/>
+                State에서 Error와 Disabled는 사용하지 않습니다.
+              </p>
+              <div class="ex">
+                <!-- @ filter-select 클래스 추가 -->
+                <div class="filter-select form-select">
+                  <select>
+                    <option value="1">텍스트</option>
+                    <option value="2">텍스트</option>
+                  </select>
+                </div>
+                <script type="syntaxhighlighter" class="brush: xml;">
+                  <!-- @ filter-select 클래스 추가 -->
+                  <div class="filter-select form-select">
+                    <select>
+                      <option value="1">텍스트</option>
+                      <option value="2">텍스트</option>
+                    </select>
+                  </div>
+                </script>
+              </div>
+            </div>
+            <div class="exs">
+              <h4>Dropdown (No Border)</h4>
+              <p class="info">선이 없는 드롭박스 경우에 사용합니다.</p>
+              <div class="ex">
+                <!-- @ no-bdr 클래스 추가 -->
+                <div class="no-bdr form-select" style="width: 100px;">
+                  <select>
+                    <option value="1">텍스트</option>
+                    <option value="2">텍스트</option>
+                  </select>
+                </div>
+                <script type="syntaxhighlighter" class="brush: xml;">
+                  <!-- @ no-bdr 클래스 추가 -->
+                  <div class="no-bdr form-select">
+                    <select>
+                      <option value="1">텍스트</option>
+                      <option value="2">텍스트</option>
+                    </select>
+                  </div>
+                </script>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- *** 체크박스 *** -->
+        <section>
+          <div class="ex-box">
+            <h3>Checkbox</h3>
+            <p class="info">
+              체크박스는 사용자가 세트에서 하나 이상의 항목을 선택할 수 있게 하며 옵션을 켜거나 끄는 데 사용할 수 있습니다.<br/>
+              체크박스는 사용자가 옵션 세트에서 선택을 하는 데 도움이 되는 일종의 선택 컨트롤입니다.
+            </p>
+            <div class="exs">
+              <h4>Checkbox (All Checkbox)</h4>
+              <p class="info">전체 항목 선택이 가능한 체크박스입니다.</p>
+              <div class="ex">
+                <div class="opt-group">
+                  <div class="form-checkbox"><!-- @ 전체 체크박스는 'Chk-All' 클래스 추가 -->
+                    <input type="checkbox" class="Chk-All" id="Chk1-All" name="">
+                    <label for="Chk1-All"><span>전체</span></label>
+                  </div>
+                  <div class="form-checkbox">
+                    <input type="checkbox" id="Chk1-1" name="">
+                    <label for="Chk1-1"><span>테스트</span></label>
+                  </div>
+                  <div class="form-checkbox">
+                    <input type="checkbox" id="Chk1-2" name="">
+                    <label for="Chk1-2"><span>테스트</span></label>
+                  </div>
+                </div>
+                <script type="syntaxhighlighter" class="brush: xml;">
+                  <div class="opt-group">
+                    <div class="form-checkbox"><!-- @ 전체 체크박스는 'Chk-All' 클래스 추가 -->
+                      <input type="checkbox" class="Chk-All" id="Chk1-All" name="">
+                      <label for="Chk1-All"><span>전체</span></label>
+                    </div>
+                    <div class="form-checkbox">
+                      <input type="checkbox" id="Chk1-1" name="">
+                      <label for="Chk1-1"><span>테스트</span></label>
+                    </div>
+                    <div class="form-checkbox">
+                      <input type="checkbox" id="Chk1-2" name="">
+                      <label for="Chk1-2"><span>테스트</span></label>
+                    </div>
+                  </div>
+                </script>
+              </div>
+            </div>
+            <div class="exs">
+              <h4>Checkbox (with Label)</h4>
+              <p class="info">사용자가 세트에서 한 개 이상의 항목을 선택 할 수 있게 합니다.</p>
+              <div class="ex">
+                <div class="opt-group">
+                  <div class="form-checkbox">
+                    <input type="checkbox" id="Chk2-1" name="" checked>
+                    <label for="Chk2-1"><span>테스트</span></label>
+                  </div>
+                  <div class="form-checkbox">
+                    <input type="checkbox" id="Chk2-2" name="" >
+                    <label for="Chk2-2"><span>테스트</span></label>
+                  </div>
+                  <div class="form-checkbox">
+                    <!-- @ disabled 속성 추가 -->
+                    <input type="checkbox" id="Chk2-3" name="" disabled>
+                    <label for="Chk2-3"><span>테스트</span></label>
+                  </div>
+                </div>
+                <script type="syntaxhighlighter" class="brush: xml;">
+                  <div class="opt-group">
+                    <div class="form-checkbox">
+                      <input type="checkbox" id="Chk2-1" name="" checked>
+                      <label for="Chk2-1"><span>테스트</span></label>
+                    </div>
+                    <div class="form-checkbox">
+                      <input type="checkbox" id="Chk2-2" name="" >
+                      <label for="Chk2-2"><span>테스트</span></label>
+                    </div>
+                    <div class="form-checkbox">
+                      <!-- @ disabled 속성 추가 -->
+                      <input type="checkbox" id="Chk2-3" name="" disabled>
+                      <label for="Chk2-3"><span>테스트</span></label>
+                    </div>
+                  </div>
+                </script>
+              </div>
+            </div>
+            <div class="exs">
+              <h4>Checkbox</h4>
+              <div class="ex">
+                <div class="form-checkbox">
+                  <input type="checkbox" id="Chk3-1" name="" checked>
+                  <label for="Chk3-1"></label>
+                </div>
+                <div class="form-checkbox">
+                  <input type="checkbox" id="Chk3-2" name="" >
+                  <label for="Chk3-2"></label>
+                </div>
+                <div class="form-checkbox">
+                  <!-- @ disabled 속성 추가 -->
+                  <input type="checkbox" id="Chk3-3" name="" disabled>
+                  <label for="Chk3-3"></label>
+                </div>
+                <script type="syntaxhighlighter" class="brush: xml;">
+                  <div class="form-checkbox">
+                    <input type="checkbox" id="Chk3-1" name="" checked>
+                    <label for="Chk3-1"></label>
+                  </div>
+                  <div class="form-checkbox">
+                    <input type="checkbox" id="Chk3-2" name="" >
+                    <label for="Chk3-2"></label>
+                  </div>
+                  <div class="form-checkbox">
+                    <!-- @ disabled 속성 추가 -->
+                    <input type="checkbox" id="Chk3-3" name="" disabled>
+                    <label for="Chk3-3"></label>
+                  </div>
+                </script>
+              </div>
+            </div>
+            <div class="exs">
+              <h4>Checkbox (with Rating)</h4>
+              <p class="info">필터에서 호텔 성급을 선택할 때 사용합니다.</p>
+              <div class="ex">
+                <div class="opt-group">
+                  <div class="form-checkbox">
+                    <input type="checkbox" id="Chk4-1" name="" checked>
+                    <label for="Chk4-1"><p class="stars"><span class="star"></span><span class="star"></span><span class="star"></span></p></label>
+                  </div>
+                  <div class="form-checkbox">
+                    <input type="checkbox" id="Chk4-2" name="">
+                    <label for="Chk4-2"><p class="stars"><span class="star"></span><span class="star"></span></p></label>
+                  </div>
+                  <div class="form-checkbox">
+                    <!-- @ disabled 속성 추가 -->
+                    <input type="checkbox" id="Chk4-3" name="" disabled>
+                    <label for="Chk4-3"><p class="stars"><span class="star"></span></p></label>
+                  </div>
+                </div>
+                <script type="syntaxhighlighter" class="brush: xml;">
+                  <div class="opt-group">
+                    <div class="form-checkbox">
+                      <input type="checkbox" id="Chk4-1" name="" checked>
+                      <label for="Chk4-1"><p class="stars"><span class="star"></span><span class="star"></span><span class="star"></span></p></label>
+                    </div>
+                    <div class="form-checkbox">
+                      <input type="checkbox" id="Chk4-2" name="">
+                      <label for="Chk4-2"><p class="stars"><span class="star"></span><span class="star"></span></p></label>
+                    </div>
+                    <div class="form-checkbox">
+                      <!-- @ disabled 속성 추가 -->
+                      <input type="checkbox" id="Chk4-3" name="" disabled>
+                      <label for="Chk4-3"><p class="stars"><span class="star"></span></p></label>
+                    </div>
+                  </div>
+                </script>
+              </div>
+            </div>
+        </section>
+
+        <!-- *** 라디오 버튼 *** -->
+        <section>
+          <div class="ex-box">
+            <h3>Radio</h3>
+            <p class="info">
+              Radio button은 상호 간에 배타적인 두 개 이상의 옵션이 있어서 그중 하나만을 선택할 수 있을 경우 사용됩니다.<br/>
+              디폴트로 하나는 무조건 선택되어 있어야 합니다.
+            </p>
+            <div class="exs">
+              <h4>Radio (with Label)</h4>
+              <div class="ex">
+                <div class="opt-group">
+                  <div class="form-radio">
+                    <input type="radio" id="Radio1-1" name="Radio1" checked>
+                    <label for="Radio1-1"><span>텍스트</span></label>
+                  </div>
+                  <div class="form-radio">
+                    <input type="radio" id="Radio1-2" name="Radio1">
+                    <label for="Radio1-2"><span>텍스트</span></label>
+                  </div>
+                  <div class="form-radio">
+                    <!-- @ disabled 속성 추가 -->
+                    <input type="radio" id="Radio1-3" name="Radio1" disabled>
+                    <label for="Radio1-3"><span>텍스트</span></label>
+                  </div>
+                </div>
+                <script type="syntaxhighlighter" class="brush: xml;">
+                  <div class="opt-group">
+                    <div class="form-radio">
+                      <input type="radio" id="Radio1-1" name="Radio1" checked>
+                      <label for="Radio1-1"><span>텍스트</span></label>
+                    </div>
+                    <div class="form-radio">
+                      <input type="radio" id="Radio1-2" name="Radio1">
+                      <label for="Radio1-2"><span>텍스트</span></label>
+                    </div>
+                    <div class="form-radio">
+                      <!-- @ disabled 속성 추가 -->
+                      <input type="radio" id="Radio1-3" name="Radio1" disabled>
+                      <label for="Radio1-3"><span>텍스트</span></label>
+                    </div>
+                  </div>
+                </script>
+              </div>
+            </div>
+            <div class="exs">
+              <h4>Radio</h4>
+              <div class="ex">
+                <div class="form-radio">
+                  <input type="radio" id="Radio2-1" name="Radio2" checked>
+                  <label for="Radio2-1"></label>
+                </div>
+                <div class="form-radio">
+                  <input type="radio" id="Radio2-2" name="Radio2">
+                  <label for="Radio2-2"></label>
+                </div>
+                <div class="form-radio">
+                  <!-- @ disabled 속성 추가 -->
+                  <input type="radio" id="Radio2-3" name="Radio2" disabled>
+                  <label for="Radio2-3"></label>
+                </div>
+                <script type="syntaxhighlighter" class="brush: xml;">
+                  <div class="form-radio">
+                    <input type="radio" id="Radio2-1" name="Radio2" checked>
+                    <label for="Radio2-1"></label>
+                  </div>
+                  <div class="form-radio">
+                    <input type="radio" id="Radio2-2" name="Radio2">
+                    <label for="Radio2-2"></label>
+                  </div>
+                  <div class="form-radio">
+                    <!-- @ disabled 속성 추가 -->
+                    <input type="radio" id="Radio2-3" name="Radio2" disabled>
+                    <label for="Radio2-3"></label>
+                  </div>
+                </script>
+              </div>
+            </div>
+        </section>
+
+        <!-- *** 텍스트 필드 *** -->
+        <section>
+          <div class="ex-box">
+            <h3>TEXT FILELD</h3>
+            <p class="info">
+              텍스트 필드(Text Fields)는 사용자가 UI 상 텍스트 입력 및 확인 시 활용되는 컴포넌트입니다.<br/>
+              한 줄 입력인 텍스트 필드(Text Field)와 여러 줄 입력인 텍스트 영역(Text Area)으로 나뉩니다.
+            </p>
+
+            <!-- Input -->
+            <div class="exs">
+              <h4>Text Field (기본형)</h4>
+              <p class="info">Text Field는 가장 기본적인 텍스트 입력 및 수정하기 위한 컴포넌트로 쓰임새에 따라 세부 속성을 변경해 사용합니다.</p>
+              <div class="ex">
+                <h5>◾ Basic</h5>
+                <div class="form-area">
+                  <div class="form-input">
+                    <input type="text" placeholder="텍스트">
+                    <div class="input-btn-wrap">
+                      <button class="delete-btn" type="button" title="삭제"></button>
+                    </div>
+                  </div>
+                  <p class="noti">Help text</p>
+                </div>
+                <br/><br/>
+                <div class="form-input">
+                  <input type="text" placeholder="텍스트">
+                  <div class="input-btn-wrap">
+                    <button class="delete-btn" type="button" title="삭제"></button>
+                  </div>
+                </div>
+                <script type="syntaxhighlighter" class="brush: xml;">
+                  <div class="form-area">
+                    <div class="form-input">
+                      <input type="text" placeholder="텍스트">
+                      <div class="input-btn-wrap">
+                        <button class="delete-btn" type="button" title="삭제"></button>
+                      </div>
+                    </div>
+                    <p class="noti">Help text</p>
+                  </div>
+                  <div class="form-input">
+                    <input type="text" placeholder="텍스트">
+                    <div class="input-btn-wrap">
+                      <button class="delete-btn" type="button" title="삭제"></button>
+                    </div>
+                  </div>
+                </script>
+              </div>
+              <div class="ex">
+                <h5>◾ Error</h5>
+                <div class="form-area">
+                  <!-- @ err 클래스 추가 -->
+                  <div class="err form-input">
+                    <input type="text" placeholder="텍스트">
+                    <div class="input-btn-wrap">
+                      <button class="delete-btn" type="button" title="삭제"></button>
+                    </div>
+                  </div>
+                  <p class="noti">Help text</p>
+                </div>
+                <br/><br/>
+                <!-- @ err 클래스 추가 -->
+                <div class="err form-input">
+                  <input type="text" placeholder="텍스트">
+                  <div class="input-btn-wrap">
+                    <button class="delete-btn" type="button" title="삭제"></button>
+                  </div>
+                </div>
+                <script type="syntaxhighlighter" class="brush: xml;">
+                  <div class="form-area">
+                    <!-- @ err 클래스 추가 -->
+                    <div class="err form-input">
+                      <input type="text" placeholder="텍스트">
+                      <div class="input-btn-wrap">
+                        <button class="delete-btn" type="button" title="삭제"></button>
+                      </div>
+                    </div>
+                    <p class="noti">Help text</p>
+                  </div>
+                  <!-- @ err 클래스 추가 -->
+                  <div class="err form-input">
+                    <input type="text" placeholder="텍스트">
+                    <div class="input-btn-wrap">
+                      <button class="delete-btn" type="button" title="삭제"></button>
+                    </div>
+                  </div>
+                </script>
+              </div>
+              <div class="ex">
+                <h5>◾ Disabled</h5>
+                <div class="form-area">
+                  <div class="form-input">
+                    <!-- @ disabled 속성 추가 -->
+                    <input type="text" placeholder="텍스트" disabled>
+                    <div class="input-btn-wrap">
+                      <button class="delete-btn" type="button" title="삭제"></button>
+                    </div>
+                  </div>
+                  <p class="noti">Help text</p>
+                </div>
+                <br/><br/>
+                <div class="form-input">
+                  <!-- @ disabled 속성 추가 -->
+                  <input type="text" placeholder="텍스트" disabled>
+                  <div class="input-btn-wrap">
+                    <button class="delete-btn" type="button" title="삭제"></button>
+                  </div>
+                </div>
+                <script type="syntaxhighlighter" class="brush: xml;">
+                  <div class="form-area">
+                    <div class="form-input">
+                      <!-- @ disabled 속성 추가 -->
+                      <input type="text" placeholder="텍스트" disabled>
+                      <div class="input-btn-wrap">
+                        <button class="delete-btn" type="button" title="삭제"></button>
+                      </div>
+                    </div>
+                    <p class="noti">Help text</p>
+                  </div>
+                  <div class="form-input">
+                    <!-- @ disabled 속성 추가 -->
+                    <input type="text" placeholder="텍스트" disabled>
+                    <div class="input-btn-wrap">
+                      <button class="delete-btn" type="button" title="삭제"></button>
+                    </div>
+                  </div>
+                </script>
+              </div>
+              <div class="ex">
+                <h5>◾ Read Only</h5>
+                <div class="form-area">
+                  <div class="form-input">
+                    <!-- @ readonly 속성 추가 -->
+                    <input type="text" placeholder="텍스트" readonly value="입력값">
+                    <div class="input-btn-wrap">
+                      <button class="delete-btn" type="button" title="삭제"></button>
+                    </div>
+                  </div>
+                  <p class="noti">Help text</p>
+                </div>
+                <br/><br/>
+                <div class="form-input">
+                  <!-- @ readonly 속성 추가 -->
+                  <input type="text" placeholder="텍스트" readonly value="입력값">
+                  <div class="input-btn-wrap">
+                    <button class="delete-btn" type="button" title="삭제"></button>
+                  </div>
+                </div>
+                <script type="syntaxhighlighter" class="brush: xml;">
+                  <div class="form-area">
+                    <div class="form-input">
+                      <!-- @ readonly 속성 추가 -->
+                      <input type="text" placeholder="텍스트" readonly value="입력값">
+                      <div class="input-btn-wrap">
+                        <button class="delete-btn" type="button" title="삭제"></button>
+                      </div>
+                    </div>
+                    <p class="noti">Help text</p>
+                  </div>
+                  <div class="form-input">
+                    <!-- @ readonly 속성 추가 -->
+                    <input type="text" placeholder="텍스트" readonly value="입력값">
+                    <div class="input-btn-wrap">
+                      <button class="delete-btn" type="button" title="삭제"></button>
+                    </div>
+                  </div>
+                </script>
+              </div>
+            </div>
+            <div class="exs">
+              <h4>Text Field (Icon)</h4>
+              <p class="info">Text Field에 검색 아이콘을 표시합니다.</p>
+              <div class="ex">
+                <h5>◾ Basic</h5>
+                <div class="form-area">
+                  <!-- @ srch-input 클래스 추가 -->
+                  <div class="srch-input form-input">
+                    <input type="text" placeholder="텍스트">
+                    <div class="input-btn-wrap">
+                      <button class="delete-btn" type="button" title="삭제"></button>
+                    </div>
+                  </div>
+                  <p class="noti">Help text</p>
+                </div>
+                <br/><br/>
+                <!-- @ srch-input 클래스 추가 -->
+                <div class="srch-input form-input">
+                  <input type="text" placeholder="텍스트">
+                  <div class="input-btn-wrap">
+                    <button class="delete-btn" type="button" title="삭제"></button>
+                  </div>
+                </div>
+                <script type="syntaxhighlighter" class="brush: xml;">
+                  <div class="form-area">
+                    <!-- @ srch-input 클래스 추가 -->
+                    <div class="srch-input form-input">
+                      <input type="text" placeholder="텍스트">
+                      <div class="input-btn-wrap">
+                        <button class="delete-btn" type="button" title="삭제"></button>
+                      </div>
+                    </div>
+                    <p class="noti">Help text</p>
+                  </div>
+                  <!-- @ srch-input 클래스 추가 -->
+                  <div class="srch-input form-input">
+                    <input type="text" placeholder="텍스트">
+                    <div class="input-btn-wrap">
+                      <button class="delete-btn" type="button" title="삭제"></button>
+                    </div>
+                  </div>
+                </script>
+              </div>
+            </div>
+            <div class="exs">
+              <h4>Text Field (Price)</h4>
+              <p class="info">필터의 요금범위에서 min/max 가격을 입력할 때 사용합니다. 폰트 크기는 가이드에서 예외적으로 사용합니다.</p>
+              <div class="ex">
+                <div class="form-range">
+                  <!-- @ data-range 값 입력 -->
+                  <div class="slider-range" data-range='{"min": 0, "max": 1875500, "minValue": 10000, "maxValue" : 1875500}'></div>
+                  <div class="form-group">
+                    <div class="form-input more"><!-- @ input 숫자 콤마, num 클래스 추가 -->
+                      <input type="text" class="num">
+                      <span class="unit">원</span>
+                    </div>
+                    <span class="dash"></span>
+                    <div class="form-input less"><!-- @ input 숫자 콤마, num 클래스 추가 -->
+                      <input type="text" class="num">
+                      <span class="unit">원</span>
+                    </div>
+                  </div>
+                </div>
+                <script type="syntaxhighlighter" class="brush: xml;">
+                  <div class="form-range">
+                    <!-- @ data-range 값 입력 -->
+                    <div class="slider-range" data-range='{"min": 0, "max": 1875500, "minValue": 10000, "maxValue" : 1875500}'></div>
+                    <div class="form-group">
+                      <div class="form-input more"><!-- @ input 숫자 콤마, num 클래스 추가 -->
+                        <input type="text" class="num">
+                        <span class="unit">원</span>
+                      </div>
+                      <span class="dash"></span>
+                      <div class="form-input less"><!-- @ input 숫자 콤마, num 클래스 추가 -->
+                        <input type="text" class="num">
+                        <span class="unit">원</span>
+                      </div>
+                    </div>
+                  </div>
+                </script>
+              </div>
+            </div>
+              
+            <!-- TextAreas -->
+            <div class="exs">
+              <h4>Text Area</h4>
+              <p class="info">
+                Text Area는 텍스트 영역은 한 줄 이상, 즉 여러 줄 텍스트를 입력하기 위한 컴포넌트입니다. 텍스트양이 넘을 경우 줄 바꿈 되어, 높이는 고정되고 커서가 필드 최하단에 도착 시 고정 높이에서 스크롤 됩니다.<br/>
+                한글/영문대소문자/특수문자/숫자 입력 가능합니다. 엔터 입력 시 줄바꿈 처리 됩니다. 최대 1,000자 까지 입력이 가능합니다.
+              </p>
+              <div class="ex">
+                <h5>◾ Basic</h5>
+                <div class="form-area">
+                  <div class="form-textarea">
+                    <textarea placeholder="입력하세요." maxlength="1000"></textarea>
+                  </div>
+                  <p class="noti">Help text</p>
+                </div>
+                <br/><br/>
+                <div class="form-textarea">
+                  <textarea placeholder="입력하세요." maxlength="1000"></textarea>
+                </div>
+                <script type="syntaxhighlighter" class="brush: xml;">
+                  <div class="form-area">
+                    <div class="form-textarea">
+                      <textarea placeholder="입력하세요." maxlength="1000"></textarea>
+                    </div>
+                    <p class="noti">Help text</p>
+                  </div>
+                  <div class="form-textarea">
+                    <textarea placeholder="입력하세요." maxlength="1000"></textarea>
+                  </div>
+                </script>
+              </div>
+              <div class="ex">
+                <h5>◾ Scroll</h5>
+                <div class="form-area">
+                  <div class="form-textarea">
+                    <textarea placeholder="입력하세요." maxlength="1000">추가 요청사항을 입력해 주세요(선택) 한글/영문대소문자/특수문자/숫자 입력 가능합니다. 엔터 입력 시 줄바꿈 처리 됩니다. 최대 1,000자 까지 입력이 가능합니다. 추가 요청사항을 입력해 주세요(선택) 한글/영문대소문자/특수문자/숫자 입력 가능합니다. 엔터 입력 시 줄바꿈 처리 됩니다. 최대 1,000자 까지 입력이 가능합니다. 추가 요청사항을 입력해 주세요(선택) 한글/영문대소문자/특수문자/숫자 입력 가능합니다. 엔터 입력 시 줄바꿈 처리 됩니다. 최대 1,000자 까지 입력이 가능합니다.</textarea>
+                  </div>
+                  <p class="noti">Help text</p>
+                </div>
+                <br/><br/>
+                <div class="form-textarea">
+                  <textarea placeholder="입력하세요." maxlength="1000">추가 요청사항을 입력해 주세요(선택) 한글/영문대소문자/특수문자/숫자 입력 가능합니다. 엔터 입력 시 줄바꿈 처리 됩니다. 최대 1,000자 까지 입력이 가능합니다. 추가 요청사항을 입력해 주세요(선택) 한글/영문대소문자/특수문자/숫자 입력 가능합니다. 엔터 입력 시 줄바꿈 처리 됩니다. 최대 1,000자 까지 입력이 가능합니다. 추가 요청사항을 입력해 주세요(선택) 한글/영문대소문자/특수문자/숫자 입력 가능합니다. 엔터 입력 시 줄바꿈 처리 됩니다. 최대 1,000자 까지 입력이 가능합니다.</textarea>
+                </div>
+                <script type="syntaxhighlighter" class="brush: xml;">
+                  <div class="form-area">
+                    <div class="form-textarea">
+                      <textarea placeholder="입력하세요." maxlength="1000">
+                        추가 요청사항을 입력해 주세요(선택) 한글/영문대소문자/특수문자/숫자 입력 가능합니다.
+                        엔터 입력 시 줄바꿈 처리 됩니다. 최대 1,000자 까지 입력이 가능합니다.
+                        추가 요청사항을 입력해 주세요(선택) 한글/영문대소문자/특수문자/숫자 입력 가능합니다.
+                        엔터 입력 시 줄바꿈 처리 됩니다. 최대 1,000자 까지 입력이 가능합니다.
+                        추가 요청사항을 입력해 주세요(선택) 한글/영문대소문자/특수문자/숫자 입력 가능합니다.
+                        엔터 입력 시 줄바꿈 처리 됩니다. 최대 1,000자 까지 입력이 가능합니다.
+                      </textarea>
+                    </div>
+                    <p class="noti">Help text</p>
+                  </div>
+                  <div class="form-textarea">
+                    <textarea placeholder="입력하세요." maxlength="1000">
+                      추가 요청사항을 입력해 주세요(선택) 한글/영문대소문자/특수문자/숫자 입력 가능합니다.
+                      엔터 입력 시 줄바꿈 처리 됩니다. 최대 1,000자 까지 입력이 가능합니다.
+                      추가 요청사항을 입력해 주세요(선택) 한글/영문대소문자/특수문자/숫자 입력 가능합니다.
+                      엔터 입력 시 줄바꿈 처리 됩니다. 최대 1,000자 까지 입력이 가능합니다.
+                      추가 요청사항을 입력해 주세요(선택) 한글/영문대소문자/특수문자/숫자 입력 가능합니다.
+                      엔터 입력 시 줄바꿈 처리 됩니다. 최대 1,000자 까지 입력이 가능합니다.
+                    </textarea>
+                  </div>
+                </script>
+              </div>
+              <div class="ex">
+                <h5>◾ Error</h5>
+                <div class="form-area">
+                  <!-- @ err 클래스 추가 -->
+                  <div class="err form-textarea">
+                    <textarea placeholder="입력하세요." maxlength="1000"></textarea>
+                  </div>
+                  <p class="noti">Help text</p>
+                </div>
+                <br/><br/>
+                <div class="err form-textarea">
+                  <!-- @ err 클래스 추가 -->
+                  <textarea placeholder="입력하세요." maxlength="1000"></textarea>
+                </div>
+                <script type="syntaxhighlighter" class="brush: xml;">
+                  <div class="form-area">
+                    <!-- @ err 클래스 추가 -->
+                    <div class="err form-textarea">
+                      <textarea placeholder="입력하세요." maxlength="1000"></textarea>
+                    </div>
+                    <p class="noti">Help text</p>
+                  </div>
+                  <!-- @ err 클래스 추가 -->
+                  <div class="err form-textarea">
+                    <textarea placeholder="입력하세요." maxlength="1000"></textarea>
+                  </div>
+                </script>
+              </div>
+              <div class="ex">
+                <h5>◾ Disabled</h5>
+                <div class="form-area">
+                  <div class="form-textarea">
+                    <!-- @ disabled 속성 추가 -->
+                    <textarea placeholder="입력하세요." maxlength="1000" disabled></textarea>
+                  </div>
+                  <p class="noti">Help text</p>
+                </div>
+                <br/><br/>
+                <div class="form-textarea">
+                  <!-- @ disabled 속성 추가 -->
+                  <textarea placeholder="입력하세요." maxlength="1000" disabled></textarea>
+                </div>
+                <script type="syntaxhighlighter" class="brush: xml;">
+                  <div class="form-area">
+                    <div class="form-textarea">
+                      <!-- @ disabled 속성 추가 -->
+                      <textarea placeholder="입력하세요." maxlength="1000" disabled></textarea>
+                    </div>
+                    <p class="noti">Help text</p>
+                  </div>
+                  <div class="form-textarea">
+                    <!-- @ disabled 속성 추가 -->
+                    <textarea placeholder="입력하세요." maxlength="1000" disabled></textarea>
+                  </div>
+                </script>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div class="ex-box">
+            <h3>FILE</h3>
+            <p class="info">
+              파일 찾기 버튼입니다.
+            </p>
+
+            <!-- File -->
+            <div class="exs">
+              <div class="ex">
+                <div class="form-file">
+                  <div class="attached-file">
+                    <div class="file-btn-area">
+                      <input type="file" id="search-file">
+                      <label for="search-file">파일찾기</label>
+                    </div>
+                    <div class="file-list">
+                      <div class="list">
+                        <p class="file-name f-body-r3">첨부파일이미지명.jpg</p>
+                        <a class="btn-delete" href="javascript:"></a>
+                      </div>
+                      <div class="list">
+                        <p class="file-name f-body-r3">첨부파일이미지명.jpg</p>
+                        <a class="btn-delete" href="javascript:"></a>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="noti-txt f-body-r3">※ 첨부파일은 jpg, gif, png, pdf, ppt, pptx, xls, xlsx, doc, docs, hwp, txt, zip 파일로 1개만 가능합니다.(용량제한 : 10MB)</p>
+                </div>
+                <script type="syntaxhighlighter" class="brush: xml;">
+                  <div class="form-file">
+                    <div class="attached-file">
+                      <div class="file-btn-area">
+                        <input type="file" id="search-file">
+                        <label for="search-file">파일찾기</label>
+                      </div>
+                      <div class="file-list">
+                        <div class="list">
+                          <p class="file-name f-body-r3">첨부파일이미지명.jpg</p>
+                          <a class="btn-delete" href="javascript:"></a>
+                        </div>
+                        <div class="list">
+                          <p class="file-name f-body-r3">첨부파일이미지명.jpg</p>
+                          <a class="btn-delete" href="javascript:"></a>
+                        </div>
+                      </div>
+                    </div>
+                    <p class="noti-txt f-body-r3">※ 첨부파일은 jpg, gif, png, pdf, ppt, pptx, xls, xlsx, doc, docs, hwp, txt, zip 파일로 1개만 가능합니다.(용량제한 : 10MB)</p>
+                  </div>
+                </script>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

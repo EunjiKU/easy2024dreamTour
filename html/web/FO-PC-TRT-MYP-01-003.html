@@ -1,0 +1,2347 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>현대드림투어 호텔 HUB</title>
+    <link rel="shortcut icon" href="/common/web/images/favicon.ico" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no,maximum-scale=1.0,minimum-scale=1.0,target-densitydpi=medium-dpi" />
+		<meta name="keywords" content="각 페이지마다 유니크한 현대드림투어 호텔 HUB keywords"/>
+		<meta name="description" content="각 페이지마다 유니크한 현대드림투어 호텔 HUB description"/>
+		<meta name="format-detection" content="telephone=no, address=no, email=no">
+		<meta property="og:site_name" content="현대드림투어 호텔 HUB" id="og-sitename-value"/>
+		<meta property="og:type" content="website" id="og-type-value"/>
+		<meta property="og:url" content="URL" id="og-url-value"/>
+		<meta property="og:title" content="NOTICE | 현대드림투어 호텔 HUB" id="og-title-value"/>
+		<meta property="og:description" content="현대드림투어 호텔 HUB 홈페이지에 방문하신 것을 환영합니다." id="og-description-value"/>
+		<meta property="og:image" content="img URL" id="og-image-value"/>
+		<!-- <meta name="twitter:url" content="URL" id="twitter-url-value"/>
+		<meta name="twitter:title" content="Main" id="twitter-title-value"/>
+		<meta name="twitter:image" content="img URL" />
+		<meta name="twitter:description" content="현대드림투어 호텔 HUB 홈페이지에 방문하신 것을 환영합니다." id="twitter-discription-value"/> -->
+		
+		<link rel="stylesheet" href="/common/web/css/jquery-ui.css" />
+		<link rel="stylesheet" href="/common/web/css/swiper.css" />
+		<link rel="stylesheet" href="/common/web/css/common.css" />
+		<link rel="stylesheet" href="/common/web/css/style.css" />
+
+		<script type="text/javascript" src="/common/web/js/jquery-1.12.4.min.js"></script>
+		<script type="text/javascript" src="/common/web/js/gsap.min.js"></script>
+		<script type="text/javascript" src="/common/web/js/ScrollTrigger.min.js"></script>
+		<script type="text/javascript" src="/common/web/js/swiper.min.js"></script>
+		<script type="text/javascript" src="/common/web/js/jquery-ui-1.12.1.custom.min.js"></script>
+    <script type="text/javascript" src="/common/web/js/script.js"></script>
+	</head>
+
+	<body>
+    <div id="wrap">
+      <header id="header"></header>
+
+      <div class="cont-wrap">
+        <div class="inner">
+          <div class="bread-crumb">
+            <a href="javascript:" class="home"></a>
+            <a href="javascript:"><span class="f-body-r3">마이페이지</span></a>
+            <a href="javascript:"><span class="f-body-r3">예약내역</span></a>
+            <a href="javascript:"><span class="f-body-r3">호텔예약</span></a>
+          </div>
+
+          <div class="mypage-area">
+            <div class="left">
+              <p class="f-t1">마이페이지</p>
+              <div class="mypage-menu">
+                <p class="f-body-b1">
+                  <a href="javascript:">예약조회</a>
+                </p>
+                <p class="f-body-r2">
+                  <a href="javascript:">레일예약</a>
+                </p>
+                <p class="f-body-r2 on"><!-- 활성화 된 메뉴에 on class 추가 -->
+                  <a href="javascript:">호텔예약</a>
+                </p>
+              </div>
+              <div class="mypage-menu">
+                <p class="f-body-b1">
+                  <a href="javascript:">정보관리</a>
+                </p>
+                <p class="f-body-r2">
+                  <a href="javascript:">사용자 정보</a>
+                </p>
+                <p class="f-body-r2">
+                  <a href="javascript:">찜 내역</a>
+                </p>
+              </div>
+            </div>
+            <div class="right">
+              <div class="mypage-sec">
+                <p class="f-t1">호텔 예약내역 조회</p>
+
+                <div class="cont-sec">
+                  <p class="f-t2">이지투어</p>
+                  <div class="reserve-inquiry opt-group">
+                    <div class="btn-wrap res">
+                      <div class="left">
+                        <a href="javascript:" class="btn-border-square gray"><span>입금 확인 요청</span></a>
+                        <a href="javascript:" class="btn-border-square gray"><span>바우처</span></a>
+                        <a href="javascript:" class="btn-border-square gray"><span>여행사 상세 인보이스</span></a>
+                        <a href="javascript:" class="btn-border-square gray"><span>여행사 요약 인보이스</span></a>
+                        <a href="javascript:" class="btn-border-square gray"><span>고객 인보이스</span></a>
+                      </div>
+                      <div class="right">
+                        <a href="javascript:" class="btn-border-square green"><span>예약취소</span></a>
+                        <a href="javascript:" class="btn-border-square green"><span>결제하기</span></a>
+                        <a href="javascript:" class="btn-border-square green"><span>예약추가</span></a>
+                      </div>
+                    </div>
+                    <div class="form-checkbox">
+                      <input type="checkbox" class="Chk-All" id="Chk1-All" name="">
+                      <label for="Chk1-All"><span>전체 선택</span></label>
+                    </div>
+                    <div class="white-acco-area">
+                      <div class="acco-list">
+                        <a href="javascript:" class="acco-tit">
+                          <div class="left">
+                            <div class="form-checkbox no-label">
+                              <input type="checkbox" id="reserve-chk1" name="">
+                              <label for="reserve-chk1"><span></span></label>
+                            </div>
+                            <div class="info">
+                              <p class="f-body-b2">예약번호</p>
+                              <p class="f-body-m2 green-txt">TR24061500123-1</p>
+                            </div>
+                            <div class="info">
+                              <p class="f-body-b2">호텔명</p>
+                              <p class="f-body-m2">Rihga Royal Hotel Tokyo</p>
+                            </div>
+                          </div>
+                          <div class="right">
+                            <div class="label-div">
+                              <!--
+                                blue : 결제취소, 부분결제, 미결제, 예약확정, 결제완료
+                                gray : 취소대기, 예약취소, 결제실패, 예약불가, 에러(예약실패), 에러(예약취소 실패)
+                                red : 취소 위약금
+                              -->
+                              <p class="txt-label blue">[예약확정]</p>
+                              <p class="txt-label red">[취소위약금]</p>
+                            </div>
+                          </div>
+                        </a>
+                        <div class="acco-con">
+                          <!-- 호텔 및 객실 정보 -->
+                          <div class="cont-box">
+                            <p class="f-body-b1">호텔 및 객실 정보</p>
+                            <div class="top-hotel-info">
+                              <a href="javascript:" class="link-txt f-t3"><span>Four Seasons Hotel Bangkok at Chao Phraya River</span></a>
+                              <p class="f-body-r3">포 시즌스 호텔 방콕 앳 차오 프라야 리버</p>
+                              <p class="f-body-b3">엑스트라넷</p>
+                              <div class="form-table green-bg">
+                                <div class="table-wrap">
+                                  <table class="basic-table">
+                                    <caption>특별 요청사항</caption>
+                                    <colgroup>
+                                      <col style="width: 160px;">
+                                      <col style="width: 348px;">
+                                      <col style="width: 160px;">
+                                      <col style="width: 348px;">
+                                    </colgroup>
+                                    <tbody>
+                                      <tr>
+                                        <th>
+                                          <p class="f-body-m3">체크인/체크아웃</p>
+                                        </th>
+                                        <td>
+                                          <p class="f-body-r3">2024-11-22(금) ~ 2024-11-25(월)</p>
+                                        </td>
+                                        <th>
+                                          <p class="f-body-m3">박수</p>
+                                        </th>
+                                        <td>
+                                          <p class="f-body-r3">3박</p>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <th>
+                                          <p class="f-body-m3">객실명</p>
+                                        </th>
+                                        <td colspan="3">
+                                          <p class="f-body-r3">
+                                            Deluxe Room, 1 King Bed(palm court)<br />
+                                            - 오션뷰 스위트 <br />
+                                            <span class="red-txt">*</span> 럭셔리 딜
+                                          </p>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <th>
+                                          <p class="f-body-m3">객실 수</p>
+                                        </th>
+                                        <td>
+                                          <p class="f-body-r3">2개</p>
+                                        </td>
+                                        <th>
+                                          <p class="f-body-m3">인원</p>
+                                        </th>
+                                        <td>
+                                          <p class="f-body-r3">성인 4명, 아동 2명</p>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <th>
+                                          <p class="f-body-m3">조식포함여부</p>
+                                        </th>
+                                        <td>
+                                          <p class="f-body-r3">Breakfast</p>
+                                        </td>
+                                        <th>
+                                          <p class="f-body-m3">특전 여부</p>
+                                        </th>
+                                        <td>
+                                          <p class="f-body-r3">특전 포함(체크인 시 무료로 제공되는 객실 업그레이드가 포합됩니다.)</p>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <th>
+                                          <p class="f-body-m3">취소마감일</p>
+                                        </th>
+                                        <td>
+                                          <a href="javascript:" class="link-txt gray-txt">2024-09-30</a>
+                                        </td>
+                                        <th>
+                                          <p class="f-body-m3">예약일</p>
+                                        </th>
+                                        <td>
+                                          <p class="f-body-r3">2024-09-09(금)</p>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- 투숙객 정보 -->
+                          <div class="cont-box">
+                            <p class="f-body-b1">투숙객 정보</p>
+                            <div class="form-table green-bg border">
+                              <div class="table-wrap">
+                                <table class="basic-table">
+                                  <caption>Remark</caption>
+                                  <colgroup>
+                                    <col style="width: 100px;">
+                                    <col style="width: 120px;">
+                                    <col style="width: 338px;">
+                                    <col style="width: 120px;">
+                                    <col style="width: 338px;">
+                                  </colgroup>
+                                  <thead>
+                                    <tr>
+                                      <th colspan="5" class="bdb">
+                                        <div class="guest-info">
+                                          <p class="f-body-b3">객실 1 <span class="f-body-m3">(성인 2명, 아동 0명)</span></p>
+                                          <p class="f-body-m3">RH12345678</p>
+                                        </div>
+                                      </th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <th class="bdr" rowspan="2">
+                                        <p class="f-body-m3">성인 1</p>
+                                      </th>
+                                      <th>
+                                        <p class="f-body-m3">한글 이름</p>
+                                      </th>
+                                      <td>
+                                        <p class="f-body-r3">박민수</p>
+                                      </td>
+                                      <th>
+                                        <p class="f-body-m3">영문 이름</p>
+                                      </th>
+                                      <td>
+                                        <p class="f-body-r3">PARK MINSOO</p>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <th>
+                                        <p class="f-body-m3">생년월일</p>
+                                      </th>
+                                      <td>
+                                        <p class="f-body-r3">1975-10-07</p>
+                                      </td>
+                                      <th>
+                                        <p class="f-body-m3">이메일</p>
+                                      </th>
+                                      <td>
+                                        <p class="f-body-r3">mspark123403@hdec.kr</p>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <th class="bdr" rowspan="2">
+                                        <p class="f-body-m3">성인 2</p>
+                                      </th>
+                                      <th>
+                                        <p class="f-body-m3">한글 이름</p>
+                                      </th>
+                                      <td>
+                                        <p class="f-body-r3">김철수</p>
+                                      </td>
+                                      <th>
+                                        <p class="f-body-m3">영문 이름</p>
+                                      </th>
+                                      <td>
+                                        <p class="f-body-r3">KIM CHULSOO</p>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <th>
+                                        <p class="f-body-m3">생년월일</p>
+                                      </th>
+                                      <td colspan="3">
+                                        <p class="f-body-r3">1975-12-12</p>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                            <div class="form-table green-bg border">
+                              <div class="table-wrap">
+                                <table class="basic-table">
+                                  <caption>투숙객 정보</caption>
+                                  <colgroup>
+                                    <col style="width: 100px;">
+                                    <col style="width: 120px;">
+                                    <col style="width: 338px;">
+                                    <col style="width: 120px;">
+                                    <col style="width: 338px;">
+                                  </colgroup>
+                                  <thead>
+                                    <tr>
+                                      <th colspan="5" class="bdb">
+                                        <div class="guest-info">
+                                          <p class="f-body-b3">객실 1 <span class="f-body-m3">(성인 1명, 아동 2명)</span></p>
+                                          <p class="f-body-m3">-</p>
+                                        </div>
+                                      </th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <th class="bdr" rowspan="2">
+                                        <p class="f-body-m3">성인 1</p>
+                                      </th>
+                                      <th>
+                                        <p class="f-body-m3">한글 이름</p>
+                                      </th>
+                                      <td>
+                                        <p class="f-body-r3">이지호</p>
+                                      </td>
+                                      <th>
+                                        <p class="f-body-m3">영문 이름</p>
+                                      </th>
+                                      <td>
+                                        <p class="f-body-r3">LEE JIHO</p>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <th>
+                                        <p class="f-body-m3">생년월일</p>
+                                      </th>
+                                      <td>
+                                        <p class="f-body-r3">1980-01-05</p>
+                                      </td>
+                                      <th>
+                                        <p class="f-body-m3">이메일</p>
+                                      </th>
+                                      <td>
+                                        <p class="f-body-r3">jiho@daiwahouse.co.jp</p>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <th class="bdr" rowspan="2">
+                                        <p class="f-body-m3">아동 1</p>
+                                      </th>
+                                      <th>
+                                        <p class="f-body-m3">한글 이름</p>
+                                      </th>
+                                      <td>
+                                        <p class="f-body-r3">이민하</p>
+                                      </td>
+                                      <th>
+                                        <p class="f-body-m3">영문 이름</p>
+                                      </th>
+                                      <td>
+                                        <p class="f-body-r3">LEE MINHA</p>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <th>
+                                        <p class="f-body-m3">생년월일</p>
+                                      </th>
+                                      <td>
+                                        <p class="f-body-r3">2020-05-01</p>
+                                      </td>
+                                      <th>
+                                        <p class="f-body-m3">만 나이</p>
+                                      </th>
+                                      <td>
+                                        <p class="f-body-r3">만 3세</p>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <th class="bdr" rowspan="2">
+                                        <p class="f-body-m3">아동 2</p>
+                                      </th>
+                                      <th>
+                                        <p class="f-body-m3">한글 이름</p>
+                                      </th>
+                                      <td>
+                                        <p class="f-body-r3">이민준</p>
+                                      </td>
+                                      <th>
+                                        <p class="f-body-m3">영문 이름</p>
+                                      </th>
+                                      <td>
+                                        <p class="f-body-r3">LEE MINJUN</p>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <th>
+                                        <p class="f-body-m3">생년월일</p>
+                                      </th>
+                                      <td>
+                                        <p class="f-body-r3">2010-02-08</p>
+                                      </td>
+                                      <th>
+                                        <p class="f-body-m3">만 나이</p>
+                                      </th>
+                                      <td>
+                                        <p class="f-body-r3">만 14세</p>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- 특별 요청사항 -->
+                          <div class="cont-box">
+                            <p class="f-body-b1">특별 요청사항</p>
+                            <div class="form-table green-bg">
+                              <div class="table-wrap">
+                                <table class="basic-table">
+                                  <caption>특별 요청사항</caption>
+                                  <colgroup>
+                                    <col style="width: 160px;">
+                                    <col style="width: 348px;">
+                                    <col style="width: 160px;">
+                                    <col style="width: 348px;">
+                                  </colgroup>
+                                  <tbody>
+                                    <tr>
+                                      <th>
+                                        <p class="f-body-m3">특별 요청사항<span class="red-txt">*</span></p>
+                                      </th>
+                                      <td>
+                                        <p class="f-body-r3">2BED, adjacent room, late check-in</p>
+                                      </td>
+                                      <th>
+                                        <p class="f-body-m3">체크인 시간</p>
+                                      </th>
+                                      <td>
+                                        <p class="f-body-r3">21:00</p>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <th>
+                                        <p class="f-body-m3">추가 요청사항<span class="red-txt">*</span></p>
+                                      </th>
+                                      <td colspan="3">
+                                        <p class="f-body-r3">Please assign me to the same floor.</p>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- 가격 정보 -->
+                          <div class="cont-box">
+                            <p class="f-body-b1">가격 정보</p>
+                            <div class="form-table green-bg border">
+                              <div class="table-wrap">
+                                <table class="basic-table">
+                                  <caption>가격 정보</caption>
+                                  <colgroup>
+                                    <col style="width: 33%;">
+                                    <col style="width: 34%;">
+                                    <col style="width: 33%;">
+                                  </colgroup>
+                                  <thead>
+                                    <tr>
+                                      <th>
+                                        <p class="f-body-m3">총 요금</p>
+                                      </th>
+                                      <th>
+                                        <p class="f-body-m3">패널티</p>
+                                      </th>
+                                      <th>
+                                        <p class="f-body-m3">환불 금액</p>
+                                      </th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td>
+                                        <!-- 2024-12-06 환종이 외화인 경우, 하단에 원화 표시 -->
+                                        <!-- @ 환종이 외화인 경우, 하단에 원화 표시 -->
+                                        <p class="f-body-r3">
+                                          3,065,268 USD
+                                          <span class="krw">3,065,268 원</span>
+                                        </p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">-</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">-</p>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- 결제 정보 -->
+                          <div class="cont-box">
+                            <p class="f-body-b1">결제 정보</p>
+                            <div class="form-table green-bg border">
+                              <div class="table-wrap">
+                                <table class="basic-table">
+                                  <caption>결제 정보</caption>
+                                  <colgroup>
+                                    <col style="width: 120px;">
+                                    <col style="width: 146px;">
+                                    <col style="width: 150px;">
+                                    <col style="width: 150px;">
+                                    <col style="width: 150px;">
+                                    <col style="width: 150px;">
+                                    <col style="width: 150px;">
+                                  </colgroup>
+                                  <thead>
+                                    <tr>
+                                      <th>
+                                        <p class="f-body-m3">결제상태</p>
+                                      </th>
+                                      <th>
+                                        <p class="f-body-m3">결제수단</p>
+                                      </th>
+                                      <th>
+                                        <p class="f-body-m3">총 요금/환불 금액</p>
+                                      </th>
+                                      <th>
+                                        <p class="f-body-m3">결제한 금액</p>
+                                      </th>
+                                      <th>
+                                        <p class="f-body-m3">잔액</p>
+                                      </th>
+                                      <th>
+                                        <p class="f-body-m3">요청일시</p>
+                                      </th>
+                                      <th>
+                                        <p class="f-body-m3">처리일시</p>
+                                      </th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td>
+                                        <p class="f-body-r3">결제취소</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">-</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3 ta-right">-3,065,268 원</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3 ta-right">-3,065,268 원</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3 ta-right">0 원</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">2024-01-02 13:00</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">2024-01-02 13:00</p>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <p class="f-body-r3">결제완료</p>
+                                      </td>
+                                      <td>
+                                        <div class="payment-method">
+                                          <p class="f-body-r3">신용카드</p>
+                                          <a href="javascript:" class="btn-border-square gray"><span>영수증</span></a>
+                                        </div>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3 ta-right">-3,065,268 원</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3 ta-right">-3,065,268 원</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3 ta-right">0 원</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">2024-01-02 13:00</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">2024-01-02 13:00</p>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                            <!-- 결제 정보가 없을 때 -->
+                            <div class="form-table green-bg border">
+                              <div class="table-wrap">
+                                <table class="basic-table">
+                                  <caption>결제 정보</caption>
+                                  <colgroup>
+                                    <col style="width: 120px;">
+                                    <col style="width: 146px;">
+                                    <col style="width: 150px;">
+                                    <col style="width: 150px;">
+                                    <col style="width: 150px;">
+                                    <col style="width: 150px;">
+                                    <col style="width: 150px;">
+                                  </colgroup>
+                                  <thead>
+                                    <tr>
+                                      <th>
+                                        <p class="f-body-m3">결제상태</p>
+                                      </th>
+                                      <th>
+                                        <p class="f-body-m3">결제수단</p>
+                                      </th>
+                                      <th>
+                                        <p class="f-body-m3">총 요금/환불 금액</p>
+                                      </th>
+                                      <th>
+                                        <p class="f-body-m3">결제한 금액</p>
+                                      </th>
+                                      <th>
+                                        <p class="f-body-m3">잔액</p>
+                                      </th>
+                                      <th>
+                                        <p class="f-body-m3">요청일시</p>
+                                      </th>
+                                      <th>
+                                        <p class="f-body-m3">처리일시</p>
+                                      </th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td colspan="7">
+                                        <div class="no-data">
+                                          <p class="f-body-m2">※ 등록된 결제정보가 없습니다.</p>
+                                        </div>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- 예약상태 변경이력 -->
+                          <div class="cont-box">
+                            <button type="button" class="table-acco-btn"><span class="f-body-b1">예약상태 변경이력</span></button>
+                            <div class="form-table green-bg border">
+                              <div class="table-wrap">
+                                <table class="basic-table">
+                                  <caption>예약상태 변경이력</caption>
+                                  <colgroup>
+                                    <col style="width: 7%;">
+                                    <col style="width: 31%;">
+                                    <col style="width: 31%;">
+                                    <col style="width: 31%;">
+                                  </colgroup>
+                                  <thead>
+                                    <tr>
+                                      <th>
+                                        <p class="f-body-m3">번호</p>
+                                      </th>
+                                      <th>
+                                        <p class="f-body-m3">변경 전</p>
+                                      </th>
+                                      <th>
+                                        <p class="f-body-m3">변경 후</p>
+                                      </th>
+                                      <th>
+                                        <p class="f-body-m3">변경일시</p>
+                                      </th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td>
+                                        <p class="f-body-r3">7</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">-</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">예약대기, 결제대기</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">2024-09-06 14:03</p>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <p class="f-body-r3">6</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">-</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">예약확정, 결제완료</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">2024-09-06 14:03</p>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <p class="f-body-r3">5</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">예약확정, 미결제</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">예약대기, 결제대기</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">2024-09-06 14:03</p>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <p class="f-body-r3">4</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">예약확정, 결제대기</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">예약대기, 결제대기</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">2024-09-06 14:03</p>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <p class="f-body-r3">3</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">예약대기, 미결제</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">예약대기, 결제대기</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">2024-09-06 14:03</p>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <p class="f-body-r3">2</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">-</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">예약대기, 결제대기</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">2024-09-06 14:03</p>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <p class="f-body-r3">1</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">-</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">예약대기, 결제대기</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">2024-09-06 14:03</p>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="acco-list">
+                        <a href="javascript:" class="acco-tit">
+                          <div class="left">
+                            <div class="form-checkbox no-label">
+                              <input type="checkbox" id="reserve-chk2" name="">
+                              <label for="reserve-chk2"><span></span></label>
+                            </div>
+                            <div class="info">
+                              <p class="f-body-b2">예약번호</p>
+                              <p class="f-body-m2 green-txt">TR24061500123-2</p>
+                            </div>
+                            <div class="info">
+                              <p class="f-body-b2">호텔명</p>
+                              <p class="f-body-m2">Rihga Royal Hotel Tokyo</p>
+                            </div>
+                          </div>
+                          <div class="right">
+                            <div class="label-div">
+                              <!--
+                                blue : 결제취소, 부분결제, 미결제, 예약확정, 결제완료
+                                gray : 취소대기, 예약취소, 결제실패, 예약불가, 에러(예약실패), 에러(예약취소 실패)
+                                red : 취소 위약금
+                              -->
+                              <p class="txt-label gray">[예약취소]</p>
+                              <p class="txt-label gray">[에러(예약취소 실패)]</p>
+                            </div>
+                          </div>
+                        </a>
+                        <div class="acco-con">
+                          <!-- 호텔 및 객실 정보 -->
+                          <div class="cont-box">
+                            <p class="f-body-b1">호텔 및 객실 정보</p>
+                            <div class="top-hotel-info">
+                              <a href="javascript:" class="link-txt f-t3"><span>Four Seasons Hotel Bangkok at Chao Phraya River</span></a>
+                              <p class="f-body-r3">포 시즌스 호텔 방콕 앳 차오 프라야 리버</p>
+                              <div class="form-table green-bg">
+                                <div class="table-wrap">
+                                  <table class="basic-table">
+                                    <caption>특별 요청사항</caption>
+                                    <colgroup>
+                                      <col style="width: 160px;">
+                                      <col style="width: 348px;">
+                                      <col style="width: 160px;">
+                                      <col style="width: 348px;">
+                                    </colgroup>
+                                    <tbody>
+                                      <tr>
+                                        <th>
+                                          <p class="f-body-m3">체크인/체크아웃</p>
+                                        </th>
+                                        <td>
+                                          <p class="f-body-r3">2024-11-22(금) ~ 2024-11-25(월)</p>
+                                        </td>
+                                        <th>
+                                          <p class="f-body-m3">박수</p>
+                                        </th>
+                                        <td>
+                                          <p class="f-body-r3">3박</p>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <th>
+                                          <p class="f-body-m3">객실명</p>
+                                        </th>
+                                        <td colspan="3">
+                                          <p class="f-body-r3">Deluxe Room, 1 King Bed(palm court)</p>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <th>
+                                          <p class="f-body-m3">객실 수</p>
+                                        </th>
+                                        <td>
+                                          <p class="f-body-r3">2개</p>
+                                        </td>
+                                        <th>
+                                          <p class="f-body-m3">인원</p>
+                                        </th>
+                                        <td>
+                                          <p class="f-body-r3">성인 4명, 아동 2명</p>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <th>
+                                          <p class="f-body-m3">조식포함여부</p>
+                                        </th>
+                                        <td>
+                                          <p class="f-body-r3">조식 포함(뷔페식사)</p>
+                                        </td>
+                                        <th>
+                                          <p class="f-body-m3">특전 여부</p>
+                                        </th>
+                                        <td>
+                                          <p class="f-body-r3">특전 포함(체크인 시 무료로 제공되는 객실 업그레이드가 포합됩니다.)</p>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <th>
+                                          <p class="f-body-m3">취소마감일</p>
+                                        </th>
+                                        <td>
+                                          <a href="javascript:" class="link-txt">2024-09-30</a>
+                                        </td>
+                                        <th>
+                                          <p class="f-body-m3">예약일</p>
+                                        </th>
+                                        <td>
+                                          <p class="f-body-r3">2024-09-09(금)</p>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- 투숙객 정보 -->
+                          <div class="cont-box">
+                            <p class="f-body-b1">투숙객 정보</p>
+                            <div class="form-table green-bg border">
+                              <div class="table-wrap">
+                                <table class="basic-table">
+                                  <caption>Remark</caption>
+                                  <colgroup>
+                                    <col style="width: 100px;">
+                                    <col style="width: 120px;">
+                                    <col style="width: 338px;">
+                                    <col style="width: 120px;">
+                                    <col style="width: 338px;">
+                                  </colgroup>
+                                  <thead>
+                                    <tr>
+                                      <th colspan="5" class="bdb">
+                                        <div class="guest-info">
+                                          <p class="f-body-b3">객실 1 <span class="f-body-m3">(성인 2명, 아동 0명)</span></p>
+                                          <p class="f-body-m3">RH12345678</p>
+                                        </div>
+                                      </th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <th class="bdr" rowspan="2">
+                                        <p class="f-body-m3">성인 1</p>
+                                      </th>
+                                      <th>
+                                        <p class="f-body-m3">한글 이름</p>
+                                      </th>
+                                      <td>
+                                        <p class="f-body-r3">박민수</p>
+                                      </td>
+                                      <th>
+                                        <p class="f-body-m3">영문 이름</p>
+                                      </th>
+                                      <td>
+                                        <p class="f-body-r3">PARK MINSOO</p>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <th>
+                                        <p class="f-body-m3">생년월일</p>
+                                      </th>
+                                      <td>
+                                        <p class="f-body-r3">1975-10-07</p>
+                                      </td>
+                                      <th>
+                                        <p class="f-body-m3">이메일</p>
+                                      </th>
+                                      <td>
+                                        <p class="f-body-r3">mspark123403@hdec.kr</p>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <th class="bdr" rowspan="2">
+                                        <p class="f-body-m3">성인 2</p>
+                                      </th>
+                                      <th>
+                                        <p class="f-body-m3">한글 이름</p>
+                                      </th>
+                                      <td>
+                                        <p class="f-body-r3">김철수</p>
+                                      </td>
+                                      <th>
+                                        <p class="f-body-m3">영문 이름</p>
+                                      </th>
+                                      <td>
+                                        <p class="f-body-r3">KIM CHULSOO</p>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <th>
+                                        <p class="f-body-m3">생년월일</p>
+                                      </th>
+                                      <td colspan="3">
+                                        <p class="f-body-r3">1975-12-12</p>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                            <div class="form-table green-bg border">
+                              <div class="table-wrap">
+                                <table class="basic-table">
+                                  <caption>투숙객 정보</caption>
+                                  <colgroup>
+                                    <col style="width: 100px;">
+                                    <col style="width: 120px;">
+                                    <col style="width: 338px;">
+                                    <col style="width: 120px;">
+                                    <col style="width: 338px;">
+                                  </colgroup>
+                                  <thead>
+                                    <tr>
+                                      <th colspan="5" class="bdb">
+                                        <div class="guest-info">
+                                          <p class="f-body-b3">객실 1 <span class="f-body-m3">(성인 1명, 아동 2명)</span></p>
+                                          <p class="f-body-m3">-</p>
+                                        </div>
+                                      </th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <th class="bdr" rowspan="2">
+                                        <p class="f-body-m3">성인 1</p>
+                                      </th>
+                                      <th>
+                                        <p class="f-body-m3">한글 이름</p>
+                                      </th>
+                                      <td>
+                                        <p class="f-body-r3">이지호</p>
+                                      </td>
+                                      <th>
+                                        <p class="f-body-m3">영문 이름</p>
+                                      </th>
+                                      <td>
+                                        <p class="f-body-r3">LEE JIHO</p>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <th>
+                                        <p class="f-body-m3">생년월일</p>
+                                      </th>
+                                      <td>
+                                        <p class="f-body-r3">1980-01-05</p>
+                                      </td>
+                                      <th>
+                                        <p class="f-body-m3">이메일</p>
+                                      </th>
+                                      <td>
+                                        <p class="f-body-r3">jiho@daiwahouse.co.jp</p>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <th class="bdr" rowspan="2">
+                                        <p class="f-body-m3">아동 1</p>
+                                      </th>
+                                      <th>
+                                        <p class="f-body-m3">한글 이름</p>
+                                      </th>
+                                      <td>
+                                        <p class="f-body-r3">이민하</p>
+                                      </td>
+                                      <th>
+                                        <p class="f-body-m3">영문 이름</p>
+                                      </th>
+                                      <td>
+                                        <p class="f-body-r3">LEE MINHA</p>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <th>
+                                        <p class="f-body-m3">생년월일</p>
+                                      </th>
+                                      <td>
+                                        <p class="f-body-r3">2020-05-01</p>
+                                      </td>
+                                      <th>
+                                        <p class="f-body-m3">만 나이</p>
+                                      </th>
+                                      <td>
+                                        <p class="f-body-r3">만 3세</p>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <th class="bdr" rowspan="2">
+                                        <p class="f-body-m3">아동 2</p>
+                                      </th>
+                                      <th>
+                                        <p class="f-body-m3">한글 이름</p>
+                                      </th>
+                                      <td>
+                                        <p class="f-body-r3">이민준</p>
+                                      </td>
+                                      <th>
+                                        <p class="f-body-m3">영문 이름</p>
+                                      </th>
+                                      <td>
+                                        <p class="f-body-r3">LEE MINJUN</p>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <th>
+                                        <p class="f-body-m3">생년월일</p>
+                                      </th>
+                                      <td>
+                                        <p class="f-body-r3">2010-02-08</p>
+                                      </td>
+                                      <th>
+                                        <p class="f-body-m3">만 나이</p>
+                                      </th>
+                                      <td>
+                                        <p class="f-body-r3">만 14세</p>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- 특별 요청사항 -->
+                          <div class="cont-box">
+                            <p class="f-body-b1">특별 요청사항</p>
+                            <div class="form-table green-bg">
+                              <div class="table-wrap">
+                                <table class="basic-table">
+                                  <caption>특별 요청사항</caption>
+                                  <colgroup>
+                                    <col style="width: 160px;">
+                                    <col style="width: 348px;">
+                                    <col style="width: 160px;">
+                                    <col style="width: 348px;">
+                                  </colgroup>
+                                  <tbody>
+                                    <tr>
+                                      <th>
+                                        <p class="f-body-m3">특별 요청사항<span class="red-txt">*</span></p>
+                                      </th>
+                                      <td>
+                                        <p class="f-body-r3">2BED, adjacent room, late check-in</p>
+                                      </td>
+                                      <th>
+                                        <p class="f-body-m3">체크인 시간</p>
+                                      </th>
+                                      <td>
+                                        <p class="f-body-r3">21:00</p>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <th>
+                                        <p class="f-body-m3">추가 요청사항<span class="red-txt">*</span></p>
+                                      </th>
+                                      <td colspan="3">
+                                        <p class="f-body-r3">Please assign me to the same floor.</p>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- 가격 정보 -->
+                          <div class="cont-box">
+                            <p class="f-body-b1">가격 정보</p>
+                            <div class="form-table green-bg border">
+                              <div class="table-wrap">
+                                <table class="basic-table">
+                                  <caption>가격 정보</caption>
+                                  <colgroup>
+                                    <col style="width: 33%;">
+                                    <col style="width: 34%;">
+                                    <col style="width: 33%;">
+                                  </colgroup>
+                                  <thead>
+                                    <tr>
+                                      <th>
+                                        <p class="f-body-m3">총 요금</p>
+                                      </th>
+                                      <th>
+                                        <p class="f-body-m3">패널티</p>
+                                      </th>
+                                      <th>
+                                        <p class="f-body-m3">환불 금액</p>
+                                      </th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td>
+                                        <!-- @ 환종이 외화인 경우, 하단에 원화 표시 -->
+                                        <p class="f-body-r3">3,065,268 원</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">-</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">-</p>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- 결제 정보 -->
+                          <div class="cont-box">
+                            <p class="f-body-b1">결제 정보</p>
+                            <div class="form-table green-bg border">
+                              <div class="table-wrap">
+                                <table class="basic-table">
+                                  <caption>결제 정보</caption>
+                                  <colgroup>
+                                    <col style="width: 120px;">
+                                    <col style="width: 146px;">
+                                    <col style="width: 150px;">
+                                    <col style="width: 150px;">
+                                    <col style="width: 150px;">
+                                    <col style="width: 150px;">
+                                    <col style="width: 150px;">
+                                  </colgroup>
+                                  <thead>
+                                    <tr>
+                                      <th>
+                                        <p class="f-body-m3">결제상태</p>
+                                      </th>
+                                      <th>
+                                        <p class="f-body-m3">결제수단</p>
+                                      </th>
+                                      <th>
+                                        <p class="f-body-m3">총 요금/환불 금액</p>
+                                      </th>
+                                      <th>
+                                        <p class="f-body-m3">결제한 금액</p>
+                                      </th>
+                                      <th>
+                                        <p class="f-body-m3">잔액</p>
+                                      </th>
+                                      <th>
+                                        <p class="f-body-m3">요청일시</p>
+                                      </th>
+                                      <th>
+                                        <p class="f-body-m3">처리일시</p>
+                                      </th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td>
+                                        <p class="f-body-r3">결제취소</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">-</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3 ta-right">-3,065,268 원</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3 ta-right">-3,065,268 원</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3 ta-right">0 원</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">2024-01-02 13:00</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">2024-01-02 13:00</p>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <p class="f-body-r3">결제완료</p>
+                                      </td>
+                                      <td>
+                                        <div class="payment-method">
+                                          <p class="f-body-r3">신용카드</p>
+                                          <a href="javascript:" class="btn-border-square gray"><span>영수증</span></a>
+                                        </div>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3 ta-right">-3,065,268 원</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3 ta-right">-3,065,268 원</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3 ta-right">0 원</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">2024-01-02 13:00</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">2024-01-02 13:00</p>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- 예약상태 변경이력 -->
+                          <div class="cont-box">
+                            <button type="button" class="table-acco-btn"><span class="f-body-b1">예약상태 변경이력</span></button>
+                            <div class="form-table green-bg border">
+                              <div class="table-wrap">
+                                <table class="basic-table">
+                                  <caption>예약상태 변경이력</caption>
+                                  <colgroup>
+                                    <col style="width: 7%;">
+                                    <col style="width: 31%;">
+                                    <col style="width: 31%;">
+                                    <col style="width: 31%;">
+                                  </colgroup>
+                                  <thead>
+                                    <tr>
+                                      <th>
+                                        <p class="f-body-m3">번호</p>
+                                      </th>
+                                      <th>
+                                        <p class="f-body-m3">변경 전</p>
+                                      </th>
+                                      <th>
+                                        <p class="f-body-m3">변경 후</p>
+                                      </th>
+                                      <th>
+                                        <p class="f-body-m3">변경일시</p>
+                                      </th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td>
+                                        <p class="f-body-r3">7</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">-</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">예약대기, 결제대기</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">2024-09-06 14:03</p>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <p class="f-body-r3">6</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">-</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">예약확정, 결제완료</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">2024-09-06 14:03</p>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <p class="f-body-r3">5</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">예약확정, 미결제</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">예약대기, 결제대기</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">2024-09-06 14:03</p>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <p class="f-body-r3">4</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">예약확정, 결제대기</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">예약대기, 결제대기</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">2024-09-06 14:03</p>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <p class="f-body-r3">3</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">예약대기, 미결제</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">예약대기, 결제대기</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">2024-09-06 14:03</p>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <p class="f-body-r3">2</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">-</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">예약대기, 결제대기</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">2024-09-06 14:03</p>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <p class="f-body-r3">1</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">-</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">예약대기, 결제대기</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">2024-09-06 14:03</p>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="acco-list">
+                        <a href="javascript:" class="acco-tit">
+                          <div class="left">
+                            <div class="form-checkbox no-label">
+                              <input type="checkbox" id="reserve-chk3" name="">
+                              <label for="reserve-chk3"><span></span></label>
+                            </div>
+                            <div class="info">
+                              <p class="f-body-b2">예약번호</p>
+                              <p class="f-body-m2 green-txt">TR24061500123-3</p>
+                            </div>
+                            <div class="info">
+                              <p class="f-body-b2">호텔명</p>
+                              <p class="f-body-m2">Rihga Royal Hotel Tokyo</p>
+                            </div>
+                          </div>
+                          <div class="right">
+                            <div class="label-div">
+                              <!--
+                                blue : 결제취소, 부분결제, 미결제, 예약확정, 결제완료
+                                gray : 취소대기, 예약취소, 결제실패, 예약불가, 에러(예약실패), 에러(예약취소 실패)
+                                red : 취소 위약금
+                              -->
+                              <p class="txt-label blue">[예약확정]</p>
+                              <p class="txt-label blue">[부분결제]</p>
+                            </div>
+                          </div>
+                        </a>
+                        <div class="acco-con">
+                          <!-- 호텔 및 객실 정보 -->
+                          <div class="cont-box">
+                            <p class="f-body-b1">호텔 및 객실 정보</p>
+                            <div class="top-hotel-info">
+                              <a href="javascript:" class="link-txt f-t3"><span>Four Seasons Hotel Bangkok at Chao Phraya River</span></a>
+                              <p class="f-body-r3">포 시즌스 호텔 방콕 앳 차오 프라야 리버</p>
+                              <div class="form-table green-bg">
+                                <div class="table-wrap">
+                                  <table class="basic-table">
+                                    <caption>특별 요청사항</caption>
+                                    <colgroup>
+                                      <col style="width: 160px;">
+                                      <col style="width: 348px;">
+                                      <col style="width: 160px;">
+                                      <col style="width: 348px;">
+                                    </colgroup>
+                                    <tbody>
+                                      <tr>
+                                        <th>
+                                          <p class="f-body-m3">체크인/체크아웃</p>
+                                        </th>
+                                        <td>
+                                          <p class="f-body-r3">2024-11-22(금) ~ 2024-11-25(월)</p>
+                                        </td>
+                                        <th>
+                                          <p class="f-body-m3">박수</p>
+                                        </th>
+                                        <td>
+                                          <p class="f-body-r3">3박</p>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <th>
+                                          <p class="f-body-m3">객실명</p>
+                                        </th>
+                                        <td colspan="3">
+                                          <p class="f-body-r3">Deluxe Room, 1 King Bed(palm court)</p>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <th>
+                                          <p class="f-body-m3">객실 수</p>
+                                        </th>
+                                        <td>
+                                          <p class="f-body-r3">2개</p>
+                                        </td>
+                                        <th>
+                                          <p class="f-body-m3">인원</p>
+                                        </th>
+                                        <td>
+                                          <p class="f-body-r3">성인 4명, 아동 2명</p>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <th>
+                                          <p class="f-body-m3">조식포함여부</p>
+                                        </th>
+                                        <td>
+                                          <p class="f-body-r3">조식 포함(뷔페식사)</p>
+                                        </td>
+                                        <th>
+                                          <p class="f-body-m3">특전 여부</p>
+                                        </th>
+                                        <td>
+                                          <p class="f-body-r3">특전 포함(체크인 시 무료로 제공되는 객실 업그레이드가 포합됩니다.)</p>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <th>
+                                          <p class="f-body-m3">취소마감일</p>
+                                        </th>
+                                        <td>
+                                          <a href="javascript:" class="link-txt">2024-09-30</a>
+                                        </td>
+                                        <th>
+                                          <p class="f-body-m3">예약일</p>
+                                        </th>
+                                        <td>
+                                          <p class="f-body-r3">2024-09-09(금)</p>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- 투숙객 정보 -->
+                          <div class="cont-box">
+                            <p class="f-body-b1">투숙객 정보</p>
+                            <div class="form-table green-bg border">
+                              <div class="table-wrap">
+                                <table class="basic-table">
+                                  <caption>Remark</caption>
+                                  <colgroup>
+                                    <col style="width: 100px;">
+                                    <col style="width: 120px;">
+                                    <col style="width: 338px;">
+                                    <col style="width: 120px;">
+                                    <col style="width: 338px;">
+                                  </colgroup>
+                                  <thead>
+                                    <tr>
+                                      <th colspan="5" class="bdb">
+                                        <div class="guest-info">
+                                          <p class="f-body-b3">객실 1 <span class="f-body-m3">(성인 2명, 아동 0명)</span></p>
+                                          <p class="f-body-m3">RH12345678</p>
+                                        </div>
+                                      </th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <th class="bdr" rowspan="2">
+                                        <p class="f-body-m3">성인 1</p>
+                                      </th>
+                                      <th>
+                                        <p class="f-body-m3">한글 이름</p>
+                                      </th>
+                                      <td>
+                                        <p class="f-body-r3">박민수</p>
+                                      </td>
+                                      <th>
+                                        <p class="f-body-m3">영문 이름</p>
+                                      </th>
+                                      <td>
+                                        <p class="f-body-r3">PARK MINSOO</p>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <th>
+                                        <p class="f-body-m3">생년월일</p>
+                                      </th>
+                                      <td>
+                                        <p class="f-body-r3">1975-10-07</p>
+                                      </td>
+                                      <th>
+                                        <p class="f-body-m3">이메일</p>
+                                      </th>
+                                      <td>
+                                        <p class="f-body-r3">mspark123403@hdec.kr</p>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <th class="bdr" rowspan="2">
+                                        <p class="f-body-m3">성인 2</p>
+                                      </th>
+                                      <th>
+                                        <p class="f-body-m3">한글 이름</p>
+                                      </th>
+                                      <td>
+                                        <p class="f-body-r3">김철수</p>
+                                      </td>
+                                      <th>
+                                        <p class="f-body-m3">영문 이름</p>
+                                      </th>
+                                      <td>
+                                        <p class="f-body-r3">KIM CHULSOO</p>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <th>
+                                        <p class="f-body-m3">생년월일</p>
+                                      </th>
+                                      <td colspan="3">
+                                        <p class="f-body-r3">1975-12-12</p>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                            <div class="form-table green-bg border">
+                              <div class="table-wrap">
+                                <table class="basic-table">
+                                  <caption>투숙객 정보</caption>
+                                  <colgroup>
+                                    <col style="width: 100px;">
+                                    <col style="width: 120px;">
+                                    <col style="width: 338px;">
+                                    <col style="width: 120px;">
+                                    <col style="width: 338px;">
+                                  </colgroup>
+                                  <thead>
+                                    <tr>
+                                      <th colspan="5" class="bdb">
+                                        <div class="guest-info">
+                                          <p class="f-body-b3">객실 1 <span class="f-body-m3">(성인 1명, 아동 2명)</span></p>
+                                          <p class="f-body-m3">-</p>
+                                        </div>
+                                      </th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <th class="bdr" rowspan="2">
+                                        <p class="f-body-m3">성인 1</p>
+                                      </th>
+                                      <th>
+                                        <p class="f-body-m3">한글 이름</p>
+                                      </th>
+                                      <td>
+                                        <p class="f-body-r3">이지호</p>
+                                      </td>
+                                      <th>
+                                        <p class="f-body-m3">영문 이름</p>
+                                      </th>
+                                      <td>
+                                        <p class="f-body-r3">LEE JIHO</p>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <th>
+                                        <p class="f-body-m3">생년월일</p>
+                                      </th>
+                                      <td>
+                                        <p class="f-body-r3">1980-01-05</p>
+                                      </td>
+                                      <th>
+                                        <p class="f-body-m3">이메일</p>
+                                      </th>
+                                      <td>
+                                        <p class="f-body-r3">jiho@daiwahouse.co.jp</p>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <th class="bdr" rowspan="2">
+                                        <p class="f-body-m3">아동 1</p>
+                                      </th>
+                                      <th>
+                                        <p class="f-body-m3">한글 이름</p>
+                                      </th>
+                                      <td>
+                                        <p class="f-body-r3">이민하</p>
+                                      </td>
+                                      <th>
+                                        <p class="f-body-m3">영문 이름</p>
+                                      </th>
+                                      <td>
+                                        <p class="f-body-r3">LEE MINHA</p>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <th>
+                                        <p class="f-body-m3">생년월일</p>
+                                      </th>
+                                      <td>
+                                        <p class="f-body-r3">2020-05-01</p>
+                                      </td>
+                                      <th>
+                                        <p class="f-body-m3">만 나이</p>
+                                      </th>
+                                      <td>
+                                        <p class="f-body-r3">만 3세</p>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <th class="bdr" rowspan="2">
+                                        <p class="f-body-m3">아동 2</p>
+                                      </th>
+                                      <th>
+                                        <p class="f-body-m3">한글 이름</p>
+                                      </th>
+                                      <td>
+                                        <p class="f-body-r3">이민준</p>
+                                      </td>
+                                      <th>
+                                        <p class="f-body-m3">영문 이름</p>
+                                      </th>
+                                      <td>
+                                        <p class="f-body-r3">LEE MINJUN</p>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <th>
+                                        <p class="f-body-m3">생년월일</p>
+                                      </th>
+                                      <td>
+                                        <p class="f-body-r3">2010-02-08</p>
+                                      </td>
+                                      <th>
+                                        <p class="f-body-m3">만 나이</p>
+                                      </th>
+                                      <td>
+                                        <p class="f-body-r3">만 14세</p>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- 특별 요청사항 -->
+                          <div class="cont-box">
+                            <p class="f-body-b1">특별 요청사항</p>
+                            <div class="form-table green-bg">
+                              <div class="table-wrap">
+                                <table class="basic-table">
+                                  <caption>특별 요청사항</caption>
+                                  <colgroup>
+                                    <col style="width: 160px;">
+                                    <col style="width: 348px;">
+                                    <col style="width: 160px;">
+                                    <col style="width: 348px;">
+                                  </colgroup>
+                                  <tbody>
+                                    <tr>
+                                      <th>
+                                        <p class="f-body-m3">특별 요청사항<span class="red-txt">*</span></p>
+                                      </th>
+                                      <td>
+                                        <p class="f-body-r3">2BED, adjacent room, late check-in</p>
+                                      </td>
+                                      <th>
+                                        <p class="f-body-m3">체크인 시간</p>
+                                      </th>
+                                      <td>
+                                        <p class="f-body-r3">21:00</p>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <th>
+                                        <p class="f-body-m3">추가 요청사항<span class="red-txt">*</span></p>
+                                      </th>
+                                      <td colspan="3">
+                                        <p class="f-body-r3">Please assign me to the same floor.</p>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- 가격 정보 -->
+                          <div class="cont-box">
+                            <p class="f-body-b1">가격 정보</p>
+                            <div class="form-table green-bg border">
+                              <div class="table-wrap">
+                                <table class="basic-table">
+                                  <caption>가격 정보</caption>
+                                  <colgroup>
+                                    <col style="width: 33%;">
+                                    <col style="width: 34%;">
+                                    <col style="width: 33%;">
+                                  </colgroup>
+                                  <thead>
+                                    <tr>
+                                      <th>
+                                        <p class="f-body-m3">총 요금</p>
+                                      </th>
+                                      <th>
+                                        <p class="f-body-m3">패널티</p>
+                                      </th>
+                                      <th>
+                                        <p class="f-body-m3">환불 금액</p>
+                                      </th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td>
+                                        <!-- @ 환종이 외화인 경우, 하단에 원화 표시 -->
+                                        <p class="f-body-r3">3,065,268 원</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">-</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">-</p>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- 결제 정보 -->
+                          <div class="cont-box">
+                            <p class="f-body-b1">결제 정보</p>
+                            <div class="form-table green-bg border">
+                              <div class="table-wrap">
+                                <table class="basic-table">
+                                  <caption>결제 정보</caption>
+                                  <colgroup>
+                                    <col style="width: 120px;">
+                                    <col style="width: 146px;">
+                                    <col style="width: 150px;">
+                                    <col style="width: 150px;">
+                                    <col style="width: 150px;">
+                                    <col style="width: 150px;">
+                                    <col style="width: 150px;">
+                                  </colgroup>
+                                  <thead>
+                                    <tr>
+                                      <th>
+                                        <p class="f-body-m3">결제상태</p>
+                                      </th>
+                                      <th>
+                                        <p class="f-body-m3">결제수단</p>
+                                      </th>
+                                      <th>
+                                        <p class="f-body-m3">총 요금/환불 금액</p>
+                                      </th>
+                                      <th>
+                                        <p class="f-body-m3">결제한 금액</p>
+                                      </th>
+                                      <th>
+                                        <p class="f-body-m3">잔액</p>
+                                      </th>
+                                      <th>
+                                        <p class="f-body-m3">요청일시</p>
+                                      </th>
+                                      <th>
+                                        <p class="f-body-m3">처리일시</p>
+                                      </th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td>
+                                        <p class="f-body-r3">결제취소</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">-</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3 ta-right">-3,065,268 원</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3 ta-right">-3,065,268 원</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3 ta-right">0 원</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">2024-01-02 13:00</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">2024-01-02 13:00</p>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <p class="f-body-r3">결제완료</p>
+                                      </td>
+                                      <td>
+                                        <div class="payment-method">
+                                          <p class="f-body-r3">신용카드</p>
+                                          <a href="javascript:" class="btn-border-square gray"><span>영수증</span></a>
+                                        </div>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3 ta-right">-3,065,268 원</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3 ta-right">-3,065,268 원</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3 ta-right">0 원</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">2024-01-02 13:00</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">2024-01-02 13:00</p>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- 예약상태 변경이력 -->
+                          <div class="cont-box">
+                            <button type="button" class="table-acco-btn"><span class="f-body-b1">예약상태 변경이력</span></button>
+                            <div class="form-table green-bg border">
+                              <div class="table-wrap">
+                                <table class="basic-table">
+                                  <caption>예약상태 변경이력</caption>
+                                  <colgroup>
+                                    <col style="width: 7%;">
+                                    <col style="width: 31%;">
+                                    <col style="width: 31%;">
+                                    <col style="width: 31%;">
+                                  </colgroup>
+                                  <thead>
+                                    <tr>
+                                      <th>
+                                        <p class="f-body-m3">번호</p>
+                                      </th>
+                                      <th>
+                                        <p class="f-body-m3">변경 전</p>
+                                      </th>
+                                      <th>
+                                        <p class="f-body-m3">변경 후</p>
+                                      </th>
+                                      <th>
+                                        <p class="f-body-m3">변경일시</p>
+                                      </th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td>
+                                        <p class="f-body-r3">7</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">-</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">예약대기, 결제대기</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">2024-09-06 14:03</p>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <p class="f-body-r3">6</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">-</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">예약확정, 결제완료</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">2024-09-06 14:03</p>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <p class="f-body-r3">5</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">예약확정, 미결제</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">예약대기, 결제대기</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">2024-09-06 14:03</p>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <p class="f-body-r3">4</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">예약확정, 결제대기</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">예약대기, 결제대기</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">2024-09-06 14:03</p>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <p class="f-body-r3">3</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">예약대기, 미결제</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">예약대기, 결제대기</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">2024-09-06 14:03</p>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <p class="f-body-r3">2</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">-</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">예약대기, 결제대기</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">2024-09-06 14:03</p>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <p class="f-body-r3">1</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">-</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">예약대기, 결제대기</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">2024-09-06 14:03</p>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 전체 가격정보 -->
+                <div class="cont-sec">
+                  <div class="tit-wrap">
+                    <p class="f-t2">전체 가격정보</p>
+                  </div>
+                  <div class="form-table green-bg border">
+                    <div class="table-wrap">
+                      <table class="basic-table">
+                        <caption>전체 가격정보</caption>
+                        <colgroup>
+                          <col style="width: 200px;">
+                          <col style="width: 172px;">
+                          <col style="width: 172px;">
+                          <col style="width: 172px;">
+                          <col style="width: 172px;">
+                          <col style="width: 172px;">
+                        </colgroup>
+                        <thead>
+                          <tr>
+                            <th>
+                              <p class="f-body-m3">예약번호</p>
+                            </th>
+                            <th>
+                              <p class="f-body-m3">총 요금/환불 금액</p>
+                            </th>
+                            <th>
+                              <p class="f-body-m3">결제한 금액</p>
+                            </th>
+                            <th>
+                              <p class="f-body-m3">잔액</p>
+                            </th>
+                            <th>
+                              <p class="f-body-m3">패널티</p>
+                            </th>
+                            <th>
+                              <p class="f-body-m3">환불금액</p>
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>
+                              <p class="f-body-r2">TR24090600078-1</p>
+                            </td>
+                            <td class="ta-right">
+                              <p class="f-body-r2">3,065,268 원</p>
+                            </td>
+                            <td class="ta-right">
+                              <p class="f-body-r2">3,065,268 원</p>
+                            </td>
+                            <td class="ta-right">
+                              <p class="f-body-r2">0 원</p>
+                            </td>
+                            <td class="ta-right">
+                              <p class="f-body-r2">-</p>
+                            </td>
+                            <td class="ta-right">
+                              <p class="f-body-r2">3,065,268 원</p>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <p class="f-body-r2">TR24090600078-2</p>
+                            </td>
+                            <td class="ta-right">
+                              <p class="f-body-r2">3,065,268 원</p>
+                            </td>
+                            <td class="ta-right">
+                              <p class="f-body-r2">0 원</p>
+                            </td>
+                            <td class="ta-right">
+                              <p class="f-body-r2">1,500,000 원</p>
+                            </td>
+                            <td class="ta-right">
+                              <p class="f-body-r2">-</p>
+                            </td>
+                            <td class="ta-right">
+                              <p class="f-body-r2">-</p>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <p class="f-body-r2">TR24090600078-3</p>
+                            </td>
+                            <td class="ta-right">
+                              <p class="f-body-r2">3,065,268 원</p>
+                            </td>
+                            <td class="ta-right">
+                              <p class="f-body-r2">3,065,268 원</p>
+                            </td>
+                            <td class="ta-right">
+                              <p class="f-body-r2">500,000 원</p>
+                            </td>
+                            <td class="ta-right">
+                              <p class="f-body-r2">-</p>
+                            </td>
+                            <td class="ta-right">
+                              <p class="f-body-r2">-</p>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <p class="f-body-r2">합계</p>
+                            </td>
+                            <td class="ta-right">
+                              <p class="black-txt f-body-b2">6,565,268 원</p>
+                            </td>
+                            <td class="ta-right">
+                              <p class="black-txt f-body-b2">4,565,268 원</p>
+                            </td>
+                            <td class="ta-right">
+                              <p class="black-txt f-body-b2">2,000,000 원</p>
+                            </td>
+                            <td class="ta-right">
+                              <p class="black-txt f-body-b2">-</p>
+                            </td>
+                            <td class="ta-right">
+                              <p class="black-txt f-body-b2">3,065,268 원</p>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Remark -->
+                <div class="cont-sec">
+                  <div class="tit-wrap">
+                    <p class="f-t2">Remark</p>
+                  </div>
+                  <div class="form-table green-bg border">
+                    <div class="table-wrap">
+                      <table class="basic-table">
+                        <caption>Remark</caption>
+                        <colgroup>
+                          <col style="width: 160px;">
+                          <col style="width: 904px;">
+                        </colgroup>
+                        <thead>
+                          <tr>
+                            <th>
+                              <p class="f-body-m3">등록일</p>
+                            </th>
+                            <th>
+                              <p class="f-body-m3">내용</p>
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>
+                              <p class="f-body-r3">2024-09-09(금)</p>
+                            </td>
+                            <td class="ta-left">
+                              <p class="f-body-r3">현대드림투어 호텔 예약 시스템 계약 만료 10일전 입니다. 담당 부서로 연락바랍니다.</p>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <p class="f-body-r3">2024-09-08(목)</p>
+                            </td>
+                            <td class="ta-left">
+                              <p class="f-body-r3">현대드림투어 호텔 예약 시스템 계약 만료 11일전 입니다. 담당 부서로 연락바랍니다.</p>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 예약 담당자 정보 -->
+                <div class="cont-sec">
+                  <div class="tit-wrap">
+                    <p class="f-t2">예약 담당자 정보</p>
+                  </div>
+                  <div class="form-table green-bg">
+                    <div class="table-wrap">
+                      <table class="basic-table">
+                        <caption>예약 담당자 정보</caption>
+                        <colgroup>
+                          <col style="width: 160px;">
+                          <col style="width: 372px;">
+                          <col style="width: 160px;">
+                          <col style="width: 372px;">
+                        </colgroup>
+                        <tbody>
+                          <tr>
+                            <th>
+                              <p class="f-body-m3">이름</p>
+                            </th>
+                            <td>
+                              <p class="f-body-r3">홍길동</p>
+                            </td>
+                            <th>
+                              <p class="f-body-m3">휴대폰</p>
+                            </th>
+                            <td>
+                              <p class="f-body-r3">01012345678</p>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>
+                              <p class="f-body-m3">이메일</p>
+                            </th>
+                            <td>
+                              <p class="f-body-r3">eztour@tour.com</p>
+                            </td>
+                            <th>
+                              <p class="f-body-m3">직통 전화번호</p>
+                            </th>
+                            <td>
+                              <p class="f-body-r3">0212345678</p>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="btn-wrap res">
+                  <div class="left">
+                    <a href="javascript:" class="btn-border-square gray"><span>입금 확인 요청</span></a>
+                    <a href="javascript:" class="btn-border-square gray"><span>바우처</span></a>
+                    <a href="javascript:" class="btn-border-square gray"><span>여행사 상세 인보이스</span></a>
+                    <a href="javascript:" class="btn-border-square gray"><span>여행사 요약 인보이스</span></a>
+                    <a href="javascript:" class="btn-border-square gray"><span>고객 인보이스</span></a>
+                  </div>
+                  <div class="right">
+                    <a href="javascript:" class="btn-border-square green"><span>예약취소</span></a>
+                    <a href="javascript:" class="btn-border-square green"><span>결제하기</span></a>
+                    <a href="javascript:" class="btn-border-square green"><span>예약추가</span></a>
+                  </div>
+                </div>
+
+                <div class="btn-wrap">
+                  <a href="javascript:" class="btn-border-round gray"><span>목록</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer></footer>
+
+      <!-- 우측 하단 퀵메뉴 -->
+      <div class="quick-fixed-area">
+        <div class="quick-area">
+          <a href="javascript:" class="recent-srch" onClick="openPopup('.recent-srch-pop', this)"></a>
+          <a href="javascript:" class="like" onClick="openPopup('.hotel-like-pop', this)"></a>
+          <a href="javascript:" class="reserve"></a>
+        </div>
+        <button type="button" class="btn-top" title="상단으로 이동"></button>
+      </div>
+    </div>
+	</body>
+</html>

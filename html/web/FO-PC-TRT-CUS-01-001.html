@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>현대드림투어 호텔 HUB</title>
+    <link rel="shortcut icon" href="/common/web/images/favicon.ico" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no,maximum-scale=1.0,minimum-scale=1.0,target-densitydpi=medium-dpi" />
+		<meta name="keywords" content="각 페이지마다 유니크한 현대드림투어 호텔 HUB keywords"/>
+		<meta name="description" content="각 페이지마다 유니크한 현대드림투어 호텔 HUB description"/>
+		<meta name="format-detection" content="telephone=no, address=no, email=no">
+		<meta property="og:site_name" content="현대드림투어 호텔 HUB" id="og-sitename-value"/>
+		<meta property="og:type" content="website" id="og-type-value"/>
+		<meta property="og:url" content="URL" id="og-url-value"/>
+		<meta property="og:title" content="NOTICE | 현대드림투어 호텔 HUB" id="og-title-value"/>
+		<meta property="og:description" content="현대드림투어 호텔 HUB 홈페이지에 방문하신 것을 환영합니다." id="og-description-value"/>
+		<meta property="og:image" content="img URL" id="og-image-value"/>
+		<!-- <meta name="twitter:url" content="URL" id="twitter-url-value"/>
+		<meta name="twitter:title" content="Main" id="twitter-title-value"/>
+		<meta name="twitter:image" content="img URL" />
+		<meta name="twitter:description" content="현대드림투어 호텔 HUB 홈페이지에 방문하신 것을 환영합니다." id="twitter-discription-value"/> -->
+		
+		<link rel="stylesheet" href="/common/web/css/jquery-ui.css" />
+		<link rel="stylesheet" href="/common/web/css/swiper.css" />
+		<link rel="stylesheet" href="/common/web/css/common.css" />
+		<link rel="stylesheet" href="/common/web/css/style.css" />
+
+		<script type="text/javascript" src="/common/web/js/jquery-1.12.4.min.js"></script>
+		<script type="text/javascript" src="/common/web/js/gsap.min.js"></script>
+		<script type="text/javascript" src="/common/web/js/ScrollTrigger.min.js"></script>
+		<script type="text/javascript" src="/common/web/js/swiper.min.js"></script>
+		<script type="text/javascript" src="/common/web/js/jquery-ui-1.12.1.custom.min.js"></script>
+    <script type="text/javascript" src="/common/web/js/script.js"></script>
+	</head>
+
+	<body>
+    <div id="wrap">
+      <header id="header"></header>
+
+      <div class="cont-wrap">
+        <div class="inner">
+          <div class="bread-crumb">
+            <a href="javascript:" class="home"></a>
+            <a href="javascript:"><span class="f-body-r3">고객지원</span></a>
+            <a href="javascript:"><span class="f-body-r3">그룹 및 시스템문의</span></a>
+          </div>
+
+          <p class="page-title f-headline2">그룹 및 시스템문의</p>
+
+          <div class="online-page">
+            <div class="blue-info-box dot-txt-w">
+              <p class="f-body-r2 dot-txt">운영 및 답변 시간 : 평일 08:00 ~ 17:00 (주말 및 공휴일 휴무)</p>
+              <p class="f-body-r2 dot-txt">문의 내역 및 답변은 이메일을 통해 확인하실 수 있습니다.</p>
+            </div>
+
+            <p class="essential-txt f-body-r2">
+              <span class="red-txt">*</span> 필수 입력
+            </p>
+            <div class="input-wrap black-border full">
+              <div class="input-div">
+                <p class="f-body-m2 essential"><span>문의 유형</span></p>
+                <div class="form-select">
+                  <select>
+                    <option value="">문의 유형111</option>
+                    <option value="">문의 유형222</option>
+                  </select>
+                </div>
+              </div>
+              <div class="input-div">
+                <p class="f-body-m2 essential"><span>담당자명</span></p>
+                <div class="form-input w240">
+                  <input type="text" placeholder="담당자명을 입력해 주세요.">
+                  <div class="input-btn-wrap">
+                    <button class="delete-btn" type="button" title="삭제"></button>
+                  </div>
+                </div>
+              </div>
+              <div class="input-div">
+                <p class="f-body-m2 essential"><span>연락처</span></p>
+                <div class="form-input w240">
+                  <input type="text" placeholder="연락처를 입력해 주세요.">
+                  <div class="input-btn-wrap">
+                    <button class="delete-btn" type="button" title="삭제"></button>
+                  </div>
+                </div>
+              </div>
+              <div class="input-div">
+                <p class="f-body-m2 essential"><span>제목</span></p>
+                <div class="form-input">
+                  <input type="text" placeholder="제목을 입력해 주세요.">
+                  <div class="input-btn-wrap">
+                    <button class="delete-btn" type="button" title="삭제"></button>
+                  </div>
+                </div>
+              </div>
+              <div class="input-div">
+                <p class="f-body-m2 essential"><span>내용</span></p>
+                <div class="form-textarea">
+                  <textarea placeholder="내용을 입력해 주세요."></textarea>
+                </div>
+              </div>
+              <div class="input-div">
+                <p class="f-body-m2"><span>첨부파일</span></p>
+                <div class="form-file">
+                  <div class="attached-file">
+                    <div class="file-btn-area">
+                      <input type="file" id="search-file">
+                      <label for="search-file">파일찾기</label>
+                    </div>
+                    <div class="file-list">
+                      <div class="list">
+                        <p class="file-name f-body-r3">
+                          <span class="name">첨부파일이미지명.jpg</span>
+                          <span class="capacity">(20KB)</span>
+                        </p>
+                        <a class="btn-delete" href="javascript:"></a>
+                      </div>
+                      <div class="list">
+                        <p class="file-name f-body-r3">
+                          <span  class="name">첨부파일이미지명첨부파일이미지명첨부파일이미지명첨부파일이미지명첨부파일이미지명.jpg</span>
+                          <span class="capacity">(20KB)</span>
+                        </p>
+                        <a class="btn-delete" href="javascript:"></a>
+                      </div>
+                      <div class="list">
+                        <p class="file-name f-body-r3">
+                          <span class="name">첨부파일이미지명첨부파일이미지명.jpg</span>
+                          <span class="capacity">(20KB)</span>
+                        </p>
+                        <a class="btn-delete" href="javascript:"></a>
+                      </div>
+                      <div class="list">
+                        <p class="file-name f-body-r3">
+                          <span class="name">첨부파일이미지명첨부파일이미지명첨부파일이미지명첨부파일이미지명첨부파일이미지명첨부파일이미지명첨부파일이미지명첨부파일이미지명첨부파일이미지명첨부파일이미지명첨부파일이미지명첨부파일이미지명첨부파일이미지명첨부파일이미지명.jpg</span>
+                          <span class="capacity">(150KB)</span>
+                        </p>
+                        <a class="btn-delete" href="javascript:"></a>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="noti-txt f-body-r3">첨부파일은 최대 5개, 30MB까지 등록 가능합니다.</p>
+                </div>
+              </div>
+            </div>
+            <!-- 개인정보 수집 이용 동의 -->
+            <div class="agree-acco">
+              <div class="check-list on">
+                <a href="javascript:" class="click-div">
+                  <div class="form-checkbox">
+                    <input type="checkbox" id="agree3" name="">
+                    <label for="agree3">개인정보 수집 이용 동의<span class="red-txt f-body-m2">(필수)</span></label>
+                  </div>
+                </a>
+                <div class="check-list-con">
+                  <div class="check-con">
+                    <div class="scroll-area">
+                      <!-- 2024-12-18 내용 수정 --> 
+                      <div class="reserve-pop-con">
+                        <div class="cont-div">
+                          <p class="f-body-b2">개인정보처리방침</p>
+                          <p class="f-body-r2">㈜현대드림투어가 운영하는 유럽 철도 및 전세계 호텔 예약 시스템(이하 “THERAILNTEL”라고 합니다)는 고객의 정보를 소중하게 생각하며, ‘정보통신망 이용 촉진 및 정보보호 등에 관한 법률’ 등 관련 법률을 준수하기 위하여 [개인정보 처리방침]을 제정하고 이를 준수하고 있습니다. [개인정보 처리방침]은 정부의 지침 변경, 당사의 정책 수정 변화 등의 이유로 변경 될 수 있습니다. 고객 여러분들께서는 THERAILNTEL 방문 시 수시로 확인하여 주시기 바랍니다.</p>
+                        </div>
+                        <div class="cont-div">
+                          <p class="f-body-m2">제2조 개인정보 수집항목 및 이용목적</p>
+                          <!-- 2024-12-18 br태그 추가 -->
+                          <p class="f-body-r2">THERAILNTEL는 회원가입, 로그인 절차 후 콘텐츠에 자유롭게 접근할 수 있습니다.<br/>THERAILNTEL의 서비스를 이용하시는 경우 다음의 정보를 고객의 동의를 받아 수집할 수 있으며 선택항목을 입력하시지 않았다 하여 서비스 이용에 제한은 없습니다.</p>
+                          <div class="table-div">
+                            <p class="f-body-r2">1) 회원가입 및 예약 등 필요 시점에 수집하는 개인정보의 범위</p>
+                            <div class="form-table green-bg border">
+                              <div class="table-wrap">
+                                <table class="basic-table">
+                                  <caption>회원가입 및 예약 등 필요 시점에 수집하는 개인정보의 범위</caption>
+                                  <colgroup>
+                                    <col style="width: 10%;">
+                                    <col style="width: 8%;">
+                                    <col style="width: 8%;">
+                                    <col style="width: 11%;">
+                                    <col style="width: 19%;">
+                                    <col style="width: 21%;">
+                                    <col style="width: 19%;">
+                                  </colgroup>
+                                  <thead>
+                                    <tr>
+                                      <th class="f-body-m3" colspan="3">구분</th>
+                                      <th class="f-body-m3">수집방법</th>
+                                      <th class="f-body-m3">수집항목</th>
+                                      <th class="f-body-m3">이용목적</th>
+                                      <th class="f-body-m3">보유기간</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td rowspan="5">
+                                        <p class="f-body-r3">THERAILNTEL</p>
+                                      </td>
+                                      <td rowspan="5">
+                                        <p class="f-body-r3">회원</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">필수</p>
+                                      </td>
+                                      <td rowspan="2">
+                                        <p class="f-body-r3">가입</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">
+                                          기본정보<br />
+                                          [사용자명, 이메일, 연락처, 핸드폰, 부서명, 직급 명]<br />
+                                          회사 정보<br />
+                                          [사업자 번호, 사업자 주소, 회사명, 수수료입금계좌]
+                                        </p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">이용자 식별 및 본인여부 확인을 통한 회원제 서비스 제공 및 상담, 예약 내역 전달</p>
+                                      </td>
+                                      <td rowspan="4">
+                                        <p class="f-body-r3">회원: 회원탈퇴 시 또는 법정 의무 보유기간까지</p>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <p class="f-body-r3">선택</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">회사 정보[사업자등록증, 통장사본]</p>
+                                      </td>
+                                      <td class="bdr">
+                                        <p class="f-body-r3">세금계산서 발행 및 입금</p>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <p class="f-body-r3">필수</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">철도 예약 및 발권</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">
+                                          예약자 정보<br />
+                                          [한글이름, 핸드폰, 이메일]<br />
+                                          탑승객 정보<br />
+                                          [성명(영문/국문), 생년월일, 나이, 성별, 핸드폰, 이메일, 여권번호, 유효기간]
+                                        </p>
+                                      </td>
+                                      <td class="bdr">
+                                        <p class="f-body-r3">철도 예약 및 발권</p>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <p class="f-body-r3">필수</p>
+                                      </td>
+                                      <td rowspan="2">
+                                        <p class="f-body-r3">결제</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">
+                                          결제정보<br />
+                                          [카드 사명, 카드번호, 유효기간, 계좌번호, 비밀번호]
+                                        </p>
+                                      </td>
+                                      <td class="bdr">
+                                        <p class="f-body-r3">여행상품의 결제</p>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <p class="f-body-r3">선택</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">이메일</p>
+                                      </td>
+                                      <td class="bdr"></td>
+                                      <td></td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                            <p class="f-body-r3 num">※ THERAILNTEL은 이 외에 고객님이 이용한 서면, 문자, 게시판, 메신저 등 다양한 상담 채널 별 문의와 이벤트 응모 시 수집 항목, 목적, 보유기간에 대한 별도 동의를 받아 개인정보를 수집할 수 있습니다.</p>
+                          </div>
+                          <div class="table-div">
+                            <p class="f-body-r2">2) 서비스 이용과정에서 생성되는 정보</p>
+                            <div class="form-table green-bg border">
+                              <div class="table-wrap">
+                                <table class="basic-table">
+                                  <caption>서비스 이용과정에서 생성되는 정보</caption>
+                                  <colgroup>
+                                    <col style="width: 15%;">
+                                    <col style="width: 25%;">
+                                    <col style="width: 30%;">
+                                    <col style="width: 30%;">
+                                  </colgroup>
+                                  <thead>
+                                    <tr>
+                                      <th class="f-body-m3">구분</th>
+                                      <th class="f-body-m3">이용목적</th>
+                                      <th class="f-body-m3">수집항목</th>
+                                      <th class="f-body-m3">보유기간</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td>
+                                        <p class="f-body-r3">필수</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">서비스 이용 통계 등</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">IP Address, 쿠키, 방문 일시, 서비스 이용 기록</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">
+                                          회원 탈퇴 시 또는
+                                          법정 의무 보유기간<br /><br />
+                                          ※ 쿠키의 경우, 브라우저
+                                          종료 시 또는 로그아웃 시 만료
+                                        </p>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="table-div">
+                            <p class="f-body-r2">3) 기타 법정 의무 수집정보 등</p>
+                            <div class="form-table green-bg border">
+                              <div class="table-wrap">
+                                <table class="basic-table">
+                                  <caption>기타 법정 의무 수집정보 등</caption>
+                                  <colgroup>
+                                    <col style="width: 25%;">
+                                    <col style="width: 30%;">
+                                    <col style="width: 30%;">
+                                    <col style="width: 15%;">
+                                  </colgroup>
+                                  <thead>
+                                    <tr>
+                                      <th class="f-body-m3">관련법률</th>
+                                      <th class="f-body-m3">이용목적</th>
+                                      <th class="f-body-m3">수집항목</th>
+                                      <th class="f-body-m3">보유기간</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td>
+                                        <p class="f-body-r3">전자상거래법</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">소비자 불만 또는 분쟁처리, 계약내용 확인</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">고객식별정보, 분쟁처리기록, 계약·철회 기록</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">3년 / 5년</p>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <p class="f-body-r3">국세기본법</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">국세 소멸시효 계산</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">국세증빙자료</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">10년</p>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <p class="f-body-r3">통신비밀보호법</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">수사기관 제공 (법원 영장 등 정당한 절차의 경우에 제공)</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">로그기록, IP등</p>
+                                      </td>
+                                      <td>
+                                        <p class="f-body-r3">3개월</p>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                            <p class="f-body-r3 num">※ 소득세법에 따라 일반/현금 경품 수령을 위한 제세공과금 처리 목적으로 고객의 주민등록번호, 계좌번호 및 주소 정보를 수집할 수 있습니다. (시행규칙 제100조 제25호)</p>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- // 2024-12-18 내용 수정 --> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="btn-wrap">
+              <a href="javascript:" class="btn-round-s w120"><span>문의 발송</span></a>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+
+      <footer></footer>
+
+      <!-- 우측 하단 퀵메뉴 -->
+      <div class="quick-fixed-area">
+        <div class="quick-area">
+          <a href="javascript:" class="recent-srch" onClick="openPopup('.recent-srch-pop', this)"></a>
+          <a href="javascript:" class="like" onClick="openPopup('.hotel-like-pop', this)"></a>
+          <a href="javascript:" class="reserve"></a>
+        </div>
+        <button type="button" class="btn-top" title="상단으로 이동"></button>
+      </div>
+    </div>
+	</body>
+</html>

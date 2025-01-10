@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <title>퍼블리싱 스타일 가이드</title>
+  <link rel="stylesheet" href="/css/fonts.css">
+  <link rel="stylesheet" href="/css/common.css">
+  <link rel="stylesheet" href="/css/jQuery.mCustomScrollbar.css">
+  <link rel="stylesheet" href="/styleguide/assets/css/index.css">
+  <link rel="stylesheet" href="/styleguide/assets/styles/shCore.css"/>
+	<link rel="Stylesheet" href="/styleguide/assets/styles/shCoreEclipse.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <script src="/styleguide/assets/scripts/XRegExp.js"></script> <!-- XRegExp is bundled with the final shCore.js during build -->
+	<script src="/styleguide/assets/scripts/shCore.js"></script>
+	<script src="/styleguide/assets/scripts/shBrushJScript.js"></script>
+	<script src="/styleguide/assets/scripts/shBrushXml.js"></script>
+	<script src="/styleguide/assets/scripts/shBrushCss.js"></script>
+  <script src="/js/jquery-1.12.4.min.js"></script>
+  <script src="/js/jquery.mCustomScrollbar.js"></script>
+  <script src="/js/gsap.min.js"></script>
+  <script src="/js/jquery-ui-1.12.1.custom.min.js"></script>
+  <script src="/js/swiper.min.js"></script>
+  <script src="/js/script.js"></script>
+  <script type="text/javascript">SyntaxHighlighter.all();</script>
+
+
+
+  <style>
+    .form-text {position: relative; height: 42px; border: 1px solid #d8d8d8; border-radius: 5px; background-color: #fff;}
+    .form-text:after {content: ""; clear: both; display: block; height: 0;}
+    .form-text input {padding: 5px 20px; width: 100%; height: 100%; border-radius: 5px; outline: 0; border: 0;}
+  </style>
+</head>
+<body>
+  <div id="wrap" style="background:#fff;">
+    <header>
+      <h1>Rotem Catalog 가이드</h1>
+      <div class="btn-wrap">
+        <a href="../worklist.html">작업현황판  <i class="fas fa-angle-right"></i></a>
+      </div>
+    </header>
+    <div id="contents">
+      <aside>
+        <a href="/styleguide/guide-intro.html">기본 정책 <i class="fas fa-angle-right"></i></a>
+        <a href="/styleguide/guide-markup.html">마크업 규칙 <i class="fas fa-angle-right"></i></a>
+        <a href="/styleguide/guide-css.html">CSS 규칙 <i class="fas fa-angle-right"></i></a>
+        <a href="/styleguide/guide-naming.html">네이밍 규칙 <i class="fas fa-angle-right"></i></a>
+        <a href="javascript:" class="active">스타일 가이드 <i class="fas fa-angle-right"></i></a>
+        <ul class="guide-list">
+          <li><a href="/styleguide/guide/form.html" class="active">FORM</a></li>
+          <li><a href="/styleguide/guide/typography.html">TYPOGRAPHY</a></li>
+          <li><a href="/styleguide/guide/button.html">BUTTON</a></li>
+          <li><a href="/styleguide/guide/popup.html">POPUP</a></li>
+          <li><a href="/styleguide/guide/accordion.html">ACCORDION</a></li>
+          <li><a href="/styleguide/guide/tab.html">TAB</a></li>
+        </ul>
+      </aside>
+      <div class="content-area">
+        <h2>스타일 가이드</h2>
+
+        <section>
+          <h3>Search Box</h3>
+          <!-- sample -->
+          <div class="form_search">
+            <div class="form_search_div">
+              <input type="text" placeholder="검색어를 입력하세요">
+              <div class="input_btn_wrap">
+                <button type="button" class="btn_delete" title="지우기"></button>
+                <button type="button" class="btn_search" title="검색"></button>
+              </div>
+            </div>
+          </div>
+          <!-- //sample -->
+
+          <script type="syntaxhighlighter" class="brush: xml;">
+            <div class="form_search">
+              <div class="form_search_div">
+                <input type="text" placeholder="검색어를 입력하세요">
+                <div class="input_btn_wrap">
+                  <button type="button" class="btn_delete" title="지우기"></button>
+                  <button type="button" class="btn_search" title="검색"></button>
+                </div>
+              </div>
+            </div>
+          </script>
+          <script type="syntaxhighlighter" class="brush: css;">
+            /* form - search */
+            .form_search {position: relative; display: inline-block; width: 560rem;}
+            .form_search .form_search_div {overflow: hidden; position: relative; display: flex; align-items: center; justify-content: space-between; background: transparent; border-bottom: 2px solid #000;}
+            .form_search input {padding: 0; width: calc(100% - 60rem); width: -webkit-calc(100% - 60rem); height: 44rem; font-family: "Pretendard_Regular", sans-serif; font-size: 16rem; color: #000; line-height: 120%; border: none; background: transparent;}
+            .form_search input::placeholder {color: #999; font-size: 16rem; line-height: 120%; font-family: "Pretendard_Regular", sans-serif;}
+            .form_search .btn_delete {display: none; margin-right: 15rem; width: 18rem; height: 18rem; background: url(/images/btn-input-delete.svg) no-repeat center center/cover;}
+            .form_search .btn_search {/* position: absolute; right: 20px; top: 50%; transform: translateY(-50%); */ width: 18rem; height: 18rem; background: url(/images/btn-search-menu.svg) no-repeat center center/18rem;}
+          </script>
+        </section>
+
+        <section>
+          <h3>Table</h3>
+          <!-- sample -->
+          <div class="form_table active" style="width:700rem;">
+            <table>
+              <caption>이데일리 창립일, 주소, 대표번호 테이블</caption>
+              <colgroup>
+                <col width="22%">
+                <col width="78%">
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th><p class="f_body1">창립일</p></th>
+                  <td><p class="f_body2">2000.01.15</p></td>
+                </tr>
+                <tr>
+                  <th><p class="f_body1">주소</p></th>
+                  <td><p class="f_body2">서울특별시 중구 통일로 92, KG타워 18∙19F</p></td>
+                </tr>
+                <tr>
+                  <th><p class="f_body1">대표번호</p></th>
+                  <td><p class="f_body2">02-3772-0114</p></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- //sample -->
+
+          <script type="syntaxhighlighter" class="brush: xml;">
+            <div class="form_table">
+              <table>
+                <caption>이데일리 창립일, 주소, 대표번호 테이블</caption>
+                <colgroup>
+                  <col width="22%">
+                  <col width="78%">
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th><p class="f_body1">창립일</p></th>
+                    <td><p class="f_body2">2000.01.15</p></td>
+                  </tr>
+                  <tr>
+                    <th><p class="f_body1">주소</p></th>
+                    <td><p class="f_body2">서울특별시 중구 통일로 92, KG타워 18∙19F</p></td>
+                  </tr>
+                  <tr>
+                    <th><p class="f_body1">대표번호</p></th>
+                    <td><p class="f_body2">02-3772-0114</p></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </script>
+          <script type="syntaxhighlighter" class="brush: css;">
+            /* form - table */
+            .form_table {position: relative;}
+            .form_table:after {display: block; content: ""; position: absolute; top: 0; left: 0; width: 0; height: 1px; background: #000; transition: width .8s ease-in-out;}
+            .form_table table {table-layout: fixed;}
+            .form_table tbody th {padding: 20rem 20rem 20rem 0; text-align: left;}
+            .form_table tbody tr {border-bottom: 1px solid #eee;}
+          </script>
+        </section>
+
+        
+      </div>
+    </div>
+  </div>
+</body>
+</html>

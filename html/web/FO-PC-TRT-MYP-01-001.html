@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>현대드림투어 호텔 HUB</title>
+    <link rel="shortcut icon" href="/common/web/images/favicon.ico" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no,maximum-scale=1.0,minimum-scale=1.0,target-densitydpi=medium-dpi" />
+		<meta name="keywords" content="각 페이지마다 유니크한 현대드림투어 호텔 HUB keywords"/>
+		<meta name="description" content="각 페이지마다 유니크한 현대드림투어 호텔 HUB description"/>
+		<meta name="format-detection" content="telephone=no, address=no, email=no">
+		<meta property="og:site_name" content="현대드림투어 호텔 HUB" id="og-sitename-value"/>
+		<meta property="og:type" content="website" id="og-type-value"/>
+		<meta property="og:url" content="URL" id="og-url-value"/>
+		<meta property="og:title" content="NOTICE | 현대드림투어 호텔 HUB" id="og-title-value"/>
+		<meta property="og:description" content="현대드림투어 호텔 HUB 홈페이지에 방문하신 것을 환영합니다." id="og-description-value"/>
+		<meta property="og:image" content="img URL" id="og-image-value"/>
+		<!-- <meta name="twitter:url" content="URL" id="twitter-url-value"/>
+		<meta name="twitter:title" content="Main" id="twitter-title-value"/>
+		<meta name="twitter:image" content="img URL" />
+		<meta name="twitter:description" content="현대드림투어 호텔 HUB 홈페이지에 방문하신 것을 환영합니다." id="twitter-discription-value"/> -->
+		
+		<link rel="stylesheet" href="/common/web/css/jquery-ui.css" />
+		<link rel="stylesheet" href="/common/web/css/swiper.css" />
+		<link rel="stylesheet" href="/common/web/css/common.css" />
+		<link rel="stylesheet" href="/common/web/css/style.css" />
+
+		<script type="text/javascript" src="/common/web/js/jquery-1.12.4.min.js"></script>
+		<script type="text/javascript" src="/common/web/js/gsap.min.js"></script>
+		<script type="text/javascript" src="/common/web/js/ScrollTrigger.min.js"></script>
+		<script type="text/javascript" src="/common/web/js/swiper.min.js"></script>
+		<script type="text/javascript" src="/common/web/js/jquery-ui-1.12.1.custom.min.js"></script>
+    <script type="text/javascript" src="/common/web/js/script.js"></script>
+	</head>
+
+	<body>
+    <div id="wrap">
+      <header id="header"></header>
+
+      <div class="cont-wrap">
+        <div class="inner">
+          <div class="bread-crumb">
+            <a href="javascript:" class="home"></a>
+            <a href="javascript:"><span class="f-body-r3">마이페이지</span></a>
+            <a href="javascript:"><span class="f-body-r3">정보관리</span></a>
+            <a href="javascript:"><span class="f-body-r3">호텔예약</span></a>
+          </div>
+
+          <div class="mypage-area">
+            <div class="left">
+              <p class="f-t1">마이페이지</p>
+              <div class="mypage-menu">
+                <p class="f-body-b1">
+                  <a href="javascript:">예약조회</a>
+                </p>
+                <p class="f-body-r2">
+                  <a href="javascript:">레일예약</a>
+                </p>
+                <p class="f-body-r2 on"><!-- 활성화 된 메뉴에 on class 추가 -->
+                  <a href="javascript:">호텔예약</a>
+                </p>
+              </div>
+              <div class="mypage-menu">
+                <p class="f-body-b1">
+                  <a href="javascript:">정보관리</a>
+                </p>
+                <p class="f-body-r2">
+                  <a href="javascript:">사용자 정보</a>
+                </p>
+                <p class="f-body-r2">
+                  <a href="javascript:">찜 내역</a>
+                </p>
+              </div>
+            </div>
+            <div class="right">
+              <div class="mypage-sec">
+                <p class="f-t1 no-bdr">호텔 예약내역 조회</p>
+                <div class="reserve-check">
+                  <div class="check-div">
+                    <p class="f-body-m2">검색 키워드</p>
+                    <div class="flex-box">
+                      <div class="form-select">
+                        <select>
+                          <option value="1">전체</option>
+                          <option value="2">투숙객명</option>
+                          <option value="3">예약번호</option>
+                          <option value="4">호텔명</option>
+                          <option value="5">담당자명</option>
+                        </select>
+                      </div>
+                      <div class="form-input">
+                        <input type="text" placeholder="검색어를 입력해주세요.">
+                        <div class="input-btn-wrap">
+                          <button class="delete-btn" type="button" title="삭제"></button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="check-div">
+                    <p class="f-body-m2">검색기간</p>
+                    <div class="flex-box">
+                      <div class="form-select">
+                        <select>
+                          <option value="1">예약일</option>
+                          <option value="2">체크인</option>
+                          <option value="3">체크아웃</option>
+                          <option value="4">취소마감일</option>
+                        </select>
+                      </div>
+                      <div class="form-date-w">
+                        <!-- 2024-12-05 태그 오류 수정 -->
+                        <div class="form-date">
+                          <input type="text">
+                        </div>
+                        <div class="form-date">
+                          <input type="text">
+                        </div>
+                        <!-- // 2024-12-05 태그 오류 수정 -->
+                      </div>
+                      <div class="period-btn">
+                        <button type="button" class="on"><span class="f-body-m2">직접입력</span></button>
+                        <button type="button"><span class="f-body-m2">전일</span></button>
+                        <button type="button"><span class="f-body-m2">1주일</span></button>
+                        <button type="button"><span class="f-body-m2">1개월</span></button>
+                        <button type="button"><span class="f-body-m2">3개월</span></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="check-div">
+                    <p class="f-body-m2">예약상태</p>
+                    <div class="opt-group">
+                      <div class="form-checkbox">
+                        <input type="checkbox" class="Chk-All" id="Chk1-1" name="">
+                        <label for="Chk1-1">전체</label>
+                      </div>
+                      <div class="form-checkbox">
+                        <input type="checkbox" id="Chk1-2" name="">
+                        <label for="Chk1-2">예약대기</label>
+                      </div>
+                      <div class="form-checkbox">
+                        <input type="checkbox" id="Chk1-3" name="">
+                        <label for="Chk1-3">예약확정</label>
+                      </div>
+                      <div class="form-checkbox">
+                        <input type="checkbox" id="Chk1-4" name="">
+                        <label for="Chk1-4">취소대기</label>
+                      </div>
+                      <div class="form-checkbox">
+                        <input type="checkbox" id="Chk1-5" name="">
+                        <label for="Chk1-5">예약취소</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="check-div">
+                    <p class="f-body-m2">결제상태</p>
+                    <div class="opt-group">
+                      <div class="form-checkbox">
+                        <input type="checkbox" class="Chk-All" id="Chk2-1" name="">
+                        <label for="Chk2-1">전체</label>
+                      </div>
+                      <div class="form-checkbox">
+                        <input type="checkbox" id="Chk2-2" name="">
+                        <label for="Chk2-2">미결제</label>
+                      </div>
+                      <div class="form-checkbox">
+                        <input type="checkbox" id="Chk2-3" name="">
+                        <label for="Chk2-3">부분결제</label>
+                      </div>
+                      <div class="form-checkbox">
+                        <input type="checkbox" id="Chk2-4" name="">
+                        <label for="Chk2-4">결제완료</label>
+                      </div>
+                      <div class="form-checkbox">
+                        <input type="checkbox" id="Chk2-5" name="">
+                        <label for="Chk2-5">결제취소</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="btn-wrap">
+                    <a href="javascript:" class="btn-border-round gray"><span>초기화</span></a>
+                    <a href="javascript:" class="btn-round-s"><span>조회하기</span></a>
+                  </div>
+                </div>
+                <div class="opt-group">
+                  <div class="check-result">
+                    <div class="btn-wrap">
+                      <a href="javascript:" class="btn-border-square gray"><span>입금 확인 요청</span></a>
+                      <a href="javascript:" class="btn-border-square gray"><span>바우처</span></a>
+                      <a href="javascript:" class="btn-border-square gray"><span>여행사 상세 인보이스</span></a>
+                      <a href="javascript:" class="btn-border-square gray"><span>여행사 요약 인보이스</span></a>
+                      <a href="javascript:" class="btn-border-square gray"><span>고객 인보이스</span></a>
+                      <a href="javascript:" class="btn-border-square gray"><span>엑셀 다운로드</span></a>
+                    </div>
+                    <p class="total-count f-body-r2">총<span class="f-body-b2 green-txt">61</span>건의 검색결과가 있습니다.</p>
+                    <div class="form-about">
+                      <div class="form-checkbox">
+                        <input type="checkbox" class="Chk-All" id="reserve-all" name="">
+                        <label for="reserve-all"><span>전체 선택</span></label>
+                      </div>
+                      <div class="toggle-btn">
+                        <p class="toggle-txt f-body-m5">예약내역 전체 펼쳐보기</p>
+                        <p class="toggle-area"></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="booking-history-list">
+                    <div class="list">
+                      <div class="tit-area">
+                        <div class="left">
+                          <div class="form-checkbox">
+                            <input type="checkbox" id="reserve-01" name="">
+                            <label for="reserve-01"></label>
+                          </div>
+                          <p class="f-body-b3">예약번호</p>
+                          <a href="javascript:" class="link-txt f-body-m3">TR240900001-1</a>
+                        </div>
+                        <div class="right">
+                          <div class="label-div">
+                            <!--
+                              blue : 결제취소, 부분결제, 미결제, 예약확정, 결제완료
+                              gray : 취소대기, 예약취소, 결제실패, 예약불가, 에러(예약실패), 에러(예약취소 실패)
+                              red : 취소 위약금
+                            -->
+                            <p class="txt-label blue">[예약확정]</p>
+                            <p class="txt-label red">[취소위약금]</p>
+                          </div>
+                          <button type="button"><img src="/common/web/images/icon-white-accordian-arrow.svg" alt=""></button>
+                        </div>
+                      </div>
+                      <div class="con-area">
+                        <p class="f-body-m1">멜리아 다낭 비치 리조트</p>
+                        <!-- 2024-12-24 공급사 추가 -->
+                        <!-- @ 계정의 권한이 '마스터'인 경우만 공급사 표시 (supplier) -->
+                        <p class="supplier f-body-m3">엑스트라넷</p>
+                        <div class="book-info-wrap">
+                          <div class="book-info">
+                            <p class="f-body-m3">대표 투숙객</p>
+                            <p class="f-body-r3">HONG G**G</p>
+                          </div>
+                          <div class="book-info long">
+                            <p class="f-body-m3">체크인/체크아웃&middot;박수</p><!-- 2024-12-02 텍스트 수정 --> 
+                            <p class="f-body-r3">2024-10-10(수) ~ 2024-10-13(일) &middot; 3박</p><!-- 2024-12-05 텍스트 수정 -->
+                          </div>
+                          <!-- 2024-12-06 예약담당자, 총요금 위치 변경 -->
+                          <div class="book-info">
+                            <p class="f-body-m3">예약 담당자</p>
+                            <p class="f-body-r3">홍*동홍</p>
+                          </div>
+                          <div class="book-info">
+                            <p class="f-body-m3">취소마감일</p>
+                            <p class="f-body-r3">2024-09-30</p>
+                          </div>
+                          <div class="book-info long">
+                            <p class="f-body-m3">예약일</p>
+                            <p class="f-body-r3">2024-09-09(금)</p>
+                          </div>
+                          <div class="book-info">
+                            <p class="f-body-m3">총 요금</p>
+                            <!-- 2024-12-06 환종이 외화인 경우, 하단에 원화 표시 -->
+                            <!-- @ 환종이 외화인 경우, 하단에 원화 표시 -->
+                            <p class="f-body-r3">
+                              99,999,999 USD
+                              <span class="krw">99,999,999 원</span>
+                            </p>
+                          </div>
+                        </div>
+                        <div class="detail">
+                          <div class="book-info-wrap">
+                            <div class="book-info">
+                              <p class="f-body-m3">투숙객</p>
+                              <p class="f-body-r3">HONG G**G 외 5명</p>
+                            </div>
+                            <div class="book-info long">
+                              <p class="f-body-m3">객실명</p>
+                              <p class="f-body-r3">Deluxe Room, 1 King Bed, City View</p>
+                            </div>
+                            <div class="book-info">
+                              <p class="f-body-m3">조식포함여부</p>
+                              <p class="f-body-r3">조식포함(Breakfast)</p>
+                            </div>
+                            <div class="book-info long">
+                              <p class="f-body-m3">객실/인원</p>
+                              <p class="f-body-r3">객실 5 / 성인 5 / 아동 1</p>
+                            </div>
+                          </div>
+                          <a href="javascript:" class="btn-border-square gray"><span>예약추가</span></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="list">
+                      <div class="tit-area">
+                        <div class="left">
+                          <div class="form-checkbox">
+                            <input type="checkbox" id="reserve-02" name="">
+                            <label for="reserve-02"></label>
+                          </div>
+                          <p class="f-body-b3">예약번호</p>
+                          <a href="javascript:" class="link-txt f-body-m3">TR240900001-2</a>
+                        </div>
+                        <div class="right">
+                          <div class="label-div">
+                            <!--
+                              blue : 결제취소, 부분결제, 미결제, 예약확정, 결제완료
+                              gray : 취소대기, 예약취소, 결제실패, 예약불가, 에러(예약실패), 에러(예약취소 실패)
+                              red : 취소 위약금
+                            -->
+                            <p class="txt-label blue">[예약확정]</p>
+                            <p class="txt-label blue">[부분결제]</p>
+                          </div>
+                          <button type="button"><img src="/common/web/images/icon-white-accordian-arrow.svg" alt=""></button>
+                        </div>
+                      </div>
+                      <div class="con-area">
+                        <p class="f-body-m1">멜리아 다낭 비치 리조트 멜리아 다낭 비치 리조트 멜리아 다낭 비치 리조트 멜리아 다낭 비치 리조트 멜리아 다낭 비치 리조트 멜리아 다낭 비치 리조트 멜리아 다낭 비치 리조트 멜리아 다낭 비치 리조트 멜리아 다낭 비치 리조트 멜리아 다낭 비치 리조트 멜리아 다낭 비치 리조트 멜리아 다낭 비치 리조트 멜리아 다낭 비치 리조트 멜리아 다낭 비치 리조트 멜리아 다낭 비치 리조트 멜리아 다낭 비치 리조트</p>
+                        <!-- 2024-12-24 공급사 추가 -->
+                        <!-- @ 계정의 권한이 '마스터'인 경우만 공급사 표시 (supplier) -->
+                        <!-- <p class="supplier f-body-m3">${공급사}</p> -->
+                        <div class="book-info-wrap">
+                          <div class="book-info">
+                            <p class="f-body-m3">대표 투숙객</p>
+                            <p class="f-body-r3">HONG G**G</p>
+                          </div>
+                          <div class="book-info long">
+                            <p class="f-body-m3">체크인/체크아웃&middot;박수</p><!-- 2024-12-02 텍스트 수정 --> 
+                            <p class="f-body-r3">2024-10-10(수) ~ 2024-10-13(일) &middot; 3박</p><!-- 2024-12-05 텍스트 수정 -->
+                          </div>
+                          <!-- 2024-12-06 예약담당자, 총요금 위치 변경 -->
+                          <div class="book-info">
+                            <p class="f-body-m3">예약 담당자</p>
+                            <p class="f-body-r3">홍*동홍</p>
+                          </div>
+                          <div class="book-info">
+                            <p class="f-body-m3">취소마감일</p>
+                            <p class="f-body-r3">2024-09-30</p>
+                          </div>
+                          <div class="book-info long">
+                            <p class="f-body-m3">예약일</p>
+                            <p class="f-body-r3">2024-09-09(금)</p>
+                          </div>
+                          <div class="book-info">
+                            <p class="f-body-m3">총 요금</p>
+                            <!-- @ 환종이 외화인 경우, 하단에 원화 표시 -->
+                            <p class="f-body-r3">
+                              99,999,999 원
+                            </p>
+                          </div>
+                        </div>
+                        <div class="detail">
+                          <div class="book-info-wrap">
+                            <div class="book-info">
+                              <p class="f-body-m3">투숙객</p>
+                              <p class="f-body-r3">HONG G**G 외 5명</p>
+                            </div>
+                            <div class="book-info long">
+                              <p class="f-body-m3">객실명</p>
+                              <p class="f-body-r3">Deluxe Room, 1 King Bed, City View</p>
+                            </div>
+                            <div class="book-info">
+                              <p class="f-body-m3">조식포함여부</p>
+                              <p class="f-body-r3">조식포함(Breakfast)</p>
+                            </div>
+                            <div class="book-info long">
+                              <p class="f-body-m3">객실/인원</p>
+                              <p class="f-body-r3">객실 5 / 성인 5 / 아동 1</p>
+                            </div>
+                          </div>
+                          <a href="javascript:" class="btn-border-square gray"><span>예약추가</span></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="btn-wrap">
+                  <a href="javascript:" class="btn-border-round gray"><span>더보기<span class="count">(<span>6</span>/<span>30</span>)</span></span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer></footer>
+
+      <!-- 우측 하단 퀵메뉴 -->
+      <div class="quick-fixed-area">
+        <div class="quick-area">
+          <a href="javascript:" class="recent-srch" onClick="openPopup('.recent-srch-pop', this)"></a>
+          <a href="javascript:" class="like" onClick="openPopup('.hotel-like-pop', this)"></a>
+          <a href="javascript:" class="reserve"></a>
+        </div>
+        <button type="button" class="btn-top" title="상단으로 이동"></button>
+      </div>
+    </div>
+	</body>
+</html>

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <title>퍼블리싱 스타일 가이드</title>
+  <link rel="stylesheet" href="/styleguide/assets/css/index.css">
+  <link rel="stylesheet" href="/styleguide/assets/styles/shCore.css"/>
+	<link rel="Stylesheet" href="/styleguide/assets/styles/shCoreEclipse.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <script src="/styleguide/assets/scripts/XRegExp.js"></script> <!-- XRegExp is bundled with the final shCore.js during build -->
+	<script src="/styleguide/assets/scripts/shCore.js"></script>
+	<script src="/styleguide/assets/scripts/shBrushJScript.js"></script>
+	<script src="/styleguide/assets/scripts/shBrushXml.js"></script>
+  <script type="text/javascript">SyntaxHighlighter.all();</script>
+</head>
+<body>
+  <div id="wrap">
+    <header id="header">
+      <h1>Rotem Catalog 가이드</h1>
+      <div class="btn-wrap">
+        <a href="../worklist.html">작업현황판  <i class="fas fa-angle-right"></i></a>
+      </div>
+    </header>
+    <div id="contents">
+      <aside>
+        <a href="/styleguide/guide-intro.html">기본 정책 <i class="fas fa-angle-right"></i></a>
+        <a href="javascript:" class="active">마크업 규칙 <i class="fas fa-angle-right"></i></a>
+        <a href="/styleguide/guide-css.html">CSS 규칙 <i class="fas fa-angle-right"></i></a>
+        <a href="/styleguide/guide-naming.html">네이밍 규칙 <i class="fas fa-angle-right"></i></a>
+        <a href="/styleguide/guide/form.html">스타일 가이드 <i class="fas fa-angle-right"></i></a>
+      </aside>
+      <div class="content-area">
+        <h2>마크업 규칙</h2>
+        <section>
+          <h3>문법</h3>
+          <ul class="list">
+            <li>doctype을 포함하여 태그를 대문자로 사용 금지</li>
+            <li>들여쓰기는 1점식을 사용(1칸 공백)</li>
+            <li>중첩된 요소는 들여쓰기 한번 사용</li>
+            <li>속성에는 항상 큰 따옴표를 사용하고 작은 따옴표는 사용 금지</li>
+            <li>셀프 클로즈 요소(img, input 등)에는 닫는 슬래시 사용 금지</li>
+          </ul>
+        </section>
+        <section>
+          <h3>속성 순서</h3>
+          <ul class="list">
+            <li>HTML 속성은 코드를 더 쉽게 읽을 수 있도록 특정 순서로 제공되어야 합니다.</li>
+          </ul>
+          <ul>
+            <li>1. class</li>
+            <li>2. id, name</li>
+            <li>3. data-*</li>
+            <li>4. src, for, type, href, value</li>
+            <li>5. title, alt</li>
+            <li>6. role, aria-*</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Language 속성</h3>
+          <ul class="list">
+            <li>html태그에 lang속성을 지정하는것이 좋음</li>
+            <li>lang속성을 지정하지 않으면 음성도구, 번역도구에서 불이익을 받음</li>
+          </ul>
+        </section>
+        <section>
+          <h3>IE 호환 모드</h3>
+          <ul class="list">
+            <li>
+              internet Explorer는 문서 호환성 &lt;meta&gt; 태그 사용을 지원하여 페이지를 렌더링 할 IE 버전을 지정합니다 <br>
+              상황에 따라 달리 필요하지 않는 한 IE에 최신 지원 모드를 에지 모드와 함께 사용하도록 지시하는 것이 가장 유용합니다
+            </li>
+          </ul>
+          <script type="syntaxhighlighter" class="brush: xml;">
+            <meta http-equiv="x-ua-compatible" content="ie=edge">
+          </script>
+        </section>
+        <section>
+          <h3>문자 인코딩</h3>
+          <ul class="list">
+            <li>명시적 문자 인코딩을 선언하여 빠르고 쉽게 콘텐츠의 적절한 렌더링을 보장합니다</li>
+            <li>인코딩이 문서의 인코딩과 일치한다면 (일반적으로 UTF-8) HTML에서 문자 엔티티를 사용하지 않을 수 있습니다</li>
+          </ul>
+          <script type="syntaxhighlighter" class="brush: xml;">
+            <head>
+              <meta charset="utf-8">
+            </head>
+          </script>
+        </section>
+        <section>
+          <h3>태그 정의</h3>
+          <div class="table-type1 tr-border">
+            <table>
+              <caption>태그 정의 설명</caption>
+              <thead>
+                <tr>
+                  <th>종류</th>
+                  <th>구분</th>
+                  <th>태그</th>
+                  <th>비고</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td rowspan="2">Elements</td>
+                  <td>블록요소</td>
+                  <td>div</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>인라인요소</td>
+                  <td>span</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td rowspan="6">Landmark</td>
+                  <td>헤더 그룹</td>
+                  <td>header</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>네비게이션 그룹</td>
+                  <td>nav</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>LNB 그룹</td>
+                  <td>aside</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>그룹화된 컨텐츠영역</td>
+                  <td>article</td>
+                  <td>section태그의 집합개념</td>
+                </tr>
+                <tr>
+                  <td>연속된 컨텐츠영역</td>
+                  <td>section</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>푸터 영역</td>
+                  <td>footer</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td rowspan="6">헤딩태그</td>
+                  <td>Level 1</td>
+                  <td>h1</td>
+                  <td>각 페이지에 한개만 존재</td>
+                </tr>
+                <tr>
+                  <td>Level 2</td>
+                  <td>h2</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Level 3</td>
+                  <td>h3</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Level 4</td>
+                  <td>h4</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Level 5</td>
+                  <td>h5</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Level 6</td>
+                  <td>h6</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td rowspan="2">이벤트 요소</td>
+                  <td>링크</td>
+                  <td>a</td>
+                  <td>링크외에 사용 금지</td>
+                </tr>
+                <tr>
+                  <td>버튼</td>
+                  <td>button</td>
+                  <td>링크외 클릭 요소에 사용</td>
+                </tr>
+                <tr>
+                  <td rowspan="5">강조</td>
+                  <td>중요한 제목</td>
+                  <td>strong</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>유의미한 강조</td>
+                  <td>em</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>무의미한 강조</td>
+                  <td>b</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>작은 텍스트</td>
+                  <td>small</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>그래픽 강조</td>
+                  <td>i</td>
+                  <td>icon 표현</td>
+                </tr>
+                <tr>
+                  <td rowspan="3">리스트</td>
+                  <td>순서가 있는 리스트</td>
+                  <td>ol, li</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>순서가 없는 리스트</td>
+                  <td>ul, li</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>설명이 있는 리스트</td>
+                  <td>dl, dt, dd</td>
+                  <td>dt생략 불가능</td>
+                </tr>
+                <tr>
+                  <td rowspan="7">테이블</td>
+                  <td>테이블 제목</td>
+                  <td>caption</td>
+                  <td>summary는 더이상 사용되지 않음</td>
+                </tr>
+                <tr>
+                  <td>헤더</td>
+                  <td>thead</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>본문</td>
+                  <td>tbody</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>푸터</td>
+                  <td>tfoot</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>테이블 행</td>
+                  <td>tr</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>제목</td>
+                  <td>th</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>내용</td>
+                  <td>td</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

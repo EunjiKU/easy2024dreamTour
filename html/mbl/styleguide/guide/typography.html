@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>퍼블리싱 스타일 가이드</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  <!-- <link rel="stylesheet" href="../..//common/mbl/css/swiper.css"/> -->
+  <link rel="stylesheet" href="../assets/styles/shCore.css"/>
+	<link rel="Stylesheet" href="../assets/styles/shCoreEclipse.css"/>
+  <link rel="stylesheet" href="../assets/css/index.css"/>
+  <link rel="stylesheet" href="../..//common/mbl/css/common.css"/>
+  <link rel="stylesheet" href="../..//common/mbl/css/fonts.css"/>
+  <script type="text/javascript" src="../..//common/mbl/js/jquery-1.12.4.min.js"></script>
+  <script src="../assets/scripts/XRegExp.js"></script> <!-- XRegExp is bundled with the final shCore.js during build -->
+	<script src="../assets/scripts/shCore.js"></script>
+	<script src="../assets/scripts/shBrushJScript.js"></script>
+	<script src="../assets/scripts/shBrushXml.js"></script>
+	<script src="../assets/scripts/shBrushCss.js"></script>
+  <!-- <script type="text/javascript" src="../..//common/mbl/js/gsap.min.js"></script> -->
+  <!-- <script type="text/javascript" src="../..//common/mbl/js/ScrollTrigger.min.js"></script> -->
+  <script type="text/javascript" src="../..//common/mbl/js/Draggable.min.js"></script>
+  <!-- <script type="text/javascript" src="../..//common/mbl/js/swiper.min.js"></script> -->
+  <!-- <script type="text/javascript" src="../..//common/mbl/js/script.js"></script> -->
+  <script type="text/javascript">SyntaxHighlighter.all();</script>
+  <style>
+    body{background:#fff;}
+    #wrap{overflow:visible; top:auto; left:auto; height:auto; transform: none; min-width:100%; max-height: none;}
+    .content-area {width: 1133rem; box-sizing: border-box;}
+    @media all and (max-width: 1023px) {
+      .content-area {width: 100%;}
+    }
+    .ex-box ~ .ex-box {margin-top: 20px;} 
+    .ex-box > p {margin-bottom: 10px;}
+    .exs ~ .exs {margin-top: 40px;}
+    .ex ~ .ex {margin-top: 40px;}
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <header>
+      <h1>현대드림투어 가이드</h1>
+      <div class="btn-wrap">
+        <a href="../../worklist.html">작업현황판  <i class="fas fa-angle-right"></i></a>
+      </div>
+    </header>
+    <div id="contents">
+      <aside>
+        <a href="../guide-intro.html">기본 정책 <i class="fas fa-angle-right"></i></a>
+        <a href="../guide-markup.html">마크업 규칙 <i class="fas fa-angle-right"></i></a>
+        <a href="../guide-css.html">CSS 규칙 <i class="fas fa-angle-right"></i></a>
+        <a href="../guide-naming.html">네이밍 규칙 <i class="fas fa-angle-right"></i></a>
+        <a href="javascript:" class="active">스타일 가이드 <i class="fas fa-angle-right"></i></a>
+        <ul class="guide-list">
+          <li><a href="./form.html">FORM</a></li>
+          <li><a href="./typography.html" class="active">TYPOGRAPHY</a></li>
+          <!-- <li><a href="./color.html">COLOR</a></li> -->
+          <li><a href="./button.html">BUTTON</a></li>
+          <li><a href="./popup.html">POPUP</a></li>
+          <li><a href="./table.html">TABLE</a></li>
+        </ul>
+      </aside>
+      <!-- 가이드 Start -->
+      <div class="content-area">
+        <h2>타이포그래피 가이드</h2>
+        <p>현대드림투어는 한글 - NotoSans, 영문 - Inter 폰트를 사용합니다.</p>
+        <p>텍스트의 위계에 따라 폰트의 크기 및 자족을 아래와 같이 사용합니다.</p>
+        <br/>
+        <section>
+          <div class="ex-box">
+            <h3>Headline1</h3>
+            <div class="ex">
+              <p class="f-headline1">우리는 항상 고객이 기대한 그 이상을 서비스합니다</p>
+            </div>
+            <script type="syntaxhighlighter" class="brush: xml;">
+              <p class="f-headline1">우리는 항상 고객이 기대한 그 이상을 서비스합니다</p>
+            </script>
+            <script type="syntaxhighlighter" class="brush: css;">
+              .f-headline1{font-size:32px; line-height:140%; letter-spacing: -0.3px; font-family: "Inter-Bold", "NotoSansKR-Bold";}
+            </script>
+          </div>
+          <div class="ex-box">
+            <h3>Headline2</h3>
+            <div class="ex">
+              <p class="f-headline2">우리는 항상 고객이 기대한 그 이상을 서비스합니다</p>
+            </div>
+            <script type="syntaxhighlighter" class="brush: xml;">
+              <p class="f-headline2">우리는 항상 고객이 기대한 그 이상을 서비스합니다</p>
+            </script>
+            <script type="syntaxhighlighter" class="brush: css;">
+              .f-headline2{font-size:24px; line-height:140%; letter-spacing: -0.3px; font-family: "Inter-Bold", "NotoSansKR-Bold";}
+            </script>
+          </div>
+          <div class="ex-box">
+            <h3>Title1</h3>
+            <div class="ex">
+              <p class="f-t1">우리는 항상 고객이 기대한 그 이상을 서비스합니다</p>
+            </div>
+            <script type="syntaxhighlighter" class="brush: xml;">
+              <p class="f-t1">우리는 항상 고객이 기대한 그 이상을 서비스합니다</p>
+            </script>
+            <script type="syntaxhighlighter" class="brush: css;">
+              .f-t1{font-size:21px; line-height:140%; letter-spacing: -0.3px; font-family: "Inter-Bold", "NotoSansKR-Bold";}
+            </script>
+          </div>
+          <div class="ex-box">
+            <h3>Title2</h3>
+            <div class="ex">
+              <p class="f-t2">우리는 항상 고객이 기대한 그 이상을 서비스합니다</p>
+            </div>
+            <script type="syntaxhighlighter" class="brush: xml;">
+              <p class="f-t2">We always serve more than what customers expect</p>
+            </script>
+            <script type="syntaxhighlighter" class="brush: css;">
+              .f-t2{font-size:18px; line-height:140%; letter-spacing: -0.3px; font-family: "Inter-Bold", "NotoSansKR-Bold";}
+            </script>
+          </div>
+          <div class="ex-box">
+            <h3>Body1</h3>
+            <div class="ex">
+              <p style="margin-bottom:10px; color:blue; text-decoration: underline;">* Bold, Medium, Regular의 앞글자를 따서 구분</p>
+              <p class="f-body-b1">우리는 항상 고객이 기대한 그 이상을 서비스합니다</p>
+              <p class="f-body-m1">우리는 항상 고객이 기대한 그 이상을 서비스합니다</p>
+              <p class="f-body-r1">우리는 항상 고객이 기대한 그 이상을 서비스합니다</p>
+            </div>
+            <script type="syntaxhighlighter" class="brush: xml;">
+              <p class="f-body-b1">우리는 항상 고객이 기대한 그 이상을 서비스합니다</p>
+              <p class="f-body-m1">우리는 항상 고객이 기대한 그 이상을 서비스합니다</p>
+              <p class="f-body-r1">우리는 항상 고객이 기대한 그 이상을 서비스합니다</p>
+            </script>
+            <script type="syntaxhighlighter" class="brush: css;">
+              .f-body-b1{font-size:18px; line-height:140%; letter-spacing: -0.2px; font-family: "Inter-Bold", "NotoSansKR-Bold";}
+              .f-body-m1{font-size:18px; line-height:140%; letter-spacing: -0.2px; font-family: "Inter-Medium", "NotoSansKR-Medium";}
+              .f-body-r1{font-size:18px; line-height:160%; letter-spacing: -0.2px; font-family: "Inter-Regular", "NotoSansKR-Regular";}
+            </script>
+          </div>
+          <div class="ex-box">
+            <h3>Body2</h3>
+            <div class="ex">
+              <p style="margin-bottom:10px; color:blue; text-decoration: underline;">* Bold, Medium, Regular의 앞글자를 따서 구분</p>
+              <p class="f-body-b2">우리는 항상 고객이 기대한 그 이상을 서비스합니다</p>
+              <p class="f-body-m2">우리는 항상 고객이 기대한 그 이상을 서비스합니다</p>
+              <p class="f-body-r2">우리는 항상 고객이 기대한 그 이상을 서비스합니다</p>
+            </div>
+            <script type="syntaxhighlighter" class="brush: xml;">
+              <p class="f-body-b2">우리는 항상 고객이 기대한 그 이상을 서비스합니다</p>
+              <p class="f-body-m2">우리는 항상 고객이 기대한 그 이상을 서비스합니다</p>
+              <p class="f-body-r2">우리는 항상 고객이 기대한 그 이상을 서비스합니다</p>
+            </script>
+            <script type="syntaxhighlighter" class="brush: css;">
+              .f-body-b2{font-size:15px; line-height:140%; letter-spacing: -0.1px; font-family: "Inter-Bold", "NotoSansKR-Bold";}
+              .f-body-m2{font-size:15px; line-height:140%; letter-spacing: -0.1px; font-family: "Inter-Medium", "NotoSansKR-Medium";}
+              .f-body-r2{font-size:15px; line-height:160%; letter-spacing: -0.1px; font-family: "Inter-Regular", "NotoSansKR-Regular";}
+            </script>
+          </div>
+          <div class="ex-box">
+            <h3>Body3</h3>
+            <div class="ex">
+              <p style="margin-bottom:10px; color:blue; text-decoration: underline;">* Bold, Medium, Regular의 앞글자를 따서 구분</p>
+              <p class="f-body-b3">우리는 항상 고객이 기대한 그 이상을 서비스합니다</p>
+              <p class="f-body-m3">우리는 항상 고객이 기대한 그 이상을 서비스합니다</p>
+              <p class="f-body-r3">우리는 항상 고객이 기대한 그 이상을 서비스합니다</p>
+            </div>
+            <script type="syntaxhighlighter" class="brush: xml;">
+              <p class="f-body-b3">우리는 항상 고객이 기대한 그 이상을 서비스합니다</p>
+              <p class="f-body-m3">우리는 항상 고객이 기대한 그 이상을 서비스합니다</p>
+              <p class="f-body-r3">우리는 항상 고객이 기대한 그 이상을 서비스합니다</p>
+            </script>
+            <script type="syntaxhighlighter" class="brush: css;">
+              .f-body-b3{font-size:14px; line-height:140%; letter-spacing: -0.1px; font-family: "Inter-Bold", "NotoSansKR-Bold";}
+              .f-body-m3{font-size:14px; line-height:140%; letter-spacing: -0.1px; font-family: "Inter-Medium", "NotoSansKR-Medium";}
+              .f-body-r3{font-size:14px; line-height:160%; letter-spacing: -0.1px; font-family: "Inter-Regular", "NotoSansKR-Regular";}
+            </script>
+          </div>
+          <div class="ex-box">
+            <h3>Body4</h3>
+            <div class="ex">
+              <p style="margin-bottom:10px; color:blue; text-decoration: underline;">* Bold, Medium, Regular의 앞글자를 따서 구분</p>
+              <p class="f-body-b4">우리는 항상 고객이 기대한 그 이상을 서비스합니다</p>
+              <p class="f-body-m4">우리는 항상 고객이 기대한 그 이상을 서비스합니다</p>
+              <p class="f-body-r4">우리는 항상 고객이 기대한 그 이상을 서비스합니다</p>
+            </div>
+            <script type="syntaxhighlighter" class="brush: xml;">
+              <p class="f-body-b4">우리는 항상 고객이 기대한 그 이상을 서비스합니다</p>
+              <p class="f-body-m4">우리는 항상 고객이 기대한 그 이상을 서비스합니다</p>
+              <p class="f-body-r4">우리는 항상 고객이 기대한 그 이상을 서비스합니다</p>
+            </script>
+            <script type="syntaxhighlighter" class="brush: css;">
+              .f-body-b4{font-size:13px; line-height:140%; letter-spacing: 0; font-family: "Inter-Bold", "NotoSansKR-Bold";}
+              .f-body-m4{font-size:13px; line-height:140%; letter-spacing: 0; font-family: "Inter-Medium", "NotoSansKR-Medium";}
+              .f-body-r4{font-size:13px; line-height:160%; letter-spacing: 0; font-family: "Inter-Regular", "NotoSansKR-Regular";}
+            </script>
+          </div>
+          <div class="ex-box">
+            <h3>Body5</h3>
+            <div class="ex">
+              <p style="margin-bottom:10px; color:blue; text-decoration: underline;">* Bold, Medium, Regular의 앞글자를 따서 구분</p>
+              <p class="f-body-b5">우리는 항상 고객이 기대한 그 이상을 서비스합니다</p>
+              <p class="f-body-m5">우리는 항상 고객이 기대한 그 이상을 서비스합니다</p>
+              <p class="f-body-r5">우리는 항상 고객이 기대한 그 이상을 서비스합니다</p>
+            </div>
+            <script type="syntaxhighlighter" class="brush: xml;">
+              <p class="f-body-b5">우리는 항상 고객이 기대한 그 이상을 서비스합니다</p>
+              <p class="f-body-m5">우리는 항상 고객이 기대한 그 이상을 서비스합니다</p>
+              <p class="f-body-r5">우리는 항상 고객이 기대한 그 이상을 서비스합니다</p>
+            </script>
+            <script type="syntaxhighlighter" class="brush: css;">
+              .f-body-b5{font-size:12px; line-height:140%; letter-spacing: 0; font-family: "Inter-Bold", "NotoSansKR-Bold";}
+              .f-body-m5{font-size:12px; line-height:140%; letter-spacing: 0; font-family: "Inter-Medium", "NotoSansKR-Medium";}
+              .f-body-r5{font-size:12px; line-height:160%; letter-spacing: 0; font-family: "Inter-Regular", "NotoSansKR-Regular";}
+            </script>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

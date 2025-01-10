@@ -1,0 +1,1969 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>현대드림투어 호텔 HUB</title>
+    <link rel="shortcut icon" href="/common/web/images/favicon.ico" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no,maximum-scale=1.0,minimum-scale=1.0,target-densitydpi=medium-dpi" />
+		<meta name="keywords" content="각 페이지마다 유니크한 현대드림투어 호텔 HUB keywords"/>
+		<meta name="description" content="각 페이지마다 유니크한 현대드림투어 호텔 HUB description"/>
+		<meta name="format-detection" content="telephone=no, address=no, email=no">
+		<meta property="og:site_name" content="현대드림투어 호텔 HUB" id="og-sitename-value"/>
+		<meta property="og:type" content="website" id="og-type-value"/>
+		<meta property="og:url" content="URL" id="og-url-value"/>
+		<meta property="og:title" content="NOTICE | 현대드림투어 호텔 HUB" id="og-title-value"/>
+		<meta property="og:description" content="현대드림투어 호텔 HUB 홈페이지에 방문하신 것을 환영합니다." id="og-description-value"/>
+		<meta property="og:image" content="img URL" id="og-image-value"/>
+		<!-- <meta name="twitter:url" content="URL" id="twitter-url-value"/>
+		<meta name="twitter:title" content="Main" id="twitter-title-value"/>
+		<meta name="twitter:image" content="img URL" />
+		<meta name="twitter:description" content="현대드림투어 호텔 HUB 홈페이지에 방문하신 것을 환영합니다." id="twitter-discription-value"/> -->
+		
+		<link rel="stylesheet" href="/common/web/css/jquery-ui.css" />
+		<link rel="stylesheet" href="/common/web/css/swiper.css" />
+		<link rel="stylesheet" href="/common/web/css/common.css" />
+		<link rel="stylesheet" href="/common/web/css/style.css" />
+		<link rel="stylesheet" href="/common/web/css/main.css" />
+
+		<script type="text/javascript" src="/common/web/js/jquery-1.12.4.min.js"></script>
+		<script type="text/javascript" src="/common/web/js/gsap.min.js"></script>
+		<script type="text/javascript" src="/common/web/js/ScrollTrigger.min.js"></script>
+		<script type="text/javascript" src="/common/web/js/swiper.min.js"></script>
+    <script type="text/javascript" src="/common/web/js/jquery-ui-1.12.1.custom.min.js"></script>
+		<script type="text/javascript" src="/common/web/js/Draggable.min.js"></script>
+    <script type="text/javascript" src="/common/web/js/script.js"></script>
+		<script type="text/javascript" src="/common/web/js/main.js"></script>
+	</head>
+
+	<body>
+    <div id="wrap" class="main">
+      <header id="header"></header>
+
+      <div class="cont-wrap">
+        <div class="inner">
+          <!-- 상단 비주얼 및 검색 바 -->
+          <div class="trip-sel-area">
+            <!-- 2024-11-26 a 태그로 수정 -->
+            <a href="javascript:" class="visual">
+              <video src="/common/web/images/@main-visual-video.mp4" playsinline muted loop autoplay></video>
+            </a>
+            <!-- // 2024-11-26 a 태그로 수정 -->
+            <div class="trip-sel-wrap">
+              <!-- 신규 예약하기 -->
+              <div class="new-reserve-bar">
+                <div class="left">
+                  <div class="list">
+                    <p class="f-body-b3">예약번호</p>
+                    <p class="f-body-b3 green-txt">TR24090600078</p>
+                  </div>
+                  <div class="list">
+                    <p class="f-body-b3">투숙객</p>
+                    <p class="f-body-r3">홍*동 외 5명</p>
+                  </div>
+                  <p class="f-body-r3">추가 예약 진행 중</p>
+                </div>
+                <a href="javascript:" class="btn"><span class="f-body-b2">신규 예약하기</span></a>
+              </div>
+              <div class="trip-input-wrap">
+                <!-- 목적지 입력 -->
+                <div class="trip-input-div">
+                  <div class="trip-input">
+                    <div class="form-input">
+                      <input type="text" placeholder="지역, 숙소 이름 또는 랜드마크를 입력해 주세요." />
+                      <div class="input-btn-wrap">
+                        <button type="button" class="delete-btn" title="검색어 지우기"></button>
+                      </div>
+                    </div>
+                    <div class="trip-recent-srch">
+                      <div class="scroll-area">
+                        <!-- 검색어 입력 전 -->
+                        <div class="srch-before on"><!-- on class 추가하면 해당 화면 보입니다. -->
+                          <div class="recent-srch-wrap">
+                            <div class="flex-box">
+                              <p class="title">최근 검색어</p>
+                              <div class="recent-word">
+                                <button type="button" class="word"><span class="txt">파리</span></button>
+                                <button type="button" class="word"><span class="txt">인천광역시</span></button>
+                                <button type="button" class="word"><span class="txt">힐튼 경주</span></button>
+                                <button type="button" class="word"><span class="txt">노보텔 방콕 수완나품</span></button>
+                                <button type="button" class="word"><span class="txt">하노이</span></button>
+                              </div>
+                            </div>
+                            <div class="toggle-btn on">
+                              <p class="toggle-txt">최근 검색어</p>
+                              <p class="toggle-area"></p>
+                            </div>
+                          </div>
+                          <div class="main-city-wrap">
+                            <div class="flex-box">
+                              <p class="title">주요 추천 도시</p>
+                              <div class="tab-func-area">
+                                <div class="tab-btn-area">
+                                  <button type="button" class="tab-btn on"><span class="f-body-m2">국내</span></button>
+                                  <button type="button" class="tab-btn"><span class="f-body-m2">홍콩/중국</span></button>
+                                  <button type="button" class="tab-btn"><span class="f-body-m2">일본</span></button>
+                                  <button type="button" class="tab-btn"><span class="f-body-m2">남태평양</span></button>
+                                  <button type="button" class="tab-btn"><span class="f-body-m2">유럽</span></button>
+                                  <button type="button" class="tab-btn"><span class="f-body-m2">미주/캐나다</span></button>
+                                </div>
+                                <div class="tab-con-area">
+                                  <div class="main-city-box tab-con on">
+                                    <div class="scroll">
+                                      <button type="button" class="city"><span class="txt">부산</span></button>
+                                      <button type="button" class="city"><span class="txt">라스베가스</span></button>
+                                      <button type="button" class="city"><span class="txt">삿포로</span></button>
+                                      <button type="button" class="city"><span class="txt">방콕</span></button>
+                                      <button type="button" class="city"><span class="txt">인천</span></button>
+                                      <button type="button" class="city"><span class="txt">파타야</span></button>
+                                      <button type="button" class="city"><span class="txt">도쿄</span></button>
+                                      <button type="button" class="city"><span class="txt">파리</span></button>
+                                    </div>
+                                  </div>
+                                  <div class="main-city-box tab-con">
+                                    <div class="scroll">
+                                      <button type="button" class="city"><span class="txt">홍콩</span></button>
+                                      <button type="button" class="city"><span class="txt">중국</span></button>
+                                      <button type="button" class="city"><span class="txt">삿포로</span></button>
+                                      <button type="button" class="city"><span class="txt">방콕</span></button>
+                                      <button type="button" class="city"><span class="txt">인천</span></button>
+                                      <button type="button" class="city"><span class="txt">파타야</span></button>
+                                      <button type="button" class="city"><span class="txt">도쿄</span></button>
+                                      <button type="button" class="city"><span class="txt">파리</span></button>
+                                      <button type="button" class="city"><span class="txt">인천</span></button>
+                                      <button type="button" class="city"><span class="txt">파타야</span></button>
+                                      <button type="button" class="city"><span class="txt">도쿄</span></button>
+                                      <button type="button" class="city"><span class="txt">파리</span></button>
+                                      <button type="button" class="city"><span class="txt">인천</span></button>
+                                      <button type="button" class="city"><span class="txt">파타야</span></button>
+                                      <button type="button" class="city"><span class="txt">도쿄</span></button>
+                                      <button type="button" class="city"><span class="txt">파리</span></button>
+                                      <button type="button" class="city"><span class="txt">홍콩</span></button>
+                                      <button type="button" class="city"><span class="txt">중국</span></button>
+                                      <button type="button" class="city"><span class="txt">삿포로</span></button>
+                                      <button type="button" class="city"><span class="txt">방콕</span></button>
+                                      <button type="button" class="city"><span class="txt">인천</span></button>
+                                      <button type="button" class="city"><span class="txt">파타야</span></button>
+                                      <button type="button" class="city"><span class="txt">도쿄</span></button>
+                                      <button type="button" class="city"><span class="txt">파리</span></button>
+                                      <button type="button" class="city"><span class="txt">인천</span></button>
+                                      <button type="button" class="city"><span class="txt">파타야</span></button>
+                                      <button type="button" class="city"><span class="txt">도쿄</span></button>
+                                      <button type="button" class="city"><span class="txt">파리</span></button>
+                                      <button type="button" class="city"><span class="txt">인천</span></button>
+                                      <button type="button" class="city"><span class="txt">파타야</span></button>
+                                      <button type="button" class="city"><span class="txt">도쿄</span></button>
+                                      <button type="button" class="city"><span class="txt">파리</span></button>
+                                    </div>
+                                  </div>
+                                  <div class="main-city-box tab-con">
+                                    <div class="scroll">
+                                      <button type="button" class="city"><span class="txt">일본</span></button>
+                                      <button type="button" class="city"><span class="txt">중국</span></button>
+                                      <button type="button" class="city"><span class="txt">삿포로</span></button>
+                                      <button type="button" class="city"><span class="txt">방콕</span></button>
+                                      <button type="button" class="city"><span class="txt">인천</span></button>
+                                      <button type="button" class="city"><span class="txt">파타야</span></button>
+                                      <button type="button" class="city"><span class="txt">도쿄</span></button>
+                                      <button type="button" class="city"><span class="txt">파리</span></button>
+                                      <button type="button" class="city"><span class="txt">인천</span></button>
+                                      <button type="button" class="city"><span class="txt">파타야</span></button>
+                                    </div>
+                                  </div>
+                                  <div class="main-city-box tab-con">
+                                    <div class="scroll">
+                                      <button type="button" class="city"><span class="txt">남태평양</span></button>
+                                      <button type="button" class="city"><span class="txt">중국</span></button>
+                                      <button type="button" class="city"><span class="txt">삿포로</span></button>
+                                      <button type="button" class="city"><span class="txt">방콕</span></button>
+                                      <button type="button" class="city"><span class="txt">인천</span></button>
+                                      <button type="button" class="city"><span class="txt">파타야</span></button>
+                                      <button type="button" class="city"><span class="txt">도쿄</span></button>
+                                      <button type="button" class="city"><span class="txt">파리</span></button>
+                                      <button type="button" class="city"><span class="txt">인천</span></button>
+                                    </div>
+                                  </div>
+                                  <div class="main-city-box tab-con">
+                                    <div class="scroll">
+                                      <button type="button" class="city"><span class="txt">유럽</span></button>
+                                      <button type="button" class="city"><span class="txt">중국</span></button>
+                                      <button type="button" class="city"><span class="txt">삿포로</span></button>
+                                      <button type="button" class="city"><span class="txt">방콕</span></button>
+                                      <button type="button" class="city"><span class="txt">인천</span></button>
+                                      <button type="button" class="city"><span class="txt">파타야</span></button>
+                                      <button type="button" class="city"><span class="txt">도쿄</span></button>
+                                      <button type="button" class="city"><span class="txt">파리</span></button>
+                                      <button type="button" class="city"><span class="txt">인천</span></button>
+                                      <button type="button" class="city"><span class="txt">파타야</span></button>
+                                      <button type="button" class="city"><span class="txt">도쿄</span></button>
+                                    </div>
+                                  </div>
+                                  <div class="main-city-box tab-con">
+                                    <div class="scroll">
+                                      <button type="button" class="city"><span class="txt">미주/캐나다</span></button>
+                                      <button type="button" class="city"><span class="txt">중국</span></button>
+                                      <button type="button" class="city"><span class="txt">삿포로</span></button>
+                                      <button type="button" class="city"><span class="txt">방콕</span></button>
+                                      <button type="button" class="city"><span class="txt">인천</span></button>
+                                      <button type="button" class="city"><span class="txt">파타야</span></button>
+                                      <button type="button" class="city"><span class="txt">도쿄</span></button>
+                                      <button type="button" class="city"><span class="txt">파리</span></button>
+                                      <button type="button" class="city"><span class="txt">인천</span></button>
+                                      <button type="button" class="city"><span class="txt">파타야</span></button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- // 검색어 입력 전 -->
+                        <!-- 검색어 입력 후 -->
+                        <div class="srch-after"><!-- on class 추가하면 해당 화면 보입니다. -->
+                          <div class="place-area city">
+                            <!--
+                              도시/지역 - city
+                              호텔 - hotel
+                              지하철/기차역 - subway
+                              랜드마크 - landmark
+                              공항 - airport
+                            -->
+                            <p class="tit">도시/지역</p>
+                            <div class="place-wrap">
+                              <button type="button">
+                                <span class="txt"><span class="keyword">신주쿠</span></span>
+                                <span>도쿄, 일본</span>
+                              </button>
+                            </div>
+                          </div>
+                          <div class="place-area hotel">
+                            <p class="tit">호텔</p>
+                            <div class="place-wrap">
+                              <button type="button">
+                                <span class="txt"><span class="keyword">신주쿠</span> 워싱턴 호텔 메인</span>
+                                <span>Hotel Gracery Shinjuku</span>
+                                <span>도쿄, 일본</span>
+                              </button>
+                              <button type="button">
+                                <span class="txt"><span class="keyword">신주쿠</span> 프린스 호텔</span>
+                                <span>Hotel Gracery Shinjuku</span>
+                                <span>도쿄, 일본</span>
+                              </button>
+                              <button type="button">
+                                <span class="txt"><span class="keyword">신주쿠</span> 그레이서리 신주쿠</span>
+                                <span>Hotel Gracery Shinjuku</span>
+                                <span>도쿄, 일본</span>
+                              </button>
+                              <button type="button">
+                                <span class="txt">캄튼 <span class="keyword">신주쿠</span> 도쿄, IHG 호텔</span>
+                                <span>Hotel Gracery Shinjuku</span>
+                                <span>도쿄, 일본</span>
+                              </button>
+                            </div>
+                          </div>
+                          <div class="place-area subway">
+                            <p class="tit">지하철/기차역</p>
+                            <div class="place-wrap">
+                              <button type="button">
+                                <span class="txt"><span class="keyword">신주쿠</span>역</span>
+                                <span>도쿄, 일본</span>
+                              </button>
+                              <button type="button">
+                                <span class="txt"><span class="keyword">신주쿠</span> 니시구치역</span>
+                                <span>도쿄, 일본</span>
+                              </button>
+                            </div>
+                          </div>
+                          <div class="place-area landmark">
+                            <p class="tit">랜드마크</p>
+                            <div class="place-wrap">
+                              <button type="button">
+                                <span class="txt"><span class="keyword">신주쿠</span>아일랜드</span>
+                                <span>도쿄, 일본</span>
+                              </button>
+                            </div>
+                          </div>
+                          <div class="place-area airport">
+                            <p class="tit">공항</p>
+                            <div class="place-wrap">
+                              <button type="button">
+                                <span class="txt"><span class="keyword">신주쿠</span>아일랜드</span>
+                                <span>도쿄, 일본</span>
+                              </button>
+                            </div>
+                          </div>
+                          <!-- 검색 결과 없을 때 -->
+                          <div class="no-place-area">
+                            <p class="f-body-r2">입력하신 내용이 다르거나, 검색결과가 없습니다.</p>
+                          </div>
+                          <!-- // 검색 결과 없을 때 -->
+                        </div>
+                        <!-- // 검색어 입력 후 -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="trip-select-div">
+                  <!-- 체크인, 체크아웃, 숙박일수 -->
+                  <div class="trip-date">
+                    <div class="date-info-wrap">
+                      <div class="checkin-wrap">
+                        <div class="chk-in-out">
+                          <p class="tit">체크인</p>
+                          <p class="date-txt">
+                            <span class="year"></span>-<span class="month"></span>-<span class="date"></span>
+                            (<span class="day"></span>)
+                          </p>
+                        </div>
+                        <div class="chk-in-out">
+                          <p class="tit">체크아웃</p>
+                          <p class="date-txt">
+                            <span class="year"></span>-<span class="month"></span>-<span class="date"></span>
+                            (<span class="day"></span>)
+                          </p>
+                        </div>
+                      </div>
+                      <div class="calendar-wrap">
+                        <div class="scroll-area">
+                          <!-- 달력 -->
+                          <div class="calendar-div">
+                            <div class="calendar on">
+                              <div class="year-month-div">
+                                <div class="no-bdr form-select">
+                                  <select>
+                                    <option value="2025-01" selected>2025-01</option>
+                                    <option value="2025-02">2025-02</option>
+                                    <option value="2025-03">2025-03</option>
+                                    <option value="2025-04">2025-04</option>
+                                    <option value="2025-05">2025-05</option>
+                                    <option value="2025-06">2025-06</option>
+                                    <option value="2025-07">2025-07</option>
+                                    <option value="2025-08">2025-08</option>
+                                    <option value="2025-09">2025-09</option>
+                                    <option value="2025-10">2025-10</option>
+                                    <option value="2025-11">2025-11</option>
+                                    <option value="2025-12">2025-12</option>
+                                  </select>
+                                </div>
+                              </div>
+                              <div class="day">
+                                <p>일</p>
+                                <p>월</p>
+                                <p>화</p>
+                                <p>수</p>
+                                <p>목</p>
+                                <p>금</p>
+                                <p>토</p>
+                              </div>
+                              <div class="week-div">
+                                <a href="javascript:"><span class="date">1</span></a>
+                                <a href="javascript:"><span class="date">2</span></a>
+                                <a href="javascript:"><span class="date">3</span></a>
+                                <a href="javascript:"><span class="date">4</span></a>
+                                <a href="javascript:"><span class="date">5</span></a>
+                                <a href="javascript:"><span class="date">6</span></a>
+                                <a href="javascript:"><span class="date">7</span></a>
+                                <a href="javascript:"><span class="date">8</span></a>
+                                <a href="javascript:"><span class="date">9</span></a>
+                                <a href="javascript:"><span class="date">10</span></a>
+                                <a href="javascript:"><span class="date">11</span></a>
+                                <a href="javascript:"><span class="date">12</span></a>
+                                <a href="javascript:"><span class="date">13</span></a>
+                                <a href="javascript:"><span class="date">14</span></a>
+                                <a href="javascript:"><span class="date">15</span></a>
+                                <a href="javascript:"><span class="date">16</span></a>
+                                <a href="javascript:"><span class="date">17</span></a>
+                                <a href="javascript:"><span class="date">18</span></a>
+                                <a href="javascript:"><span class="date">19</span></a>
+                                <a href="javascript:"><span class="date">20</span></a>
+                                <a href="javascript:"><span class="date">21</span></a>
+                                <a href="javascript:"><span class="date">22</span></a>
+                                <a href="javascript:"><span class="date">23</span></a>
+                                <a href="javascript:"><span class="date">24</span></a>
+                                <a href="javascript:" class="spe"><span class="date">25</span></a>
+                                <a href="javascript:"><span class="date">26</span></a>
+                                <a href="javascript:"><span class="date">27</span></a>
+                                <a href="javascript:"><span class="date">28</span></a>
+                                <a href="javascript:"><span class="date">29</span></a>
+                                <a href="javascript:"><span class="date">30</span></a>
+                                <a href="javascript:"><span class="date">31</span></a>
+                                <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                <a href="javascript:" class="disabled"><span class="date"></span></a>
+                              </div>
+                              <!-- 공휴일 안내 -->
+                              <div class="holiday-div">
+                                <p class="holiday"><span>09-16</span> 추석연휴</p>
+                                <p class="holiday"><span>09-17</span> 추석</p>
+                                <p class="holiday"><span>09-18</span> 추석연휴</p>
+                                <p class="holiday"><span>10-03</span> 개천절</p>
+                                <p class="holiday"><span>10-09</span> 한글날</p>
+                                <p class="holiday"><span>09-16</span> 추석연휴</p>
+                                <p class="holiday"><span>09-17</span> 추석</p>
+                                <p class="holiday"><span>09-18</span> 추석연휴</p>
+                                <p class="holiday"><span>10-03</span> 개천절</p>
+                                <p class="holiday"><span>10-09</span> 한글날</p>
+                                <p class="holiday"><span>09-16</span> 추석연휴</p>
+                                <p class="holiday"><span>09-17</span> 추석</p>
+                                <p class="holiday"><span>09-18</span> 추석연휴</p>
+                                <p class="holiday"><span>10-03</span> 개천절</p>
+                                <p class="holiday"><span>10-09</span> 한글날</p>
+                                <p class="holiday"><span>09-16</span> 추석연휴</p>
+                                <p class="holiday"><span>09-17</span> 추석</p>
+                                <p class="holiday"><span>09-18</span> 추석연휴</p>
+                                <p class="holiday"><span>10-03</span> 개천절</p>
+                                <p class="holiday"><span>10-09</span> 한글날</p>
+                              </div>
+                            </div>
+                            <div class="calendar">
+                              <div class="year-month-div">
+                                <div class="no-bdr form-select">
+                                  <select>
+                                    <option value="2025-01">2025-01</option>
+                                    <option value="2025-02" selected>2025-02</option>
+                                    <option value="2025-03">2025-03</option>
+                                    <option value="2025-04">2025-04</option>
+                                    <option value="2025-05">2025-05</option>
+                                    <option value="2025-06">2025-06</option>
+                                    <option value="2025-07">2025-07</option>
+                                    <option value="2025-08">2025-08</option>
+                                    <option value="2025-09">2025-09</option>
+                                    <option value="2025-10">2025-10</option>
+                                    <option value="2025-11">2025-11</option>
+                                    <option value="2025-12">2025-12</option>
+                                  </select>
+                                </div>
+                              </div>
+                              <div class="day">
+                                <p>일</p>
+                                <p>월</p>
+                                <p>화</p>
+                                <p>수</p>
+                                <p>목</p>
+                                <p>금</p>
+                                <p>토</p>
+                              </div>
+                              <div class="week-div">
+                                <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                <a href="javascript:" class="spe"><span class="date">1</span></a>
+                                <a href="javascript:"><span class="date">2</span></a>
+                                <a href="javascript:"><span class="date">3</span></a>
+                                <a href="javascript:"><span class="date">4</span></a>
+                                <a href="javascript:"><span class="date">5</span></a>
+                                <a href="javascript:"><span class="date">6</span></a>
+                                <a href="javascript:"><span class="date">7</span></a>
+                                <a href="javascript:"><span class="date">8</span></a>
+                                <a href="javascript:"><span class="date">9</span></a>
+                                <a href="javascript:"><span class="date">10</span></a>
+                                <a href="javascript:"><span class="date">11</span></a>
+                                <a href="javascript:"><span class="date">12</span></a>
+                                <a href="javascript:"><span class="date">13</span></a>
+                                <a href="javascript:"><span class="date">14</span></a>
+                                <a href="javascript:"><span class="date">15</span></a>
+                                <a href="javascript:"><span class="date">16</span></a>
+                                <a href="javascript:"><span class="date">17</span></a>
+                                <a href="javascript:"><span class="date">18</span></a>
+                                <a href="javascript:"><span class="date">19</span></a>
+                                <a href="javascript:"><span class="date">20</span></a>
+                                <a href="javascript:"><span class="date">21</span></a>
+                                <a href="javascript:"><span class="date">22</span></a>
+                                <a href="javascript:"><span class="date">23</span></a>
+                                <a href="javascript:"><span class="date">24</span></a>
+                                <a href="javascript:"><span class="date">25</span></a>
+                                <a href="javascript:"><span class="date">26</span></a>
+                                <a href="javascript:"><span class="date">27</span></a>
+                                <a href="javascript:" class="spe"><span class="date">28</span></a>
+                                <a href="javascript:" class="spe"><span class="date">29</span></a>
+                                <a href="javascript:" class="spe"><span class="date">30</span></a>
+                                <a href="javascript:"><span class="date">31</span></a>
+                                <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                <a href="javascript:" class="disabled"><span class="date"></span></a>
+                              </div>
+                              <!-- 공휴일 안내 -->
+                              <div class="holiday-div">
+                                <p class="holiday"><span>09-16</span> 추석연휴</p>
+                                <p class="holiday"><span>09-17</span> 추석</p>
+                                <p class="holiday"><span>09-18</span> 추석연휴</p>
+                                <p class="holiday"><span>10-03</span> 개천절</p>
+                                <p class="holiday"><span>10-09</span> 한글날</p>
+                                <p class="holiday"><span>10-03</span> 개천절</p>
+                                <p class="holiday"><span>10-09</span> 한글날</p>
+                                <p class="holiday"><span>10-03</span> 개천절</p>
+                                <p class="holiday"><span>10-09</span> 한글날</p>
+                              </div>
+                            </div>
+                            <div class="calendar">
+                              <div class="year-month-div">
+                                <div class="no-bdr form-select">
+                                  <select>
+                                    <option value="2025-01">2025-01</option>
+                                    <option value="2025-02">2025-02</option>
+                                    <option value="2025-03" selected>2025-03</option>
+                                    <option value="2025-04">2025-04</option>
+                                    <option value="2025-05">2025-05</option>
+                                    <option value="2025-06">2025-06</option>
+                                    <option value="2025-07">2025-07</option>
+                                    <option value="2025-08">2025-08</option>
+                                    <option value="2025-09">2025-09</option>
+                                    <option value="2025-10">2025-10</option>
+                                    <option value="2025-11">2025-11</option>
+                                    <option value="2025-12">2025-12</option>
+                                  </select>
+                                </div>
+                              </div>
+                              <div class="day">
+                                <p>일</p>
+                                <p>월</p>
+                                <p>화</p>
+                                <p>수</p>
+                                <p>목</p>
+                                <p>금</p>
+                                <p>토</p>
+                              </div>
+                              <div class="week-div">
+                                <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                <a href="javascript:"><span class="date">1</span></a>
+                                <a href="javascript:"><span class="date">2</span></a>
+                                <a href="javascript:"><span class="date">3</span></a>
+                                <a href="javascript:"><span class="date">4</span></a>
+                                <a href="javascript:"><span class="date">5</span></a>
+                                <a href="javascript:"><span class="date">6</span></a>
+                                <a href="javascript:"><span class="date">7</span></a>
+                                <a href="javascript:"><span class="date">8</span></a>
+                                <a href="javascript:"><span class="date">9</span></a>
+                                <a href="javascript:"><span class="date">10</span></a>
+                                <a href="javascript:"><span class="date">11</span></a>
+                                <a href="javascript:"><span class="date">12</span></a>
+                                <a href="javascript:"><span class="date">13</span></a>
+                                <a href="javascript:"><span class="date">14</span></a>
+                                <a href="javascript:"><span class="date">15</span></a>
+                                <a href="javascript:"><span class="date">16</span></a>
+                                <a href="javascript:"><span class="date">17</span></a>
+                                <a href="javascript:"><span class="date">18</span></a>
+                                <a href="javascript:"><span class="date">19</span></a>
+                                <a href="javascript:"><span class="date">20</span></a>
+                                <a href="javascript:"><span class="date">21</span></a>
+                                <a href="javascript:"><span class="date">22</span></a>
+                                <a href="javascript:"><span class="date">23</span></a>
+                                <a href="javascript:"><span class="date">24</span></a>
+                                <a href="javascript:"><span class="date">25</span></a>
+                                <a href="javascript:"><span class="date">26</span></a>
+                                <a href="javascript:"><span class="date">27</span></a>
+                                <a href="javascript:"><span class="date">28</span></a>
+                                <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                <a href="javascript:" class="disabled"><span class="date"></span></a>
+                              </div>
+                              <!-- 공휴일 안내 -->
+                              <div class="holiday-div">
+                              </div>
+                            </div>
+                            <div class="calendar">
+                              <div class="year-month-div">
+                                <div class="no-bdr form-select">
+                                  <select>
+                                    <option value="2025-01">2025-01</option>
+                                    <option value="2025-02">2025-02</option>
+                                    <option value="2025-03">2025-03</option>
+                                    <option value="2025-04" selected>2025-04</option>
+                                    <option value="2025-05">2025-05</option>
+                                    <option value="2025-06">2025-06</option>
+                                    <option value="2025-07">2025-07</option>
+                                    <option value="2025-08">2025-08</option>
+                                    <option value="2025-09">2025-09</option>
+                                    <option value="2025-10">2025-10</option>
+                                    <option value="2025-11">2025-11</option>
+                                    <option value="2025-12">2025-12</option>
+                                  </select>
+                                </div>
+                              </div>
+                              <div class="day">
+                                <p>일</p>
+                                <p>월</p>
+                                <p>화</p>
+                                <p>수</p>
+                                <p>목</p>
+                                <p>금</p>
+                                <p>토</p>
+                              </div>
+                              <div class="week-div">
+                                <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                <a href="javascript:" class="spe"><span class="date">1</span></a>
+                                <a href="javascript:"><span class="date">2</span></a>
+                                <a href="javascript:" class="spe"><span class="date">3</span></a>
+                                <a href="javascript:"><span class="date">4</span></a>
+                                <a href="javascript:"><span class="date">5</span></a>
+                                <a href="javascript:"><span class="date">6</span></a>
+                                <a href="javascript:"><span class="date">7</span></a>
+                                <a href="javascript:"><span class="date">8</span></a>
+                                <a href="javascript:" class="spe"><span class="date">9</span></a>
+                                <a href="javascript:"><span class="date">10</span></a>
+                                <a href="javascript:"><span class="date">11</span></a>
+                                <a href="javascript:"><span class="date">12</span></a>
+                                <a href="javascript:"><span class="date">13</span></a>
+                                <a href="javascript:"><span class="date">14</span></a>
+                                <a href="javascript:"><span class="date">15</span></a>
+                                <a href="javascript:"><span class="date">16</span></a>
+                                <a href="javascript:"><span class="date">17</span></a>
+                                <a href="javascript:"><span class="date">18</span></a>
+                                <a href="javascript:"><span class="date">19</span></a>
+                                <a href="javascript:"><span class="date">20</span></a>
+                                <a href="javascript:"><span class="date">21</span></a>
+                                <a href="javascript:"><span class="date">22</span></a>
+                                <a href="javascript:"><span class="date">23</span></a>
+                                <a href="javascript:"><span class="date">24</span></a>
+                                <a href="javascript:"><span class="date">25</span></a>
+                                <a href="javascript:"><span class="date">26</span></a>
+                                <a href="javascript:"><span class="date">27</span></a>
+                                <a href="javascript:"><span class="date">28</span></a>
+                                <a href="javascript:"><span class="date">29</span></a>
+                                <a href="javascript:"><span class="date">30</span></a>
+                                <a href="javascript:"><span class="date">31</span></a>
+                                <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                <a href="javascript:" class="disabled"><span class="date"></span></a>
+                              </div>
+                              <!-- 공휴일 안내 -->
+                              <div class="holiday-div">
+                                <p class="holiday"><span>09-16</span> 추석연휴</p>
+                                <p class="holiday"><span>09-17</span> 추석</p>
+                              </div>
+                            </div>
+                            <div class="calendar">
+                              <div class="year-month-div">
+                                <div class="no-bdr form-select">
+                                  <select>
+                                    <option value="2024-11">2024-11</option>
+                                    <option value="2024-12">2024-12</option>
+                                    <option value="2025-01">2025-01</option>
+                                    <option value="2025-02">2025-02</option>
+                                    <option value="2025-03">2025-03</option>
+                                    <option value="2025-04" selected>2025-04</option>
+                                    <option value="2025-05">2025-05</option>
+                                    <option value="2025-06">2025-06</option>
+                                    <option value="2025-07">2025-07</option>
+                                    <option value="2025-08">2025-08</option>
+                                    <option value="2025-09">2025-09</option>
+                                    <option value="2025-10">2025-10</option>
+                                  </select>
+                                </div>
+                              </div>
+                              <div class="day">
+                                <p>일</p>
+                                <p>월</p>
+                                <p>화</p>
+                                <p>수</p>
+                                <p>목</p>
+                                <p>금</p>
+                                <p>토</p>
+                              </div>
+                              <div class="week-div">
+                                <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                <a href="javascript:"><span class="date">1</span></a>
+                                <a href="javascript:"><span class="date">2</span></a>
+                                <a href="javascript:"><span class="date">3</span></a>
+                                <a href="javascript:"><span class="date">4</span></a>
+                                <a href="javascript:"><span class="date">5</span></a>
+                                <a href="javascript:"><span class="date">6</span></a>
+                                <a href="javascript:"><span class="date">7</span></a>
+                                <a href="javascript:"><span class="date">8</span></a>
+                                <a href="javascript:"><span class="date">9</span></a>
+                                <a href="javascript:"><span class="date">10</span></a>
+                                <a href="javascript:"><span class="date">11</span></a>
+                                <a href="javascript:"><span class="date">12</span></a>
+                                <a href="javascript:"><span class="date">13</span></a>
+                                <a href="javascript:"><span class="date">14</span></a>
+                                <a href="javascript:"><span class="date">15</span></a>
+                                <a href="javascript:"><span class="date">16</span></a>
+                                <a href="javascript:"><span class="date">17</span></a>
+                                <a href="javascript:"><span class="date">18</span></a>
+                                <a href="javascript:"><span class="date">19</span></a>
+                                <a href="javascript:"><span class="date">20</span></a>
+                                <a href="javascript:"><span class="date">21</span></a>
+                                <a href="javascript:"><span class="date">22</span></a>
+                                <a href="javascript:"><span class="date">23</span></a>
+                                <a href="javascript:"><span class="date">24</span></a>
+                                <a href="javascript:"><span class="date">25</span></a>
+                                <a href="javascript:"><span class="date">26</span></a>
+                                <a href="javascript:"><span class="date">27</span></a>
+                                <a href="javascript:"><span class="date">28</span></a>
+                                <a href="javascript:"><span class="date">29</span></a>
+                                <a href="javascript:"><span class="date">30</span></a>
+                                <a href="javascript:"><span class="date">31</span></a>
+                                <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                <a href="javascript:" class="disabled"><span class="date"></span></a>
+                              </div>
+                              <!-- 공휴일 안내 -->
+                              <div class="holiday-div">
+                                <p class="holiday"><span>09-16</span> 추석연휴</p>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- 버튼 클릭 할 수 없을 경우 disabled class 추가 -->
+                          <button type="button" class="prev-btn disabled"><img src="/common/web/images/btn-calendar-prev.svg" alt=""></button>
+                          <button type="button" class="next-btn"><img src="/common/web/images/btn-calendar-next.svg" alt=""></button>
+                        </div>
+                      </div>
+                      <div class="stay-wrap">
+                        <p class="tit">숙박일수</p>
+                        <div class="stay-day">
+                          <button type="button" class="select-day">1박</button>
+                          <div class="day-list">
+                            <button type="button" class="list-day on">1박</button>
+                            <button type="button" class="list-day">2박</button>
+                            <button type="button" class="list-day">3박</button>
+                            <button type="button" class="list-day">4박</button>
+                            <button type="button" class="list-day">5박</button>
+                            <button type="button" class="list-day">6박</button>
+                            <button type="button" class="list-day">7박</button>
+                            <button type="button" class="list-day">8박</button>
+                            <button type="button" class="list-day">9박</button>
+                            <button type="button" class="list-day">10박</button>
+                            <button type="button" class="list-day">11박</button>
+                            <button type="button" class="list-day">12박</button>
+                            <button type="button" class="list-day">13박</button>
+                            <button type="button" class="list-day">14박</button>
+                            <button type="button" class="list-day">15박</button>
+                            <button type="button" class="list-day">16박</button>
+                            <button type="button" class="list-day">17박</button>
+                            <button type="button" class="list-day">18박</button>
+                            <button type="button" class="list-day">19박</button>
+                            <button type="button" class="list-day">20박</button>
+                            <button type="button" class="list-day">21박</button>
+                            <button type="button" class="list-day">22박</button>
+                            <button type="button" class="list-day">23박</button>
+                            <button type="button" class="list-day">24박</button>
+                            <button type="button" class="list-day">25박</button>
+                            <button type="button" class="list-day">26박</button>
+                            <button type="button" class="list-day">27박</button>
+                            <button type="button" class="list-day">28박</button>
+                            <button type="button" class="list-day">29박</button>
+                            <button type="button" class="list-day">30박</button>
+                            <button type="button" class="list-day">31박</button>
+                            <button type="button" class="list-day">32박</button>
+                            <button type="button" class="list-day">33박</button>
+                            <button type="button" class="list-day">34박</button>
+                            <button type="button" class="list-day">35박</button>
+                            <button type="button" class="list-day">36박</button>
+                            <button type="button" class="list-day">37박</button>
+                            <button type="button" class="list-day">38박</button>
+                            <button type="button" class="list-day">39박</button>
+                            <button type="button" class="list-day">40박</button>
+                            <button type="button" class="list-day">41박</button>
+                            <button type="button" class="list-day">42박</button>
+                            <button type="button" class="list-day">43박</button>
+                            <button type="button" class="list-day">44박</button>
+                            <button type="button" class="list-day">45박</button>
+                            <button type="button" class="list-day">46박</button>
+                            <button type="button" class="list-day">47박</button>
+                            <button type="button" class="list-day">48박</button>
+                            <button type="button" class="list-day">49박</button>
+                            <button type="button" class="list-day">50박</button>
+                            <button type="button" class="list-day">51박</button>
+                            <button type="button" class="list-day">52박</button>
+                            <button type="button" class="list-day">53박</button>
+                            <button type="button" class="list-day">54박</button>
+                            <button type="button" class="list-day">55박</button>
+                            <button type="button" class="list-day">56박</button>
+                            <button type="button" class="list-day">57박</button>
+                            <button type="button" class="list-day">58박</button>
+                            <button type="button" class="list-day">59박</button>
+                            <button type="button" class="list-day">60박</button>
+                            <button type="button" class="list-day">61박</button>
+                            <button type="button" class="list-day">62박</button>
+                            <button type="button" class="list-day">63박</button>
+                            <button type="button" class="list-day">64박</button>
+                            <button type="button" class="list-day">65박</button>
+                            <button type="button" class="list-day">66박</button>
+                            <button type="button" class="list-day">67박</button>
+                            <button type="button" class="list-day">68박</button>
+                            <button type="button" class="list-day">69박</button>
+                            <button type="button" class="list-day">70박</button>
+                            <button type="button" class="list-day">71박</button>
+                            <button type="button" class="list-day">72박</button>
+                            <button type="button" class="list-day">73박</button>
+                            <button type="button" class="list-day">74박</button>
+                            <button type="button" class="list-day">75박</button>
+                            <button type="button" class="list-day">76박</button>
+                            <button type="button" class="list-day">77박</button>
+                            <button type="button" class="list-day">78박</button>
+                            <button type="button" class="list-day">79박</button>
+                            <button type="button" class="list-day">80박</button>
+                            <button type="button" class="list-day">81박</button>
+                            <button type="button" class="list-day">82박</button>
+                            <button type="button" class="list-day">83박</button>
+                            <button type="button" class="list-day">84박</button>
+                            <button type="button" class="list-day">85박</button>
+                            <button type="button" class="list-day">86박</button>
+                            <button type="button" class="list-day">87박</button>
+                            <button type="button" class="list-day">88박</button>
+                            <button type="button" class="list-day">89박</button>
+                            <button type="button" class="list-day">90박</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 객실 -->
+                  <div class="trip-room">
+                    <div class="room-info-wrap">
+                      <div class="room-info">
+                        <p class="tit">객실</p>
+                        <p class="num">1</p>
+                      </div>
+                      <div class="room-info">
+                        <p class="tit">성인</p>
+                        <p class="num">2</p>
+                      </div>
+                      <div class="room-info">
+                        <p class="tit">아동</p>
+                        <p class="num">0</p>
+                      </div>
+                    </div>
+                    <div class="room-info-sel">
+                      <div class="room-sel-wrap">
+                        <div class="scroll-area">
+                          <div class="room-tit-wrap">
+                            <p class="tit f-body-b2">객실 수</p>
+                            <div class="room-num plus-minus-input">
+                              <button type="button" class="minus disabled"></button>
+                              <div class="form-input">
+                                <input type="number" value="1" data-val="1">
+                              </div>
+                              <button type="button" class="plus"></button>
+                            </div>
+                          </div>
+                          <div class="room-con-wrap">
+                            <div class="room-con-box">
+                              <div class="room-con-div">
+                                <p class="title">객실 <span class="num">1</span></p>
+                                <div class="room-person-wrap">
+                                  <div class="person-wrap">
+                                    <p class="f-body-m3">성인</p>
+                                    <div class="person plus-minus-input">
+                                      <button type="button" class="minus"></button>
+                                      <div class="form-input adult">
+                                        <input type="number" value="2" data-val="2">
+                                      </div>
+                                      <button type="button" class="plus"></button>
+                                    </div>
+                                  </div>
+                                  <div class="person-wrap">
+                                    <div class="child-tit-wrap">
+                                      <p class="f-body-m3">아동</p>
+                                      <div class="f-body-r4">
+                                        만 0~17세
+                                        <div class="tooltip-wrap">
+                                          <button class="tooltip-btn" type="button"></button>
+                                          <div class="tooltip-box dot-txt-w">
+                                            <p class="dot-txt f-body-r3">침대를 공유하는 조건이며, 보조침대는 제공되지 않습니다.</p>
+                                            <p class="dot-txt f-body-r3">아동조식은 불포함 사항이며, 이용 시 현장에서 직접 결제하셔야 합니다.</p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="person plus-minus-input">
+                                      <button type="button" class="minus disabled"></button>
+                                      <div class="form-input child">
+                                        <input type="number" value="0" data-val="0">
+                                      </div>
+                                      <button type="button" class="plus"></button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="child-chk-div">
+                                <div class="child-chk">
+                                  <p class="tit f-body-m3">아동 <span class="num">1</span></p>
+                                  <div class="form-input birth">
+                                    <input type="text" placeholder="생년월일 8자리 입력" maxlength="10" />
+                                    <div class="input-btn-wrap">
+                                      <button type="button" class="delete-btn" title="생년월일 지우기"></button>
+                                    </div>
+                                  </div>
+                                  <button type="button" class="btn-square-l gray"><span>확인</span></button>
+                                  <div class="form-input">
+                                    <input type="text" readonly>
+                                  </div>
+                                </div>
+                              </div>
+                              <button type="button" class="delete-btn"><img src="/common/web/images/icon-delete-btn-gray-bg.svg" alt=""></button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="btn-wrap">
+                        <button class="btn-round-s"><span>적용하기</span></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="trip-btn-wrap">
+                <button type="button" class="reset-btn"><img src="/common/web/images/btn-trip-informain-reset.svg" alt=""></button>
+                <button class="srch-btn"><span>검색하기</span></button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 프로모션 -->
+          <div class="cont-sec">
+            <div class="tit-wrap">
+              <p class="f-t1">TRT 호텔만의 특별 혜택 프로모션</p><!-- 2024-11-26 문구 변경 -->
+              <a href="javascript:" class="icon-txt-btn plus"><span class="f-body-b4">더보기</span></a>
+            </div>
+            <div class="promotion-swiper">
+              <div class="swiper-container">
+                <div class="swiper-wrapper">
+                  <a href="javascript:" class="swiper-slide">
+                    <div class="txt-wrap">
+                      <p class="f-t1">서유럽 5개국<br/>여름 특별 할인 프로모션</p>
+                      <p class="f-body-m1">얼리버드 여름 특가</p>
+                      <p class="f-body-m3">2024-09-10 ~ 2024-09-18</p>
+                    </div>
+                    <p class="img"></p><!-- 이미지 없을 경우 img 태그 삭제 -->
+                  </a>
+                  <a href="javascript:" class="swiper-slide done"><!-- 종료된 프로모션일 경우 done class 추가 -->
+                    <div class="txt-wrap">
+                      <p class="f-t1">일본 지역별 인기숙소<br/>할인 혜택</p>
+                      <p class="f-body-m1">가성비, 가심비 호텔 할인특가!</p>
+                      <p class="f-body-m3">2024-09-10 ~ 2024-09-18</p>
+                    </div>
+                    <p class="img">
+                      <img src="/common/web/images/@img-main-promotion-02.jpg" alt="">
+                    </p>
+                  </a>
+                  <a href="javascript:" class="swiper-slide">
+                    <div class="txt-wrap">
+                      <p class="f-t1">서유럽 3개국 여름 특별 할인 프로모션 서유럽 3개국 여름 특별 할인 프로모션</p>
+                      <p class="f-body-m1">얼리버드 여름 특가 얼리버드 여름 특가</p>
+                      <p class="f-body-m3">2024-09-10 ~ 2024-09-14</p>
+                    </div>
+                    <p class="img">
+                      <img src="/common/web/images/@img-main-promotion-01.jpg" alt="">
+                    </p>
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+              <div class="swiper-button-next circle-btn"></div>
+              <div class="swiper-button-prev circle-btn"></div>
+            </div>
+          </div>
+
+          <!-- 최근 예약 내역 -->
+          <div class="cont-sec">
+            <div class="tit-wrap">
+              <p class="f-t1">최근 예약 내역</p>
+              <a href="javascript:" class="icon-txt-btn plus"><span class="f-body-b4">더보기</span></a>
+            </div>
+            <div class="booking-history-list">
+              <div class="list">
+                <div class="tit-area">
+                  <div class="left">
+                    <p class="f-body-b3">예약번호</p>
+                    <a href="javascript:" class="link-txt f-body-m3">TR240900001-1</a>
+                  </div>
+                  <div class="right">
+                    <!-- 2024-11-26 마크업 변경 -->
+                    <div class="label-div">
+                      <!--
+                        blue : 결제취소, 부분결제, 미결제, 예약확정, 결제완료
+                        gray : 취소대기, 예약취소, 결제실패, 예약불가, 에러(예약실패), 에러(예약취소 실패)
+                        red : 취소 위약금
+                      -->
+                      <p class="txt-label blue">[예약확정]</p>
+                      <p class="txt-label red">[취소위약금]</p>
+                    </div>
+                    <!-- // 2024-11-26 마크업 변경 -->
+                    <button type="button"><img src="/common/web/images/icon-white-accordian-arrow.svg" alt=""></button>
+                  </div>
+                </div>
+                <div class="con-area">
+                  <p class="f-body-m1">멜리아 다낭 비치 리조트</p>
+                  <!-- 2024-12-24 공급사 추가 -->
+                  <!-- @ 계정의 권한이 '마스터'인 경우만 공급사 표시 (supplier) -->
+                  <p class="supplier f-body-m3">엑스트라넷</p>
+                  <div class="book-info-wrap">
+                    <div class="book-info">
+                      <p class="f-body-m3">대표 투숙객</p>
+                      <p class="f-body-r3">HONG G**G</p>
+                    </div>
+                    <div class="book-info long">
+                      <p class="f-body-m3">체크인/체크아웃&middot;박수</p><!-- 2024-12-02 텍스트 수정 --> 
+                      <p class="f-body-r3">2024-10-10(수) ~ 2024-10-13(일) &middot; 3박</p><!-- 2024-12-03 텍스트 수정 --> 
+                    </div>
+                    <!-- 2024-12-24 예약담당자/총요금 위치 변경  -->
+                    <div class="book-info">
+                      <p class="f-body-m3">예약 담당자</p>
+                      <p class="f-body-r3">홍*동홍</p>
+                    </div>
+                    <div class="book-info">
+                      <p class="f-body-m3">취소마감일</p>
+                      <p class="f-body-r3">2024-09-30</p>
+                    </div>
+                    <div class="book-info long">
+                      <p class="f-body-m3">예약일</p>
+                      <p class="f-body-r3">2024-09-09(금)</p>
+                    </div>
+                    <div class="book-info">
+                      <p class="f-body-m3">총 요금</p>
+                      <!-- 2024-12-24 환종이 외화인 경우, 하단에 원화 표시 -->
+                      <!-- @ 환종이 외화인 경우, 하단에 원화 표시 -->
+                      <p class="f-body-r3">
+                        99,999,999 USD
+                        <span class="krw">99,999,999 원</span>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="detail">
+                    <div class="book-info-wrap">
+                      <div class="book-info">
+                        <p class="f-body-m3">투숙객</p>
+                        <p class="f-body-r3">HONG G**G 외 5명</p>
+                      </div>
+                      <div class="book-info long">
+                        <p class="f-body-m3">객실명</p>
+                        <p class="f-body-r3">Deluxe Room, 1 King Bed, City View</p>
+                      </div>
+                      <div class="book-info">
+                        <p class="f-body-m3">조식포함여부</p>
+                        <p class="f-body-r3">조식포함(Breakfast)</p>
+                      </div>
+                      <div class="book-info long">
+                        <p class="f-body-m3">객실/인원</p>
+                        <p class="f-body-r3">객실 5 / 성인 5 / 아동 1</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="list">
+                <div class="tit-area">
+                  <div class="left">
+                    <p class="f-body-b3">예약번호</p>
+                    <a href="javascript:" class="link-txt f-body-m3">TR240900001-2</a>
+                  </div>
+                  <div class="right">
+                    <!-- 2024-11-26 마크업 변경 -->
+                    <div class="label-div">
+                      <!--
+                        blue : 결제취소, 부분결제, 미결제, 예약확정, 결제완료
+                        gray : 취소대기, 예약취소, 결제실패, 예약불가, 에러(예약실패), 에러(예약취소 실패)
+                        red : 취소 위약금
+                      -->
+                      <p class="txt-label blue">[예약확정]</p>
+                      <p class="txt-label red">[취소위약금]</p>
+                    </div>
+                    <!-- // 2024-11-26 마크업 변경 -->
+                    <button type="button"><img src="/common/web/images/icon-white-accordian-arrow.svg" alt=""></button>
+                  </div>
+                </div>
+                <div class="con-area">
+                  <p class="f-body-m1">멜리아 다낭 비치 리조트</p>
+                  <!-- 2024-12-24 공급사 추가 -->
+                  <!-- @ 계정의 권한이 '마스터'인 경우만 공급사 표시 (supplier) -->
+                  <!-- <p class="supplier f-body-m3">${공급사}</p> -->
+                  <div class="book-info-wrap">
+                    <div class="book-info">
+                      <p class="f-body-m3">대표 투숙객</p>
+                      <p class="f-body-r3">HONG G**G</p>
+                    </div>
+                    <div class="book-info long">
+                      <p class="f-body-m3">체크인/체크아웃&middot;박수</p><!-- 2024-12-02 텍스트 수정 --> 
+                      <p class="f-body-r3">2024-10-10(수) ~ 2024-10-13(일) &middot; 3박</p><!-- 2024-12-02 텍스트 수정 --> 
+                    </div>
+                    <div class="book-info">
+                      <p class="f-body-m3">예약 담당자</p>
+                      <p class="f-body-r3">홍*동홍</p>
+                    </div>
+                    <div class="book-info">
+                      <p class="f-body-m3">취소마감일</p>
+                      <p class="f-body-r3">2024-09-30</p>
+                    </div>
+                    <div class="book-info long">
+                      <p class="f-body-m3">예약일</p>
+                      <p class="f-body-r3">2024-09-09(금)</p>
+                    </div>
+                    <div class="book-info">
+                      <p class="f-body-m3">총 요금</p>
+                      <!-- @ 환종이 외화인 경우, 하단에 원화 표시 -->
+                      <p class="f-body-r3">
+                        99,999,999 원
+                      </p>
+                    </div>
+                  </div>
+                  <div class="detail">
+                    <div class="book-info-wrap">
+                      <div class="book-info">
+                        <p class="f-body-m3">투숙객</p>
+                        <p class="f-body-r3">HONG G**G 외 5명</p>
+                      </div>
+                      <div class="book-info long">
+                        <p class="f-body-m3">객실명</p>
+                        <p class="f-body-r3">Deluxe Room, 1 King Bed, City View</p>
+                      </div>
+                      <div class="book-info">
+                        <p class="f-body-m3">조식포함여부</p>
+                        <p class="f-body-r3">조식포함(Breakfast)</p>
+                      </div>
+                      <div class="book-info long">
+                        <p class="f-body-m3">객실/인원</p>
+                        <p class="f-body-r3">객실 5 / 성인 5 / 아동 1</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="list">
+                <div class="tit-area">
+                  <div class="left">
+                    <p class="f-body-b3">예약번호</p>
+                    <a href="javascript:" class="link-txt f-body-m3">TR240900001-2</a>
+                  </div>
+                  <div class="right">
+                    <!-- 2024-11-26 마크업 변경 -->
+                    <div class="label-div">
+                      <!--
+                        blue : 결제취소, 부분결제, 미결제, 예약확정, 결제완료
+                        gray : 취소대기, 예약취소, 결제실패, 예약불가, 에러(예약실패), 에러(예약취소 실패)
+                        red : 취소 위약금
+                      -->
+                      <p class="txt-label blue">[예약확정]</p>
+                      <p class="txt-label red">[취소위약금]</p>
+                    </div>
+                    <!-- // 2024-11-26 마크업 변경 -->
+                    <button type="button"><img src="/common/web/images/icon-white-accordian-arrow.svg" alt=""></button>
+                  </div>
+                </div>
+                <div class="con-area">
+                  <p class="f-body-m1">멜리아 다낭 비치 리조트 멜리아 다낭 비치 리조트 멜리아 다낭 비치 리조트 멜리아 다낭 비치 리조트 멜리아 다낭 비치 리조트 멜리아 다낭 비치 리조트 멜리아 다낭 비치 리조트 멜리아 다낭 비치 리조트 멜리아 다낭 비치 리조트 멜리아 다낭 비치 리조트 멜리아 다낭 비치 리조트 멜리아 다낭 비치 리조트 멜리아 다낭 비치 리조트 멜리아 다낭 비치 리조트</p>
+                  <!-- 2024-12-24 공급사 추가 -->
+                  <!-- @ 계정의 권한이 '마스터'인 경우만 공급사 표시 (supplier) -->
+                  <!-- <p class="supplier f-body-m3">${공급사}</p> -->
+                  <div class="book-info-wrap">
+                    <div class="book-info">
+                      <p class="f-body-m3">대표 투숙객</p>
+                      <p class="f-body-r3">HONG G**G</p>
+                    </div>
+                    <div class="book-info long">
+                      <p class="f-body-m3">체크인/체크아웃&middot;박수</p><!-- 2024-12-02 텍스트 수정 --> 
+                      <p class="f-body-r3">2024-10-10(수) ~ 2024-10-13(일) &middot; 3박</p><!-- 2024-12-03 텍스트 수정 --> 
+                    </div>
+                    <div class="book-info">
+                      <p class="f-body-m3">예약 담당자</p>
+                      <p class="f-body-r3">홍*동홍</p>
+                    </div>
+                    <div class="book-info">
+                      <p class="f-body-m3">취소마감일</p>
+                      <p class="f-body-r3">2024-09-30</p>
+                    </div>
+                    <div class="book-info long">
+                      <p class="f-body-m3">예약일</p>
+                      <p class="f-body-r3">2024-09-09(금)</p>
+                    </div>
+                    <div class="book-info">
+                      <p class="f-body-m3">총 요금</p>
+                      <!-- @ 환종이 외화인 경우, 하단에 원화 표시 -->
+                      <p class="f-body-r3">
+                        99,999,999 원
+                      </p>
+                    </div>
+                  </div>
+                  <div class="detail">
+                    <div class="book-info-wrap">
+                      <div class="book-info">
+                        <p class="f-body-m3">투숙객</p>
+                        <p class="f-body-r3">HONG G**G 외 5명</p>
+                      </div>
+                      <div class="book-info long">
+                        <p class="f-body-m3">객실명</p>
+                        <p class="f-body-r3">Deluxe Room, 1 King Bed, City View</p>
+                      </div>
+                      <div class="book-info">
+                        <p class="f-body-m3">조식포함여부</p>
+                        <p class="f-body-r3">조식포함(Breakfast)</p>
+                      </div>
+                      <div class="book-info long">
+                        <p class="f-body-m3">객실/인원</p>
+                        <p class="f-body-r3">객실 5 / 성인 5 / 아동 1</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 최근 예약 내역이 없을 경우 -->
+            <div class="no-data-area">
+              <p class="txt f-body-m1">조회된 게시물이 없습니다.</p>
+            </div>
+          </div>
+
+          <!-- 최근 확인한 호텔 -->
+          <div class="cont-sec">
+            <div class="tit-wrap">
+              <p class="f-t1">최근 확인한 호텔</p>
+            </div>
+            <div class="border-card-swiper">
+              <div class="swiper-container">
+                <div class="swiper-wrapper">
+                  <a href="javascript:" class="swiper-slide">
+                    <div class="tit-wrap">
+                      <p class="f-body-b1">Hampton by Hilton Humberside</p>
+                      <p class="f-body-r3">햄프턴 바이 힐튼 험버사이드</p>
+                      <div class="stars">
+                        <p class="star"></p>
+                        <p class="star"></p>
+                        <p class="star"></p>
+                        <p class="star"></p>
+                        <p class="star"></p>
+                      </div>
+                    </div>
+                    <div class="txt-wrap">
+                      <p class="f-body-r3">객실 1개 &middot; 성인2명 &middot; 아동 1명</p>
+                      <p class="f-body-r3">2024-10-10(수) ~ 2024-10-13(일) &middot; 3박</p>
+                    </div>
+                  </a>
+                  <a href="javascript:" class="swiper-slide">
+                    <div class="tit-wrap">
+                      <p class="f-body-b1">Sofitel Ambassador Seoul Hotel &amp; Servic Residence</p>
+                      <p class="f-body-r3">소피텔 앰배서더 서울 호텔 &amp; 서비스드 레지던스</p>
+                      <div class="stars">
+                        <p class="star"></p>
+                        <p class="star"></p>
+                        <p class="star"></p>
+                        <p class="star"></p>
+                      </div>
+                    </div>
+                    <div class="txt-wrap">
+                      <p class="f-body-r3">객실 1개 &middot; 성인2명 &middot; 아동 1명</p>
+                      <p class="f-body-r3">2024-10-10(수) ~ 2024-10-13(일) &middot; 3박</p>
+                    </div>
+                  </a>
+                  <a href="javascript:" class="swiper-slide">
+                    <div class="tit-wrap">
+                      <p class="f-body-b1">Hyatt Regency Danang Resort and spa</p>
+                      <p class="f-body-r3">하얏트 리젠시 다낭 리조트 앤 스파</p>
+                      <div class="stars">
+                        <p class="star"></p>
+                        <p class="star"></p>
+                        <p class="star"></p>
+                      </div>
+                    </div>
+                    <div class="txt-wrap">
+                      <p class="f-body-r3">객실 1개 &middot; 성인2명 &middot; 아동 1명</p>
+                      <p class="f-body-r3">2024-10-10(수) ~ 2024-10-13(일) &middot; 3박</p>
+                    </div>
+                  </a>
+                  <a href="javascript:" class="swiper-slide">
+                    <div class="tit-wrap">
+                      <p class="f-body-b1">Hampton by Hilton Humberside Airport</p>
+                      <p class="f-body-r3">햄프턴 바이 힐튼 험버사이드 에어포트</p>
+                      <div class="stars">
+                        <p class="star"></p>
+                        <p class="star"></p>
+                        <p class="star"></p>
+                        <p class="star"></p>
+                        <p class="star"></p>
+                      </div>
+                    </div>
+                    <div class="txt-wrap">
+                      <p class="f-body-r3">객실 1개 &middot; 성인2명 &middot; 아동 1명</p>
+                      <p class="f-body-r3">2024-10-10(수) ~ 2024-10-13(일) &middot; 3박</p>
+                    </div>
+                  </a>
+                  <a href="javascript:" class="swiper-slide">
+                    <div class="tit-wrap">
+                      <p class="f-body-b1">Hampton by Hilton Humberside Airport</p>
+                      <p class="f-body-r3">햄프턴 바이 힐튼 험버사이드 에어포트</p>
+                      <div class="stars">
+                        <p class="star"></p>
+                        <p class="star"></p>
+                        <p class="star"></p>
+                        <p class="star"></p>
+                        <p class="star"></p>
+                      </div>
+                    </div>
+                    <div class="txt-wrap">
+                      <p class="f-body-r3">객실 1개 &middot; 성인2명 &middot; 아동 1명</p>
+                      <p class="f-body-r3">2024-10-10(수) ~ 2024-10-13(일) &middot; 3박</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-button-next circle-btn"></div>
+              <div class="swiper-button-prev circle-btn"></div>
+            </div>
+          </div>
+
+          <!-- 찜한 숙소 -->
+          <div class="cont-sec">
+            <div class="tit-wrap">
+              <p class="f-t1">찜한 숙소</p>
+              <a href="javascript:" class="icon-txt-btn plus"><span class="f-body-b4">더보기</span></a>
+            </div>
+            <div class="like-list-swiper">
+              <div class="swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide like-hotel-list">
+                    <a href="javascript:">
+                      <p class="img"><img src="/common/web/images/@img-like-lodging-01.jpg" alt=""></p>
+                      <div class="txt-wrap">
+                        <p class="f-body-b1">The Westin Josun Seoul</p>
+                        <p class="f-body-r3">웨스턴 조선 서울</p>
+                        <div class="stars">
+                          <p class="star"></p>
+                          <p class="star"></p>
+                          <p class="star"></p>
+                          <p class="star"></p>
+                        </div>
+                        <p class="f-body-r3">중구</p>
+                      </div>
+                    </a>
+                    <button class="like-btn on"></button>
+                  </div>
+                  <div class="swiper-slide like-hotel-list">
+                    <a href="javascript:">
+                      <p class="img"><img src="/common/web/images/@img-like-lodging-02.jpg" alt=""></p>
+                      <div class="txt-wrap">
+                        <p class="f-body-b1">Mayfield Hotel Seoul</p>
+                        <p class="f-body-r3">메이필드호텔 서울</p>
+                        <div class="stars">
+                          <p class="star"></p>
+                          <p class="star"></p>
+                          <p class="star"></p>
+                          <p class="star"></p>
+                        </div>
+                        <p class="f-body-r3">중구</p>
+                      </div>
+                    </a>
+                    <button class="like-btn on"></button>
+                  </div>
+                  <div class="swiper-slide like-hotel-list">
+                    <a href="javascript:">
+                      <p class="img"><img src="/common/web/images/@img-like-lodging-03.jpg" alt=""></p>
+                      <div class="txt-wrap">
+                        <p class="f-body-b1">Novotel Ambassador Seoul Dongdaemun Hotel</p>
+                        <p class="f-body-r3">노보텔 앰배서더 서울 동대문 호텔</p>
+                        <div class="stars">
+                          <p class="star"></p>
+                          <p class="star"></p>
+                          <p class="star"></p>
+                          <p class="star"></p>
+                        </div>
+                        <p class="f-body-r3">중구</p>
+                      </div>
+                    </a>
+                    <button class="like-btn on"></button>
+                  </div>
+                  <div class="swiper-slide like-hotel-list">
+                    <a href="javascript:">
+                      <p class="img"><img src="/common/web/images/@img-like-lodging-04.jpg" alt=""></p>
+                      <div class="txt-wrap">
+                        <p class="f-body-b1">Hotel Naru Seoul Mgallery Ambassador</p>
+                        <p class="f-body-r3">호텔 나루 서울 엠갤러리 앰배서더</p>
+                        <div class="stars">
+                          <p class="star"></p>
+                          <p class="star"></p>
+                          <p class="star"></p>
+                          <p class="star"></p>
+                        </div>
+                        <p class="f-body-r3">중구</p>
+                      </div>
+                    </a>
+                    <button class="like-btn on"></button>
+                  </div>
+                  <div class="swiper-slide like-hotel-list">
+                    <a href="javascript:">
+                      <p class="img"><img src="/common/web/images/@img-like-lodging-01.jpg" alt=""></p>
+                      <div class="txt-wrap">
+                        <p class="f-body-b1">Lotte Hotel Seoul Lotte Hotel Seoul Lotte Hotel Seoul Lotte Hotel Seoul Lotte Hotel Seoul Lotte Hotel Seoul Lotte Hotel Seoul</p>
+                        <p class="f-body-r3">서울서울서울서울서울서울서울서울서울서울서울서울서울서울서울서울서울서울</p>
+                        <div class="stars">
+                          <p class="star"></p>
+                          <p class="star"></p>
+                          <p class="star"></p>
+                          <p class="star"></p>
+                        </div>
+                        <p class="f-body-r3">중구</p>
+                      </div>
+                    </a>
+                    <button class="like-btn on"></button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-button-next circle-btn"></div>
+              <div class="swiper-button-prev circle-btn"></div>
+            </div>
+          </div>
+
+          <!-- 주요 추천 도시 -->
+          <div class="cont-sec">
+            <div class="tit-wrap">
+              <p class="f-t1">주요 추천 도시</p>
+            </div>
+            <div class="tab-func-area">
+              <div class="tab-btn-area gray-btn-swiper swiper-container">
+                <div class="swiper-wrapper">
+                  <a href="javascript:" class="swiper-slide tab-btn on"><span class="f-body-b2">국내</span></a>
+                  <a href="javascript:" class="swiper-slide tab-btn"><span class="f-body-b2">홍콩/중국</span></a>
+                  <a href="javascript:" class="swiper-slide tab-btn"><span class="f-body-b2">일본</span></a>
+                  <a href="javascript:" class="swiper-slide tab-btn"><span class="f-body-b2">남태평양</span></a>
+                  <a href="javascript:" class="swiper-slide tab-btn"><span class="f-body-b2">유럽</span></a>
+                  <a href="javascript:" class="swiper-slide tab-btn"><span class="f-body-b2">미주/캐나다</span></a>
+                </div>
+              </div>
+              <div class="tab-con-area">
+                <div class="tab-con on flow-swiper-wrap">
+                  <div class="flow-swiper-div swiper-container">
+                    <div class="flow-swiper swiper-wrapper">
+                      <a href="javascript:" class="slide swiper-slide">
+                        <img src="/common/web/images/@img-recommend-city-01.jpg" alt="">
+                        <p class="f-body-b1">부산</p>
+                      </a>
+                      <a href="javascript:" class="slide swiper-slide">
+                        <img src="/common/web/images/@img-recommend-city-02.jpg" alt="">
+                        <p class="f-body-b1">라스베가스</p>
+                      </a>
+                      <a href="javascript:" class="slide swiper-slide">
+                        <img src="/common/web/images/@img-recommend-city-03.jpg" alt="">
+                        <p class="f-body-b1">삿포로</p>
+                      </a>
+                      <a href="javascript:" class="slide swiper-slide">
+                        <img src="/common/web/images/@img-recommend-city-04.jpg" alt="">
+                        <p class="f-body-b1">방콕</p>
+                      </a>
+                      <a href="javascript:" class="slide swiper-slide">
+                        <img src="/common/web/images/@img-recommend-city-05.jpg" alt="">
+                        <p class="f-body-b1">인천</p>
+                      </a>
+                      <a href="javascript:" class="slide swiper-slide">
+                        <img src="/common/web/images/@img-recommend-city-06.jpg" alt="">
+                        <p class="f-body-b1">파타야</p>
+                      </a>
+                      <a href="javascript:" class="slide swiper-slide">
+                        <img src="/common/web/images/@img-recommend-city-07.jpg" alt="">
+                        <p class="f-body-b1">도쿄</p>
+                      </a>
+                      <a href="javascript:" class="slide swiper-slide">
+                        <img src="/common/web/images/@img-recommend-city-08.jpg" alt="">
+                        <p class="f-body-b1">파리</p>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="swiper-button-next circle-btn"></div>
+                  <div class="swiper-button-prev circle-btn"></div>
+                </div>
+                <div class="tab-con flow-swiper-wrap">
+                  <div class="flow-swiper-div swiper-container">
+                    <div class="flow-swiper swiper-wrapper">
+                      <a href="javascript:" class="slide swiper-slide">
+                        <img src="/common/web/images/@img-recommend-city-01.jpg" alt="">
+                        <p class="f-body-b1">홍콩</p>
+                      </a>
+                      <a href="javascript:" class="slide swiper-slide">
+                        <img src="/common/web/images/@img-recommend-city-02.jpg" alt="">
+                        <p class="f-body-b1">중국</p>
+                      </a>
+                      <a href="javascript:" class="slide swiper-slide">
+                        <img src="/common/web/images/@img-recommend-city-03.jpg" alt="">
+                        <p class="f-body-b1">삿포로</p>
+                      </a>
+                      <a href="javascript:" class="slide swiper-slide">
+                        <img src="/common/web/images/@img-recommend-city-04.jpg" alt="">
+                        <p class="f-body-b1">방콕</p>
+                      </a>
+                      <a href="javascript:" class="slide swiper-slide">
+                        <img src="/common/web/images/@img-recommend-city-05.jpg" alt="">
+                        <p class="f-body-b1">인천</p>
+                      </a>
+                      <a href="javascript:" class="slide swiper-slide">
+                        <img src="/common/web/images/@img-recommend-city-06.jpg" alt="">
+                        <p class="f-body-b1">파타야</p>
+                      </a>
+                      <a href="javascript:" class="slide swiper-slide">
+                        <img src="/common/web/images/@img-recommend-city-07.jpg" alt="">
+                        <p class="f-body-b1">도쿄</p>
+                      </a>
+                      <a href="javascript:" class="slide swiper-slide">
+                        <img src="/common/web/images/@img-recommend-city-08.jpg" alt="">
+                        <p class="f-body-b1">파리</p>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="swiper-button-next circle-btn"></div>
+                  <div class="swiper-button-prev circle-btn"></div>
+                </div>
+                <div class="tab-con flow-swiper-wrap">
+                  <div class="flow-swiper-div swiper-container">
+                    <div class="flow-swiper swiper-wrapper">
+                      <a href="javascript:" class="slide swiper-slide">
+                        <img src="/common/web/images/@img-recommend-city-01.jpg" alt="">
+                        <p class="f-body-b1">일본</p>
+                      </a>
+                      <a href="javascript:" class="slide swiper-slide">
+                        <img src="/common/web/images/@img-recommend-city-02.jpg" alt="">
+                        <p class="f-body-b1">중국</p>
+                      </a>
+                      <a href="javascript:" class="slide swiper-slide">
+                        <img src="/common/web/images/@img-recommend-city-03.jpg" alt="">
+                        <p class="f-body-b1">삿포로</p>
+                      </a>
+                      <a href="javascript:" class="slide swiper-slide">
+                        <img src="/common/web/images/@img-recommend-city-04.jpg" alt="">
+                        <p class="f-body-b1">방콕</p>
+                      </a>
+                      <a href="javascript:" class="slide swiper-slide">
+                        <img src="/common/web/images/@img-recommend-city-05.jpg" alt="">
+                        <p class="f-body-b1">인천</p>
+                      </a>
+                      <a href="javascript:" class="slide swiper-slide">
+                        <img src="/common/web/images/@img-recommend-city-06.jpg" alt="">
+                        <p class="f-body-b1">파타야</p>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="swiper-button-next circle-btn"></div>
+                  <div class="swiper-button-prev circle-btn"></div>
+                </div>
+                <div class="tab-con flow-swiper-wrap">
+                  <div class="flow-swiper-div swiper-container">
+                    <div class="flow-swiper swiper-wrapper">
+                      <a href="javascript:" class="slide swiper-slide">
+                        <img src="/common/web/images/@img-recommend-city-01.jpg" alt="">
+                        <p class="f-body-b1">남태평양</p>
+                      </a>
+                      <a href="javascript:" class="slide swiper-slide">
+                        <img src="/common/web/images/@img-recommend-city-02.jpg" alt="">
+                        <p class="f-body-b1">중국</p>
+                      </a>
+                      <a href="javascript:" class="slide swiper-slide">
+                        <img src="/common/web/images/@img-recommend-city-03.jpg" alt="">
+                        <p class="f-body-b1">삿포로</p>
+                      </a>
+                      <a href="javascript:" class="slide swiper-slide">
+                        <img src="/common/web/images/@img-recommend-city-04.jpg" alt="">
+                        <p class="f-body-b1">방콕</p>
+                      </a>
+                      <a href="javascript:" class="slide swiper-slide">
+                        <img src="/common/web/images/@img-recommend-city-05.jpg" alt="">
+                        <p class="f-body-b1">인천</p>
+                      </a>
+                      <a href="javascript:" class="slide swiper-slide">
+                        <img src="/common/web/images/@img-recommend-city-06.jpg" alt="">
+                        <p class="f-body-b1">파타야</p>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="swiper-button-next circle-btn"></div>
+                  <div class="swiper-button-prev circle-btn"></div>
+                </div>
+                <div class="tab-con flow-swiper-wrap">
+                  <div class="flow-swiper-div swiper-container">
+                    <div class="flow-swiper swiper-wrapper">
+                      <a href="javascript:" class="slide swiper-slide">
+                        <img src="/common/web/images/@img-recommend-city-01.jpg" alt="">
+                        <p class="f-body-b1">유럽</p>
+                      </a>
+                      <a href="javascript:" class="slide swiper-slide">
+                        <img src="/common/web/images/@img-recommend-city-02.jpg" alt="">
+                        <p class="f-body-b1">중국</p>
+                      </a>
+                      <a href="javascript:" class="slide swiper-slide">
+                        <img src="/common/web/images/@img-recommend-city-03.jpg" alt="">
+                        <p class="f-body-b1">삿포로</p>
+                      </a>
+                      <a href="javascript:" class="slide swiper-slide">
+                        <img src="/common/web/images/@img-recommend-city-04.jpg" alt="">
+                        <p class="f-body-b1">방콕</p>
+                      </a>
+                      <a href="javascript:" class="slide swiper-slide">
+                        <img src="/common/web/images/@img-recommend-city-05.jpg" alt="">
+                        <p class="f-body-b1">인천</p>
+                      </a>
+                      <a href="javascript:" class="slide swiper-slide">
+                        <img src="/common/web/images/@img-recommend-city-06.jpg" alt="">
+                        <p class="f-body-b1">파타야</p>
+                      </a>
+                      <a href="javascript:" class="slide swiper-slide">
+                        <img src="/common/web/images/@img-recommend-city-07.jpg" alt="">
+                        <p class="f-body-b1">도쿄</p>
+                      </a>
+                      <a href="javascript:" class="slide swiper-slide">
+                        <img src="/common/web/images/@img-recommend-city-08.jpg" alt="">
+                        <p class="f-body-b1">파리</p>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="swiper-button-next circle-btn"></div>
+                  <div class="swiper-button-prev circle-btn"></div>
+                </div>
+                <div class="tab-con flow-swiper-wrap">
+                  <div class="flow-swiper-div swiper-container">
+                    <div class="flow-swiper swiper-wrapper">
+                      <a href="javascript:" class="slide swiper-slide">
+                        <img src="/common/web/images/@img-recommend-city-01.jpg" alt="">
+                        <p class="f-body-b1">미주/캐나다</p>
+                      </a>
+                      <a href="javascript:" class="slide swiper-slide">
+                        <img src="/common/web/images/@img-recommend-city-02.jpg" alt="">
+                        <p class="f-body-b1">중국</p>
+                      </a>
+                      <a href="javascript:" class="slide swiper-slide">
+                        <img src="/common/web/images/@img-recommend-city-03.jpg" alt="">
+                        <p class="f-body-b1">삿포로</p>
+                      </a>
+                      <a href="javascript:" class="slide swiper-slide">
+                        <img src="/common/web/images/@img-recommend-city-04.jpg" alt="">
+                        <p class="f-body-b1">방콕</p>
+                      </a>
+                      <a href="javascript:" class="slide swiper-slide">
+                        <img src="/common/web/images/@img-recommend-city-05.jpg" alt="">
+                        <p class="f-body-b1">인천</p>
+                      </a>
+                      <a href="javascript:" class="slide swiper-slide">
+                        <img src="/common/web/images/@img-recommend-city-06.jpg" alt="">
+                        <p class="f-body-b1">파타야</p>
+                      </a>
+                      <a href="javascript:" class="slide swiper-slide">
+                        <img src="/common/web/images/@img-recommend-city-07.jpg" alt="">
+                        <p class="f-body-b1">도쿄</p>
+                      </a>
+                      <a href="javascript:" class="slide swiper-slide">
+                        <img src="/common/web/images/@img-recommend-city-08.jpg" alt="">
+                        <p class="f-body-b1">파리</p>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="swiper-button-next circle-btn"></div>
+                  <div class="swiper-button-prev circle-btn"></div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+
+          <!-- 공지사항, FAQ -->
+          <div class="cont-sec">
+            <div class="half">
+              <div class="left">
+                <div class="tit-wrap">
+                  <p class="f-t1">공지사항</p>
+                  <a href="javascript:" class="icon-txt-btn plus"><span class="f-body-b4">더보기</span></a>
+                </div>
+                <div class="notice-list-wrap">
+                  <a href="javascript:" class="list fixed"><!-- 고정으로 등록된 게시물일 경우 fixed class 추가 -->
+                    <p class="f-body-r3"><span>[시스템]</span>사이트 점검 안내입니다.</p>
+                    <p class="date">2024.07.26</p>
+                  </a>
+                  <a href="javascript:" class="list">
+                    <p class="f-body-r3"><span>[기타]</span>임직원 특별 할인 안내입니다.</p>
+                    <p class="date">2024.07.23</p>
+                  </a>
+                  <a href="javascript:" class="list">
+                    <p class="f-body-r3"><span>[기타]</span>홍콩 숙박시설 일회용 플라스틱 제품 사용 홍콩 숙박시설 일회용 플라스틱 제품 사용</p>
+                    <p class="date">2024.07.23</p>
+                  </a>
+                </div>
+
+                <!-- 공지사항이 없을 경우 -->
+                <div class="no-data-area">
+                  <p class="txt f-body-m1">조회된 게시물이 없습니다.</p>
+                </div>
+              </div>
+              <div class="right">
+                <div class="tit-wrap">
+                  <p class="f-t1">FAQ</p>
+                  <a href="javascript:" class="icon-txt-btn plus"><span class="f-body-b4">더보기</span></a>
+                </div>
+                <div class="notice-list-wrap">
+                  <a href="javascript:" class="list fixed">
+                    <p class="f-body-r3"><span>[예약]</span>아동 포함 예약은 어떻게 하나요?</p>
+                  </a>
+                  <a href="javascript:" class="list">
+                    <p class="f-body-r3"><span>[결제 및 취소]</span>신용카드를 여러개 나눠서 결제 가능한가요?</p>
+                  </a>
+                  <a href="javascript:" class="list">
+                    <p class="f-body-r3"><span>[회원 혜택]</span>회원 혜택은 어떻게 되나요?</p>
+                  </a>
+                </div>
+
+                <!-- FAQ가 없을 경우 -->
+                <div class="no-data-area">
+                  <p class="txt f-body-m1">조회된 게시물이 없습니다.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer></footer>
+
+      <!-- 우측 하단 퀵메뉴 -->
+      <div class="quick-fixed-area">
+        <div class="quick-area">
+          <a href="javascript:" class="recent-srch" onClick="openPopup('.recent-srch-pop', this)"></a>
+          <a href="javascript:" class="like" onClick="openPopup('.hotel-like-pop', this)"></a>
+          <a href="javascript:" class="reserve"></a>
+        </div>
+        <button type="button" class="btn-top" title="상단으로 이동"></button>
+      </div>
+
+      <!-- 최근 검색 이력 팝업 -->
+      <div class="right-pop layer-popup recent-srch-pop">
+        <div class="pop-area">
+          <div class="pop-wrap">
+            <div class="pop-fixed">
+              <div class="pop-head">
+                <p class="f-t3">최근 검색 이력</p>
+              </div>
+              <p class="info-txt f-body-r2">최근 검색 이력은 최대 20개까지 보관됩니다.</p>
+              <p class="total-count f-body-r2">총<span class="f-body-b2 green-txt">8</span>개</p>
+            </div>
+            <div class="scroll-area" tabindex="0">
+              <div class="in">
+                <div class="pop-cont">
+                  <!-- @ 내용없음 -->
+                  <!-- <div class="no-data-area">
+                    <p class="txt f-body-m2">최근 검색 이력이 없습니다.</p>
+                  </div> -->
+
+                  <!-- @ 내용있음-->
+                  <ul class="recent-srch-list">
+                    <li class="recent-srch">
+                      <a href="javascript:">
+                        <p class="f-body-b2">파리</p>
+                        <p class="f-body-r3">2024-10-10(수) ~ 2024-10-13(일) &middot; 3박</p>
+                        <p class="f-body-r3">객실 1개 &middot; 성인2명 &middot; 아동 1명</p>
+                      </a>
+                      <button type="button" class="delete-btn"></button>
+                    </li>
+                    <li class="recent-srch">
+                      <a href="javascript:">
+                        <p class="f-body-b2">베트남</p>
+                        <p class="f-body-r3">2024-10-10(수) ~ 2024-10-13(일) &middot; 3박</p>
+                        <p class="f-body-r3">객실 1개 &middot; 성인2명 &middot; 아동 1명</p>
+                      </a>
+                      <button type="button" class="delete-btn"></button>
+                    </li>
+                    <li class="recent-srch">
+                      <a href="javascript:">
+                        <p class="f-body-b2">InterContinental Danang Sun Peninsula Resort, an IHG Hotel 2 lines or more 2 lines or more 2 lines or more 2 lines or more 2 lines or more</p>
+                        <p class="f-body-r3">햄프턴 바이 힐튼 험버사이드 에어포트</p>
+                        <div class="stars">
+                          <p class="star"></p>
+                          <p class="star"></p>
+                          <p class="star"></p>
+                          <p class="star"></p>
+                          <p class="star"></p>
+                        </div>
+                        <p class="f-body-r3">2024-10-10(수) ~ 2024-10-13(일) &middot; 3박</p>
+                        <p class="f-body-r3">객실 1개 &middot; 성인2명 &middot; 아동 1명</p>
+                      </a>
+                      <button type="button" class="delete-btn"></button>
+                    </li>
+                    <li class="recent-srch">
+                      <a href="javascript:">
+                        <p class="f-body-b2">중국</p>
+                        <p class="f-body-r3">2024-10-10(수) ~ 2024-10-13(일) &middot; 3박</p>
+                        <p class="f-body-r3">객실 1개 &middot; 성인2명 &middot; 아동 1명</p>
+                      </a>
+                      <button type="button" class="delete-btn"></button>
+                    </li>
+                    <li class="recent-srch">
+                      <a href="javascript:">
+                        <p class="f-body-b2">Melia Vinpearl Danang Riverfront</p>
+                        <p class="f-body-r3">멜리아 빈펄 다낭 리버프런트</p>
+                        <div class="stars">
+                          <p class="star"></p>
+                          <p class="star"></p>
+                          <p class="star"></p>
+                          <p class="star"></p>
+                        </div>
+                        <p class="f-body-r3">2024-10-10(수) ~ 2024-10-13(일) &middot; 3박</p>
+                        <p class="f-body-r3">객실 1개 &middot; 성인2명 &middot; 아동 1명</p>
+                      </a>
+                      <button type="button" class="delete-btn"></button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="pop-btn-wrap">
+            <button class="popclose-btn" type="button" title="팝업 닫기"></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 호텔 찜 내역 팝업 -->
+      <div class="right-pop layer-popup hotel-like-pop">
+        <div class="pop-area">
+          <div class="pop-wrap">
+            <div class="pop-fixed">
+              <div class="pop-head">
+                <p class="f-t3">호텔 찜 내역</p>
+              </div>
+              <p class="info-txt f-body-r2">찜 내역은 최대 100개까지 보관됩니다.</p>
+              <div class="form-select">
+                <select>
+                  <option>전체</option>
+                  <option>전체11</option>
+                </select>
+              </div>
+              <p class="total-count f-body-r2">총<span class="f-body-b2 green-txt">8</span>개</p>
+            </div>
+            <div class="scroll-area" tabindex="0">
+              <div class="in">
+                <div class="pop-cont">
+                  <ul class="hotel-like-list">
+                    <li class="like-list">
+                      <a href="javascript:">
+                        <p class="img"><img src="/common/web/images/@img-hotel-like-01.jpg" alt=""></p>
+                        <div class="info">
+                          <p class="f-body-b2">InterContinental Danang Sun Peninsula Resort, an IHG Hotel 2 lines or mor</p>
+                          <p class="f-body-r3">인터컨티넨탈 다낭 썬 페닌술라 리조트</p>
+                          <div class="stars">
+                            <p class="star"></p>
+                            <p class="star"></p>
+                            <p class="star"></p>
+                            <p class="star"></p>
+                            <p class="star"></p>
+                          </div>
+                          <p class="f-body-r3">다낭</p>
+                        </div>
+                      </a>
+                      <button class="like-btn on"></button>
+                    </li>
+                    <li class="like-list">
+                      <a href="javascript:">
+                        <p class="img"><img src="/common/web/images/@img-hotel-like-02.jpg" alt=""></p>
+                        <div class="info">
+                          <p class="f-body-b2">Melia Vinpearl Danang Riverfront</p>
+                          <p class="f-body-r3">멜리아 빈펄 다낭 리버프런트</p>
+                          <div class="stars">
+                            <p class="star"></p>
+                            <p class="star"></p>
+                            <p class="star"></p>
+                            <p class="star"></p>
+                          </div>
+                          <p class="f-body-r3">다낭</p>
+                        </div>
+                      </a>
+                      <button class="like-btn on"></button>
+                    </li>
+                    <li class="like-list">
+                      <a href="javascript:">
+                        <p class="img"><img src="/common/web/images/@img-hotel-like-03.jpg" alt=""></p>
+                        <div class="info">
+                          <p class="f-body-b2">Melia Vinpearl Danang Riverfront</p>
+                          <p class="f-body-r3">멜리아 빈펄 다낭 리버프런트 멜리아 빈펄 다낭 리버프런트 멜리아 빈펄 다낭 리버프런트 멜리아 빈펄 다낭 리버프런트</p>
+                          <p class="f-body-r3">다낭</p>
+                        </div>
+                      </a>
+                      <button class="like-btn on"></button>
+                    </li>
+                    <li class="like-list">
+                      <a href="javascript:">
+                        <p class="img"><img src="/common/web/images/@img-hotel-like-04.jpg" alt=""></p>
+                        <div class="info">
+                          <p class="f-body-b2">Melia Vinpearl Danang RiverfrontMelia Vinpearl Danang RiverfrontMelia Vinpearl Danang RiverfrontMelia Vinpearl Danang Riverfront</p>
+                          <p class="f-body-r3">멜리아 빈펄 다낭 리버프런트 멜리아 빈펄 다낭 리버프런트 멜리아 빈펄 다낭 리버프런트 멜리아 빈펄 다낭 리버프런트</p>
+                          <p class="f-body-r3">다낭</p>
+                        </div>
+                      </a>
+                      <button class="like-btn on"></button>
+                    </li>
+                    <li class="like-list">
+                      <a href="javascript:">
+                        <p class="img"><img src="/common/web/images/@img-hotel-like-05.jpg" alt=""></p>
+                        <div class="info">
+                          <p class="f-body-b2">Melia Vinpearl Danang RiverfrontMelia Vinpearl Danang RiverfrontMelia Vinpearl Danang RiverfrontMelia Vinpearl Danang Riverfront</p>
+                          <p class="f-body-r3">멜리아 빈펄 다낭 리버프런트 멜리아 빈펄 다낭 리버프런트 멜리아 빈펄 다낭 리버프런트 멜리아 빈펄 다낭 리버프런트</p>
+                          <div class="stars">
+                            <p class="star"></p>
+                            <p class="star"></p>
+                            <p class="star"></p>
+                            <p class="star"></p>
+                            <p class="star"></p>
+                          </div>
+                          <p class="f-body-r3">다낭</p>
+                        </div>
+                      </a>
+                      <button class="like-btn on"></button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="pop-btn-wrap">
+            <button class="popclose-btn" type="button" title="팝업 닫기"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+	</body>
+
+  <!-- 2024-12-13 개발쪽에서 하단 스크립트 내용이 담긴 todayCheckFn() 함수 호출을 하고 있습니다.
+    하단 스크립트는 퍼블 보여주기 용도로만 기재된 스크립트입니다. -->
+  <script>
+    // 체크인, 체크아웃 default값
+    if(!$(".trip-sel-area").hasClass("resrch")) { // 목록, 상세의 검색바의 경우 디폴트값 있으면 안됨. 데이터가 들어가 있어야해서 빠짐
+      getNewDate(); // 날짜
+      getDayOfWeek(); // 요일
+    }
+    
+    $(".year-month-div .form-select").each(function(){
+      if(new Date().getMonth() + 1 == parseInt($(this).find("select option:selected").text().split("-")[1])){
+        $(this).closest(".calendar").find(".week-div > a").each(function(){
+          if(parseInt($(this).text()) == new Date().getDate()){
+            $(this).addClass("today");
+            if(!$(".check.in").hasClass("today")) {  // 서브페이지 검색바에서, today와 checkin이 겹칠 경우,,,
+              $(this).append("<span>오늘</span>")
+            }
+          }
+        })
+      }
+    });
+    
+    $(".today").prevAll("a").addClass("disabled"); // 오늘 기준 전 날짜 다 disabled 처리
+  </script>
+</html>

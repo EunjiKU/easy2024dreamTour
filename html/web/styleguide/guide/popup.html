@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>퍼블리싱 스타일 가이드</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  <link rel="stylesheet" href="../..//common/web/css/swiper.css"/>
+  <link rel="stylesheet" href="../assets/styles/shCore.css"/>
+	<link rel="Stylesheet" href="../assets/styles/shCoreEclipse.css"/>
+  <link rel="stylesheet" href="../assets/css/index.css"/>
+  <link rel="stylesheet" href="../..//common/web/css/common.css"/>
+  <link rel="stylesheet" href="../..//common/web/css/main.css"/>
+  <link rel="stylesheet" href="../..//common/web/css/fonts.css"/>
+  <script type="text/javascript" src="../..//common/web/js/jquery-1.12.4.min.js"></script>
+  <script src="../assets/scripts/XRegExp.js"></script> <!-- XRegExp is bundled with the final shCore.js during build -->
+	<script src="../assets/scripts/shCore.js"></script>
+	<script src="../assets/scripts/shBrushJScript.js"></script>
+	<script src="../assets/scripts/shBrushXml.js"></script>
+	<script src="../assets/scripts/shBrushCss.js"></script>
+  <script type="text/javascript" src="../..//common/web/js/gsap.min.js"></script>
+  <script type="text/javascript" src="../..//common/web/js/ScrollTrigger.min.js"></script>
+  <script type="text/javascript" src="../..//common/web/js/Draggable.min.js"></script>
+  <script type="text/javascript" src="../..//common/web/js/swiper.min.js"></script>
+  <script type="text/javascript" src="../..//common/web/js/script.js"></script>
+  <script type="text/javascript">SyntaxHighlighter.all();</script>
+  <style>
+    body{background:#fff;}
+    #wrap{overflow:visible; top:auto; left:auto; height:auto; transform: none; min-width:100%; max-height: none;}
+
+    .pop-wrap {background-color: #fff !important;}
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <header>
+      <h1>현대드림투어 가이드</h1>
+      <div class="btn-wrap">
+        <a href="../../worklist.html">작업현황판  <i class="fas fa-angle-right"></i></a>
+      </div>
+    </header>
+    <div id="contents">
+      <aside>
+        <a href="../guide-intro.html">기본 정책 <i class="fas fa-angle-right"></i></a>
+        <a href="../guide-markup.html">마크업 규칙 <i class="fas fa-angle-right"></i></a>
+        <a href="../guide-css.html">CSS 규칙 <i class="fas fa-angle-right"></i></a>
+        <a href="../guide-naming.html">네이밍 규칙 <i class="fas fa-angle-right"></i></a>
+        <a href="javascript:" class="active">스타일 가이드 <i class="fas fa-angle-right"></i></a>
+        <ul class="guide-list">
+          <li><a href="./form.html">FORM</a></li>
+          <li><a href="./typography.html">TYPOGRAPHY</a></li>
+          <li><a href="./color.html">COLOR</a></li>
+          <li><a href="./button.html">BUTTON</a></li>
+          <li><a href="./popup.html" class="active">POPUP</a></li>
+          <li><a href="./table.html">TABLE</a></li>
+        </ul>
+      </aside>
+      <div class="content-area">
+        <h2>팝업 스타일 가이드</h2>
+        <br/>
+        <section>
+          <div class="ex-box">
+            <h3>MAIN POPUP</h3>
+            <p>layper-popup클래스에 main-pop클래스를 추가합니다.</p>
+            <div class="exs">
+              <h4>팝업이 1개일 경우</h4>
+              <div class="ex">
+                <div class="btn-wrap">
+                  <button
+                    class="btn-round-l"
+                    onClick="openPopupMain('#MAIN-POPUP1')"
+                    title="팝업 열기"
+                  ><span>MAIN-POPUP(1)</span></button>
+                </div>
+                <!--팝업-->
+                <!-- @ on 클래스가 있으면 페이지 첫진입 시, 팝업이 열려있는 상태 -->
+                <!-- @ 팝업 호출
+                      해당팝업과 연결된 버튼에 onClick="openPopup('.layer-popup', this)" 이벤트 작성
+                      메인팝업은 openPopupMain('.layer-popup.main-pop')" 호출
+                -->
+                <!-- @ 팝업 종류
+                      main-pop : 메인 팝업
+                      center-pop : 가운데 팝업
+                      full-pop : 전체 팝업
+                      right-pop : 우측 팝업
+                -->
+                <div class="main-pop layer-popup" id="MAIN-POPUP1">
+                  <div class="pop-area">
+                    <div class="pop-wrap">
+                      <div class="pop-fixed">
+                        <div class="pop-head">
+                          <p class="f-t2">마감일 체크</p>
+                        </div>
+                        <p class="p-info f-body-r3">취소 마감일이 임박한 예약 정보를 안내드립니다.<br/>예약 번호를 선택 후 상세 페이지에서 예약 정보를 확인하세요.</p>
+                      </div>
+                      <div class="scroll-area" tabindex="0">
+                        <div class="pop-cont">
+                          <p class="table-info f-body-r3">※ D-2일 기준</p>
+                          <div class="form-table green-bg">
+                            <div class="table-wrap">
+                              <table class="basic-table">
+                                <caption>마감일 체크</caption>
+                                <colgroup>
+                                  <col style="width: 20%;">
+                                  <col style="width: 20%;">
+                                  <col style="width: 20%;">
+                                  <col style="width: 20%;">
+                                  <col style="width: 20%;">
+                                </colgroup>
+                                <thead>
+                                  <tr>
+                                    <th class="f-body-m4">예약번호</th>
+                                    <th class="f-body-m4">결제상태</th>
+                                    <th class="f-body-m4">예약일</th>
+                                    <th class="f-body-m4">투수객명</th>
+                                    <th class="f-body-m4">취소 마감일</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <!-- @ 검색 결과 없을 때 -->
+                                  <!-- <tr>
+                                    <td colspan="5">
+                                      <div class="no-data">
+                                        <p class="f-body-r4">검색 결과가 없습니다.</p>
+                                      </div>
+                                    </td>
+                                  </tr> -->
+          
+                                  <!-- @ 검색 결과 있을 때 -->
+                                  <tr>
+                                    <td><a href="javascript:" class="link-txt f-body-r4">TH0000019</a></td>
+                                    <td><p class="f-body-r4">결제완료</p></td>
+                                    <td><p class="f-body-r4">2024-08-21(수)</p></td>
+                                    <td><p class="f-body-r4">고길동</p></td>
+                                    <td><p class="red-txt f-body-r4">2024-08-22(목)</p></td>
+                                  </tr>
+                                  <tr>
+                                    <td><a href="javascript:" class="link-txt f-body-r4">TH0000019</a></td>
+                                    <td><p class="f-body-r4">결제완료</p></td>
+                                    <td><p class="f-body-r4">2024-08-21(수)</p></td>
+                                    <td><p class="f-body-r4">고길동</p></td>
+                                    <td><p class="red-txt f-body-r4">2024-08-22(목)</p></td>
+                                  </tr>
+                                  <tr>
+                                    <td><a href="javascript:" class="link-txt f-body-r4">TH0000019</a></td>
+                                    <td><p class="f-body-r4">결제완료</p></td>
+                                    <td><p class="f-body-r4">2024-08-21(수)</p></td>
+                                    <td><p class="f-body-r4">고길동</p></td>
+                                    <td><p class="red-txt f-body-r4">2024-08-22(목)</p></td>
+                                  </tr>
+                                  <tr>
+                                    <td><a href="javascript:" class="link-txt f-body-r4">TH0000019</a></td>
+                                    <td><p class="f-body-r4">결제완료</p></td>
+                                    <td><p class="f-body-r4">2024-08-21(수)</p></td>
+                                    <td><p class="f-body-r4">고길동</p></td>
+                                    <td><p class="red-txt f-body-r4">2024-08-22(목)</p></td>
+                                  </tr>
+                                  <tr>
+                                    <td><a href="javascript:" class="link-txt f-body-r4">TH0000019</a></td>
+                                    <td><p class="f-body-r4">결제완료</p></td>
+                                    <td><p class="f-body-r4">2024-08-21(수)</p></td>
+                                    <td><p class="f-body-r4">고길동</p></td>
+                                    <td><p class="red-txt f-body-r4">2024-08-22(목)</p></td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                          <div class="btn-wrap">
+                            <button class="w120 btn-round-s"><span>더보기</span></button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="pop-btn-wrap">
+                      <div class="form-checkbox">
+                        <input type="checkbox" id="Chk1-1" name="">
+                        <label for="Chk1-1"><span>오늘 하루 보지 않기</span></label>
+                      </div>
+                      <button class="popclose-btn f-body-b3" type="button" title="팝업 닫기">닫기</button>
+                    </div>
+                  </div>
+                </div>
+                <!-- // 팝업-->
+              </div>
+              <script type="syntaxhighlighter" class="brush: xml;">
+              </script>
+              <script type="syntaxhighlighter" class="brush: css;">
+              </script>
+            </div>
+            <div class="exs">
+              <h4>팝업이 2개일 경우</h4>
+              <div class="ex">
+                <div class="btn-wrap">
+                  <button
+                    class="btn-round-l"
+                    onClick="openPopupMain('#MAIN-POPUP2')"
+                    title="팝업 열기"
+                  ><span>MAIN-POPUP(2)</span></button>
+                </div>
+                <!--팝업-->
+                <!-- @ on 클래스가 있으면 페이지 첫진입 시, 팝업이 열려있는 상태 -->
+                <!-- @ 팝업 호출
+                      해당팝업과 연결된 버튼에 onClick="openPopup('.layer-popup', this)" 이벤트 작성
+                      메인팝업은 openPopupMain('.layer-popup.main-pop')" 호출
+                -->
+                <!-- @ 팝업 종류
+                      main-pop : 메인 팝업
+                      center-pop : 가운데 팝업
+                      full-pop : 전체 팝업
+                      right-pop : 우측 팝업
+                -->
+                <div class="main-pop layer-popup" id="MAIN-POPUP2">
+                  <div class="pop-area">
+                    <div class="pop-wrap">
+                      <div class="pop-fixed">
+                        <div class="pop-head">
+                          <p class="f-t2">마감일 체크</p>
+                        </div>
+                        <p class="p-info f-body-r3">취소 마감일이 임박한 예약 정보를 안내드립니다.<br/>예약 번호를 선택 후 상세 페이지에서 예약 정보를 확인하세요.</p>
+                      </div>
+                      <div class="scroll-area" tabindex="0">
+                        <div class="pop-cont">
+                          <p class="table-info f-body-r3">※ D-2일 기준</p>
+                          <div class="form-table green-bg">
+                            <div class="table-wrap">
+                              <table class="basic-table">
+                                <caption>마감일 체크</caption>
+                                <colgroup>
+                                  <col style="width: 20%;">
+                                  <col style="width: 20%;">
+                                  <col style="width: 20%;">
+                                  <col style="width: 20%;">
+                                  <col style="width: 20%;">
+                                </colgroup>
+                                <thead>
+                                  <tr>
+                                    <th class="f-body-m4">예약번호</th>
+                                    <th class="f-body-m4">결제상태</th>
+                                    <th class="f-body-m4">예약일</th>
+                                    <th class="f-body-m4">투수객명</th>
+                                    <th class="f-body-m4">취소 마감일</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <!-- @ 검색 결과 없을 때 -->
+                                  <!-- <tr>
+                                    <td colspan="5">
+                                      <div class="no-data">
+                                        <p class="f-body-r4">검색 결과가 없습니다.</p>
+                                      </div>
+                                    </td>
+                                  </tr> -->
+          
+                                  <!-- @ 검색 결과 있을 때 -->
+                                  <tr>
+                                    <td><a href="javascript:" class="link-txt f-body-r4">TH0000019</a></td>
+                                    <td><p class="f-body-r4">결제완료</p></td>
+                                    <td><p class="f-body-r4">2024-08-21(수)</p></td>
+                                    <td><p class="f-body-r4">고길동</p></td>
+                                    <td><p class="red-txt f-body-r4">2024-08-22(목)</p></td>
+                                  </tr>
+                                  <tr>
+                                    <td><a href="javascript:" class="link-txt f-body-r4">TH0000019</a></td>
+                                    <td><p class="f-body-r4">결제완료</p></td>
+                                    <td><p class="f-body-r4">2024-08-21(수)</p></td>
+                                    <td><p class="f-body-r4">고길동</p></td>
+                                    <td><p class="red-txt f-body-r4">2024-08-22(목)</p></td>
+                                  </tr>
+                                  <tr>
+                                    <td><a href="javascript:" class="link-txt f-body-r4">TH0000019</a></td>
+                                    <td><p class="f-body-r4">결제완료</p></td>
+                                    <td><p class="f-body-r4">2024-08-21(수)</p></td>
+                                    <td><p class="f-body-r4">고길동</p></td>
+                                    <td><p class="red-txt f-body-r4">2024-08-22(목)</p></td>
+                                  </tr>
+                                  <tr>
+                                    <td><a href="javascript:" class="link-txt f-body-r4">TH0000019</a></td>
+                                    <td><p class="f-body-r4">결제완료</p></td>
+                                    <td><p class="f-body-r4">2024-08-21(수)</p></td>
+                                    <td><p class="f-body-r4">고길동</p></td>
+                                    <td><p class="red-txt f-body-r4">2024-08-22(목)</p></td>
+                                  </tr>
+                                  <tr>
+                                    <td><a href="javascript:" class="link-txt f-body-r4">TH0000019</a></td>
+                                    <td><p class="f-body-r4">결제완료</p></td>
+                                    <td><p class="f-body-r4">2024-08-21(수)</p></td>
+                                    <td><p class="f-body-r4">고길동</p></td>
+                                    <td><p class="red-txt f-body-r4">2024-08-22(목)</p></td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                          <div class="btn-wrap">
+                            <button class="w120 btn-round-s"><span>더보기</span></button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="pop-btn-wrap">
+                      <div class="form-checkbox">
+                        <input type="checkbox" id="Chk1-1" name="">
+                        <label for="Chk1-1"><span>오늘 하루 보지 않기</span></label>
+                      </div>
+                      <button class="popclose-btn f-body-b3" type="button" title="팝업 닫기">닫기</button>
+                    </div>
+                  </div>
+                  <div class="pop-area">
+                    <div class="pop-wrap">
+                      <div class="scroll-area" tabindex="0">
+                        <div class="pop-cont">
+                          <div class="pop-swiper swiper-container">
+                            <div class="swiper-wrapper">
+                              <!-- 이미지 버전 -->
+                              <div class="swiper-slide">
+                                <img src="/common/web/images/@img-recommend-city-02.jpg" alt="">
+                              </div>
+                              <div class="swiper-slide">
+                                <a href="javascript:"><img src="/common/web/images/@img-recommend-city-02.jpg" alt=""></a>
+                              </div>
+                              <!-- html 버전 -->
+                              <div class="swiper-slide">
+                                <div class="html-wrap">
+                                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum, pariatur sapiente. Illo error iste neque nulla, similique placeat expedita quae ipsam sunt laudantium quos, atque sequi officiis. Rem repellat architecto ipsa similique laborum possimus corrupti ex earum culpa, cumque consequuntur!</p>
+                                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum, pariatur sapiente. Illo error iste neque nulla, similique placeat expedita quae ipsam sunt laudantium quos, atque sequi officiis. Rem repellat architecto ipsa similique laborum possimus corrupti ex earum culpa, cumque consequuntur!</p>
+                                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum, pariatur sapiente. Illo error iste neque nulla, similique placeat expedita quae ipsam sunt laudantium quos, atque sequi officiis. Rem repellat architecto ipsa similique laborum possimus corrupti ex earum culpa, cumque consequuntur!</p>
+                                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum, pariatur sapiente. Illo error iste neque nulla, similique placeat expedita quae ipsam sunt laudantium quos, atque sequi officiis. Rem repellat architecto ipsa similique laborum possimus corrupti ex earum culpa, cumque consequuntur!</p>
+                                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum, pariatur sapiente. Illo error iste neque nulla, similique placeat expedita quae ipsam sunt laudantium quos, atque sequi officiis. Rem repellat architecto ipsa similique laborum possimus corrupti ex earum culpa, cumque consequuntur!</p>
+                                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum, pariatur sapiente. Illo error iste neque nulla, similique placeat expedita quae ipsam sunt laudantium quos, atque sequi officiis. Rem repellat architecto ipsa similique laborum possimus corrupti ex earum culpa, cumque consequuntur!</p>
+                                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum, pariatur sapiente. Illo error iste neque nulla, similique placeat expedita quae ipsam sunt laudantium quos, atque sequi officiis. Rem repellat architecto ipsa similique laborum possimus corrupti ex earum culpa, cumque consequuntur!</p>
+                                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum, pariatur sapiente. Illo error iste neque nulla, similique placeat expedita quae ipsam sunt laudantium quos, atque sequi officiis. Rem repellat architecto ipsa similique laborum possimus corrupti ex earum culpa, cumque consequuntur!</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="swiper-controller">
+                              <div class="swiper-button-prev"></div>
+                              <div class="swiper-button-next"></div>
+                              <div class="swiper-pagination"></div>
+                              <button class="autoplay-btn" aria-label="자동재생정지"></button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="pop-btn-wrap">
+                      <div class="form-checkbox">
+                        <input type="checkbox" id="Chk1-1" name="">
+                        <label for="Chk1-1"><span>오늘 하루 보지 않기</span></label>
+                      </div>
+                      <button class="popclose-btn f-body-b3" type="button" title="팝업 닫기">닫기</button>
+                    </div>
+                  </div>
+                </div>
+                <!-- // 팝업-->
+              </div>
+              <script type="syntaxhighlighter" class="brush: xml;">
+              </script>
+              <script type="syntaxhighlighter" class="brush: css;">
+              </script>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div class="ex-box">
+            <h3>CENTER POPUP</h3>
+            <p>layper-popup클래스에 center-popup클래스를 추가합니다.</p>
+            <div class="exs">
+              <h4>상단 고정</h4>
+              <div class="ex">
+                <div class="btn-wrap">
+                  <button
+                    class="btn-round-l"
+                    onClick="openPopup('#CENTER-POP', this)"
+                    title="팝업 열기"
+                  ><span>CENTER-POPUP</span></button>
+                </div>
+                <!--팝업-->
+                <!-- @ on 클래스가 있으면 페이지 첫진입 시, 팝업이 열려있는 상태 -->
+                <!-- @ 팝업 호출
+                      해당팝업과 연결된 버튼에 onClick="openPopup('.layer-popup', this)" 이벤트 작성
+                      메인팝업은 openPopupMain('.layer-popup.main-pop')" 호출
+                -->
+                <!-- @ 팝업 종류
+                      main-pop : 메인 팝업
+                      center-pop : 가운데 팝업
+                      full-pop : 전체 팝업
+                      right-pop : 우측 팝업
+                -->
+                <div class="center-pop w1000 layer-popup" id="CENTER-POP">
+                  <div class="pop-area">
+                    <div class="pop-wrap">
+                      <div class="pop-fixed">
+                        <div class="pop-head">
+                          <p class="f-t2">호텔정보</p>
+                        </div>
+                      </div>
+                      <div class="scroll-area" tabindex="0">
+                        <div class="in">
+                          <div class="pop-cont">
+                            <div class="form-table black-border">
+                              <div class="table-wrap">
+                                <table class="basic-table">
+                                  <caption>호텔정보</caption>
+                                  <colgroup>
+                                    <col style="width: 20%;">
+                                    <col style="width: 80%;">
+                                  </colgroup>
+                                  <tbody>
+                                    <tr>
+                                      <th>
+                                        <p class="f-body-m3">국가/도시</p>
+                                      </th>
+                                      <td>
+                                        <p class="f-body-r3">일본/Tokyo</p>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <th>
+                                        <p class="f-body-m3">언어</p>
+                                      </th>
+                                      <td>
+                                        <p class="f-body-r3">일본어, 영어</p>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <th>
+                                        <p class="f-body-m3">TEL / FAX</p>
+                                      </th>
+                                      <td>
+                                        <p class="f-body-r3">+81 36 2531111 / +81 36 2353115</p>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <th>
+                                        <p class="f-body-m3">호텔 위치</p>
+                                      </th>
+                                      <td>
+                                        <p class="f-body-r3">도쿄(신주쿠)에 위치한 리가 로열 호텔 도쿄의 경우 걸어서 3분 거리에 와세다대학교, 차로 4분 거리에 도쿄돔 등이 있습니다. 이 업스케일 호텔에서 도겐우키지조 코간 사찰까지는 4.7km 떨어져 있으며, 5km 거리에는 도쿄 황궁도 있습니다.</p>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <th>
+                                        <p class="f-body-m3">체크인 안내</p>
+                                      </th>
+                                      <td>
+                                        <div class="dot-txt-w">
+                                          <p class="dot-txt f-body-r3">체크인 시작 시간: 15:00 ~ 24:00</p>
+                                          <p class="dot-txt f-body-r3">체크아웃 시간: 12:00</p>
+                                          <p class="dot-txt f-body-r3">최소 체크인 나이 : 만 18세</p>
+                                        </div>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <th>
+                                        <p class="f-body-m3">편의시설 및 서비스</p>
+                                      </th>
+                                      <td>
+                                        <div class="green-icon-wrap">
+                                          <div class="txt-wrap">
+                                            <p class="f-body-m3">[숙박 편의 시설]</p>
+                                          </div>
+                                          <div class="green-icon-div">
+                                            <p class="green-icon">
+                                              <img src="/common/web/images/icon-internet-green.svg" alt="">
+                                              <span class="f-body-m3">인터넷</span>
+                                            </p>
+                                            <div class="dot-txt-w half">
+                                              <p class="dot-txt f-body-r3">무료 Wi-fi</p>
+                                            </div>
+                                          </div>
+                                          <div class="green-icon-div">
+                                            <p class="green-icon">
+                                              <img src="/common/web/images/icon-facilities-disabled-green.svg" alt="">
+                                              <span class="f-body-m3">장애인 편의시설</span>
+                                            </p>
+                                            <div class="dot-txt-w half">
+                                              <p class="dot-txt f-body-r3">휠체어로 이용 가능 - 없음</p>
+                                              <p class="dot-txt f-body-r3">주차 및 교통</p>
+                                              <p class="dot-txt f-body-r3">셀프 주차(요금 별도)</p>
+                                            </div>
+                                          </div>
+                                          <div class="green-icon-div">
+                                            <p class="green-icon">
+                                              <img src="/common/web/images/icon-food-green.svg" alt="">
+                                              <span class="f-body-m3">식음료</span>
+                                            </p>
+                                            <div class="dot-txt-w half">
+                                              <p class="dot-txt f-body-r3">레스토랑 수 - 5</p>
+                                              <p class="dot-txt f-body-r3">바/라운지 수 - 1</p>
+                                            </div>
+                                          </div>
+                                          <div class="green-icon-div">
+                                            <p class="green-icon">
+                                              <img src="/common/web/images/icon-enjoy-green.svg" alt="">
+                                              <span class="f-body-m3">즐길거리</span>
+                                            </p>
+                                            <div class="dot-txt-w half">
+                                              <p class="dot-txt f-body-r3">정원</p>
+                                            </div>
+                                          </div>
+                                          <div class="green-icon-div">
+                                            <p class="green-icon">
+                                              <img src="/common/web/images/icon-service-green.svg" alt="">
+                                              <span class="f-body-m3">고객 서비스</span>
+                                            </p>
+                                            <div class="dot-txt-w half">
+                                              <p class="dot-txt f-body-r3">프런트 데스크의 안전 금고</p>
+                                              <p class="dot-txt f-body-r3">다국어 구사 가능 직원</p>
+                                              <p class="dot-txt f-body-r3">24시간 운영 프런트 데스크</p>
+                                              <p class="dot-txt f-body-r3">포터/벨보이</p>
+                                            </div>
+                                          </div>
+                                          <div class="green-icon-div">
+                                            <p class="green-icon">
+                                              <img src="/common/web/images/icon-amenities-green.svg" alt="">
+                                              <span class="f-body-m3">편의시설</span>
+                                            </p>
+                                            <div class="dot-txt-w half">
+                                              <p class="dot-txt f-body-r3">세탁 시설</p>
+                                              <p class="dot-txt f-body-r3">엘리베이터</p>
+                                            </div>
+                                          </div>
+                                          <div class="green-icon-div">
+                                            <p class="green-icon">
+                                              <img src="/common/web/images/icon-shopping-convenience-space.svg" alt="">
+                                              <span class="f-body-m3">쇼핑 및 편의 공간</span>
+                                            </p>
+                                            <div class="dot-txt-w half">
+                                              <p class="dot-txt f-body-r3">미용실</p>
+                                            </div>
+                                          </div>
+                                          <div class="green-icon-div">
+                                            <p class="green-icon">
+                                              <img src="/common/web/images/icon-business-facilities-green.svg" alt="">
+                                              <span class="f-body-m3">비즈니스 편의시설</span>
+                                            </p>
+                                            <div class="dot-txt-w half">
+                                              <p class="dot-txt f-body-r3">회의실</p>
+                                            </div>
+                                          </div>
+                                          <div class="green-icon-div">
+                                            <p class="green-icon">
+                                              <img src="/common/web/images/icon-etc-green.svg" alt="">
+                                              <span class="f-body-m3">기타</span>
+                                            </p>
+                                            <div class="dot-txt-w half">
+                                              <p class="dot-txt f-body-r3">지정 흡연 구역</p>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="green-icon-wrap">
+                                          <div class="txt-wrap">
+                                            <p class="f-body-m3">[객실 편의 시설]</p>
+                                            <p class="f-body-r3">131개 객실에는 냉장고 및 미니바도 갖추어져 있어 편하게 머무실 수 있습니다. 위성 채널 프로그램 시청이 가능한 LCD TV가 있어 지루하지 않게 시간을 보내실 수 있으며 DVD 플레이어도 구비되어 있습니다. 샤워기가 달린 욕조 시설을 갖춘 전용 욕실에는 무료 세면용품 및 비데도 마련되어 있습니다. 편의 시설/서비스로는 전화 외에 금고 및 책상도 있습니다.</p>
+                                          </div>
+                                          <div class="green-icon-div">
+                                            <p class="green-icon">
+                                              <img src="/common/web/images/icon-etc-green.svg" alt="">
+                                              <span class="f-body-m3">기타</span>
+                                            </p>
+                                            <div class="dot-txt-w half">
+                                              <p class="dot-txt f-body-r3">금연</p>
+                                            </div>
+                                          </div>
+                                          <div class="green-icon-div">
+                                            <p class="green-icon">
+                                              <img src="/common/web/images/icon-food-green.svg" alt="">
+                                              <span class="f-body-m3">식음료</span>
+                                            </p>
+                                            <div class="dot-txt-w half">
+                                              <p class="dot-txt f-body-r3">냉장고</p>
+                                              <p class="dot-txt f-body-r3">룸서비스(이용 시간 제한)</p>
+                                              <p class="dot-txt f-body-r3">무료 생수</p>
+                                              <p class="dot-txt f-body-r3">미니바</p>
+                                              <p class="dot-txt f-body-r3">커피/티 메이커</p>
+                                            </div>
+                                          </div>
+                                          <div class="green-icon-div">
+                                            <p class="green-icon">
+                                              <img src="/common/web/images/icon-entertain-green.svg" alt="">
+                                              <span class="f-body-m3">엔터테인먼트</span>
+                                            </p>
+                                            <div class="dot-txt-w half">
+                                              <p class="dot-txt f-body-r3">DVD 플레이어</p>
+                                              <p class="dot-txt f-body-r3">TV</p>
+                                              <p class="dot-txt f-body-r3">객실 내 마사지 서비스 가능</p>
+                                            </div>
+                                          </div>
+                                          <div class="green-icon-div">
+                                            <p class="green-icon">
+                                              <img src="/common/web/images/icon-bath-green.svg" alt="">
+                                              <span class="f-body-m3">욕실</span>
+                                            </p>
+                                            <div class="dot-txt-w half">
+                                              <p class="dot-txt f-body-r3">목욕 가운</p>
+                                              <p class="dot-txt f-body-r3">무료 세면용품</p>
+                                              <p class="dot-txt f-body-r3">샤워기가 달린 욕조</p>
+                                              <p class="dot-txt f-body-r3">이동식 욕조 의자</p>
+                                              <p class="dot-txt f-body-r3">전용 욕실</p>
+                                              <p class="dot-txt f-body-r3">타월 제공</p>
+                                              <p class="dot-txt f-body-r3">헤어드라이어</p>
+                                            </div>
+                                          </div>
+                                          <div class="green-icon-div">
+                                            <p class="green-icon">
+                                              <img src="/common/web/images/icon-bed-green.svg" alt="">
+                                              <span class="f-body-m3">침실</span>
+                                            </p>
+                                            <div class="dot-txt-w half">
+                                              <p class="dot-txt f-body-r3">무료 유아용 침대</p>
+                                              <p class="dot-txt f-body-r3">오리/거위털 이불</p>
+                                              <p class="dot-txt f-body-r3">침대 수 - 2</p>
+                                            </div>
+                                          </div>
+                                          <div class="green-icon-div">
+                                            <p class="green-icon">
+                                              <img src="/common/web/images/icon-house-green.svg" alt="">
+                                              <span class="f-body-m3">하우스 키핑</span>
+                                            </p>
+                                            <div class="dot-txt-w half">
+                                              <p class="dot-txt f-body-r3">매일 하우스 키핑</p>
+                                            </div>
+                                          </div>
+                                          <div class="green-icon-div">
+                                            <p class="green-icon">
+                                              <img src="/common/web/images/icon-room-green.svg" alt="">
+                                              <span class="f-body-m3">객실</span>
+                                            </p>
+                                            <div class="dot-txt-w half">
+                                              <p class="dot-txt f-body-r3">객실 금고</p>
+                                              <p class="dot-txt f-body-r3">객실 내 온도 조절(난방)</p>
+                                              <p class="dot-txt f-body-r3">슬리퍼</p>
+                                              <p class="dot-txt f-body-r3">암막 커튼</p>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="pop-btn-wrap">
+                      <button class="popclose-btn" type="button" title="팝업 닫기"></button>
+                    </div>
+                  </div>
+                </div>
+                <!-- // 팝업-->
+              </div>
+              <script type="syntaxhighlighter" class="brush: xml;">
+              </script>
+              <script type="syntaxhighlighter" class="brush: css;">
+              </script>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div class="ex-box">
+            <h3>FULL POPUP</h3>
+            <p>layper-popup클래스에 full-popup클래스를 추가합니다.</p>
+            <div class="exs">
+              <h4>상단 고정</h4>
+              <div class="ex">
+                <div class="btn-wrap">
+                  <button
+                    class="btn-round-l"
+                    onClick="openPopup('#FULL-POPUP', this)"
+                    title="팝업 열기"
+                  ><span>FULL-POPUP</span></button>
+                </div>
+                <!--팝업-->
+                <!-- @ on 클래스가 있으면 페이지 첫진입 시, 팝업이 열려있는 상태 -->
+                <!-- @ 팝업 호출
+                      해당팝업과 연결된 버튼에 onClick="openPopup('.layer-popup', this)" 이벤트 작성
+                      메인팝업은 openPopupMain('.layer-popup.main-pop')" 호출
+                -->
+                <!-- @ 팝업 종류
+                      main-pop : 메인 팝업
+                      center-pop : 가운데 팝업
+                      full-pop : 전체 팝업
+                      right-pop : 우측 팝업
+                -->
+                <div class="full-pop layer-popup" id="FULL-POPUP">
+                  <div class="pop-area">
+                    <div class="pop-wrap">
+                      <div class="pop-fixed">
+                        <div class="pop-head">
+                          <p class="f-t2">팝업 타이틀</p>
+                        </div>
+                      </div>
+                      <div class="scroll-area" tabindex="0">
+                        <div class="in">
+                          <div class="pop-cont">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem incidunt tempore quaerat, blanditiis recusandae nihil expedita sequi ratione voluptates repudiandae asperiores, optio corporis possimus, aspernatur error excepturi cum? Culpa unde harum possimus doloribus dolor nemo dolores ipsam, hic praesentium modi id sunt eveniet facere debitis quidem non fugiat. Sit modi, voluptatum illum laudantium accusamus excepturi? Minima praesentium omnis nobis accusantium natus iste ipsa libero nemo nostrum repellendus dolores voluptatem dicta culpa, tempora facere sunt! Qui autem perferendis ut architecto consequatur, vero, veniam odio animi accusamus in officia atque ea neque, fugiat dolor rerum. Eum ullam, vero, esse pariatur quidem voluptates inventore alias eius fugit itaque ipsam vitae amet aliquid tempore quisquam veritatis dicta! Laborum cumque odio saepe debitis quasi quaerat sint autem aut quidem consequatur sunt eaque, fugiat voluptatem error iusto voluptatum nisi soluta aspernatur earum! Iste odio sapiente exercitationem dicta aut voluptatem sequi. Vitae molestiae error quibusdam nulla enim, voluptatibus ea, vero maiores laudantium quasi repellendus maxime rem dolore repellat, similique repudiandae officiis necessitatibus ipsum expedita neque iure obcaecati? Neque, ipsam dignissimos nobis aut ratione totam voluptatum cupiditate deserunt eum ipsa, labore iusto numquam reprehenderit quaerat sunt quae odio. Aliquam doloremque dolores laborum, qui nesciunt ipsam assumenda nihil earum deserunt. Ratione consequatur nisi beatae dolorem placeat assumenda, fuga tempore! Quasi molestiae at similique adipisci. Deserunt at aspernatur iste ipsum obcaecati debitis rem veniam molestiae, voluptatum delectus possimus dolore, quidem reprehenderit officia esse sapiente cum quia modi nemo ad! Quibusdam, earum impedit placeat atque fugiat unde eaque possimus velit molestias nihil nam et sed cumque perspiciatis porro, quis maxime magni voluptas quisquam magnam tempora facilis sunt excepturi laborum. Maiores iure magnam tenetur molestias, repellendus quae veritatis culpa, fuga, labore sint dolore porro tempora accusamus error sit ab fugiat illo sunt esse magni voluptate pariatur! Ea quam maxime consequatur fugit dicta numquam dignissimos explicabo eligendi provident cum. Qui porro vitae est explicabo ab officiis earum suscipit, laboriosam rerum dolor id, veniam blanditiis obcaecati impedit quia commodi perspiciatis ipsa adipisci enim non neque alias odit. Veritatis dolor facere officiis illo commodi temporibus? Cum alias mollitia neque at. Ipsum non accusamus, hic maiores voluptates fugiat iure dolore reiciendis blanditiis et veniam possimus officiis aliquid. Fugiat quo, quas nostrum, nesciunt consectetur ducimus deleniti asperiores eum, molestias aspernatur rerum quidem nisi laudantium qui! Officiis necessitatibus vel quibusdam expedita amet id aut, earum, debitis dolorum tempora est culpa sapiente aliquam, illum explicabo nostrum magni quasi aliquid? Placeat, quisquam. Architecto repellat eligendi maiores, voluptatum repudiandae ab nemo voluptatibus facere illum sunt cumque, at accusamus deleniti reprehenderit quia quo voluptates. Praesentium dolorem velit quo libero perspiciatis tempore labore voluptates, quaerat quae tempora repellat minima dolores dicta recusandae obcaecati incidunt similique accusantium reprehenderit veniam! Blanditiis, nulla libero soluta animi beatae commodi optio ducimus eligendi tempore! Ratione itaque qui impedit, quisquam, tenetur non distinctio alias praesentium molestias sit, adipisci quos animi aspernatur consequatur perferendis reprehenderit repellendus fuga inventore eius! Eius, excepturi earum unde quam sed itaque? Est voluptates assumenda maxime sed magnam ad perferendis culpa alias cum, ut expedita modi!</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem incidunt tempore quaerat, blanditiis recusandae nihil expedita sequi ratione voluptates repudiandae asperiores, optio corporis possimus, aspernatur error excepturi cum? Culpa unde harum possimus doloribus dolor nemo dolores ipsam, hic praesentium modi id sunt eveniet facere debitis quidem non fugiat. Sit modi, voluptatum illum laudantium accusamus excepturi? Minima praesentium omnis nobis accusantium natus iste ipsa libero nemo nostrum repellendus dolores voluptatem dicta culpa, tempora facere sunt! Qui autem perferendis ut architecto consequatur, vero, veniam odio animi accusamus in officia atque ea neque, fugiat dolor rerum. Eum ullam, vero, esse pariatur quidem voluptates inventore alias eius fugit itaque ipsam vitae amet aliquid tempore quisquam veritatis dicta! Laborum cumque odio saepe debitis quasi quaerat sint autem aut quidem consequatur sunt eaque, fugiat voluptatem error iusto voluptatum nisi soluta aspernatur earum! Iste odio sapiente exercitationem dicta aut voluptatem sequi. Vitae molestiae error quibusdam nulla enim, voluptatibus ea, vero maiores laudantium quasi repellendus maxime rem dolore repellat, similique repudiandae officiis necessitatibus ipsum expedita neque iure obcaecati? Neque, ipsam dignissimos nobis aut ratione totam voluptatum cupiditate deserunt eum ipsa, labore iusto numquam reprehenderit quaerat sunt quae odio. Aliquam doloremque dolores laborum, qui nesciunt ipsam assumenda nihil earum deserunt. Ratione consequatur nisi beatae dolorem placeat assumenda, fuga tempore! Quasi molestiae at similique adipisci. Deserunt at aspernatur iste ipsum obcaecati debitis rem veniam molestiae, voluptatum delectus possimus dolore, quidem reprehenderit officia esse sapiente cum quia modi nemo ad! Quibusdam, earum impedit placeat atque fugiat unde eaque possimus velit molestias nihil nam et sed cumque perspiciatis porro, quis maxime magni voluptas quisquam magnam tempora facilis sunt excepturi laborum. Maiores iure magnam tenetur molestias, repellendus quae veritatis culpa, fuga, labore sint dolore porro tempora accusamus error sit ab fugiat illo sunt esse magni voluptate pariatur! Ea quam maxime consequatur fugit dicta numquam dignissimos explicabo eligendi provident cum. Qui porro vitae est explicabo ab officiis earum suscipit, laboriosam rerum dolor id, veniam blanditiis obcaecati impedit quia commodi perspiciatis ipsa adipisci enim non neque alias odit. Veritatis dolor facere officiis illo commodi temporibus? Cum alias mollitia neque at. Ipsum non accusamus, hic maiores voluptates fugiat iure dolore reiciendis blanditiis et veniam possimus officiis aliquid. Fugiat quo, quas nostrum, nesciunt consectetur ducimus deleniti asperiores eum, molestias aspernatur rerum quidem nisi laudantium qui! Officiis necessitatibus vel quibusdam expedita amet id aut, earum, debitis dolorum tempora est culpa sapiente aliquam, illum explicabo nostrum magni quasi aliquid? Placeat, quisquam. Architecto repellat eligendi maiores, voluptatum repudiandae ab nemo voluptatibus facere illum sunt cumque, at accusamus deleniti reprehenderit quia quo voluptates. Praesentium dolorem velit quo libero perspiciatis tempore labore voluptates, quaerat quae tempora repellat minima dolores dicta recusandae obcaecati incidunt similique accusantium reprehenderit veniam! Blanditiis, nulla libero soluta animi beatae commodi optio ducimus eligendi tempore! Ratione itaque qui impedit, quisquam, tenetur non distinctio alias praesentium molestias sit, adipisci quos animi aspernatur consequatur perferendis reprehenderit repellendus fuga inventore eius! Eius, excepturi earum unde quam sed itaque? Est voluptates assumenda maxime sed magnam ad perferendis culpa alias cum, ut expedita modi!</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem incidunt tempore quaerat, blanditiis recusandae nihil expedita sequi ratione voluptates repudiandae asperiores, optio corporis possimus, aspernatur error excepturi cum? Culpa unde harum possimus doloribus dolor nemo dolores ipsam, hic praesentium modi id sunt eveniet facere debitis quidem non fugiat. Sit modi, voluptatum illum laudantium accusamus excepturi? Minima praesentium omnis nobis accusantium natus iste ipsa libero nemo nostrum repellendus dolores voluptatem dicta culpa, tempora facere sunt! Qui autem perferendis ut architecto consequatur, vero, veniam odio animi accusamus in officia atque ea neque, fugiat dolor rerum. Eum ullam, vero, esse pariatur quidem voluptates inventore alias eius fugit itaque ipsam vitae amet aliquid tempore quisquam veritatis dicta! Laborum cumque odio saepe debitis quasi quaerat sint autem aut quidem consequatur sunt eaque, fugiat voluptatem error iusto voluptatum nisi soluta aspernatur earum! Iste odio sapiente exercitationem dicta aut voluptatem sequi. Vitae molestiae error quibusdam nulla enim, voluptatibus ea, vero maiores laudantium quasi repellendus maxime rem dolore repellat, similique repudiandae officiis necessitatibus ipsum expedita neque iure obcaecati? Neque, ipsam dignissimos nobis aut ratione totam voluptatum cupiditate deserunt eum ipsa, labore iusto numquam reprehenderit quaerat sunt quae odio. Aliquam doloremque dolores laborum, qui nesciunt ipsam assumenda nihil earum deserunt. Ratione consequatur nisi beatae dolorem placeat assumenda, fuga tempore! Quasi molestiae at similique adipisci. Deserunt at aspernatur iste ipsum obcaecati debitis rem veniam molestiae, voluptatum delectus possimus dolore, quidem reprehenderit officia esse sapiente cum quia modi nemo ad! Quibusdam, earum impedit placeat atque fugiat unde eaque possimus velit molestias nihil nam et sed cumque perspiciatis porro, quis maxime magni voluptas quisquam magnam tempora facilis sunt excepturi laborum. Maiores iure magnam tenetur molestias, repellendus quae veritatis culpa, fuga, labore sint dolore porro tempora accusamus error sit ab fugiat illo sunt esse magni voluptate pariatur! Ea quam maxime consequatur fugit dicta numquam dignissimos explicabo eligendi provident cum. Qui porro vitae est explicabo ab officiis earum suscipit, laboriosam rerum dolor id, veniam blanditiis obcaecati impedit quia commodi perspiciatis ipsa adipisci enim non neque alias odit. Veritatis dolor facere officiis illo commodi temporibus? Cum alias mollitia neque at. Ipsum non accusamus, hic maiores voluptates fugiat iure dolore reiciendis blanditiis et veniam possimus officiis aliquid. Fugiat quo, quas nostrum, nesciunt consectetur ducimus deleniti asperiores eum, molestias aspernatur rerum quidem nisi laudantium qui! Officiis necessitatibus vel quibusdam expedita amet id aut, earum, debitis dolorum tempora est culpa sapiente aliquam, illum explicabo nostrum magni quasi aliquid? Placeat, quisquam. Architecto repellat eligendi maiores, voluptatum repudiandae ab nemo voluptatibus facere illum sunt cumque, at accusamus deleniti reprehenderit quia quo voluptates. Praesentium dolorem velit quo libero perspiciatis tempore labore voluptates, quaerat quae tempora repellat minima dolores dicta recusandae obcaecati incidunt similique accusantium reprehenderit veniam! Blanditiis, nulla libero soluta animi beatae commodi optio ducimus eligendi tempore! Ratione itaque qui impedit, quisquam, tenetur non distinctio alias praesentium molestias sit, adipisci quos animi aspernatur consequatur perferendis reprehenderit repellendus fuga inventore eius! Eius, excepturi earum unde quam sed itaque? Est voluptates assumenda maxime sed magnam ad perferendis culpa alias cum, ut expedita modi!</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem incidunt tempore quaerat, blanditiis recusandae nihil expedita sequi ratione voluptates repudiandae asperiores, optio corporis possimus, aspernatur error excepturi cum? Culpa unde harum possimus doloribus dolor nemo dolores ipsam, hic praesentium modi id sunt eveniet facere debitis quidem non fugiat. Sit modi, voluptatum illum laudantium accusamus excepturi? Minima praesentium omnis nobis accusantium natus iste ipsa libero nemo nostrum repellendus dolores voluptatem dicta culpa, tempora facere sunt! Qui autem perferendis ut architecto consequatur, vero, veniam odio animi accusamus in officia atque ea neque, fugiat dolor rerum. Eum ullam, vero, esse pariatur quidem voluptates inventore alias eius fugit itaque ipsam vitae amet aliquid tempore quisquam veritatis dicta! Laborum cumque odio saepe debitis quasi quaerat sint autem aut quidem consequatur sunt eaque, fugiat voluptatem error iusto voluptatum nisi soluta aspernatur earum! Iste odio sapiente exercitationem dicta aut voluptatem sequi. Vitae molestiae error quibusdam nulla enim, voluptatibus ea, vero maiores laudantium quasi repellendus maxime rem dolore repellat, similique repudiandae officiis necessitatibus ipsum expedita neque iure obcaecati? Neque, ipsam dignissimos nobis aut ratione totam voluptatum cupiditate deserunt eum ipsa, labore iusto numquam reprehenderit quaerat sunt quae odio. Aliquam doloremque dolores laborum, qui nesciunt ipsam assumenda nihil earum deserunt. Ratione consequatur nisi beatae dolorem placeat assumenda, fuga tempore! Quasi molestiae at similique adipisci. Deserunt at aspernatur iste ipsum obcaecati debitis rem veniam molestiae, voluptatum delectus possimus dolore, quidem reprehenderit officia esse sapiente cum quia modi nemo ad! Quibusdam, earum impedit placeat atque fugiat unde eaque possimus velit molestias nihil nam et sed cumque perspiciatis porro, quis maxime magni voluptas quisquam magnam tempora facilis sunt excepturi laborum. Maiores iure magnam tenetur molestias, repellendus quae veritatis culpa, fuga, labore sint dolore porro tempora accusamus error sit ab fugiat illo sunt esse magni voluptate pariatur! Ea quam maxime consequatur fugit dicta numquam dignissimos explicabo eligendi provident cum. Qui porro vitae est explicabo ab officiis earum suscipit, laboriosam rerum dolor id, veniam blanditiis obcaecati impedit quia commodi perspiciatis ipsa adipisci enim non neque alias odit. Veritatis dolor facere officiis illo commodi temporibus? Cum alias mollitia neque at. Ipsum non accusamus, hic maiores voluptates fugiat iure dolore reiciendis blanditiis et veniam possimus officiis aliquid. Fugiat quo, quas nostrum, nesciunt consectetur ducimus deleniti asperiores eum, molestias aspernatur rerum quidem nisi laudantium qui! Officiis necessitatibus vel quibusdam expedita amet id aut, earum, debitis dolorum tempora est culpa sapiente aliquam, illum explicabo nostrum magni quasi aliquid? Placeat, quisquam. Architecto repellat eligendi maiores, voluptatum repudiandae ab nemo voluptatibus facere illum sunt cumque, at accusamus deleniti reprehenderit quia quo voluptates. Praesentium dolorem velit quo libero perspiciatis tempore labore voluptates, quaerat quae tempora repellat minima dolores dicta recusandae obcaecati incidunt similique accusantium reprehenderit veniam! Blanditiis, nulla libero soluta animi beatae commodi optio ducimus eligendi tempore! Ratione itaque qui impedit, quisquam, tenetur non distinctio alias praesentium molestias sit, adipisci quos animi aspernatur consequatur perferendis reprehenderit repellendus fuga inventore eius! Eius, excepturi earum unde quam sed itaque? Est voluptates assumenda maxime sed magnam ad perferendis culpa alias cum, ut expedita modi!</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem incidunt tempore quaerat, blanditiis recusandae nihil expedita sequi ratione voluptates repudiandae asperiores, optio corporis possimus, aspernatur error excepturi cum? Culpa unde harum possimus doloribus dolor nemo dolores ipsam, hic praesentium modi id sunt eveniet facere debitis quidem non fugiat. Sit modi, voluptatum illum laudantium accusamus excepturi? Minima praesentium omnis nobis accusantium natus iste ipsa libero nemo nostrum repellendus dolores voluptatem dicta culpa, tempora facere sunt! Qui autem perferendis ut architecto consequatur, vero, veniam odio animi accusamus in officia atque ea neque, fugiat dolor rerum. Eum ullam, vero, esse pariatur quidem voluptates inventore alias eius fugit itaque ipsam vitae amet aliquid tempore quisquam veritatis dicta! Laborum cumque odio saepe debitis quasi quaerat sint autem aut quidem consequatur sunt eaque, fugiat voluptatem error iusto voluptatum nisi soluta aspernatur earum! Iste odio sapiente exercitationem dicta aut voluptatem sequi. Vitae molestiae error quibusdam nulla enim, voluptatibus ea, vero maiores laudantium quasi repellendus maxime rem dolore repellat, similique repudiandae officiis necessitatibus ipsum expedita neque iure obcaecati? Neque, ipsam dignissimos nobis aut ratione totam voluptatum cupiditate deserunt eum ipsa, labore iusto numquam reprehenderit quaerat sunt quae odio. Aliquam doloremque dolores laborum, qui nesciunt ipsam assumenda nihil earum deserunt. Ratione consequatur nisi beatae dolorem placeat assumenda, fuga tempore! Quasi molestiae at similique adipisci. Deserunt at aspernatur iste ipsum obcaecati debitis rem veniam molestiae, voluptatum delectus possimus dolore, quidem reprehenderit officia esse sapiente cum quia modi nemo ad! Quibusdam, earum impedit placeat atque fugiat unde eaque possimus velit molestias nihil nam et sed cumque perspiciatis porro, quis maxime magni voluptas quisquam magnam tempora facilis sunt excepturi laborum. Maiores iure magnam tenetur molestias, repellendus quae veritatis culpa, fuga, labore sint dolore porro tempora accusamus error sit ab fugiat illo sunt esse magni voluptate pariatur! Ea quam maxime consequatur fugit dicta numquam dignissimos explicabo eligendi provident cum. Qui porro vitae est explicabo ab officiis earum suscipit, laboriosam rerum dolor id, veniam blanditiis obcaecati impedit quia commodi perspiciatis ipsa adipisci enim non neque alias odit. Veritatis dolor facere officiis illo commodi temporibus? Cum alias mollitia neque at. Ipsum non accusamus, hic maiores voluptates fugiat iure dolore reiciendis blanditiis et veniam possimus officiis aliquid. Fugiat quo, quas nostrum, nesciunt consectetur ducimus deleniti asperiores eum, molestias aspernatur rerum quidem nisi laudantium qui! Officiis necessitatibus vel quibusdam expedita amet id aut, earum, debitis dolorum tempora est culpa sapiente aliquam, illum explicabo nostrum magni quasi aliquid? Placeat, quisquam. Architecto repellat eligendi maiores, voluptatum repudiandae ab nemo voluptatibus facere illum sunt cumque, at accusamus deleniti reprehenderit quia quo voluptates. Praesentium dolorem velit quo libero perspiciatis tempore labore voluptates, quaerat quae tempora repellat minima dolores dicta recusandae obcaecati incidunt similique accusantium reprehenderit veniam! Blanditiis, nulla libero soluta animi beatae commodi optio ducimus eligendi tempore! Ratione itaque qui impedit, quisquam, tenetur non distinctio alias praesentium molestias sit, adipisci quos animi aspernatur consequatur perferendis reprehenderit repellendus fuga inventore eius! Eius, excepturi earum unde quam sed itaque? Est voluptates assumenda maxime sed magnam ad perferendis culpa alias cum, ut expedita modi!</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem incidunt tempore quaerat, blanditiis recusandae nihil expedita sequi ratione voluptates repudiandae asperiores, optio corporis possimus, aspernatur error excepturi cum? Culpa unde harum possimus doloribus dolor nemo dolores ipsam, hic praesentium modi id sunt eveniet facere debitis quidem non fugiat. Sit modi, voluptatum illum laudantium accusamus excepturi? Minima praesentium omnis nobis accusantium natus iste ipsa libero nemo nostrum repellendus dolores voluptatem dicta culpa, tempora facere sunt! Qui autem perferendis ut architecto consequatur, vero, veniam odio animi accusamus in officia atque ea neque, fugiat dolor rerum. Eum ullam, vero, esse pariatur quidem voluptates inventore alias eius fugit itaque ipsam vitae amet aliquid tempore quisquam veritatis dicta! Laborum cumque odio saepe debitis quasi quaerat sint autem aut quidem consequatur sunt eaque, fugiat voluptatem error iusto voluptatum nisi soluta aspernatur earum! Iste odio sapiente exercitationem dicta aut voluptatem sequi. Vitae molestiae error quibusdam nulla enim, voluptatibus ea, vero maiores laudantium quasi repellendus maxime rem dolore repellat, similique repudiandae officiis necessitatibus ipsum expedita neque iure obcaecati? Neque, ipsam dignissimos nobis aut ratione totam voluptatum cupiditate deserunt eum ipsa, labore iusto numquam reprehenderit quaerat sunt quae odio. Aliquam doloremque dolores laborum, qui nesciunt ipsam assumenda nihil earum deserunt. Ratione consequatur nisi beatae dolorem placeat assumenda, fuga tempore! Quasi molestiae at similique adipisci. Deserunt at aspernatur iste ipsum obcaecati debitis rem veniam molestiae, voluptatum delectus possimus dolore, quidem reprehenderit officia esse sapiente cum quia modi nemo ad! Quibusdam, earum impedit placeat atque fugiat unde eaque possimus velit molestias nihil nam et sed cumque perspiciatis porro, quis maxime magni voluptas quisquam magnam tempora facilis sunt excepturi laborum. Maiores iure magnam tenetur molestias, repellendus quae veritatis culpa, fuga, labore sint dolore porro tempora accusamus error sit ab fugiat illo sunt esse magni voluptate pariatur! Ea quam maxime consequatur fugit dicta numquam dignissimos explicabo eligendi provident cum. Qui porro vitae est explicabo ab officiis earum suscipit, laboriosam rerum dolor id, veniam blanditiis obcaecati impedit quia commodi perspiciatis ipsa adipisci enim non neque alias odit. Veritatis dolor facere officiis illo commodi temporibus? Cum alias mollitia neque at. Ipsum non accusamus, hic maiores voluptates fugiat iure dolore reiciendis blanditiis et veniam possimus officiis aliquid. Fugiat quo, quas nostrum, nesciunt consectetur ducimus deleniti asperiores eum, molestias aspernatur rerum quidem nisi laudantium qui! Officiis necessitatibus vel quibusdam expedita amet id aut, earum, debitis dolorum tempora est culpa sapiente aliquam, illum explicabo nostrum magni quasi aliquid? Placeat, quisquam. Architecto repellat eligendi maiores, voluptatum repudiandae ab nemo voluptatibus facere illum sunt cumque, at accusamus deleniti reprehenderit quia quo voluptates. Praesentium dolorem velit quo libero perspiciatis tempore labore voluptates, quaerat quae tempora repellat minima dolores dicta recusandae obcaecati incidunt similique accusantium reprehenderit veniam! Blanditiis, nulla libero soluta animi beatae commodi optio ducimus eligendi tempore! Ratione itaque qui impedit, quisquam, tenetur non distinctio alias praesentium molestias sit, adipisci quos animi aspernatur consequatur perferendis reprehenderit repellendus fuga inventore eius! Eius, excepturi earum unde quam sed itaque? Est voluptates assumenda maxime sed magnam ad perferendis culpa alias cum, ut expedita modi!</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="pop-btn-wrap">
+                      <button class="popclose-btn" type="button" title="팝업 닫기"></button>
+                    </div>
+                  </div>
+                </div>
+                <!-- // 팝업-->
+              </div>
+              <script type="syntaxhighlighter" class="brush: xml;">
+              </script>
+              <script type="syntaxhighlighter" class="brush: css;">
+              </script>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div class="ex-box">
+            <h3>RIGHT POPUP</h3>
+            <p>layper-popup클래스에 right-popup클래스를 추가합니다.</p>
+            <div class="exs">
+              <h4>상단 고정</h4>
+              <div class="ex">
+                <div class="btn-wrap">
+                  <button
+                    class="btn-round-l"
+                    onClick="openPopup('#RIGHT-POP', this)"
+                    title="팝업 열기"
+                  ><span>RIGHT-POPUP</span></button>
+                </div>
+                <!--팝업-->
+                <!-- @ on 클래스가 있으면 페이지 첫진입 시, 팝업이 열려있는 상태 -->
+                <!-- @ 팝업 호출
+                      해당팝업과 연결된 버튼에 onClick="openPopup('.layer-popup', this)" 이벤트 작성
+                      메인팝업은 openPopupMain('.layer-popup.main-pop')" 호출
+                -->
+                <!-- @ 팝업 종류
+                      main-pop : 메인 팝업
+                      center-pop : 가운데 팝업
+                      full-pop : 전체 팝업
+                      right-pop : 우측 팝업
+                -->
+                <div class="right-pop layer-popup recent-srch-pop" id="RIGHT-POP">
+                  <div class="pop-area">
+                    <div class="pop-wrap">
+                      <div class="pop-fixed">
+                        <div class="pop-head">
+                          <p class="f-t2">최근 검색 이력</p>
+                        </div>
+                        <p class="info-txt f-body-r2">최근 검색 이력은 최대 20개까지 보관됩니다.</p>
+                        <p class="count f-body-m2">총 <span class="f-body-b2 green-txt">8</span>개</p>
+                      </div>
+                      <div class="scroll-area" tabindex="0">
+                        <div class="in">
+                          <div class="pop-cont">
+                            <ul class="recent-srch-list">
+                              <li class="recent-srch">
+                                <a href="javascript:">
+                                  <p class="f-body-b2">파리</p>
+                                  <p class="f-body-r3">2024-10-10(수) ~ 2024-10-13(일) &middot; 3박</p>
+                                  <p class="f-body-r3">객실 1개 &middot; 성인2명 &middot; 아동 1명</p>
+                                </a>
+                                <button type="button" class="delete-btn"></button>
+                              </li>
+                              <li class="recent-srch">
+                                <a href="javascript:">
+                                  <p class="f-body-b2">베트남</p>
+                                  <p class="f-body-r3">2024-10-10(수) ~ 2024-10-13(일) &middot; 3박</p>
+                                  <p class="f-body-r3">객실 1개 &middot; 성인2명 &middot; 아동 1명</p>
+                                </a>
+                                <button type="button" class="delete-btn"></button>
+                              </li>
+                              <li class="recent-srch">
+                                <a href="javascript:">
+                                  <p class="f-body-b2">InterContinental Danang Sun Peninsula Resort, an IHG Hotel 2 lines or more 2 lines or more 2 lines or more 2 lines or more 2 lines or more</p>
+                                  <p class="f-body-r3">햄프턴 바이 힐튼 험버사이드 에어포트</p>
+                                  <div class="stars">
+                                    <p class="star"></p>
+                                    <p class="star"></p>
+                                    <p class="star"></p>
+                                    <p class="star"></p>
+                                    <p class="star"></p>
+                                  </div>
+                                  <p class="f-body-r3">2024-10-10(수) ~ 2024-10-13(일) &middot; 3박</p>
+                                  <p class="f-body-r3">객실 1개 &middot; 성인2명 &middot; 아동 1명</p>
+                                </a>
+                                <button type="button" class="delete-btn"></button>
+                              </li>
+                              <li class="recent-srch">
+                                <a href="javascript:">
+                                  <p class="f-body-b2">중국</p>
+                                  <p class="f-body-r3">2024-10-10(수) ~ 2024-10-13(일) &middot; 3박</p>
+                                  <p class="f-body-r3">객실 1개 &middot; 성인2명 &middot; 아동 1명</p>
+                                </a>
+                                <button type="button" class="delete-btn"></button>
+                              </li>
+                              <li class="recent-srch">
+                                <a href="javascript:">
+                                  <p class="f-body-b2">Melia Vinpearl Danang Riverfront</p>
+                                  <p class="f-body-r3">멜리아 빈펄 다낭 리버프런트</p>
+                                  <div class="stars">
+                                    <p class="star"></p>
+                                    <p class="star"></p>
+                                    <p class="star"></p>
+                                    <p class="star"></p>
+                                  </div>
+                                  <p class="f-body-r3">2024-10-10(수) ~ 2024-10-13(일) &middot; 3박</p>
+                                  <p class="f-body-r3">객실 1개 &middot; 성인2명 &middot; 아동 1명</p>
+                                </a>
+                                <button type="button" class="delete-btn"></button>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="pop-btn-wrap">
+                      <button class="popclose-btn" type="button" title="팝업 닫기"></button>
+                    </div>
+                  </div>
+                </div>
+                <!-- // 팝업-->
+              </div>
+              <script type="syntaxhighlighter" class="brush: xml;">
+              </script>
+              <script type="syntaxhighlighter" class="brush: css;">
+              </script>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

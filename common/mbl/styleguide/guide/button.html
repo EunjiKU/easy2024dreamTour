@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <title>퍼블리싱 스타일 가이드</title>
+  <link rel="stylesheet" href="/css/swiper-bundle.css">
+  <link rel="stylesheet" href="/css/fonts.css">
+	<link rel="stylesheet" href="/css/common.css"/>
+  <link rel="stylesheet" href="/styleguide/assets/css/index.css">
+  <link rel="stylesheet" href="/styleguide/assets/styles/shCore.css"/>
+	<link rel="Stylesheet" href="/styleguide/assets/styles/shCoreEclipse.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <script src="/styleguide/assets/scripts/XRegExp.js"></script> <!-- XRegExp is bundled with the final shCore.js during build -->
+	<script src="/styleguide/assets/scripts/shCore.js"></script>
+	<script src="/styleguide/assets/scripts/shBrushJScript.js"></script>
+	<script src="/styleguide/assets/scripts/shBrushXml.js"></script>
+	<script src="/styleguide/assets/scripts/shBrushCss.js"></script>
+	<script src="/js/swiper.min.js"></script>
+	<script src="/js/jquery-1.12.4.min.js"></script>
+	<script src="/js/gsap.min.js"></script>
+	<script src="/js/script.js"></script>
+  <script type="text/javascript">SyntaxHighlighter.all();</script>
+
+
+
+  <style>
+    .form-text {position: relative; height: 42px; border: 1px solid #d8d8d8; border-radius: 5px; background-color: #fff;}
+    .form-text:after {content: ""; clear: both; display: block; height: 0;}
+    .form-text input {padding: 5px 20px; width: 100%; height: 100%; border-radius: 5px; outline: 0; border: 0;}
+  </style>
+</head>
+<body>
+  <div id="wrap" style="background:#fff;">
+    <header>
+      <h1>Rotem Catalog 가이드</h1>
+      <div class="btn-wrap">
+        <a href="../worklist.html">작업현황판  <i class="fas fa-angle-right"></i></a>
+      </div>
+    </header>
+    <div id="contents">
+      <aside>
+        <a href="/styleguide/guide-intro.html">기본 정책 <i class="fas fa-angle-right"></i></a>
+        <a href="/styleguide/guide-markup.html">마크업 규칙 <i class="fas fa-angle-right"></i></a>
+        <a href="/styleguide/guide-css.html">CSS 규칙 <i class="fas fa-angle-right"></i></a>
+        <a href="/styleguide/guide-naming.html">네이밍 규칙 <i class="fas fa-angle-right"></i></a>
+        <a href="javascript:" class="active">스타일 가이드 <i class="fas fa-angle-right"></i></a>
+        <ul class="guide-list">
+          <li><a href="/styleguide/guide/form.html">FORM</a></li>
+          <li><a href="/styleguide/guide/typography.html">TYPOGRAPHY</a></li>
+          <li><a href="/styleguide/guide/button.html" class="active">BUTTON</a></li>
+          <li><a href="/styleguide/guide/popup.html">POPUP</a></li>
+          <li><a href="/styleguide/guide/accordion.html">ACCORDION</a></li>
+          <li><a href="/styleguide/guide/tab.html">TAB</a></li>
+        </ul>
+      </aside>
+      <div class="content-area">
+        <h2>버튼 스타일 가이드</h2>
+        <section>
+          <h3>Basic Button</h3>
+          <!-- sample -->
+          <div>
+            <a class="border_btn" href="javascript:">
+              <span>버튼명</span>
+            </a>
+          </div>
+          <!-- //sample -->
+
+          <script type="syntaxhighlighter" class="brush: xml;">
+            <div>
+              <a class="border_btn" href="javascript:">
+                <span>버튼명</span>
+              </a>
+            </div>
+          </script>
+          <script type="syntaxhighlighter" class="brush: css;">
+            /* 버튼 */
+            .border_btn {overflow: hidden; position: relative; padding: 13rem 20rem 12rem; text-align: center; border: 1px solid #000; background: #fff;}
+            .border_btn:after {display: block; content: ""; position: absolute; top: 100%; left: 0; width: 100%; height: 100%; background: #000; transition: top .4s ease;}
+            .border_btn span {position: relative; z-index: 1; color: #000; font-size: max(16rem, 14px); line-height: 120%; font-family: "Pretendard_Bold"; transition: color .4s ease;}
+            .border_btn:hover:after {top: 0;}
+            .border_btn:hover span {color: #fff;}
+          </script>
+        </section>
+
+        <section>
+          <h3>다운로드 버튼</h3>
+          <div>
+            <a href="javascript:" class="download_btn" download=""><span>회사소개서 다운로드</span></a>
+          </div>
+
+          <script type="syntaxhighlighter" class="brush: xml;">
+            <a href="javascript:" class="download_btn" download=""><span>회사소개서 다운로드</span></a>
+          </script>
+          <script type="syntaxhighlighter" class="brush: css;">
+            .download_btn {padding-right: 44rem; font-size: 16rem; line-height: 19rem; font-family: "Pretendard_Bold"; color:#000; background: url("/images/icon-file-download.svg") no-repeat right center/40rem 40rem;}
+            .download_btn span {display: inline-block; position: relative; line-height: 40rem;}
+            .download_btn span:after {display: block; content: ""; position: absolute; bottom: 8rem; left: 0; width: 0; height: 1px; background: #000; transition: width .4s ease;}
+            .download_btn:hover span:after {width: 100%;}
+          </script>
+        </section>
+
+        <section>
+          <h3>링크 텍스트 버튼</h3>
+          <!-- sample -->
+          <div>
+            <a href="javascript:" class="link_arrow_btn"><span>KG 스틸</span></a>
+          </div>
+          <!-- //sample -->
+
+          <script type="syntaxhighlighter" class="brush: xml;">
+            <a href="javascript:" class="link_arrow_btn"><span>KG 스틸</span></a>
+          </script>
+          <script type="syntaxhighlighter" class="brush: css;">
+            .link_arrow_btn {display: inline-block; padding-right: 40rem; background: url("/images/icon-link-txt-arrow.svg") no-repeat right top/36rem 36rem;}
+            .link_arrow_btn span {position: relative; font-size: 40rem; line-height: 120%; font-family: "Pretendard_Bold";}
+            .link_arrow_btn span:after {display: block; content: ""; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: #000; transition: width .4s ease;}
+            .link_arrow_btn:hover span:after {width: 100%;}
+          </script>
+        </section>
+
+        <section>
+          <h3>우측 arrow 버튼</h3>
+          <!-- sample -->
+          <div>
+            <a href="javascript:" class="arrow_btn">
+              <span>View</span>
+            </a>
+          </div>
+          <!-- //sample -->
+
+          <script type="syntaxhighlighter" class="brush: xml;">
+            <a href="javascript:" class="arrow_btn">
+              <span>View</span>
+            </a>
+          </script>
+          <script type="syntaxhighlighter" class="brush: css;">
+            .arrow_btn {display: inline-block; padding-right: 18px; background: url("/images/icon-main-title-arrow.svg") no-repeat right center/8rem auto;}
+            .arrow_btn span {display: block; position: relative; font-size: 16rem; line-height: 120%; font-family: "Pretendard_Bold"; color: #000;}
+            .arrow_btn span:after {display: block; content: ""; position: absolute; bottom: 0; left: 0; width: 0; height: 1px; background: #000; transition: width .4s ease;}
+            .arrow_btn:hover span:after {width: 100%;}
+          </script>
+
+        </section>
+
+        <section>
+          <h3>페이징 버튼</h3>
+          <!-- sample -->
+          <div>
+            <div class="paging">
+              <a href="javascript:" class="btn_page first" title="처음으로 이동"> </a>
+              <a href="javascript:" class="btn_page prev" title="이전페이지로 이동"> </a>
+              <a href="javascript:" class="num active"><span>1</span></a>
+              <a href="javascript:" class="num"><span>2</span></a>
+              <a href="javascript:" class="num"><span>3</span></a>
+              <a href="javascript:" class="num"><span>4</span></a>
+              <a href="javascript:" class="num"><span>5</span></a>
+              <a href="javascript:" class="num"><span>6</span></a>
+              <a href="javascript:" class="num"><span>7</span></a>
+              <a href="javascript:" class="num"><span>8</span></a>
+              <a href="javascript:" class="num"><span>9</span></a>
+              <a href="javascript:" class="num"><span>10</span></a>
+              <a href="javascript:" class="btn_page next" title="다음페이지로 이동"> </a>
+              <a href="javascript:" class="btn_page last" title="마지막으로 이동"> </a>
+            </div>
+          </div>
+          <!-- //sample -->
+
+          <script type="syntaxhighlighter" class="brush: xml;">
+            <div class="paging">
+              <a href="javascript:" class="btn_page first" title="처음으로 이동"> </a>
+              <a href="javascript:" class="btn_page prev" title="이전페이지로 이동"> </a>
+              <a href="javascript:" class="num active"><span>1</span></a>
+              <a href="javascript:" class="num"><span>2</span></a>
+              <a href="javascript:" class="num"><span>3</span></a>
+              <a href="javascript:" class="num"><span>4</span></a>
+              <a href="javascript:" class="num"><span>5</span></a>
+              <a href="javascript:" class="num"><span>6</span></a>
+              <a href="javascript:" class="num"><span>7</span></a>
+              <a href="javascript:" class="num"><span>8</span></a>
+              <a href="javascript:" class="num"><span>9</span></a>
+              <a href="javascript:" class="num"><span>10</span></a>
+              <a href="javascript:" class="btn_page next" title="다음페이지로 이동"> </a>
+              <a href="javascript:" class="btn_page last" title="마지막으로 이동"> </a>
+            </div>
+          </script>
+          <script type="syntaxhighlighter" class="brush: css;">
+            .reset_btn span{display:inline-block; padding-left:30px; font-family: "NotoSans_Bold", sans-serif; font-size: 14px; line-height:22px; letter-spacing:-0.35px; background:url("../images/icon-reset.svg") no-repeat left center;}
+            .reset_wrap{display:flex; align-items: center; width:100%;}
+            .reset_wrap .reset_btn{margin-right:30px;}
+            .reset_wrap .filter_btn{width:calc(100% - 98px);}
+          </script>
+
+        </section>
+
+        <section>
+          <h3>공유 버튼</h3>
+          <!-- sample -->
+          <div class="share_area on" style="width:290rem">
+            <a href="javascript:" class="share_btn"><span class="blind">공유하기</span></a>
+            <div class="share_wrap" style="display:block;">
+              <div class="share_div">
+                <a href="javascript:" class="kakao"><span class="blind">카카오톡</span></a>
+                <a href="javascript:" class="facebook"><span class="blind">페이스북</span></a>
+                <a href="javascript:" class="twitter"><span class="blind">트위터</span></a>
+                <a href="javascript:" class="url"><span class="blind">URL 복사</span></a>
+              </div>
+            </div>
+          </div>
+          <!-- //sample -->
+
+          <script type="syntaxhighlighter" class="brush: xml;">
+            <div class="share_area">
+              <a href="javascript:" class="share_btn"><span class="blind">공유하기</span></a>
+              <div class="share_wrap">
+                <div class="share_div">
+                  <a href="javascript:" class="kakao"><span class="blind">카카오톡</span></a>
+                  <a href="javascript:" class="facebook"><span class="blind">페이스북</span></a>
+                  <a href="javascript:" class="twitter"><span class="blind">트위터</span></a>
+                  <a href="javascript:" class="url"><span class="blind">URL 복사</span></a>
+                </div>
+              </div>
+            </div>
+          </script>
+          <script type="syntaxhighlighter" class="brush: css;">
+            /* 공유 버튼 */
+            .share_btn{display:block; width:24px; height:24px; background:url("../images/icon-view-share.svg") no-repeat center center;}
+          </script>
+
+        </section>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>현대드림투어 호텔 HUB</title>
+    <link rel="shortcut icon" href="/common/web/images/favicon.ico" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no,maximum-scale=1.0,minimum-scale=1.0,target-densitydpi=medium-dpi" />
+		<meta name="keywords" content="각 페이지마다 유니크한 현대드림투어 호텔 HUB keywords"/>
+		<meta name="description" content="각 페이지마다 유니크한 현대드림투어 호텔 HUB description"/>
+		<meta name="format-detection" content="telephone=no, address=no, email=no">
+		<meta property="og:site_name" content="현대드림투어 호텔 HUB" id="og-sitename-value"/>
+		<meta property="og:type" content="website" id="og-type-value"/>
+		<meta property="og:url" content="URL" id="og-url-value"/>
+		<meta property="og:title" content="NOTICE | 현대드림투어 호텔 HUB" id="og-title-value"/>
+		<meta property="og:description" content="현대드림투어 호텔 HUB 홈페이지에 방문하신 것을 환영합니다." id="og-description-value"/>
+		<meta property="og:image" content="img URL" id="og-image-value"/>
+		<!-- <meta name="twitter:url" content="URL" id="twitter-url-value"/>
+		<meta name="twitter:title" content="Main" id="twitter-title-value"/>
+		<meta name="twitter:image" content="img URL" />
+		<meta name="twitter:description" content="현대드림투어 호텔 HUB 홈페이지에 방문하신 것을 환영합니다." id="twitter-discription-value"/> -->
+		
+		<link rel="stylesheet" href="/common/web/css/jquery-ui.css" />
+		<link rel="stylesheet" href="/common/web/css/swiper.css" />
+		<link rel="stylesheet" href="/common/web/css/common.css" />
+		<link rel="stylesheet" href="/common/web/css/style.css" />
+
+		<script type="text/javascript" src="/common/web/js/jquery-1.12.4.min.js"></script>
+		<script type="text/javascript" src="/common/web/js/gsap.min.js"></script>
+		<script type="text/javascript" src="/common/web/js/ScrollTrigger.min.js"></script>
+		<script type="text/javascript" src="/common/web/js/swiper.min.js"></script>
+		<script type="text/javascript" src="/common/web/js/jquery-ui-1.12.1.custom.min.js"></script>
+    <script type="text/javascript" src="/common/web/js/script.js"></script>
+	</head>
+
+	<body>
+    <div id="wrap">
+      <header id="header"></header>
+
+      <div class="cont-wrap">
+        <div class="inner">
+          <div class="bread-crumb">
+            <a href="javascript:" class="home"></a>
+            <a href="javascript:"><span class="f-body-r3">마이페이지</span></a>
+            <a href="javascript:"><span class="f-body-r3">예약내역</span></a>
+            <a href="javascript:"><span class="f-body-r3">호텔예약</span></a>
+            <a href="javascript:"><span class="f-body-r3">예약 취소하기</span></a>
+          </div>
+
+          <div class="mypage-area">
+            <div class="left">
+              <p class="f-t1">마이페이지</p>
+              <div class="mypage-menu">
+                <p class="f-body-b1">
+                  <a href="javascript:">예약조회</a>
+                </p>
+                <p class="f-body-r2">
+                  <a href="javascript:">레일예약</a>
+                </p>
+                <p class="f-body-r2 on"><!-- 활성화 된 메뉴에 on class 추가 -->
+                  <a href="javascript:">호텔예약</a>
+                </p>
+              </div>
+              <div class="mypage-menu">
+                <p class="f-body-b1">
+                  <a href="javascript:">정보관리</a>
+                </p>
+                <p class="f-body-r2">
+                  <a href="javascript:">사용자 정보</a>
+                </p>
+                <p class="f-body-r2">
+                  <a href="javascript:">찜 내역</a>
+                </p>
+              </div>
+            </div>
+            <div class="right">
+              <div class="mypage-sec">
+                <p class="f-t1">예약 취소하기</p>
+                <div class="cont-sec">
+                  <div class="tit-wrap">
+                    <p class="f-t2">예약정보</p>
+                  </div>
+                  <div class="booking-history-list">
+                    <div class="list">
+                      <div class="tit-area">
+                        <div class="left">
+                          <p class="f-body-b3">예약번호</p>
+                          <a href="javascript:" class="link-txt f-body-m3">TR240900001-1</a>
+                        </div>
+                        <div class="right">
+                          <div class="label-div">
+                            <!--
+                              blue : 결제취소, 부분결제, 미결제, 예약확정, 결제완료
+                              gray : 취소대기, 예약취소, 결제실패, 예약불가, 에러(예약실패), 에러(예약취소 실패)
+                              red : 취소 위약금
+                            -->
+                            <p class="txt-label blue">[예약확정]</p>
+                            <p class="txt-label red">[취소위약금]</p>
+                          </div>
+                          <button type="button"><img src="/common/web/images/icon-white-accordian-arrow.svg" alt=""></button>
+                        </div>
+                      </div>
+                      <div class="con-area">
+                        <p class="f-body-m1">멜리아 다낭 비치 리조트</p>
+                        <div class="book-info-wrap">
+                          <div class="book-info">
+                            <p class="f-body-m3">대표 투숙객</p>
+                            <p class="f-body-r3">HONG GILDONG</p><!-- 2024-12-04 텍스트 수정 -->
+                          </div>
+                          <div class="book-info long">
+                            <p class="f-body-m3">체크인/체크아웃&middot;박수</p><!-- 2024-12-02 텍스트 수정 --> 
+                            <p class="f-body-r3">2024-10-10(수) ~ 2024-10-13(일) &middot; 3박</p><!-- 2024-12-06 텍스트 수정 -->
+                          </div>
+                          <div class="book-info">
+                            <p class="f-body-m3">총 요금</p>
+                            <p class="f-body-r3">99,999,999 원</p>
+                          </div>
+                          <div class="book-info">
+                            <p class="f-body-m3">취소마감일</p>
+                            <p class="f-body-r3 red-txt">2024-09-30</p>
+                          </div>
+                          <div class="book-info long">
+                            <p class="f-body-m3">결제수단</p>
+                            <p class="f-body-r3">신용카드</p>
+                          </div>
+                        </div>
+                        <div class="detail">
+                          <div class="book-info-wrap">
+                            <div class="book-info">
+                              <p class="f-body-m3">투숙객</p>
+                              <p class="f-body-r3">HONG GILDONG 외 5명</p><!-- 2024-12-04 텍스트 수정 -->
+                            </div>
+                            <div class="book-info long">
+                              <p class="f-body-m3">객실명</p>
+                              <p class="f-body-r3">Deluxe Room, 1 King Bed, City View</p>
+                            </div>
+                            <div class="book-info">
+                              <p class="f-body-m3">조식포함여부</p>
+                              <p class="f-body-r3">조식포함(Breakfast)</p>
+                            </div>
+                            <div class="book-info long">
+                              <p class="f-body-m3">객실/인원</p>
+                              <p class="f-body-r3">객실 5 / 성인 5 / 아동 1</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="list">
+                      <div class="tit-area">
+                        <div class="left">
+                          <p class="f-body-b3">예약번호</p>
+                          <a href="javascript:" class="link-txt f-body-m3">TR240900001-2</a>
+                        </div>
+                        <div class="right">
+                          <div class="label-div">
+                            <!--
+                              blue : 결제취소, 부분결제, 미결제, 예약확정, 결제완료
+                              gray : 취소대기, 예약취소, 결제실패, 예약불가, 에러(예약실패), 에러(예약취소 실패)
+                              red : 취소 위약금
+                            -->
+                            <p class="txt-label blue">[예약확정]</p>
+                            <p class="txt-label blue">[부분결제]</p>
+                          </div>
+                          <button type="button"><img src="/common/web/images/icon-white-accordian-arrow.svg" alt=""></button>
+                        </div>
+                      </div>
+                      <div class="con-area">
+                        <p class="f-body-m1">멜리아 다낭 비치 리조트 멜리아 다낭 비치 리조트 멜리아 다낭 비치 리조트 멜리아 다낭 비치 리조트 멜리아 다낭 비치 리조트 멜리아 다낭 비치 리조트 멜리아 다낭 비치 리조트 멜리아 다낭 비치 리조트 멜리아 다낭 비치 리조트 멜리아 다낭 비치 리조트 멜리아 다낭 비치 리조트 멜리아 다낭 비치 리조트 멜리아 다낭 비치 리조트 멜리아 다낭 비치 리조트 멜리아 다낭 비치 리조트 멜리아 다낭 비치 리조트</p>
+                        <div class="book-info-wrap">
+                          <div class="book-info">
+                            <p class="f-body-m3">대표 투숙객</p>
+                            <p class="f-body-r3">HONG GILDONG</p><!-- 2024-12-04 텍스트 수정 -->
+                          </div>
+                          <div class="book-info long">
+                            <p class="f-body-m3">체크인/체크아웃&middot;박수</p><!-- 2024-12-02 텍스트 수정 --> 
+                            <p class="f-body-r3">2024-10-10(수) ~ 2024-10-13(일) &middot; 3박</p><!-- 2024-12-06 텍스트 수정 -->
+                          </div>
+                          <div class="book-info">
+                            <p class="f-body-m3">총 요금</p>
+                            <p class="f-body-r3">99,999,999 원</p>
+                          </div>
+                          <div class="book-info">
+                            <p class="f-body-m3">취소마감일</p>
+                            <p class="f-body-r3 red-txt">취소불가</p>
+                          </div>
+                          <div class="book-info long">
+                            <p class="f-body-m3">결제수단</p>
+                            <p class="f-body-r3">계좌이체</p>
+                          </div>
+                        </div>
+                        <div class="detail">
+                          <div class="book-info-wrap">
+                            <div class="book-info">
+                              <p class="f-body-m3">투숙객</p>
+                              <p class="f-body-r3">HONG GILDONG 외 5명</p><!-- 2024-12-04 텍스트 수정 -->
+                            </div>
+                            <div class="book-info long">
+                              <p class="f-body-m3">객실명</p>
+                              <p class="f-body-r3">Deluxe Room, 1 King Bed, City View</p>
+                            </div>
+                            <div class="book-info">
+                              <p class="f-body-m3">조식포함여부</p>
+                              <p class="f-body-r3">조식포함(Breakfast)</p>
+                            </div>
+                            <div class="book-info long">
+                              <p class="f-body-m3">객실/인원</p>
+                              <p class="f-body-r3">객실 5 / 성인 5 / 아동 1</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cont-sec">
+                  <div class="tit-wrap">
+                    <p class="f-t2">환불정보 안내</p>
+                    <p class="f-body-r3 gray-txt">※ 계좌이체의 경우 제휴사 환불 계좌로 환불됩니다.</p>
+                  </div>
+                  <div class="form-table green-bg border">
+                    <div class="table-wrap">
+                      <table class="basic-table">
+                        <caption>환불정보 안내</caption>
+                        <colgroup>
+                          <col style="width: 18%;">
+                          <col style="width: 18%;">
+                          <col style="width: 18%;">
+                          <col style="width: 18%;">
+                          <col style="width: 28%;">
+                        </colgroup>
+                        <thead>
+                          <tr>
+                            <th class="f-body-m3 bdb">결제수단</th>
+                            <th class="f-body-m3 bdb">계좌이체</th>
+                            <th class="f-body-m3 bdb">실시간 계좌이체</th>
+                            <th class="f-body-m3 bdb">신용카드</th>
+                            <th class="f-body-m3 bdb">결제요청</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th class="bdr f-body-m3 ta-center">환불 소요기간</th>
+                            <td class="bdr"><p class="f-body-r3 ta-center">영업일 기준 3~5일</p></td>
+                            <td><p class="f-body-r3 ta-center">영업일 기준 1~5일</p></td>
+                            <td><p class="f-body-r3 ta-center">영업일 기준 3~5일</p></td>
+                            <td><p class="f-body-r3 ta-center">실시간 계좌이체 : 영업일 기준 1~5일<br />신용카드 : 영업일 기준 3~5일</p></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="cont-sec">
+                  <div class="tit-wrap">
+                    <p class="f-t2">환불 예상 금액</p>
+                  </div>
+                  <div class="pay-price-wrap">
+                    <div class="row">
+                      <div class="left">
+                        <p class="f-body-m3">TR24090600078-1</p>
+                      </div>
+                      <div class="right">
+                        <p class="f-body-r4">결제금액</p>
+                        <p class="price f-body-r3"><span class="f-body-m3">437,890</span> 원</p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="left">
+                        <p class="f-body-m3">TR24090600078-2</p>
+                        <p class="f-body-r4">패널티 437,890원(100%)</p>
+                      </div>
+                      <div class="right">
+                        <p class="f-body-r4">결제금액</p>
+                        <p class="price f-body-r3"><span class="f-body-m3">437,890</span> 원</p>
+                        <p class="f-body-r4">환불 예상 금액</p>
+                        <p class="price f-body-b3 red-txt"><span class="f-body-b3 red-txt">0</span> 원</p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="left">
+                        <p class="f-body-m3">TR24090600078-3</p>
+                      </div>
+                      <div class="right">
+                        <p class="f-body-r4">결제금액</p>
+                        <p class="price f-body-r3"><span class="f-body-m3">437,890</span> 원</p>
+                      </div>
+                    </div>
+                    <div class="row no-bdb">
+                      <div class="price-div">
+                        <p class="f-body-m3">최종 결제 금액</p>
+                        <p class="price f-body-m3"><span>1,313,670</span> 원</p>
+                      </div>
+                      <div class="price-div">
+                        <p class="f-body-m3">패널티 예상 금액</p>
+                        <p class="price f-body-m3"><span>-437,890</span> 원</p>
+                      </div>
+                    </div>
+                    <div class="row bg">
+                      <p class="f-body-b3">최종 환불 예상 금액</p>
+                      <div class="right">
+                        <p class="price f-body-b3"><span class="f-body-b1">875,780</span> 원</p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <p class="gray-txt f-body-r3">패널티 예상 금액, 최종 환불 예상 금액을 확인하였으며, 취소에 동의하시겠습니까? (전자상거래법 제 8조 2항)</p>
+                      <div class="form-checkbox">
+                        <input type="checkbox" id="price-agree" name="">
+                        <label for="price-agree"><span class="f-body-m2">규정을 확인하였으며 동의합니다.</span></label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="btn-wrap full">
+                  <a href="javascript:" class="btn-border-round gray"><span>뒤로가기</span></a>
+                  <a href="javascript:" class="btn-round-s">
+                    <span>예약 취소하기</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer></footer>
+
+      <!-- 우측 하단 퀵메뉴 -->
+      <div class="quick-fixed-area">
+        <div class="quick-area">
+          <a href="javascript:" class="recent-srch" onClick="openPopup('.recent-srch-pop', this)"></a>
+          <a href="javascript:" class="like" onClick="openPopup('.hotel-like-pop', this)"></a>
+          <a href="javascript:" class="reserve"></a>
+        </div>
+        <button type="button" class="btn-top" title="상단으로 이동"></button>
+      </div>
+    </div>
+	</body>
+</html>

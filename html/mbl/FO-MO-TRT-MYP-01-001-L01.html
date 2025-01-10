@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>현대드림투어 호텔 HUB</title>
+    <link rel="shortcut icon" href="/common/mbl/images/favicon.ico" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no,maximum-scale=1.0,minimum-scale=1.0,target-densitydpi=medium-dpi" />
+		<meta name="keywords" content="각 페이지마다 유니크한 현대드림투어 호텔 HUB keywords"/>
+		<meta name="description" content="각 페이지마다 유니크한 현대드림투어 호텔 HUB description"/>
+		<meta name="format-detection" content="telephone=no, address=no, email=no">
+		<meta property="og:site_name" content="현대드림투어 호텔 HUB" id="og-sitename-value"/>
+		<meta property="og:type" content="website" id="og-type-value"/>
+		<meta property="og:url" content="URL" id="og-url-value"/>
+		<meta property="og:title" content="NOTICE | 현대드림투어 호텔 HUB" id="og-title-value"/>
+		<meta property="og:description" content="현대드림투어 호텔 HUB 홈페이지에 방문하신 것을 환영합니다." id="og-description-value"/>
+		<meta property="og:image" content="img URL" id="og-image-value"/>
+		<!-- <meta name="twitter:url" content="URL" id="twitter-url-value"/>
+		<meta name="twitter:title" content="Main" id="twitter-title-value"/>
+		<meta name="twitter:image" content="img URL" />
+		<meta name="twitter:description" content="현대드림투어 호텔 HUB 홈페이지에 방문하신 것을 환영합니다." id="twitter-discription-value"/> -->
+		
+		<link rel="stylesheet" href="/common/mbl/css/jquery-ui.css" />
+		<link rel="stylesheet" href="/common/mbl/css/swiper.css" />
+		<link rel="stylesheet" href="/common/mbl/css/common.css" />
+		<link rel="stylesheet" href="/common/mbl/css/style.css" />
+
+		<script type="text/javascript" src="/common/mbl/js/jquery-1.12.4.min.js"></script>
+		<script type="text/javascript" src="/common/mbl/js/gsap.min.js"></script>
+		<script type="text/javascript" src="/common/mbl/js/ScrollTrigger.min.js"></script>
+		<script type="text/javascript" src="/common/mbl/js/swiper.min.js"></script>
+		<script type="text/javascript" src="/common/mbl/js/jquery-ui-1.12.1.custom.min.js"></script>
+    <script type="text/javascript" src="/common/mbl/js/script.js"></script>
+	</head>
+
+	<body>
+    <div id="wrap">
+      <header id="header">
+        <div class="page-tit-wrap">
+          <a href="javascript:" class="prev-btn"></a>
+          <p class="f-body-b1">호텔예약</p>
+        </div>
+        <div class="nav-util">
+          <a class="user" href="javascript:" title="마이페이지"><img src="/common/mbl/images/btn-gnb-mypage.svg" alt=""></a>
+          <button type="button" class="all-menu-btn"><img src="/common/mbl/images/btn-gnb-menu.svg" alt=""></button>
+          <div class="all-menu"></div>
+        </div>
+      </header>
+
+      <div class="cont-wrap">
+        <div class="mypage-area">
+          <div class="reserve-date">
+            <div class="date-txt">
+              <p class="f-body-m3">예약일</p>
+              <p class="f-body-r3">2024-08-27 ~ 2024-09-27</p>
+            </div>
+            <div class="status">
+              <p class="f-body-r5">예약대기</p>
+              <p class="f-body-r5">미결제</p>
+            </div>
+            <button type="button" class="filter-btn" onclick="openPopup('.mypage-filter-pop', this)"></button>
+          </div>
+          <div class="gray-border-swiper swiper-container">
+            <div class="swiper-wrapper">
+              <a href="javascript:" class="swiper-slide btn-border-square-l gray"><span>입금 확인 요청</span></a>
+              <a href="javascript:" class="swiper-slide btn-border-square-l gray"><span>바우처</span></a>
+              <a href="javascript:" class="swiper-slide btn-border-square-l gray"><span>여행사 상세 인보이스</span></a>
+              <a href="javascript:" class="swiper-slide btn-border-square-l gray"><span>여행사 요약 인보이스</span></a>
+              <a href="javascript:" class="swiper-slide btn-border-square-l gray"><span>고객 인보이스</span></a>
+            </div>
+          </div>
+          <div class="mypage-sec">
+            <p class="total-count f-body-m2">총<span class="f-body-b2 green-txt">61</span>건의 검색결과가 있습니다.</p>
+            <div class="reserve-result-list opt-group">
+              <div class="top-info">
+                <div class="form-checkbox">
+                  <input type="checkbox" class="Chk-All" id="reserve-all" name="">
+                  <label for="reserve-all"><span class="f-body-m2">전체 선택</span></label>
+                </div>
+                <div class="toggle-btn">
+                  <p class="toggle-txt f-body-r3">예약내역 펼쳐보기</p>
+                  <p class="toggle-area"></p>
+                </div>
+              </div>
+              <div class="result-list">
+                <div class="top">
+                  <div class="form-checkbox">
+                    <input type="checkbox" id="reserve-01" name="">
+                    <label for="reserve-01"></label>
+                  </div>
+                  <div class="res-num">
+                    <p class="f-body-b2 green-txt">TR24092700001-1</p>
+                    <div class="label-div">
+                      <p class="bg-label green">예약확정</p>
+                      <p class="bg-label green">결제완료</p>
+                    </div>
+                  </div>
+                  <a href="javascript:" class="btn-border-square gray"><span>상세</span></a>
+                </div>
+                <p class="f-body-b2 hotel-name">InterContinental Danang Sun Peninsula Resort</p>
+                <div class="flex-box">
+                  <p class="f-body-r4">취소마감일 : 2024-09-30</p>
+                  <a href="javascript:" class="icon-txt-btn plus"><span>예약추가</span></a>
+                </div>
+                <div class="info-row-wrap">
+                  <div class="info-row">
+                    <p class="f-body-m3">예약 담당자</p>
+                    <p class="f-body-r3">홍길동</p>
+                  </div>
+                  <div class="info-row">
+                    <p class="f-body-m3">대표 투숙객</p>
+                    <p class="f-body-r3">HONG GILDONG</p>
+                  </div>
+                  <div class="info-row">
+                    <p class="f-body-m3">체크인/체크아웃 &middot; 박수</p>
+                    <p class="f-body-r3">2024-10-10(수) ~ 2024-10-13(일) &middot; 3박</p>
+                  </div>
+                  <div class="info-row">
+                    <p class="f-body-m3">예약일</p>
+                    <p class="f-body-r3">2024-09-30</p>
+                  </div>
+                </div>
+                <div class="flex-box">
+                  <p class="f-body-b3">총 요금</p>
+                  <p class="f-body-b2"><span class="f-body-b1">437,890</span> 원</p>
+                </div>
+                <div class="gray-detail-acco">
+                  <a href="javascript:" class="detail-btn"><span class="f-body-b2">상세 내역</span></a>
+                  <div class="detail-con">
+                    <div class="info-row-wrap">
+                      <div class="info-row">
+                        <p class="f-body-m4">객실명</p>
+                        <p class="f-body-r4">Deluxe Room, 1 King Bed, City View</p>
+                      </div>
+                      <div class="info-row">
+                        <p class="f-body-m4">조식포함여부</p>
+                        <p class="f-body-r4">조식포함(Breakfast)</p>
+                      </div>
+                      <div class="info-row">
+                        <p class="f-body-m4">투숙객</p>
+                        <p class="f-body-r4">HONG GILDONG 외 5명</p>
+                      </div>
+                      <div class="info-row">
+                        <p class="f-body-m4">객실/인원</p>
+                        <p class="f-body-r4">객실 5 &middot; 성인 5 &middot; 아동 1</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="result-list">
+                <div class="top">
+                  <div class="form-checkbox">
+                    <input type="checkbox" id="reserve-02" name="">
+                    <label for="reserve-02"></label>
+                  </div>
+                  <div class="res-num">
+                    <p class="f-body-b2 green-txt">TR24092700001-2</p>
+                    <div class="label-div">
+                      <p class="bg-label green">예약확정</p>
+                      <p class="bg-label green">결제완료</p>
+                    </div>
+                  </div>
+                  <a href="javascript:" class="btn-border-square gray"><span>상세</span></a>
+                </div>
+                <p class="f-body-b2 hotel-name">InterContinental Danang Sun Peninsula Resort</p>
+                <div class="flex-box">
+                  <p class="f-body-r4">취소마감일 : 2024-09-30</p>
+                  <a href="javascript:" class="icon-txt-btn plus"><span>예약추가</span></a>
+                </div>
+                <div class="info-row-wrap">
+                  <div class="info-row">
+                    <p class="f-body-m3">예약 담당자</p>
+                    <p class="f-body-r3">홍길동</p>
+                  </div>
+                  <div class="info-row">
+                    <p class="f-body-m3">대표 투숙객</p>
+                    <p class="f-body-r3">HONG GILDONG</p>
+                  </div>
+                  <div class="info-row">
+                    <p class="f-body-m3">체크인/체크아웃 &middot; 박수</p>
+                    <p class="f-body-r3">2024-10-10(수) ~ 2024-10-13(일) &middot; 3박</p>
+                  </div>
+                  <div class="info-row">
+                    <p class="f-body-m3">예약일</p>
+                    <p class="f-body-r3">2024-09-30</p>
+                  </div>
+                </div>
+                <div class="flex-box">
+                  <p class="f-body-b3">총 요금</p>
+                  <p class="f-body-b2"><span class="f-body-b1">437,890</span> 원</p>
+                </div>
+                <div class="gray-detail-acco">
+                  <a href="javascript:" class="detail-btn"><span class="f-body-b2">상세 내역</span></a>
+                  <div class="detail-con">
+                    <div class="info-row-wrap">
+                      <div class="info-row">
+                        <p class="f-body-m4">객실명</p>
+                        <p class="f-body-r4">Deluxe Room, 1 King Bed, City View</p>
+                      </div>
+                      <div class="info-row">
+                        <p class="f-body-m4">조식포함여부</p>
+                        <p class="f-body-r4">조식포함(Breakfast)</p>
+                      </div>
+                      <div class="info-row">
+                        <p class="f-body-m4">투숙객</p>
+                        <p class="f-body-r4">HONG GILDONG 외 5명</p>
+                      </div>
+                      <div class="info-row">
+                        <p class="f-body-m4">객실/인원</p>
+                        <p class="f-body-r4">객실 5 &middot; 성인 5 &middot; 아동 1</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="btn-wrap">
+              <a href="javascript:" class="btn-border-round gray"><span>더보기<span class="count">(<span>6</span>/<span>30</span>)</span></span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 필터 설정 팝업 -->
+      <div class="mypage-filter-pop full-pop layer-popup on" style="display:block;">
+        <div class="pop-area">
+          <div class="pop-wrap">
+            <div class="pop-fixed">
+              <div class="pop-head">
+                <p class="f-body-b1">필터 설정</p>
+              </div>
+            </div>
+            <div class="scroll-area" tabindex="0">
+              <div class="pop-cont">
+                <div class="mypage-filter">
+                  <div class="cont-div">
+                    <div class="form-select">
+                      <select>
+                        <option value="1">전체</option>
+                        <option value="2">투숙객명</option>
+                        <option value="3">예약번호</option>
+                        <option value="4">호텔명</option>
+                        <option value="5">담당자명</option>
+                      </select>
+                    </div>
+                    <div class="srch-input form-input">
+                      <input type="text" placeholder="검색어를 입력해 주세요.">
+                      <div class="input-btn-wrap">
+                        <button class="delete-btn" type="button" title="삭제"></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cont-div">
+                    <p class="div-tit f-t2">검색기간</p>
+                    <div class="green-sel-btn-wrap">
+                      <div class="green-btn-sel">
+                        <button type="button" class="btn on"><span>예약일</span></button>
+                        <button type="button" class="btn"><span>체크인</span></button>
+                        <button type="button" class="btn"><span>체크아웃</span></button>
+                        <button type="button" class="btn"><span>취소마감일</span></button>
+                      </div>
+                      <div class="form-date-w">
+                        <div class="form-date">
+                          <input type="text" placeholder="시작날짜">
+                          <span class="icon"></span>
+                        </div>
+                        <div class="form-date">
+                          <input type="text" placeholder="종료날짜">
+                          <span class="icon"></span>
+                        </div>
+                      </div>
+                      <div class="green-btn-sel date">
+                        <button type="button" class="btn on"><span>직접입력</span></button>
+                        <button type="button" class="btn"><span>전일</span></button>
+                        <button type="button" class="btn"><span>1주일</span></button>
+                        <button type="button" class="btn"><span>1개월</span></button>
+                        <button type="button" class="btn"><span>3개월</span></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cont-div">
+                    <p class="div-tit f-t2">예약상태</p>
+                    <div class="green-btn-sel multi">
+                      <button type="button" class="btn on"><span>전체</span></button>
+                      <button type="button" class="btn"><span>예약대기</span></button>
+                      <button type="button" class="btn"><span>예약확정</span></button>
+                      <button type="button" class="btn"><span>취소대기</span></button>
+                      <button type="button" class="btn"><span>예약취소</span></button>
+                    </div>
+                  </div>
+                  <div class="cont-div">
+                    <p class="div-tit f-t2">결제상태</p>
+                    <div class="green-btn-sel multi">
+                      <button type="button" class="btn on"><span>전체</span></button>
+                      <button type="button" class="btn"><span>미결제</span></button>
+                      <button type="button" class="btn"><span>부분결제</span></button>
+                      <button type="button" class="btn"><span>결제완료</span></button>
+                      <button type="button" class="btn"><span>결제취소</span></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="pop-button">
+              <div class="btn-wrap">
+                <button class="all reset-btn btn-border-round-l gray" type="butotn" title="초기화"><span>초기화</span></button>
+                <button class="btn-round-l" type="button" ><span>조회하기</span></button>
+              </div>
+            </div>
+          </div>
+          <div class="pop-btn-wrap">
+            <button class="popclose-btn" type="button" title="팝업 닫기"></button>
+          </div>
+        </div>
+      </div>
+
+      <footer></footer>
+
+      <!-- 우측 하단 퀵메뉴 -->
+      <div class="quick-fixed-area">
+        <div class="quick-area">
+          <div class="quick-con">
+            <a href="javascript:" class="recent-srch" onClick="openPopup('.recent-srch-pop', this)"></a>
+            <a href="javascript:" class="like" onClick="openPopup('.hotel-like-pop', this)"></a>
+            <a href="javascript:" class="reserve"></a>
+          </div>
+        </div>
+        <button type="button" class="btn-top" title="상단으로 이동"></button>
+      </div>
+    </div>
+	</body>
+</html>

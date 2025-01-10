@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>퍼블리싱 스타일 가이드</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  <link rel="stylesheet" href="../..//common/mbl/css/swiper.css"/>
+  <link rel="stylesheet" href="../assets/styles/shCore.css"/>
+	<link rel="Stylesheet" href="../assets/styles/shCoreEclipse.css"/>
+  <link rel="stylesheet" href="../assets/css/index.css"/>
+  <link rel="stylesheet" href="../..//common/mbl/css/common.css"/>
+  <link rel="stylesheet" href="../..//common/mbl/css/main.css"/>
+  <link rel="stylesheet" href="../..//common/mbl/css/fonts.css"/>
+  <script type="text/javascript" src="../..//common/mbl/js/jquery-1.12.4.min.js"></script>
+  <script src="../assets/scripts/XRegExp.js"></script> <!-- XRegExp is bundled with the final shCore.js during build -->
+	<script src="../assets/scripts/shCore.js"></script>
+	<script src="../assets/scripts/shBrushJScript.js"></script>
+	<script src="../assets/scripts/shBrushXml.js"></script>
+	<script src="../assets/scripts/shBrushCss.js"></script>
+  <script type="text/javascript" src="../..//common/mbl/js/gsap.min.js"></script>
+  <script type="text/javascript" src="../..//common/mbl/js/ScrollTrigger.min.js"></script>
+  <script type="text/javascript" src="../..//common/mbl/js/Draggable.min.js"></script>
+  <script type="text/javascript" src="../..//common/mbl/js/swiper.min.js"></script>
+  <script type="text/javascript" src="../..//common/mbl/js/script.js"></script>
+  <script type="text/javascript">SyntaxHighlighter.all();</script>
+  <style>
+    body{background:#fff;}
+    #wrap{overflow:visible; top:auto; left:auto; height:auto; transform: none; min-width:100%; max-height: none;}
+    h4{margin:10px 0;}
+    .pop-wrap {background-color: #fff !important;}
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <header>
+      <h1>현대드림투어 가이드</h1>
+      <div class="btn-wrap">
+        <a href="../../worklist.html">작업현황판  <i class="fas fa-angle-right"></i></a>
+      </div>
+    </header>
+    <div id="contents">
+      <aside>
+        <a href="../guide-intro.html">기본 정책 <i class="fas fa-angle-right"></i></a>
+        <a href="../guide-markup.html">마크업 규칙 <i class="fas fa-angle-right"></i></a>
+        <a href="../guide-css.html">CSS 규칙 <i class="fas fa-angle-right"></i></a>
+        <a href="../guide-naming.html">네이밍 규칙 <i class="fas fa-angle-right"></i></a>
+        <a href="javascript:" class="active">스타일 가이드 <i class="fas fa-angle-right"></i></a>
+        <ul class="guide-list">
+          <li><a href="./form.html">FORM</a></li>
+          <li><a href="./typography.html">TYPOGRAPHY</a></li>
+          <!-- <li><a href="./color.html">COLOR</a></li> -->
+          <li><a href="./button.html">BUTTON</a></li>
+          <li><a href="./popup.html" class="active">POPUP</a></li>
+          <li><a href="./table.html">TABLE</a></li>
+        </ul>
+      </aside>
+      <div class="content-area">
+        <h2>팝업 스타일 가이드</h2>
+        <section>
+          <div class="ex-box">
+            <h3>FULL POPUP</h3>
+            <p>layper-popup클래스에 full-popup클래스를 추가합니다.</p>
+            <div class="exs">
+              <h4>상단 고정 & 하단 버튼 고정</h4>
+              <div class="ex">
+                <div class="btn-wrap">
+                  <button
+                    class="btn-round-l"
+                    onClick="openPopup('#FULL-POP1', this)"
+                    title="팝업 열기"
+                    style="max-width:200px;"
+                  ><span>FULL-POPUP</span></button>
+                </div>
+                <!-- 팝업 -->
+                <!-- full-popup -->
+                <div class="full-pop1 full-pop layer-popup" id="FULL-POP1">
+                  <div class="pop-area">
+                    <div class="pop-wrap">
+                      <div class="pop-fixed">
+                        <div class="pop-head">
+                          <p class="f-body-m1">Layer Name</p>
+                        </div>
+                      </div>
+                      <div class="scroll-area" tabindex="0">
+                        <div class="pop-cont">
+                          <p>안녕하세요</p><p>안녕하세요</p><p>안녕하세요</p>
+                          <p>안녕하세요</p><p>안녕하세요</p><p>안녕하세요</p>
+                          <p>안녕하세요</p><p>안녕하세요</p><p>안녕하세요</p>
+                          <p>안녕하세요</p><p>안녕하세요</p><p>안녕하세요</p>
+                          <p>안녕하세요</p><p>안녕하세요</p><p>안녕하세요</p>
+                          <p>안녕하세요</p><p>안녕하세요</p><p>안녕하세요</p>
+                          <p>안녕하세요</p><p>안녕하세요</p><p>안녕하세요</p>
+                          <p>안녕하세요</p><p>안녕하세요</p><p>안녕하세요</p>
+                          <p>안녕하세요</p><p>안녕하세요</p><p>안녕하세요</p>
+                          <p>안녕하세요</p><p>안녕하세요</p><p>안녕하세요</p>
+                          <p>안녕하세요</p><p>안녕하세요</p><p>안녕하세요</p>
+                          <p>안녕하세요</p><p>안녕하세요</p><p>안녕하세요</p>
+                          <p>안녕하세요</p><p>안녕하세요</p><p>안녕하세요</p>
+                          <p>안녕하세요</p><p>안녕하세요</p><p>안녕하세요</p>
+                          <p>안녕하세요</p><p>안녕하세요</p><p>안녕하세요</p>
+                          <p>안녕하세요</p><p>안녕하세요</p><p>안녕하세요</p>
+                          <p>안녕하세요</p><p>안녕하세요</p><p>안녕하세요</p>
+                          <p>안녕하세요</p><p>안녕하세요</p><p>안녕하세요</p>
+                          <p>안녕하세요</p><p>안녕하세요</p><p>안녕하세요</p>
+                          <p>안녕하세요</p><p>안녕하세요</p><p>안녕하세요</p>
+                          <p>안녕하세요</p><p>안녕하세요</p><p>안녕하세요</p>
+                          <p>안녕하세요</p><p>안녕하세요</p><p>안녕하세요</p>
+                          <p>안녕하세요</p><p>안녕하세요</p><p>안녕하세요</p>
+                          <p>안녕하세요</p><p>안녕하세요</p><p>안녕하세요</p>
+                          <p>안녕하세요</p><p>안녕하세요</p><p>안녕하세요</p>
+                          <p>안녕하세요</p><p>안녕하세요</p><p>안녕하세요</p>
+                          <p>안녕하세요</p><p>안녕하세요</p><p>안녕하세요</p>
+                          <p>안녕하세요</p><p>안녕하세요</p><p>안녕하세요</p>
+                          <p>안녕하세요</p><p>안녕하세요</p><p>안녕하세요</p>
+                        </div>
+                      </div>
+                      <div class="pop-button">
+                        <div class="btn-wrap">
+                          <button class="btn-round-l"><span>닫기</span></button>
+                          <button class="btn-round-l"><span>확인</span></button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="pop-btn-wrap">
+                      <button class="popclose-btn" type="button" title="팝업 닫기"></button>
+                    </div>
+                  </div>
+                </div>
+                <!-- // 팝업-->
+              </div>
+              <script type="syntaxhighlighter" class="brush: xml;">
+              </script>
+              <script type="syntaxhighlighter" class="brush: css;">
+              </script>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div class="ex-box">
+            <h3>FULL POPUP</h3>
+            <p>layper-popup클래스에 full-popup클래스를 추가합니다.</p>
+            <div class="exs">
+              <h4>상단 고정</h4>
+              <div class="ex">
+                <div class="btn-wrap">
+                  <button
+                    class="btn-round-l"
+                    onClick="openPopup('#FULL-POP2', this)"
+                    title="팝업 열기"
+                    style="max-width:200px;"
+                  ><span>FULL-POPUP</span></button>
+                </div>
+                <!-- 팝업 -->
+                <!-- full-popup -->
+                <div class="full-pop1 full-pop layer-popup" id="FULL-POP2">
+                  <div class="pop-area">
+                    <div class="pop-wrap">
+                      <div class="pop-fixed">
+                        <div class="pop-head">
+                          <p class="f-body-m1">Layer Name</p>
+                        </div>
+                      </div>
+                      <div class="scroll-area" tabindex="0">
+                        <div class="pop-cont">
+                          <p>안녕하세요</p><p>안녕하세요</p><p>안녕하세요</p>
+                          <p>안녕하세요</p><p>안녕하세요</p><p>안녕하세요</p>
+                          <p>안녕하세요</p><p>안녕하세요</p><p>안녕하세요</p>
+                          <p>안녕하세요</p><p>안녕하세요</p><p>안녕하세요</p>
+                          <p>안녕하세요</p><p>안녕하세요</p><p>안녕하세요</p>
+                          <p>안녕하세요</p><p>안녕하세요</p><p>안녕하세요</p>
+                          <p>안녕하세요</p><p>안녕하세요</p><p>안녕하세요</p>
+                          <p>안녕하세요</p><p>안녕하세요</p><p>안녕하세요</p>
+                          <p>안녕하세요</p><p>안녕하세요</p><p>안녕하세요</p>
+                          <p>안녕하세요</p><p>안녕하세요</p><p>안녕하세요</p>
+                          <p>안녕하세요</p><p>안녕하세요</p><p>안녕하세요</p>
+                          <p>안녕하세요</p><p>안녕하세요</p><p>안녕하세요</p>
+                          <p>안녕하세요</p><p>안녕하세요</p><p>안녕하세요</p>
+                          <p>안녕하세요</p><p>안녕하세요</p><p>안녕하세요</p>
+                          <p>안녕하세요</p><p>안녕하세요</p><p>안녕하세요</p>
+                          <p>안녕하세요</p><p>안녕하세요</p><p>안녕하세요</p>
+                          <p>안녕하세요</p><p>안녕하세요</p><p>안녕하세요</p>
+                          <p>안녕하세요</p><p>안녕하세요</p><p>안녕하세요</p>
+                          <p>안녕하세요</p><p>안녕하세요</p><p>안녕하세요</p>
+                          <p>안녕하세요</p><p>안녕하세요</p><p>안녕하세요</p>
+                          <p>안녕하세요</p><p>안녕하세요</p><p>안녕하세요</p>
+                          <p>안녕하세요</p><p>안녕하세요</p><p>안녕하세요</p>
+                          <p>안녕하세요</p><p>안녕하세요</p><p>안녕하세요</p>
+                          <p>안녕하세요</p><p>안녕하세요</p><p>안녕하세요</p>
+                          <p>안녕하세요</p><p>안녕하세요</p><p>안녕하세요</p>
+                          <p>안녕하세요</p><p>안녕하세요</p><p>안녕하세요</p>
+                          <p>안녕하세요</p><p>안녕하세요</p><p>안녕하세요</p>
+                          <p>안녕하세요</p><p>안녕하세요</p><p>안녕하세요</p>
+                          <p>안녕하세요</p><p>안녕하세요</p><p>안녕하세요</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="pop-btn-wrap">
+                      <button class="popclose-btn" type="button" title="팝업 닫기"></button>
+                    </div>
+                  </div>
+                </div>
+                <!-- // 팝업-->
+              </div>
+              <script type="syntaxhighlighter" class="brush: xml;">
+              </script>
+              <script type="syntaxhighlighter" class="brush: css;">
+              </script>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div class="ex-box">
+            <h3>BOTTOM POPUP</h3>
+            <p>layper-popup클래스에 bottom-popup클래스를 추가합니다.</p>
+            <div class="exs">
+              <h4>상단 고정 & 하단 버튼 고정</h4>
+              <div class="ex">
+                <div class="btn-wrap">
+                  <button
+                    class="btn-round-l"
+                    onClick="openPopup('#BOTTOM-POP', this)"
+                    title="팝업 열기"
+                    style="max-width:200px;"
+                  ><span>BOTTOM-POPUP</span></button>
+                </div>
+                <!-- 팝업 -->
+                <div class="bottom-pop layer-popup" id="BOTTOM-POP">
+                  <div class="pop-area">
+                    <div class="pop-wrap">
+                      <div class="pop-fixed">
+                        <div class="pop-head">
+                          <p class="f-body-m1">Layer Name</p>
+                        </div>
+                      </div>
+                      <div class="scroll-area" tabindex="0">
+                        <div class="pop-cont">
+                          <p>안녕하세요</p><p>안녕하세요</p><p>안녕하세요</p>
+                          <p>안녕하세요</p><p>안녕하세요</p><p>안녕하세요</p>
+                          <p>안녕하세요</p><p>안녕하세요</p><p>안녕하세요</p>
+                          <p>안녕하세요</p><p>안녕하세요</p><p>안녕하세요</p>
+                          <p>안녕하세요</p><p>안녕하세요</p><p>안녕하세요</p>
+                          <p>안녕하세요</p><p>안녕하세요</p><p>안녕하세요</p>
+                          <p>안녕하세요</p><p>안녕하세요</p><p>안녕하세요</p>
+                          <p>안녕하세요</p><p>안녕하세요</p><p>안녕하세요</p>
+                          <p>안녕하세요</p><p>안녕하세요</p><p>안녕하세요</p>
+                          <p>안녕하세요</p><p>안녕하세요</p><p>안녕하세요</p>
+                          <p>안녕하세요</p><p>안녕하세요</p><p>안녕하세요</p>
+                          <p>안녕하세요</p><p>안녕하세요</p><p>안녕하세요</p>
+                          <p>안녕하세요</p><p>안녕하세요</p><p>안녕하세요</p>
+                          <p>안녕하세요</p><p>안녕하세요</p><p>안녕하세요</p>
+                          <p>안녕하세요</p><p>안녕하세요</p><p>안녕하세요</p>
+                          <p>안녕하세요</p><p>안녕하세요</p><p>안녕하세요</p>
+                          <p>안녕하세요</p><p>안녕하세요</p><p>안녕하세요</p>
+                          <p>안녕하세요</p><p>안녕하세요</p><p>안녕하세요</p>
+                          <p>안녕하세요</p><p>안녕하세요</p><p>안녕하세요</p>
+                          <p>안녕하세요</p><p>안녕하세요</p><p>안녕하세요</p>
+                          <p>안녕하세요</p><p>안녕하세요</p><p>안녕하세요</p>
+                          <p>안녕하세요</p><p>안녕하세요</p><p>안녕하세요</p>
+                          <p>안녕하세요</p><p>안녕하세요</p><p>안녕하세요</p>
+                          <p>안녕하세요</p><p>안녕하세요</p><p>안녕하세요</p>
+                          <p>안녕하세요</p><p>안녕하세요</p><p>안녕하세요</p>
+                          <p>안녕하세요</p><p>안녕하세요</p><p>안녕하세요</p>
+                          <p>안녕하세요</p><p>안녕하세요</p><p>안녕하세요</p>
+                          <p>안녕하세요</p><p>안녕하세요</p><p>안녕하세요</p>
+                          <p>안녕하세요</p><p>안녕하세요</p><p>안녕하세요</p>
+                        </div>
+                      </div>
+                      <div class="pop-button">
+                        <div class="btn-wrap">
+                          <button class="btn-round-l"><span>닫기</span></button>
+                          <button class="btn-round-l"><span>확인</span></button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="pop-btn-wrap">
+                      <button class="popclose-btn" type="button" title="팝업 닫기"></button>
+                    </div>
+                  </div>
+                </div>
+                <!-- // 팝업-->
+              </div>
+              <script type="syntaxhighlighter" class="brush: xml;">
+              </script>
+              <script type="syntaxhighlighter" class="brush: css;">
+              </script>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

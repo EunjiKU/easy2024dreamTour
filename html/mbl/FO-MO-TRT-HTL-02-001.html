@@ -1,0 +1,2161 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>현대드림투어 호텔 HUB</title>
+    <link rel="shortcut icon" href="/common/mbl/images/favicon.ico" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no,maximum-scale=1.0,minimum-scale=1.0,target-densitydpi=medium-dpi" />
+		<meta name="keywords" content="각 페이지마다 유니크한 현대드림투어 호텔 HUB keywords"/>
+		<meta name="description" content="각 페이지마다 유니크한 현대드림투어 호텔 HUB description"/>
+		<meta name="format-detection" content="telephone=no, address=no, email=no">
+		<meta property="og:site_name" content="현대드림투어 호텔 HUB" id="og-sitename-value"/>
+		<meta property="og:type" content="website" id="og-type-value"/>
+		<meta property="og:url" content="URL" id="og-url-value"/>
+		<meta property="og:title" content="NOTICE | 현대드림투어 호텔 HUB" id="og-title-value"/>
+		<meta property="og:description" content="현대드림투어 호텔 HUB 홈페이지에 방문하신 것을 환영합니다." id="og-description-value"/>
+		<meta property="og:image" content="img URL" id="og-image-value"/>
+		<!-- <meta name="twitter:url" content="URL" id="twitter-url-value"/>
+		<meta name="twitter:title" content="Main" id="twitter-title-value"/>
+		<meta name="twitter:image" content="img URL" />
+		<meta name="twitter:description" content="현대드림투어 호텔 HUB 홈페이지에 방문하신 것을 환영합니다." id="twitter-discription-value"/> -->
+		
+		<link rel="stylesheet" href="/common/mbl/css/swiper.css" />
+		<link rel="stylesheet" href="/common/mbl/css/common.css" />
+		<link rel="stylesheet" href="/common/mbl/css/style.css" />
+
+		<script type="text/javascript" src="/common/mbl/js/jquery-1.12.4.min.js"></script>
+		<script type="text/javascript" src="/common/mbl/js/gsap.min.js"></script>
+		<script type="text/javascript" src="/common/mbl/js/ScrollTrigger.min.js"></script>
+		<script type="text/javascript" src="/common/mbl/js/swiper.min.js"></script>
+		<script type="text/javascript" src="/common/mbl/js/jquery-ui-1.12.1.custom.min.js"></script>
+    <script type="text/javascript" src="/common/mbl/js/script.js"></script>
+	</head>
+
+	<body>
+    <div id="wrap">
+      <header id="header">
+        <div class="page-tit-wrap">
+          <a href="javascript:" class="prev-btn"></a>
+          <p class="f-body-b1">호텔 상세</p>
+        </div>
+        <div class="nav-util">
+          <a class="user" href="javascript:" title="마이페이지"><img src="/common/mbl/images/btn-gnb-mypage.svg" alt=""></a>
+          <button type="button" class="all-menu-btn"><img src="/common/mbl/images/btn-gnb-menu.svg" alt=""></button>
+          <div class="all-menu"></div>
+        </div>
+      </header>
+
+      <!-- @ 페이지 내용 수급 후, ScrollTrigger.refresh(); 이 스크립트가 실행되어야합니다!
+          (탭메뉴 클릭하면 해당 탭으로 이동하는 기능 때문에 컨텐츠 offset top값을 사용하고있어서 컨텐츠 위치 값이 필요)
+      -->
+      <!-- @ script.js에서 txtChkFunc()함수로 실행하여 3줄 이상인 경우 더보기 버튼 활성화되게 작업해놨습니다!
+          페이지 내용 수급 후, txtChkFunc() 함수 호출이 필요합니다!
+          (개발쪽에서 따로 3줄 이상인 경우 작업하는 경우 해당부분 삭제해주셔도됩니다.)
+      -->
+      <div class="cont-wrap">
+        <div class="inner">
+          <!-- @ script.js '// ---- 상단 검색 바 (서브페이지, hasClass "resrch") START ----' 주석처리 부분에 기능 구현 -->
+          <!-- 상단 비주얼 및 검색 바 -->
+          <div class="resrch-bar">
+            <div class="resrch-wrap">
+              <a class="resrch-cont" href="javascript:" title="검색 조건 변경 팝업">
+                <div class="top-div">
+                  <ul class="line-txt">
+                    <li class="line">
+                      <p class="tit f-body-b3"></p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bottom-div">
+                  <div class="line-txt f-body-r5">
+                    <span class="year"></span>-<span class="month"></span>-<span class="date"></span>
+                    ~
+                    <span class="year"></span>-<span class="month"></span>-<span class="date"></span>
+                    (<span class="stay"></span>박)<span class="bar"></span>
+                    객실 <span class="num">0</span>개 ・ 성인 <span class="num">0</span>명 ・ 아동 <span class="num">0</span>명</div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="trip-sel-area resrch">
+            <div class="trip-sel-wrap">
+              <div class="pop-tit-wrap">
+                <a href="javascript:" class="close-btn prev-btn"></a>
+                <p class="tit f-body-b1">검색조건 변경</p>
+              </div>
+              <div class="scroll-area">
+                <div class="trip-input-wrap">
+                  <!-- 목적지 입력 -->
+                  <div class="trip-input-div">
+                    <div class="trip-input">
+                      <a href="javascript:" class="trip-input-val">
+                        <p class="on val f-body-m3">지역, 숙소 이름 또는 랜드마크 입력</p>
+                      </a>
+                      <div class="trip-recent-srch">
+                        <div class="resrch-popup">
+                          <div class="pop-tit-wrap">
+                            <a href="javascript:" class="prev-btn"></a>
+                            <p class="tit f-body-b1">목적지 검색</p>
+                          </div>
+                          <div class="top-area">
+                            <div class="srch-input form-input">
+                              <input type="text" placeholder="지역, 숙소 이름 또는 랜드마크 입력" value="" data-place="">
+                              <div class="input-btn-wrap">
+                                <button class="delete-btn" type="button" title="삭제"></button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="scroll-area">
+                            <!-- 검색어 입력 전 -->
+                            <div class="srch-before on"><!-- on class 추가하면 해당 화면 보입니다. -->
+                              <div class="recent-srch-wrap">
+                                <div class="tit-wrap">
+                                  <p class="title">최근 검색어</p>
+                                  <div class="toggle-btn on">
+                                    <p class="toggle-txt f-body-r3">최근 검색어</p>
+                                    <p class="toggle-area"></p>
+                                  </div>
+                                </div>
+                                <div class="recent-word">
+                                  <button type="button" class="word swiper-slide"><span class="txt">파리</span></button>
+                                  <button type="button" class="word swiper-slide"><span class="txt">인천광역시</span></button>
+                                  <button type="button" class="word swiper-slide"><span class="txt">힐튼 경주</span></button>
+                                  <button type="button" class="word swiper-slide"><span class="txt">노보텔 방콕 수완나품</span></button>
+                                  <button type="button" class="word swiper-slide"><span class="txt">하노이</span></button>
+                                </div>
+                              </div>
+                              <div class="main-city-wrap tab-func-area">
+                                <div class="tit-wrap">
+                                  <p class="title">주요 추천 도시</p>
+                                </div>
+                                <div class="white-acco-area">
+                                  <div class="acco-list on">
+                                    <a href="javascript:" class="acco-tit"><p class="tit">국내</p></a>
+                                    <div class="acco-con">
+                                      <div class="acco-inner">
+                                        <button type="button" class="city">
+                                          <span class="txt">부산</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">제주</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">인천</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">울산</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">경남</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">울산</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">강원</span>
+                                        </button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="acco-list">
+                                    <a href="javascript:" class="acco-tit"><p class="tit">아시아</p></a>
+                                    <div class="acco-con">
+                                      <div class="acco-inner">
+                                        <button type="button" class="city">
+                                          <span class="txt">부산</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">라스베가스</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">삿포로</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">방콕</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">인천</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">파타야</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">도쿄</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">파리</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">파타야</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">도쿄</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">파리</span>
+                                        </button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="acco-list">
+                                    <a href="javascript:" class="acco-tit"><p class="tit">홍콩/중국</p></a>
+                                    <div class="acco-con">
+                                      <div class="acco-inner">
+                                        <button type="button" class="city">
+                                          <span class="txt">부산</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">라스베가스</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">삿포로</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">방콕</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">인천</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">파타야</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">도쿄</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">파리</span>
+                                        </button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="acco-list">
+                                    <a href="javascript:" class="acco-tit"><p class="tit">일본</p></a>
+                                    <div class="acco-con">
+                                      <div class="acco-inner">
+                                        <button type="button" class="city">
+                                          <span class="txt">부산</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">라스베가스</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">삿포로</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">방콕</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">인천</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">파타야</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">도쿄</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">파리</span>
+                                        </button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="acco-list">
+                                    <a href="javascript:" class="acco-tit"><p class="tit">남태평양</p></a>
+                                    <div class="acco-con">
+                                      <div class="acco-inner">
+                                        <button type="button" class="city">
+                                          <span class="txt">부산</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">라스베가스</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">삿포로</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">방콕</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">인천</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">파타야</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">도쿄</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">파리</span>
+                                        </button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="acco-list">
+                                    <a href="javascript:" class="acco-tit"><p class="tit">유럽</p></a>
+                                    <div class="acco-con">
+                                      <div class="acco-inner">
+                                        <button type="button" class="city">
+                                          <span class="txt">부산</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">라스베가스</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">삿포로</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">방콕</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">인천</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">파타야</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">도쿄</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">파리</span>
+                                        </button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="acco-list">
+                                    <a href="javascript:" class="acco-tit"><p class="tit">미주/캐나다</p></a>
+                                    <div class="acco-con">
+                                      <div class="acco-inner">
+                                        <button type="button" class="city">
+                                          <span class="txt">부산</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">라스베가스</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">삿포로</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">방콕</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">인천</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">파타야</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">도쿄</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">파리</span>
+                                        </button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- // 검색어 입력 전 -->
+                            <!-- 검색어 입력 후 -->
+                            <div class="srch-after"><!-- on class 추가하면 해당 화면 보입니다. -->
+                              <div class="place-area city">
+                                <!--
+                                  도시/지역 - city
+                                  호텔 - hotel
+                                  지하철/기차역 - subway
+                                  랜드마크 - landmark
+                                  공항 - airport
+                                -->
+                                <p class="tit">도시/지역</p>
+                                <div class="place-wrap">
+                                  <button type="button">
+                                    <span class="destination txt"><span class="keyword">신주쿠</span></span>
+                                    <span class="location"><span class="keyword">도쿄, 일본</span></span>
+                                  </button>
+                                </div>
+                              </div>
+                              <div class="place-area hotel">
+                                <p class="tit">호텔</p>
+                                <div class="place-wrap">
+                                  <button type="button">
+                                    <span class="destination txt"><span class="keyword">신주쿠</span> 워싱턴 호텔 메인</span>
+                                    <span class="location">도쿄, 일본</span>
+                                  </button>
+                                  <button type="button">
+                                    <span class="destination txt"><span class="keyword">신주쿠</span> 프린스 호텔</span>
+                                    <span class="location">도쿄, 일본</span>
+                                  </button>
+                                  <button type="button">
+                                    <span class="destination txt"><span class="keyword">신주쿠</span> 그레이서리 신주쿠</span>
+                                    <span class="location">도쿄, 일본</span>
+                                  </button>
+                                  <button type="button">
+                                    <span class="destination txt">캄튼 <span class="keyword">신주쿠</span> 도쿄, IHG 호텔</span>
+                                    <span class="location">도쿄, 일본</span>
+                                  </button>
+                                </div>
+                              </div>
+                              <div class="place-area subway">
+                                <p class="tit">지하철/기차역</p>
+                                <div class="place-wrap">
+                                  <button type="button">
+                                    <span class="destination txt"><span class="keyword">신주쿠</span>역</span>
+                                    <span class="location">도쿄, 일본</span>
+                                  </button>
+                                  <button type="button">
+                                    <span class="destination txt"><span class="keyword">신주쿠</span> 니시구치역</span>
+                                    <span class="location">도쿄, 일본</span>
+                                  </button>
+                                </div>
+                              </div>
+                              <div class="place-area landmark">
+                                <p class="tit">랜드마크</p>
+                                <div class="place-wrap">
+                                  <button type="button">
+                                    <span class="destination txt"><span class="keyword">신주쿠</span>아일랜드</span>
+                                    <span class="location">도쿄, 일본</span>
+                                  </button>
+                                </div>
+                              </div>
+                              <div class="place-area airport">
+                                <p class="tit">공항</p>
+                                <div class="place-wrap">
+                                  <button type="button">
+                                    <span class="destination txt"><span class="keyword">신주쿠</span>아일랜드</span>
+                                    <span class="location">도쿄, 일본</span>
+                                  </button>
+                                </div>
+                              </div>
+                              <!-- 검색 결과 없을 때 -->
+                              <div class="no-place-area">
+                                <p class="f-body-m2">입력하신 내용이 다르거나, 검색결과가 없습니다.</p>
+                              </div>
+                              <!-- // 검색 결과 없을 때 -->
+                            </div>
+                            <!-- // 검색어 입력 후 -->
+                          </div>
+                        </div>
+                        <div class="bg-pop"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="trip-select-div">
+                    <!-- 체크인, 체크아웃, 숙박일수 -->
+                    <div class="trip-date">
+                      <div class="date-info-wrap">
+                        <div class="checkin-wrap">
+                          <div class="chk-in-out">
+                            <p class="txt f-body-r5">체크인</p>
+                            <p class="date-txt">
+                              <span class="year"></span>-<span class="month"></span>-<span class="date"></span>
+                              (<span class="day"></span>)
+                            </p>
+                          </div>
+                          <div class="chk-in-out">
+                            <p class="txt f-body-r5">체크아웃</p>
+                            <p class="date-txt">
+                              <span class="year"></span>-<span class="month"></span>-<span class="date"></span>
+                              (<span class="day"></span>)
+                            </p>
+                          </div>
+                        </div>
+                        <div class="stay-wrap">
+                          <div class="form-select no-bdr">
+                            <select>
+                              <option value="1">1박</option>
+                              <option value="2">2박</option>
+                              <option value="3">3박</option>
+                              <option value="4">4박</option>
+                              <option value="5">5박</option>
+                              <option value="6">6박</option>
+                              <option value="7">7박</option>
+                              <option value="8">8박</option>
+                              <option value="9">9박</option>
+                              <option value="10">10박</option>
+                              <option value="11">11박</option>
+                              <option value="12">12박</option>
+                              <option value="13">13박</option>
+                              <option value="14">14박</option>
+                              <option value="15">15박</option>
+                              <option value="16">16박</option>
+                              <option value="17">17박</option>
+                              <option value="18">18박</option>
+                              <option value="19">19박</option>
+                              <option value="20">20박</option>
+                              <option value="21">21박</option>
+                              <option value="22">22박</option>
+                              <option value="23">23박</option>
+                              <option value="24">24박</option>
+                              <option value="25">25박</option>
+                              <option value="26">26박</option>
+                              <option value="27">27박</option>
+                              <option value="28">28박</option>
+                              <option value="29">29박</option>
+                              <option value="30">30박</option>
+                              <option value="31">31박</option>
+                              <option value="32">32박</option>
+                              <option value="33">33박</option>
+                              <option value="34">34박</option>
+                              <option value="35">35박</option>
+                              <option value="36">36박</option>
+                              <option value="37">37박</option>
+                              <option value="38">38박</option>
+                              <option value="39">39박</option>
+                              <option value="40">40박</option>
+                              <option value="41">41박</option>
+                              <option value="42">42박</option>
+                              <option value="43">43박</option>
+                              <option value="44">44박</option>
+                              <option value="45">45박</option>
+                              <option value="46">46박</option>
+                              <option value="47">47박</option>
+                              <option value="48">48박</option>
+                              <option value="49">49박</option>
+                              <option value="50">50박</option>
+                              <option value="51">51박</option>
+                              <option value="52">52박</option>
+                              <option value="53">53박</option>
+                              <option value="54">54박</option>
+                              <option value="55">55박</option>
+                              <option value="56">56박</option>
+                              <option value="57">57박</option>
+                              <option value="58">58박</option>
+                              <option value="59">59박</option>
+                              <option value="60">60박</option>
+                              <option value="61">61박</option>
+                              <option value="62">62박</option>
+                              <option value="63">63박</option>
+                              <option value="64">64박</option>
+                              <option value="65">65박</option>
+                              <option value="66">66박</option>
+                              <option value="67">67박</option>
+                              <option value="68">68박</option>
+                              <option value="69">69박</option>
+                              <option value="70">70박</option>
+                              <option value="71">71박</option>
+                              <option value="72">72박</option>
+                              <option value="73">73박</option>
+                              <option value="74">74박</option>
+                              <option value="75">75박</option>
+                              <option value="76">76박</option>
+                              <option value="77">77박</option>
+                              <option value="78">78박</option>
+                              <option value="79">79박</option>
+                              <option value="80">80박</option>
+                              <option value="81">81박</option>
+                              <option value="82">82박</option>
+                              <option value="83">83박</option>
+                              <option value="84">84박</option>
+                              <option value="85">85박</option>
+                              <option value="86">86박</option>
+                              <option value="87">87박</option>
+                              <option value="88">88박</option>
+                              <option value="89">89박</option>
+                              <option value="90">90박</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="calendar-wrap">
+                        <div class="resrch-popup">
+                          <div class="pop-tit-wrap">
+                            <a href="javascript:" class="prev-btn"></a>
+                            <p class="tit f-body-b1">체크인/체크아웃 선택</p>
+                          </div>
+                          <div class="top-area">
+                            <div class="choice-box">
+                              <div class="checkin-txt">
+                                <div class="chk-in-out">
+                                  <p class="f-body-r5">체크인</p>
+                                  <p class="date-txt">
+                                    <span class="year">24</span>-<span class="month">10</span>-<span class="date">04</span>
+                                    (<span class="day">금</span>)
+                                  </p>
+                                </div>
+                                <div class="chk-in-out">
+                                  <p class="f-body-r5">체크아웃</p>
+                                  <p class="date-txt">
+                                    <span class="year">24</span>-<span class="month">10</span>-<span class="date">05</span>
+                                    (<span class="day">토</span>)
+                                  </p>
+                                </div>
+                              </div>
+                              <div class="form-select no-bdr">
+                                <select>
+                                  <option value="0" disabled hidden>0박</option>
+                                  <option value="1">1박</option>
+                                  <option value="2">2박</option>
+                                  <option value="3">3박</option>
+                                  <option value="4">4박</option>
+                                  <option value="5">5박</option>
+                                  <option value="6">6박</option>
+                                  <option value="7">7박</option>
+                                  <option value="8">8박</option>
+                                  <option value="9">9박</option>
+                                  <option value="10">10박</option>
+                                  <option value="11">11박</option>
+                                  <option value="12">12박</option>
+                                  <option value="13">13박</option>
+                                  <option value="14">14박</option>
+                                  <option value="15">15박</option>
+                                  <option value="16">16박</option>
+                                  <option value="17">17박</option>
+                                  <option value="18">18박</option>
+                                  <option value="19">19박</option>
+                                  <option value="20">20박</option>
+                                  <option value="21">21박</option>
+                                  <option value="22">22박</option>
+                                  <option value="23">23박</option>
+                                  <option value="24">24박</option>
+                                  <option value="25">25박</option>
+                                  <option value="26">26박</option>
+                                  <option value="27">27박</option>
+                                  <option value="28">28박</option>
+                                  <option value="29">29박</option>
+                                  <option value="30">30박</option>
+                                  <option value="31">31박</option>
+                                  <option value="32">32박</option>
+                                  <option value="33">33박</option>
+                                  <option value="34">34박</option>
+                                  <option value="35">35박</option>
+                                  <option value="36">36박</option>
+                                  <option value="37">37박</option>
+                                  <option value="38">38박</option>
+                                  <option value="39">39박</option>
+                                  <option value="40">40박</option>
+                                  <option value="41">41박</option>
+                                  <option value="42">42박</option>
+                                  <option value="43">43박</option>
+                                  <option value="44">44박</option>
+                                  <option value="45">45박</option>
+                                  <option value="46">46박</option>
+                                  <option value="47">47박</option>
+                                  <option value="48">48박</option>
+                                  <option value="49">49박</option>
+                                  <option value="50">50박</option>
+                                  <option value="51">51박</option>
+                                  <option value="52">52박</option>
+                                  <option value="53">53박</option>
+                                  <option value="54">54박</option>
+                                  <option value="55">55박</option>
+                                  <option value="56">56박</option>
+                                  <option value="57">57박</option>
+                                  <option value="58">58박</option>
+                                  <option value="59">59박</option>
+                                  <option value="60">60박</option>
+                                  <option value="61">61박</option>
+                                  <option value="62">62박</option>
+                                  <option value="63">63박</option>
+                                  <option value="64">64박</option>
+                                  <option value="65">65박</option>
+                                  <option value="66">66박</option>
+                                  <option value="67">67박</option>
+                                  <option value="68">68박</option>
+                                  <option value="69">69박</option>
+                                  <option value="70">70박</option>
+                                  <option value="71">71박</option>
+                                  <option value="72">72박</option>
+                                  <option value="73">73박</option>
+                                  <option value="74">74박</option>
+                                  <option value="75">75박</option>
+                                  <option value="76">76박</option>
+                                  <option value="77">77박</option>
+                                  <option value="78">78박</option>
+                                  <option value="79">79박</option>
+                                  <option value="80">80박</option>
+                                  <option value="81">81박</option>
+                                  <option value="82">82박</option>
+                                  <option value="83">83박</option>
+                                  <option value="84">84박</option>
+                                  <option value="85">85박</option>
+                                  <option value="86">86박</option>
+                                  <option value="87">87박</option>
+                                  <option value="88">88박</option>
+                                  <option value="89">89박</option>
+                                  <option value="90">90박</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="day">
+                              <p>일</p>
+                              <p>월</p>
+                              <p>화</p>
+                              <p>수</p>
+                              <p>목</p>
+                              <p>금</p>
+                              <p>토</p>
+                            </div>
+                          </div>
+                          <div class="scroll-area">
+                            <!-- 달력 -->
+                            <div class="calendar-div">
+                              <div class="calendar on">
+                                <p class="year-month-div">
+                                  <span class="year">2025</span>-<span class="month">01</span>
+                                </p>
+                                <div class="week-div">
+                                  <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                  <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                  <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                  <a href="javascript:" class="spe"><span class="date">1</span></a>
+                                  <a href="javascript:"><span class="date">2</span></a>
+                                  <a href="javascript:"><span class="date">3</span></a>
+                                  <a href="javascript:"><span class="date">4</span></a>
+                                  <a href="javascript:"><span class="date">5</span></a>
+                                  <a href="javascript:"><span class="date">6</span></a>
+                                  <a href="javascript:"><span class="date">7</span></a>
+                                  <a href="javascript:"><span class="date">8</span></a>
+                                  <a href="javascript:"><span class="date">9</span></a>
+                                  <a href="javascript:"><span class="date">10</span></a>
+                                  <a href="javascript:"><span class="date">11</span></a>
+                                  <a href="javascript:"><span class="date">12</span></a>
+                                  <a href="javascript:"><span class="date">13</span></a>
+                                  <a href="javascript:"><span class="date">14</span></a>
+                                  <a href="javascript:"><span class="date">15</span></a>
+                                  <a href="javascript:"><span class="date">16</span></a>
+                                  <a href="javascript:"><span class="date">17</span></a>
+                                  <a href="javascript:"><span class="date">18</span></a>
+                                  <a href="javascript:"><span class="date">19</span></a>
+                                  <a href="javascript:"><span class="date">20</span></a>
+                                  <a href="javascript:"><span class="date">21</span></a>
+                                  <a href="javascript:"><span class="date">22</span></a>
+                                  <a href="javascript:"><span class="date">23</span></a>
+                                  <a href="javascript:"><span class="date">24</span></a>
+                                  <a href="javascript:"><span class="date">25</span></a>
+                                  <a href="javascript:"><span class="date">26</span></a>
+                                  <a href="javascript:"><span class="date">27</span></a>
+                                  <a href="javascript:" class="spe"><span class="date">28</span></a>
+                                  <a href="javascript:" class="spe"><span class="date">29</span></a>
+                                  <a href="javascript:" class="spe"><span class="date">30</span></a>
+                                  <a href="javascript:"><span class="date">31</span></a>
+                                  <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                </div>
+                                <div class="holiday-div">
+                                  <p class="holiday"><span>01-28</span> 설날 연휴</p>
+                                  <p class="holiday"><span>01-29</span> 설날</p>
+                                  <p class="holiday"><span>01-30</span> 설날 연휴</p>
+                                </div>
+                              </div>
+                              <div class="calendar">
+                                <p class="year-month-div">
+                                  <span class="year">2025</span>-<span class="month">02</span>
+                                </p>
+                                <div class="week-div">
+                                  <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                  <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                  <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                  <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                  <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                  <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                  <a href="javascript:" class="spe"><span class="date">1</span></a>
+                                  <a href="javascript:"><span class="date">2</span></a>
+                                  <a href="javascript:" class="spe"><span class="date">3</span></a>
+                                  <a href="javascript:"><span class="date">4</span></a>
+                                  <a href="javascript:"><span class="date">5</span></a>
+                                  <a href="javascript:"><span class="date">6</span></a>
+                                  <a href="javascript:"><span class="date">7</span></a>
+                                  <a href="javascript:"><span class="date">8</span></a>
+                                  <a href="javascript:" class="spe"><span class="date">9</span></a>
+                                  <a href="javascript:"><span class="date">10</span></a>
+                                  <a href="javascript:"><span class="date">11</span></a>
+                                  <a href="javascript:"><span class="date">12</span></a>
+                                  <a href="javascript:"><span class="date">13</span></a>
+                                  <a href="javascript:"><span class="date">14</span></a>
+                                  <a href="javascript:"><span class="date">15</span></a>
+                                  <a href="javascript:"><span class="date">16</span></a>
+                                  <a href="javascript:"><span class="date">17</span></a>
+                                  <a href="javascript:"><span class="date">18</span></a>
+                                  <a href="javascript:"><span class="date">19</span></a>
+                                  <a href="javascript:"><span class="date">20</span></a>
+                                  <a href="javascript:"><span class="date">21</span></a>
+                                  <a href="javascript:"><span class="date">22</span></a>
+                                  <a href="javascript:"><span class="date">23</span></a>
+                                  <a href="javascript:"><span class="date">24</span></a>
+                                  <a href="javascript:"><span class="date">25</span></a>
+                                  <a href="javascript:"><span class="date">26</span></a>
+                                  <a href="javascript:"><span class="date">27</span></a>
+                                  <a href="javascript:"><span class="date">28</span></a>
+                                  <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                </div>
+                                <!-- 공휴일 안내 -->
+                                <div class="holiday-div">
+                                  <p class="holiday"><span>10-03</span> 개천절</p>
+                                  <p class="holiday"><span>10-09</span> 한글날</p>
+                                </div>
+                              </div>
+                              <div class="calendar">
+                                <p class="year-month-div">
+                                  <span class="year">2025</span>-<span class="month">03</span>
+                                </p>
+                                <div class="week-div">
+                                  <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                  <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                  <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                  <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                  <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                  <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                  <a href="javascript:" class="spe"><span class="date">1</span></a>
+                                  <a href="javascript:"><span class="date">2</span></a>
+                                  <a href="javascript:" class="spe"><span class="date">3</span></a>
+                                  <a href="javascript:"><span class="date">4</span></a>
+                                  <a href="javascript:"><span class="date">5</span></a>
+                                  <a href="javascript:"><span class="date">6</span></a>
+                                  <a href="javascript:"><span class="date">7</span></a>
+                                  <a href="javascript:"><span class="date">8</span></a>
+                                  <a href="javascript:" class="spe"><span class="date">9</span></a>
+                                  <a href="javascript:"><span class="date">10</span></a>
+                                  <a href="javascript:"><span class="date">11</span></a>
+                                  <a href="javascript:"><span class="date">12</span></a>
+                                  <a href="javascript:"><span class="date">13</span></a>
+                                  <a href="javascript:"><span class="date">14</span></a>
+                                  <a href="javascript:"><span class="date">15</span></a>
+                                  <a href="javascript:"><span class="date">16</span></a>
+                                  <a href="javascript:"><span class="date">17</span></a>
+                                  <a href="javascript:"><span class="date">18</span></a>
+                                  <a href="javascript:"><span class="date">19</span></a>
+                                  <a href="javascript:"><span class="date">20</span></a>
+                                  <a href="javascript:"><span class="date">21</span></a>
+                                  <a href="javascript:"><span class="date">22</span></a>
+                                  <a href="javascript:"><span class="date">23</span></a>
+                                  <a href="javascript:"><span class="date">24</span></a>
+                                  <a href="javascript:"><span class="date">25</span></a>
+                                  <a href="javascript:"><span class="date">26</span></a>
+                                  <a href="javascript:"><span class="date">27</span></a>
+                                  <a href="javascript:"><span class="date">28</span></a>
+                                  <a href="javascript:"><span class="date">29</span></a>
+                                  <a href="javascript:"><span class="date">30</span></a>
+                                  <a href="javascript:"><span class="date">31</span></a>
+                                  <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                  <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                  <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                  <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                  <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                </div>
+                                <!-- 공휴일 안내 -->
+                                <div class="holiday-div">
+                                  <p class="holiday"><span>10-03</span> 개천절</p>
+                                  <p class="holiday"><span>10-09</span> 한글날</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="fixed-btn-wrap">
+                            <a href="javascript:" class="apply-btn"><span class="f-body-b1">적용하기</span></a>
+                          </div>
+                        </div>
+                        <div class="bg-pop"></div>
+                      </div>
+                    </div>
+                    <!-- 객실 -->
+                    <div class="trip-room">
+                      <div class="room-info-sel">
+                        <div class="room-tit-wrap">
+                          <p class="f-body-b1">객실 수</p>
+                          <div class="plus-minus-input room-num">
+                            <button type="button" class="minus disabled"></button>
+                            <div class="form-input">
+                              <input type="number" value="1" data-val="1">
+                            </div>
+                            <button type="button" class="plus"></button>
+                          </div>
+                        </div>
+                        <div class="room-con-wrap">
+                          <div class="room-con-box" data-yn="N" data-del="N">
+                            <div class="room-con-div">
+                              <p class="title f-body-b1">객실 <span class="num">1</span></p>
+                              <div class="person-div">
+                                <p class="f-body-b2">성인</p>
+                                <div class="person plus-minus-input">
+                                  <button type="button" class="minus"></button>
+                                  <div class="form-input adult">
+                                    <input type="number" value="2" data-val="2">
+                                  </div>
+                                  <button type="button" class="plus"></button>
+                                </div>
+                              </div>
+                              <div class="person-div">
+                                <div class="child-tit-wrap">
+                                  <p class="f-body-b2">아동</p>
+                                  <div class="f-body-r5">
+                                    <span>만 0~17세</span>
+                                    <div class="tooltip-wrap">
+                                      <button class="tooltip-btn" type="button"></button>
+                                      <div class="tooltip-box dot-txt-w">
+                                        <p class="dot-txt f-body-r3">침대를 공유하는 조건이며, 보조침대는 제공되지 않습니다.</p>
+                                        <p class="dot-txt f-body-r3">아동조식은 불포함 사항이며, 이용 시 현장에서 직접 결제하셔야 합니다.</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                
+                                <div class="person plus-minus-input">
+                                  <button type="button" class="minus disabled"></button>
+                                  <div class="form-input child">
+                                    <input type="number" value="0" data-val="0">
+                                  </div>
+                                  <button type="button" class="plus"></button>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="child-chk-div">
+                              <div class="child-chk" data-del="N" data-yn="N">
+                                <p class="tit f-body-b2">아동 <span class="num">1</span></p>
+                                <div class="form-input birth">
+                                  <input type="text" placeholder="생년월일 8자리" maxlength="10" />
+                                </div>
+                                <button type="button" class="btn-square-l gray"><span>확인</span></button>
+                                <div class="form-input">
+                                  <input type="text" readonly />
+                                </div>
+                              </div>
+                            </div>
+                            <button type="button" class="delete-btn"><img src="/common/mbl/images/icon-delete-btn-gray-bg.svg" alt=""></button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="trip-btn-wrap">
+                <button class="srch-btn" type="button"><span>적용하기</span></button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 신규 예약하기 -->
+          <div class="new-reserve-bar">
+            <div class="list">
+              <p class="f-body-b3">예약번호</p>
+              <p class="f-body-r3">TR24090600078</p>
+            </div>
+            <div class="txt-div">
+              <p class="txt f-body-r3">추가 예약 진행 중</p>
+              <a href="javascript:" class="btn"><span class="f-body-b3">신규 예약하기</span></a>
+            </div>
+          </div>
+
+          <!-- 호텔 영역 -->
+          <div class="hotel-area">
+            <!-- 호텔 상단 영역 -->
+            <div class="hotel-view-area">
+              <div class="hotel-view">
+                <div class="thumb-wrap">
+                  <li class="img"><img src="/common/mbl/images/@img-compare-list-img.jpg" alt=""></li>
+                  <button type="button" class="gallery-btn" title="전체 이미지 팝업"></button>
+                </div>
+                <div class="info-wrap">
+                  <div class="top-div">
+                    <div class="names">
+                      <p class="e-name f-body-b1">Hotel Villa Fontaine Grand Haneda Airport</p>
+                      <p class="k-name f-body-r3">호텔 빌라 폰텐 그랜드 하네다 에어포트</p>
+                    </div>
+                    <ul class="line-txt">
+                      <li class="line">
+                        <p class="stars"><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span></p>
+                      </li>
+                      <!-- <li class="line">
+                        <p class="rating f-body-b5">4.2</p>
+                      </li> -->
+                    </ul>
+                  </div>
+                  <div class="bottom-div">
+                    <p class="location-icon f-body-r3">2-7-1 Hanedakuko, Oota, Tokyo, Tokyo, 일본, 144-0041, 2-7-1 Hanedakuko, Oota, Tokyo, Tokyo, 일본, 144-0041, 2-7-1 Hanedakuko, Oota, Tokyo, Tokyo, 일본, 144-0041, 2-7-1 Hanedakuko, Oota, Tokyo, Tokyo, 일본, 144-0041</p>
+                    <p class="headline-icon f-body-r3">쇼핑센터와 연결된 도쿄의 온천 호텔, Haneda Airport Garden Shopping Center에서 도보 거리</p>
+                  </div>
+                </div>
+                <button class="like-btn large" type="button" ></button>
+              </div>
+            </div>
+            <!-- 호텔 하단 영역 -->
+            <div class="hotel-detail-area">
+              <div class="tab-menu">
+                <div class="tab-wrap">
+                  <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                      <!-- @ on클래스 추가 시, tab active -->
+                      <a class="on tab swiper-slide" href="javascript:"><span>호텔 정보</span></a>
+                      <a class="tab swiper-slide" href="javascript:"><span>객실 정보</span></a>
+                      <a class="tab swiper-slide" href="javascript:"><span>호텔 소개</span></a>
+                      <a class="tab swiper-slide" href="javascript:"><span>시설 및 서비스</span></a>
+                      <a class="tab swiper-slide" href="javascript:"><span>호텔 정책</span></a>
+                      <a class="tab swiper-slide" href="javascript:"><span>참고사항</span></a>
+                      <a class="tab swiper-slide" href="javascript:"><span>주변 추천 호텔</span></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-conts">
+                <div class="tab-cont">
+                  <div class="tab-div">
+                    <div class="white-acco-area">
+                      <div class="acco-list on">
+                        <a href="javascript:" class="acco-tit">
+                          <p class="tit f-t2">호텔 정보</p>
+                        </a>
+                        <div class="acco-con">
+                          <div class="acco-inner">
+                            <div class="hotel-info">
+                              <ul class="info-line">
+                                <li class="line">
+                                  <p class="line-tit f-body-b2">체크인 안내</p>
+                                  <div class="line-cont">
+                                    <ul class="checkin-list">
+                                      <li class="item">
+                                        <div class="icon">
+                                          <img src="/common/mbl/images/icon-checkin-time.svg" alt="">
+                                        </div>
+                                        <div class="txt-wrap">
+                                          <p class="f-body-r3 tit">체크인 시간</p>
+                                          <p class="f-body-b2 txt">15:00 ~ 15:30</p>
+                                        </div>
+                                      </li>
+                                      <li class="item">
+                                        <div class="icon">
+                                          <img src="/common/mbl/images/icon-checkout-time.svg" alt="">
+                                        </div>
+                                        <div class="txt-wrap">
+                                          <p class="f-body-r3 tit">체크아웃 시간</p>
+                                          <p class="f-body-b2 txt">11:00</p>
+                                        </div>
+                                      </li>
+                                      <li class="item">
+                                        <div class="icon">
+                                          <img src="/common/mbl/images/icon-checkin-age.svg" alt="">
+                                        </div>
+                                        <div class="txt-wrap">
+                                          <p class="f-body-r3 tit">최소 체크인 나이</p>
+                                          <p class="f-body-b2 txt">만 18세</p>
+                                        </div>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </li>
+                                <li class="line">
+                                  <p class="line-tit f-body-b2">체크인 정책</p>
+                                  <div class="line-cont">
+                                    <div class="txt-chk">
+                                      <p class="txt f-body-r2">
+                                        추가 인원에 대한 요금이 부과될 수 있으며, 이는 숙박 시설 정책에 따라 다릅니다. 체크인 시 부대 비용 발생에 대비해 정부에서 발급한 사진이 부착된 신분증과 신용카드, 직불카드 또는 현금으로 보증금이 필요할 수 있습니다.<br/>
+                                        추가 인원에 대한 요금이 부과될 수 있으며, 이는 숙박 시설 정책에 따라 다릅니다. 체크인 시 부대 비용 발생에 대비해 정부에서 발급한 사진이 부착된 신분증과 신용카드, 직불카드 또는 현금으로 보증금이 필요할 수 있습니다.
+                                      </p>
+                                    </div>
+                                    <div class="btn-wrap">
+                                      <button type="button" class="icon-txt-btn close"><span>더보기</span></button>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="line">
+                                  <p class="line-tit f-body-b2">체크인 특별정책</p>
+                                  <div class="line-cont">
+                                    <div class="txt-chk">
+                                      <p class="txt f-body-r2">
+                                        조기 체크인은 가능하나, 추가 요금이 부과될 수 있으며, 객실 준비 상황에 따라 달라질 수 있습니다.<br/>
+                                        특히, 피크 시즌이나 높은 수요 기간에는 조기 체크인 보장이 어려울 수 있습니다.
+                                      </p>
+                                    </div>
+                                    <div class="btn-wrap">
+                                      <button type="button" class="icon-txt-btn close"><span>더보기</span></button>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="line">
+                                  <p class="line-tit f-body-b2">24시간 체크인</p>
+                                  <div class="line-cont">
+                                    <div class="txt-chk">
+                                      <p class="txt f-body-r2">
+                                        운영합니다.
+                                      </p>
+                                    </div>
+                                    <div class="btn-wrap">
+                                      <button type="button" class="icon-txt-btn close"><span>더보기</span></button>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="line">
+                                  <p class="line-tit f-body-b2">드림투어 안내사항</p>
+                                  <div class="line-cont">
+                                    <div class="txt-chk">
+                                      <p class="txt f-body-r2">
+                                        수영장 공사로 인해 수영장 사용 불가합니다.<br/>
+                                        옆 건물 공사로 인해 소음이 발생할 수 있습니다.<br/>
+                                        수영장 공사로 인해 수영장 사용 불가합니다.<br/>
+                                        옆 건물 공사로 인해 소음이 발생할 수 있습니다.
+                                      </p>
+                                    </div>
+                                    <div class="btn-wrap">
+                                      <button type="button" class="icon-txt-btn close"><span>더보기</span></button>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="line">
+                                  <p class="line-tit f-body-b2">지도에서 숙소보기</p>
+                                  <div class="line-cont">
+                                    <!-- 2025-01-07 태그 수정 -->
+                                    <a href="javascript:" class="map-btn" title="지도 팝업">
+                                      <div id="hotelDtlMap"></div>
+                                    </a>
+                                    <!-- // 2025-01-07 태그 수정 -->
+                                  </div>
+                                </li>
+                                <li class="line">
+                                  <p class="line-tit f-body-b2">주변 공항 정보</p>
+                                  <div class="line-cont">
+                                    <ul class="airplane-list">
+                                      <li class="item f-body-r3">
+                                        <p class="air">도쿄 (HND-하네다 공항)</p>
+                                        <p class="km">14.7km</p>
+                                      </li>
+                                      <li class="item f-body-r3">
+                                        <p class="air">도쿄 (HND-하네다 공항)</p>
+                                        <p class="km">14km</p>
+                                      </li>
+                                      <li class="item f-body-r3">
+                                        <p class="air">도쿄 (HND-하네다 공항)</p>
+                                        <p class="km">14km</p>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-cont">
+                  <div class="tab-tit-wrap">
+                    <p class="tit f-t2">객실 정보</p>
+                    <p class="txt f-body-r2">※ 동일조건 다른 요금일 경우 "현지 공급사"에 따라 가격이 다를 수 있으니 같은 조건이면 "낮은 요금"으로 예약하세요.</p>
+                  </div>
+                  <div class="tab-div">
+                    <div class="form-area">
+                      <div class="form-about">
+                        <div class="filter-group swiper-container">
+                          <div class="swiper-wrapper">
+                            <!-- @ 클래스 추가
+                              breakfast : 조식포함
+                              nobreakfast :조식불포함
+                              freecancel :무료취소가능
+                            -->
+                            <div class="swiper-slide">
+                              <div class="breakfast btn-checkbox">
+                                <input type="checkbox"  id="Chk1-1" name="">
+                                <label for="Chk1-1">
+                                  <span>조식포함</span>
+                                </label>
+                              </div>
+                            </div>
+                            <div class="swiper-slide">
+                              <div class="nobreakfast btn-checkbox">
+                                <input type="checkbox"  id="Chk2-1" name="">
+                                <label for="Chk2-1">
+                                  <span>조식불포함</span>
+                                </label>
+                              </div>
+                            </div>
+                            <div class="swiper-slide">
+                              <div class="freecancel btn-checkbox">
+                                <input type="checkbox"  id="Chk3-1" name="">
+                                <label for="Chk3-1">
+                                  <span>무료취소가능</span>
+                                </label>
+                              </div>
+                            </div>
+                            <!-- <div class="swiper-slide">
+                              <div class="filter-select form-select">
+                                <select>
+                                  <option value="1">룸 카테고리</option>
+                                  <option value="2">카테고리</option>
+                                  <option value="3">카테고리</option>
+                                  <option value="4">카테고리</option>
+                                </select>
+                              </div>
+                            </div> -->
+                          </div>
+                        </div>
+                        <p class="total-count f-body-m2">총<span class="f-body-b2 green-txt">8</span>개</p>
+                      </div>
+                      <!-- @ 스켈레톤 :
+                        로딩 완료되면,
+                        $(".skeleton-loading").fadeOut(400, function() {
+                          $(".skeleton-loading").remove();
+                        });
+                        실행되게 스크립트 추가 부탁드립니다.
+                      -->
+                      <!-- @ 객실정보 리스트 아이템이 다 불러져 왔을 경우 탭이동 재계산이 필요하여
+                        ScrollTrigger.refresh();
+                        위 스크립트가 실행되어야합니다.
+                      -->
+                      <ul class="table-list">
+                        <li class="item">
+                          <div class="top-div">
+                            <!-- @ 스켈레톤 -->
+                            <div class="skeleton-loading">
+                              <div class="skeleton-txt"></div>
+                            </div>
+                            <div class="names">
+                              <div class="name">
+                                <p class="f-body-m2">슈피리어룸, 금연(King)<span class="code">a</span></p>
+                              </div>
+                              <div class="dot-txt-w"><p class="dot-txt f-body-r2">오션뷰 스위트</p></div>
+                              <div class="infos">
+                                <p class="info f-body-r2"><span class="red-txt">*</span> 럭셔리 딜</p>
+                                <div class="tooltip-wrap">
+                                  <button class="info-btn tooltip-btn" type="button">특전</button>
+                                  <div class="tooltip-box">
+                                    <p>특전 상세 내용이 들어갑니다.</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="times">
+                              <p class="f-body-r3">조식포함여부 : </p>
+                              <p class="txt f-body-r3">조식포함</p>
+                            </div>
+                            <div class="times">
+                              <p class="txt f-body-r3">취소마감일 : </p>
+                              <a href="javascript:" class="red-txt f-body-r3 link-txt">취소 불가</a>
+                            </div>
+                          </div>
+                          <div class="bottom-div">
+                            <!-- @ 스켈레톤 -->
+                            <div class="skeleton-loading">
+                              <div class="skeleton-txt"></div>
+                            </div>
+                            <div class="prices">
+                              <p class="txt f-body-r4">총 요금</p>
+                              <div class="price"><span class="money f-body-b1">999,999,999,999,263,220</span><span class="f-body-b2">원</span></div>
+                            </div>
+                            <div class="btn-wrap">
+                              <button class="btn-square-s"><span>예약</span></button>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="item">
+                          <div class="top-div">
+                            <div class="names">
+                              <div class="name">
+                                <p class="f-body-m2">
+                                  Superior Twin Room, Non Smoking with Onsen ticket Superior Twin Room, Non Smoking with Onsen ticket<span class="code">b</span>
+                                </p>
+                              </div>
+                              <div class="dot-txt-w"><p class="dot-txt f-body-r2">오션뷰 스위트</p></div>
+                              <div class="infos">
+                                <p class="info f-body-r2"><span class="red-txt">*</span> 럭셔리 딜</p>
+                                <div class="tooltip-wrap">
+                                  <button class="info-btn tooltip-btn" type="button">특전</button>
+                                  <div class="tooltip-box">
+                                    <p>특전 상세 내용이 들어갑니다.</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="times">
+                              <p class="f-body-r3">조식포함여부 : </p>
+                              <p class="txt f-body-r3">조식불포함</p>
+                            </div>
+                            <div class="times">
+                              <p class="f-body-r3">취소마감일 : </p>
+                              <a href="javascript:" class="link-txt f-body-r3">2024-10-05</a>
+                            </div>
+                          </div>
+                          <div class="bottom-div">
+                            <div class="prices">
+                              <p class="txt f-body-r4">총 요금</p>
+                              <div class="price"><span class="money f-body-b1">263,220</span><span class="f-body-b2">원</span></div>
+                            </div>
+                            <div class="btn-wrap">
+                              <button class="btn-square-s"><span>예약</span></button>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="item">
+                          <div class="top-div">
+                            <div class="names">
+                              <div class="name">
+                                <p class="f-body-m2">Superior Twin Room, Non Smoking with Onsen ticket<span class="code">c</span></p>
+                              </div>
+                              <div class="dot-txt-w"><p class="dot-txt f-body-r2">오션뷰 스위트</p></div>
+                              <div class="infos">
+                                <p class="info f-body-r2"><span class="red-txt">*</span> 럭셔리 딜</p>
+                              </div>
+                            </div>
+                            <div class="times">
+                              <p class="f-body-r3">조식포함여부 : </p>
+                              <p class="txt f-body-r3">조식불포함</p>
+                            </div>
+                            <div class="times">
+                              <p class=" f-body-r3">취소마감일 : </p>
+                              <!-- @@ 프리비아에서 제공하는 객실의 경우 데이터가 불러지기 전까지 로딩 프로그레스바가 돌아갑니다. -->
+                              <div class="spinner-wrap">
+                                <div class="spinner"></div>
+                              </div>
+                              <!-- // @@ 데이터가 불러와지면 해당 태그 삭제 부탁드립니다. -->
+                            </div>
+                          </div>
+                          <div class="bottom-div">
+                            <div class="prices">
+                              <p class="txt f-body-r4">총 요금</p>
+                              <div class="price"><span class="money f-body-b1">263,220</span><span class="f-body-b2">원</span></div>
+                            </div>
+                            <div class="btn-wrap">
+                              <button class="btn-square-s"><span>예약</span></button>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                      <!-- @@ 객실 정보 없을 경우 table-list ul태그 대신 보여져야 합니다. -->
+                      <div class="no-data-area">
+                        <p class="txt f-body-m2">검색 조건에 맞는 객실이 없습니다.</p>
+                        <p class="sub f-body-r3">조건을 다시 검색하거나, 필터를 삭제해 보세요.</p>
+                      </div>
+                      <!-- // 객실 정보 없을 경우 table-list ul태그 대신 보여져야 합니다. -->
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-cont-w">
+                  <div class="tab-cont">
+                    <div class="tab-tit-wrap">
+                      <p class="tit f-t2">호텔 소개</p>
+                    </div>
+                    <div class="tab-div">
+                      <!-- @ 호텔소개 -->
+                      <div class="black-border-list">
+                        <div class="list">
+                          <p class="f-body-m2">국가/도시</p>
+                          <p class="f-body-r2">일본/Tokyo</p>
+                        </div>
+                        <div class="list">
+                          <p class="f-body-m2">언어</p>
+                          <p class="f-body-r2">중국어(만다린어), 일본어, 영어</p>
+                        </div>
+                        <div class="list">
+                          <p class="f-body-m2">TEL / FAX</p>
+                          <p class="f-body-r2">+81 36 2531111 / +81 36 2353115</p>
+                        </div>
+                        <div class="list">
+                          <p class="f-body-m2">호텔 위치</p>
+                          <p class="f-body-r2">중심부에 위치하여 도쿄의 주요 비즈니스 및 관광지와 가까운 접근성을 자랑합니다.<br/>교통이 편리하여 지하철과 버스를 이용하기 쉽습니다.</p>
+                        </div>
+                        <div class="list">
+                          <p class="f-body-m2">최근 리모델링 소식</p>
+                          <p class="f-body-r2">최근 객실과 공용 공간을 현대적으로 리모델링하여 새로운 디자인과 최신 기술을 도입했습니다.<br/>특히, 리모델링된 스파와 피트니스 센터가 고객들에게 인기를 끌고 있습니다.</p>
+                        </div>
+                        <div class="list">
+                          <p class="f-body-m2">평가 등급 출처</p>
+                          <p class="f-body-r2">호텔 빌라 퐁텐 그랜드 하네다 에어포트는 익스피디아와트립어드바이저에서 높은 평점을 받고 있으며, 고객 리뷰에서 특히 친절한 서비스와 청결도가 호평받고 있습니다.</p>
+                        </div>
+                        <div class="list">
+                          <p class="f-body-m2">비즈니스용 편의시설</p>
+                          <p class="f-body-r2">비즈니스 센터와 여러 개의 회의실을 제공하며, 최신 프레젠테이션 장비와 고속 인터넷도 갖추어져 있습니다. 출장객을 위한 다양한 비즈니스 지원 서비스가 제공됩니다.</p>
+                        </div>
+                        <div class="list">
+                          <p class="f-body-m2">객실 편의시설</p>
+                          <p class="f-body-r2">객실에는 평면 TV, 고급 침구, 미니바, 커피 메이커, 업무용 책상이 마련되어 있습니다.<br/>일부 객실은 도시의 멋진 전망을 제공합니다.</p>
+                        </div>
+                        <div class="list">
+                          <p class="f-body-m2">근처 명소</p>
+                          <p class="f-body-r2">호텔은 도쿄의 주요 관광지와 쇼핑 지역에 가까워 편리하게 접근할 수 있습니다.<br/>유명한 관광 명소인 시부야 스크램블 교차로, 하라주쿠와의 거리도 가까워 관광하기 좋습니다.</p>
+                        </div>
+                        <div class="list">
+                          <p class="f-body-m2">호텔 헤드라인</p>
+                          <p class="f-body-r2">쇼핑센터와 연결된 도쿄의 온천 호텔, Haneda Airport Garden Shopping Center에서 도보 거리</p>
+                        </div>
+                      </div>
+  
+                      <!-- @ 야놀자 - 호텔소개 -->
+                      <!-- <div class="black-border-list">
+                        <div class="list">
+                          <p class="f-body-b3">이용 안내</p>
+                          <div class="line">
+                            <p class="f-body-m3">객실 이용안내</p>
+                            <div class="dot-txt-w">
+                              <p class="dot-txt f-body-r3">
+                                프론트 운영은 24시까지 입니다.<br/>(필요하신 물품은 사전 주문 부탁드립니다.)
+                              </p>
+                              <p class="dot-txt f-body-r3">
+                                객실 내 흡연은 엄격히 금지되어 있으며, 위반 시 재정비로 인한 1일 객실료가 청구됩니다.<br/>(객실 내 연기 감지기 경고음 발생)
+                              </p>
+                            </div>
+                          </div>
+                          <div class="line">
+                            <p class="f-body-m3">호텔 이용 규정</p>
+                            <div class="dot-txt-w">
+                              <p class="dot-txt f-body-r3">
+                                퇴실 시간 초과 시 추가 요금이 부과됩니다.<br/>(시간 당 1만원)
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div> -->
+                    </div>
+                  </div>
+                  <div class="tab-cont">
+                    <div class="tab-tit-wrap">
+                      <p class="tit f-t2">시설 및 서비스</p>
+                    </div>
+                    <div class="tab-div">
+                      <div class="black-border-list">
+                        <div class="list">
+                          <p class="f-body-m2">숙박 편의시설</p>
+                          <div class="green-icon-wrap">
+                            <div class="green-icon-div">
+                              <p class="green-icon">
+                                <img src="/common/mbl/images/icon-internet-green.svg" alt="">
+                                <span class="f-body-m2">인터넷</span>
+                              </p>
+                              <div class="dot-txt-w">
+                                <p class="dot-txt f-body-r2">무료 Wi-fi</p>
+                              </div>
+                            </div>
+                            <div class="green-icon-div">
+                              <p class="green-icon">
+                                <img src="/common/mbl/images/icon-facilities-disabled-green.svg" alt="">
+                                <span class="f-body-m2">장애인 편의시설</span>
+                              </p>
+                              <div class="dot-txt-w">
+                                <p class="dot-txt f-body-r2">휠체어로 이용 가능 - 없음</p>
+                                <p class="dot-txt f-body-r2">주차 및 교통</p>
+                                <p class="dot-txt f-body-r2">셀프 주차(요금 별도)</p>
+                              </div>
+                            </div>
+                            <div class="green-icon-div">
+                              <p class="green-icon">
+                                <img src="/common/mbl/images/icon-service-green.svg" alt="">
+                                <span class="f-body-m2">고객 서비스</span>
+                              </p>
+                              <div class="dot-txt-w">
+                                <p class="dot-txt f-body-r2">프런트 데스크의 안전 금고</p>
+                                <p class="dot-txt f-body-r2">다국어 구사 가능 직원</p>
+                                <p class="dot-txt f-body-r2">24시간 운영 프런트 데스크</p>
+                                <p class="dot-txt f-body-r2">포터/벨보이</p>
+                              </div>
+                            </div>
+                            <div class="green-icon-div">
+                              <p class="green-icon">
+                                <img src="/common/mbl/images/icon-amenities-green.svg" alt="">
+                                <span class="f-body-m2">편의시설</span>
+                              </p>
+                              <div class="dot-txt-w">
+                                <p class="dot-txt f-body-r2">세탁 시설</p>
+                                <p class="dot-txt f-body-r2">엘리베이터</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="list">
+                          <p class="f-body-m2">객실 편의시설</p>
+                          <div class="green-icon-wrap">
+                            <div class="green-icon-div">
+                              <p class="green-icon">
+                                <img src="/common/mbl/images/icon-etc-green.svg" alt="">
+                                <span class="f-body-m2">기타</span>
+                              </p>
+                              <div class="dot-txt-w">
+                                <p class="dot-txt f-body-r2">지정 흡연 구역</p>
+                              </div>
+                            </div>
+                            <div class="green-icon-div">
+                              <p class="green-icon">
+                                <img src="/common/mbl/images/icon-food-green.svg" alt="">
+                                <span class="f-body-m2">식음료</span>
+                              </p>
+                              <div class="dot-txt-w">
+                                <p class="dot-txt f-body-r2">레스토랑 수 - 5</p>
+                                <p class="dot-txt f-body-r2">바/라운지 수 - 1</p>
+                              </div>
+                            </div>
+                            <div class="green-icon-div">
+                              <p class="green-icon">
+                                <img src="/common/mbl/images/icon-entertain-green.svg" alt="">
+                                <span class="f-body-m2">엔터테인먼트</span>
+                              </p>
+                              <div class="dot-txt-w">
+                                <p class="dot-txt f-body-r2">DVD 플레이어</p>
+                                <p class="dot-txt f-body-r2">TV</p>
+                                <p class="dot-txt f-body-r2">객실 내 마사지 서비스 가능</p>
+                              </div>
+                            </div>
+                            <div class="green-icon-div">
+                              <p class="green-icon">
+                                <img src="/common/mbl/images/icon-bath-green.svg" alt="">
+                                <span class="f-body-m2">욕실</span>
+                              </p>
+                              <div class="dot-txt-w">
+                                <p class="dot-txt f-body-r2">목욕 가운</p>
+                                <p class="dot-txt f-body-r2">무료 세면용품</p>
+                                <p class="dot-txt f-body-r2">샤워기가 달린 욕조</p>
+                                <p class="dot-txt f-body-r2">이동식 욕조 의자</p>
+                                <p class="dot-txt f-body-r2">전용 욕실</p>
+                                <p class="dot-txt f-body-r2">타월 제공</p>
+                                <p class="dot-txt f-body-r2">헤어드라이어</p>
+                              </div>
+                            </div>
+                            <div class="green-icon-div">
+                              <p class="green-icon">
+                                <img src="/common/mbl/images/icon-internet-green.svg" alt="">
+                                <span class="f-body-m2">인터넷</span>
+                              </p>
+                              <div class="dot-txt-w">
+                                <p class="dot-txt f-body-r2">무료 Wi-fi</p>
+                              </div>
+                            </div>
+                            <div class="green-icon-div">
+                              <p class="green-icon">
+                                <img src="/common/mbl/images/icon-bed-green.svg" alt="">
+                                <span class="f-body-m2">침실</span>
+                              </p>
+                              <div class="dot-txt-w">
+                                <p class="dot-txt f-body-r2">무료 유아용 침대</p>
+                                <p class="dot-txt f-body-r2">오리/거위털 이불</p>
+                                <p class="dot-txt f-body-r2">침대 수 - 2</p>
+                              </div>
+                            </div>
+                            <div class="green-icon-div">
+                              <p class="green-icon">
+                                <img src="/common/mbl/images/icon-house-green.svg" alt="">
+                                <span class="f-body-m2">하우스 키핑</span>
+                              </p>
+                              <div class="dot-txt-w">
+                                <p class="dot-txt f-body-r2">매일 하우스 키핑</p>
+                              </div>
+                            </div>
+                            <div class="green-icon-div">
+                              <p class="green-icon">
+                                <img src="/common/mbl/images/icon-room-green.svg" alt="">
+                                <span class="f-body-m2">객실</span>
+                              </p>
+                              <div class="dot-txt-w">
+                                <p class="dot-txt f-body-r2">객실 금고</p>
+                                <p class="dot-txt f-body-r2">객실 내 온도 조절(난방)</p>
+                                <p class="dot-txt f-body-r2">슬리퍼</p>
+                                <p class="dot-txt f-body-r2">암막 커튼</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="list">
+                          <p class="f-body-m2">침대정보</p>
+                          <div class="dot-txt-w">
+                            <p class="dot-txt f-body-r2">싱글베드 12개</p>
+                            <p class="dot-txt f-body-r2">트윈베드 10개</p>
+                            <p class="dot-txt f-body-r2">퀸사이즈베드 4개</p>
+                          </div>
+                        </div>
+                        <div class="list">
+                          <p class="f-body-m2">객실 전망</p>
+                          <div class="dot-txt-w">
+                            <p class="dot-txt f-body-r2">바다 전망</p>
+                            <p class="dot-txt f-body-r2">부분 바다 전망(우측은 숙소 보임)</p>
+                            <p class="dot-txt f-body-r2">도시 전망</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-cont">
+                    <div class="tab-tit-wrap">
+                      <p class="tit f-t2">호텔 정책</p>
+                    </div>
+                    <div class="tab-div">
+                      <div class="black-border-list">
+                        <div class="list">
+                          <p class="f-body-m2">요금 정책</p>
+                          <div class="line">
+                            <p class="f-body-m2">요금 안내</p>
+                            <p class="f-body-r2">숙박 시설에서 결제하실 요금 도시세는 1박 객실 요금에 따라 1인 기준 1박당 JPY 100~200입니다. 1박 요금이 JPY 10,000 미만인 경우에는 본 세금이 적용되지 않으며, 추가 면제가 적용될 수 있습니다. 자세한 내용은 예약 후 받으신 예약 확인 메일에 나와 있는 정보로 해당 사무실에 문의해 주시기 바랍니다.<br/>온천세가 부과될 수 있습니다(숙박 시설에서 청구) 온천세는 온천이 있는 숙박 시설에 적용되며, 1인당 금액은 현지 규정에 따라 1박당 JPY 150~500입니다. 추가 면제가 적용될 수 있습니다. 이 숙박 시설에서 제공한 모든 요금 정보가 포함되어 있습니다.</p>
+                          </div>
+                          <div class="line">
+                            <p class="f-body-m2">선택 요금 안내</p>
+                            <p class="f-body-r2">이른 체크인 요금 : JPY 1760 (객실 이용 상황에 따라 다름)<br/>늦은 체크아웃 요금 : JPY 1760 (객실 이용 상황에 따라 다름)<br/>위 목록에 명시되지 않은 다른 항목이 있을 수 있습니다. 요금 및 보증금은 세전 금액일 수 있으며 변경될 수 있습니다.</p>
+                          </div>
+                        </div>
+                        <div class="list">
+                          <p class="f-body-m2">호텔 내 결제 수단</p>
+                          <ul class="card-list">
+                            <li class="card"><img src="/common/mbl/images/img-card-carteblanche.png" alt="CarteBlanche"></li>
+                            <li class="card"><img src="/common/mbl/images/img-card-dinersclub.png" alt="DinersClub"></li>
+                            <li class="card"><img src="/common/mbl/images/img-card-americanexpress.png" alt="AmericanExpress"></li>
+                            <li class="card"><img src="/common/mbl/images/img-card-visa.png" alt="VISA"></li>
+                            <li class="card"><img src="/common/mbl/images/img-card-discover.png" alt="Discover"></li>
+                            <li class="card"><img src="/common/mbl/images/img-card-jcb.png" alt="JCB"></li>
+                            <li class="card"><img src="/common/mbl/images/img-card-unionpay.png" alt="UnionPay"></li>
+                            <li class="card"><img src="/common/mbl/images/img-card-mastercard.png" alt="MasterCard"></li>
+                            <li class="card"><img src="/common/mbl/images/img-card-ancv.png" alt="ancv"></li>
+                            <li class="card"><img src="/common/mbl/images/img-card-debit.png" alt="Debit Card"></li>
+                            <li class="card"><img src="/common/mbl/images/img-card-debit-not-available.png" alt="Debit Card Not Available"></li>
+                            <li class="card"><img src="/common/mbl/images/img-card-only-cash.png" alt="Only Cash"></li>
+                            <li class="card"><img src="/common/mbl/images/img-card-cash.png" alt="Cash"></li>
+                            <li class="card"><img src="/common/mbl/images/img-card-cash-not-available.png" alt="Cash Not Available"></li>
+                          </ul>
+                        </div>
+                        <div class="list">
+                          <p class="f-body-m2">일반 특성</p>
+                          <div class="dot-txt-w">
+                            <p class="dot-txt f-body-r2">유아용 침대 이용 불가(현장 상황에 따라 재고 변동)</p>
+                            <p class="dot-txt f-body-r2">법인 호스트/관리자</p>
+                          </div>
+                        </div>
+                        <div class="list">
+                          <p class="f-body-m2">펫 특성</p>
+                          <div class="dot-txt-w">
+                            <p class="dot-txt f-body-r2">장애인 안내 동물은 요금 및 제한 사항이 면제됩니다.</p>
+                            <p class="dot-txt f-body-r2">장애인 안내 동물 동반 가능(사전 통보 필요)</p>
+                          </div>
+                        </div>
+                        <!-- <div class="list">
+                          <p class="f-body-b3">장애인 특성</p>
+                          <div class="dot-txt-w">
+                            <p class="dot-txt f-body-r3">코로나 방역 안내</p>
+                            <p class="dot-txt f-body-r3">주기적으로 환기</p>
+                          </div>
+                        </div> -->
+                        <div class="list">
+                          <p class="f-body-m2">코로나 방역 안내</p>
+                          <div class="line">
+                            <p class="f-body-m2">위생</p>
+                            <p class="f-body-r2">모바일 키 사용(체크인 시 안내)</p>
+                          </div>
+                          <div class="line">
+                            <p class="f-body-m2">청소</p>
+                            <p class="f-body-r2">주기적으로 환기</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-cont">
+                    <div class="tab-tit-wrap">
+                      <p class="tit f-t2">참고사항</p>
+                    </div>
+                    <div class="tab-div">
+                      <div class="black-border-list">
+                        <div class="list">
+                          <p class="f-body-m2">참고사항</p>
+                          <p class="f-body-r2">일본 후생노동성은 모든 외국인 방문자가 여관, 호텔, 모텔 등의 모든 숙박 시설에 투숙할 때 여권 번호와 국적을 제출하도록 요구하고 있습니다. 또한, 숙박 시설의 소유주는 제출된 모든 투숙객의 여권을 복사하고 해당 복사본을 보관해야 합니다. 고객의 안전을 위해 모든 거래 시 현금 없이 결제 가능 등의 조치를 시행 중입니다. 비대면 체크아웃 서비스를 이용하실 수 있습니다.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- @ 회색 배경 추가, bg 클래스 추가 -->
+                <div class="tab-cont bg">
+                  <div class="tab-tit-wrap">
+                    <p class="f-t1">주변의 추천 호텔들을<br/>확인해 보세요!</p>
+                  </div>
+                  <div class="tab-div">
+                    <div class="like-list-swiper">
+                      <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <a href="javascript:">
+                              <p class="img"><img src="/common/mbl/images/@img-like-lodging-01.jpg" alt=""></p>
+                              <div class="txt-wrap">
+                                <p class="f-body-b1">Lotte Hotel Seoul Lotte Hotel Seoul Lotte Hotel Seoul Lotte Hotel Seoul Lotte Hotel Seoul</p>
+                                <p class="f-body-r3">서울</p>
+                                <div class="stars">
+                                  <p class="star"></p>
+                                  <p class="star"></p>
+                                  <p class="star"></p>
+                                  <p class="star"></p>
+                                </div>
+                              </div>
+                            </a>
+                          </div>
+                          <div class="swiper-slide">
+                            <a href="javascript:">
+                              <p class="img"><img src="/common/mbl/images/@img-like-lodging-02.jpg" alt=""></p>
+                              <div class="txt-wrap">
+                                <p class="f-body-b1">Mayfield Hotel Seoul</p>
+                                <p class="f-body-r3">메이필드호텔 서울</p>
+                                <div class="stars">
+                                  <p class="star"></p>
+                                  <p class="star"></p>
+                                  <p class="star"></p>
+                                  <p class="star"></p>
+                                </div>
+                              </div>
+                            </a>
+                          </div>
+                          <div class="swiper-slide">
+                            <a href="javascript:">
+                              <p class="img"><img src="/common/mbl/images/@img-like-lodging-03.jpg" alt=""></p>
+                              <div class="txt-wrap">
+                                <p class="f-body-b1">Novotel Ambassador Seoul Dongdaemun Hotel</p>
+                                <p class="f-body-r3">노보텔 앰배서더 서울 동대문 호텔</p>
+                                <div class="stars">
+                                  <p class="star"></p>
+                                  <p class="star"></p>
+                                  <p class="star"></p>
+                                  <p class="star"></p>
+                                </div>
+                              </div>
+                            </a>
+                          </div>
+                          <div class="swiper-slide">
+                            <a href="javascript:">
+                              <p class="img"><img src="/common/mbl/images/@img-like-lodging-04.jpg" alt=""></p>
+                              <div class="txt-wrap">
+                                <p class="f-body-b1">Hotel Naru Seoul Mgallery Ambassador</p>
+                                <p class="f-body-r3">호텔 나루 서울 엠갤러리 앰배서더</p>
+                                <div class="stars">
+                                  <p class="star"></p>
+                                  <p class="star"></p>
+                                  <p class="star"></p>
+                                  <p class="star"></p>
+                                </div>
+                              </div>
+                            </a>
+                          </div>
+                          <div class="swiper-slide">
+                            <a href="javascript:">
+                              <p class="img"><img src="/common/mbl/images/@img-like-lodging-01.jpg" alt=""></p>
+                              <div class="txt-wrap">
+                                <p class="f-body-b1">Lotte Hotel Seoul Lotte Hotel Seoul Lotte Hotel Seoul Lotte Hotel Seoul Lotte Hotel Seoul Lotte Hotel Seoul Lotte Hotel Seoul</p>
+                                <p class="f-body-r3">서울서울서울서울서울서울서울서울서울서울서울서울서울서울서울서울서울서울</p>
+                                <div class="stars">
+                                  <p class="star"></p>
+                                  <p class="star"></p>
+                                  <p class="star"></p>
+                                  <p class="star"></p>
+                                </div>
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer></footer>
+
+      <!-- 우측 하단 퀵메뉴 -->
+      <div class="quick-fixed-area">
+        <div class="quick-area">
+          <div class="quick-con">
+            <a href="javascript:" class="recent-srch" onClick="openPopup('.recent-srch-pop', this)"></a>
+            <a href="javascript:" class="like" onClick="openPopup('.hotel-like-pop', this)"></a>
+            <a href="javascript:" class="reserve"></a>
+          </div>
+        </div>
+        <button type="button" class="btn-top" title="상단으로 이동"></button>
+      </div>
+    </div>
+	</body>
+  <!-- 개발쪽에서 하단 스크립트 내용이 담긴 todayCheckFn() 함수 호출을 하고 있습니다.
+    하단 스크립트는 퍼블 보여주기 용도로만 기재된 스크립트입니다. -->
+  <script>
+    $(".year-month-div .month").each(function(){
+      if(new Date().getMonth() + 1 == parseInt($(this).text()) && new Date().getFullYear() == parseInt($(this).parents(".year-month-div").find(".year").text())){
+        $(this).closest(".calendar").find(".week-div > a").each(function(){
+          if(parseInt($(this).text()) == new Date().getDate()){
+            $(this).addClass("today");
+            $(this).append("<span>오늘</span>")
+          }
+        })
+      }
+    });
+    
+    $(".calendar .week-div .today").prevAll("a").addClass("disabled"); // 오늘 날짜 기준 전 날짜들은 전부 disabled 처리
+
+    // ---- 상단 검색 바 (서브페이지, hasClass "resrch") START ----
+    if($(".trip-sel-area").hasClass("resrch")) {
+      // @ 더미 데이터
+      const dummyData = {input: "신주쿠", check: {checkin: "2025-01-23-월", checkout: "2025-01-26-목"}, room: [{adult: 2, child: ["2024-05-05"]}, {adult: 7, child: ["2022-05-05", "2020-12-08"]}, {adult: 8, child: []}]}
+      
+      // @ 데이터 불러오고, 호출 함수
+      function tripSelAreaResrch() {
+        //  ## 목적지 SET ##
+        // @ 더미 데이터 넣기
+        $(".trip-input-div .trip-input .val").text(dummyData.input);
+
+        let tripInputVal = $(".trip-input-div .trip-input .val").text();
+        let popTripInput = $(".trip-input-div .srch-input input");
+        var $date = $(".calendar .week-div > a").not(".disabled"); // disabled를 제외한 달력 날짜
+        $(".trip-input-div .trip-input .val").addClass("on");
+        popTripInput.val(tripInputVal);
+        popTripInput.attr("value", tripInputVal);
+        popTripInput.attr("data-place", tripInputVal)
+        popTripInput.data("place", tripInputVal)
+
+        // ## 체크인/체크아웃 & n박 SET ##
+        let checkIn = $(".date-info-wrap .chk-in-out").eq(0);
+        let checOut = $(".date-info-wrap .chk-in-out").eq(1);
+        let popCheckIn = $(".calendar-wrap .chk-in-out").eq(0);
+        let popChecOut = $(".calendar-wrap .chk-in-out").eq(1);
+
+        // @ 더미 데이터 넣기
+        const [dataInYear, dataInMonth, dataInDate, dataInDay] = dummyData.check.checkin.split('-');
+        const [dataOutYear, dataOutMonth, dataOutDate, dataOutDay] = dummyData.check.checkout.split('-');
+        checkIn.find(".year").text(dataInYear);
+        checkIn.find(".month").text(dataInMonth);
+        checkIn.find(".date").text(dataInDate);
+        checkIn.find(".day").text(dataInDay);
+        checOut.find(".year").text(dataOutYear);
+        checOut.find(".month").text(dataOutMonth);
+        checOut.find(".date").text(dataOutDate);
+        checOut.find(".day").text(dataOutDay);
+        
+        const resrchCalendarFunc = () => {
+          checkIn = $(".date-info-wrap .chk-in-out").eq(0);
+          checOut = $(".date-info-wrap .chk-in-out").eq(1);
+          popCheckIn = $(".calendar-wrap .chk-in-out").eq(0);
+          popChecOut = $(".calendar-wrap .chk-in-out").eq(1);
+
+          // 팝업 내부 달력 표시 (체크인, 체크아웃...리셋)
+          $(".calendar .week-div .in span").not(".date").remove();
+          $(".calendar .week-div .out span").not(".date").remove();
+          $(".calendar .week-div a").removeClass("ing")
+          $(".calendar .week-div a").removeClass("check in")
+          $(".calendar .week-div a").removeClass("check out");
+
+          // 달력날짜를 팝업 내부 달력날짜에 넣기
+          popCheckIn.find(".year").text(checkIn.find(".year").text());
+          popCheckIn.find(".month").text(checkIn.find(".month").text());
+          popCheckIn.find(".date").text(checkIn.find(".date").text());
+          popCheckIn.find(".day").text(checkIn.find(".day").text());
+          popChecOut.find(".year").text(checOut.find(".year").text());
+          popChecOut.find(".month").text(checOut.find(".month").text());
+          popChecOut.find(".date").text(checOut.find(".date").text());
+          popChecOut.find(".day").text(checOut.find(".day").text());
+  
+          // $ 받아온 날짜에 맞춰 체크인, 체크아웃 class 추가 
+          chkInOutFn();
+          
+          // $ 체크인, 체크아웃 월 및 년도 셋팅
+          checkInMonth = parseInt($(".calendar .week-div .check.in").closest(".calendar").find(".month").text());
+          checkInYear = parseInt($(".calendar .week-div .check.in").closest(".calendar").find(".year").text());
+          checkOutMonth = parseInt($(".calendar .week-div .check.out").closest(".calendar").find(".month").text());
+          checkOutYear = parseInt($(".calendar .week-div .check.out").closest(".calendar").find(".year").text());
+  
+          // $ 체크인/체크아웃 사이 캘린더 ing 체크
+          $date.each(function(q){ // 체크아웃 클릭
+            if(checkOutYear <= checkInYear){ // 체크아웃 년도와 체크인 년도 비교
+              $date.removeClass("ing");
+
+              if(checkOutMonth > checkInMonth){ // 체크아웃 월과 체크인 월 비교
+                $(".calendar .week-div .check.out").prevAll("a").addClass("ing");
+                $(".calendar .week-div .check.in").nextUntil($(".calendar .week-div .check.out")).addClass("ing");
+                $(".calendar .week-div .check.in").closest(".calendar").nextUntil($(".calendar .week-div .check.out").closest(".calendar")).find(".week-div > a").addClass("ing"); // ex) 9-11월인 경우 10월 전체 다 체크
+              }else if(checkOutMonth < checkInMonth){
+                $(".calendar .week-div .check.out").prevAll("a").addClass("ing");
+                $(".calendar .week-div .check.in").closest(".calendar").nextUntil($(".calendar .week-div .check.out").closest(".calendar")).find(".week-div > a").addClass("ing"); // ex) 9-11월인 경우 10월 전체 다 체크
+              }
+
+              $(".calendar .week-div .disabled").removeClass("ing");
+            }else{
+              $(".calendar .week-div .check.in").closest(".calendar").nextUntil($(".calendar .week-div .check.out").closest(".calendar")).find(".week-div > a").addClass("ing");
+              $(".calendar .week-div .check.out").prevAll("a").addClass("ing");
+            }
+
+            $(".calendar .week-div .check.in").nextUntil($(".calendar .week-div .check.out")).addClass("ing");
+            $(".calendar .week-div .disabled").removeClass("ing");
+          });
+
+          // n박
+          $(".date-info-wrap .stay-wrap .form-select select").val($(".calendar .week-div .ing").length + 1);
+          $(".calendar-wrap .choice-box select").val($(".calendar .week-div .ing").length + 1);
+        }
+          
+        // 해당 체크인 캘린더에 on클래스 추가 & scroll 이동
+        $(".checkin-wrap").on("click", function() {
+          setTimeout(() => {
+            $(".calendar.on").removeClass("on");
+            $(".calendar .week-div .check.in").parents(".calendar").addClass("on");
+            $(".calendar-wrap .scroll-area").scrollTop($(".calendar.on").position().top);
+          }, 0);
+        });
+
+        resrchCalendarFunc();
+
+        // ## 객실 SET ##
+        // $(".room-con-wrap").empty();  // 객실 아이템 초기화
+        let nowRoom;  // 현재 객실
+        var newRoom = $(".trip-sel-area .room-con-box:last").clone(true); // 객실
+        var childInfoClone = $(".trip-sel-area .trip-room .room-con-box:last-child .child-chk:last-child").clone(true);
+        _roomNum = 0; // 객실 수 합계 초기화
+        _totalAdultNum = 0; // 성인 수 합계 초기화
+        _totalChildNum = 0; // 아동 수 합계 초기화
+        let age = 0;  // 만 나이 계산
+
+        $(dummyData.room).each((idx, item) => {
+          // 객실 아이템 셋팅
+          $(".room-con-wrap").append(newRoom);
+          nowRoom = $(".trip-sel-area .room-con-box:last"); // 현재 each 돌고 있는 객실
+          newRoom = $(".trip-sel-area .room-con-box:last").clone(true); // 새로운 복사본 생성
+          // 객실 아이템 셋팅 - 성인/아동
+          nowRoom.attr("data-yn", "Y");
+          nowRoom.data("yn", "Y");
+          nowRoom.find(".adult input").val(item.adult);
+          nowRoom.find(".adult input").attr("value", item.adult);
+          nowRoom.find(".adult input").data("prev", item.adult);
+          nowRoom.find(".adult input").attr("data-prev", item.adult);
+          nowRoom.find(".adult input").data("val", item.adult);
+          nowRoom.find(".adult input").attr("data-val",item.adult)
+          nowRoom.find(".child input").val(item.child.length);
+          nowRoom.find(".child input").attr("value", item.child.length);
+          nowRoom.find(".child input").data("prev", item.child.length);
+          nowRoom.find(".child input").attr("data-prev", item.child.length);
+          nowRoom.find(".child input").data("val", item.child.length);
+          nowRoom.find(".child input").attr("data-val",item.child.length)
+          nowRoom.find(".title .num").text(idx + 1);
+          // 객실 아이템 셋팅 - 아동
+          if(item.child.length > 0) {
+            nowRoom.find(".child-chk-div").addClass("on");
+            $(item.child).each((childIdx, childItem) => {
+              if(childIdx > 0) {
+                nowRoom.find(".child-chk-div").append(childInfoClone);
+                childInfoClone = $(".trip-sel-area .trip-room .child-chk:last").clone(true); // 새로운 복사본 생성
+              }
+              
+              // 만 나이 계산
+              age = calcFullAgeFn(childItem.replace(/\D/g, ""));
+              // 하이픈
+              // hyphenDate = childItem.toString().replace(/(\d{4})(\d{2})(\d{2})/, "$1-$2-$3");
+              
+              nowRoom.find(".child-chk-div .child-chk").eq(childIdx).attr("data-yn", "Y");
+              nowRoom.find(".child-chk-div .child-chk").eq(childIdx).data("yn", "Y");
+              // nowRoom.find(".child-chk-div .child-chk").eq(childIdx).attr("data-del", "N");
+              // nowRoom.find(".child-chk-div .child-chk").eq(childIdx).data("del", "N");
+              nowRoom.find(".child-chk-div .child-chk").eq(childIdx).find(".tit .num").text(childIdx + 1);
+              nowRoom.find(".child-chk-div .child-chk").eq(childIdx).find(".form-input").eq(0).find("input").val(childItem);
+              nowRoom.find(".child-chk-div .child-chk").eq(childIdx).find(".form-input").eq(0).find("input").attr("value", childItem);
+              nowRoom.find(".child-chk-div .child-chk").eq(childIdx).find(".form-input").eq(0).find("input").data("val", childItem);
+              nowRoom.find(".child-chk-div .child-chk").eq(childIdx).find(".form-input").eq(0).find("input").attr("data-val",childItem);
+              nowRoom.find(".child-chk-div .child-chk").eq(childIdx).find(".form-input").eq(1).find("input").val(`만 ${age}세`);
+              nowRoom.find(".child-chk-div .child-chk").eq(childIdx).find(".form-input").eq(1).find("input").attr("value", `만 ${age}세`);
+              nowRoom.find(".child-chk-div .child-chk").eq(childIdx).find(".form-input").eq(1).find("input").data("val", `만 ${age}세`);
+              nowRoom.find(".child-chk-div .child-chk").eq(childIdx).find(".form-input").eq(1).find("input").attr("data-val", `만 ${age}세`);
+            });
+          }
+          // 객실 아이템 셋팅 - 성인/아동 버튼 disabled 여부 (성인+아동=최대9명)
+          if(item.adult == 1) {
+            nowRoom.find(".person-div").eq(0).find(".minus").addClass("disabled");
+          } else {
+            nowRoom.find(".person-div").eq(0).find(".minus").removeClass("disabled");
+          }
+          if(item.child.length == 0) {
+            nowRoom.find(".person-div").eq(1).find(".minus").addClass("disabled");
+          } else {
+            nowRoom.find(".person-div").eq(1).find(".minus").removeClass("disabled");
+          }
+          if(item.adult + item.child.length == 9) {
+            nowRoom.find(".person-div").eq(0).find(".plus").addClass("disabled");
+            nowRoom.find(".person-div").eq(1).find(".plus").addClass("disabled");
+          }
+          
+          // 객실 수 합계
+          _roomNum++;
+          // 성인 수 합계
+          _totalAdultNum += item.adult;
+          // 아동 수 합계
+          _totalChildNum += item.child.length;
+        });
+
+        // 객실 수 합계 셋팅
+        $(".trip-sel-area .room-num .form-input input").val(_roomNum);
+        $(".trip-sel-area .room-num .form-input input").attr("value", _roomNum);
+        $(".trip-sel-area .room-num .form-input input").data("val", _roomNum);
+        $(".trip-sel-area .room-num .form-input input").attr("data-val", _roomNum);
+        
+        // 객실 버튼 disabled 여부 (1개면 - disabled, 8개면 + disabled / 최소1 최대9)
+        if (_roomNum >= 2 && _roomNum <= 7) {
+          $(".trip-sel-area .trip-room .room-tit-wrap button.plus").removeClass("disabled");
+          $(".trip-sel-area .trip-room .room-tit-wrap button.minus").removeClass("disabled");
+        } else if(_roomNum === 1) {
+          $(".trip-sel-area .trip-room .room-tit-wrap button.minus").addClass("disabled");
+          $(".trip-sel-area .trip-room .room-tit-wrap button.plus").removeClass("disabled");
+        } else if(_roomNum === 8) {
+          $(".trip-sel-area .trip-room .room-tit-wrap button.minus").removeClass("disabled");
+          $(".trip-sel-area .trip-room .room-tit-wrap button.plus").addClass("disabled");
+        }
+
+        // ## 상단 검색바 적용하기 ##
+        const resrchBarApply = () => {
+          // 목적지 셋팅
+          $(".resrch-bar .top-div .tit").text($(".trip-input-div .trip-input .val").text());
+          // 체크인 셋팅
+          $(".resrch-bar .bottom-div .year").eq(0).text(checkIn.find(".year").text());
+          $(".resrch-bar .bottom-div .month").eq(0).text(checkIn.find(".month").text());
+          $(".resrch-bar .bottom-div .date").eq(0).text(checkIn.find(".date").text());
+          // 체크아웃 셋팅
+          $(".resrch-bar .bottom-div .year").eq(1).text(checOut.find(".year").text());
+          $(".resrch-bar .bottom-div .month").eq(1).text(checOut.find(".month").text());
+          $(".resrch-bar .bottom-div .date").eq(1).text(checOut.find(".date").text());
+          // 박 수 셋팅
+          $(".resrch-bar .bottom-div .stay").text($(".calendar .week-div .ing").length + 1);
+          // 객실 수 합계 셋팅
+          $(".resrch-bar .bottom-div .num").eq(0).text(_roomNum);
+          // 성인 수 합계 셋팅
+          $(".resrch-bar .bottom-div .num").eq(1).text(_totalAdultNum);
+          // 아동 수 합계 셋팅
+          $(".resrch-bar .bottom-div .num").eq(2).text(_totalChildNum);
+        }
+        setTimeout(() => {
+          resrchBarApply();
+        }, 0);
+
+        // 이전 값 저장
+        let prevInputVal;
+        let _prevChkInDate;
+        let _prevChkOutDate;
+        
+        $(".resrch-bar").on("click", function() {
+          $(".trip-sel-area.resrch").fadeIn(200).addClass("on");
+          $("body").addClass("stop-scroll");
+          prevInputVal = $.trim($(".trip-input-val .val").text());
+          _prevChkInDate = $(".checkin-wrap .chk-in-out").eq(0).find(".date-txt").clone();
+          _prevChkOutDate = $(".checkin-wrap .chk-in-out").eq(1).find(".date-txt").clone();
+
+          $(".child-chk-div").each(function(){
+            if($(this).hasClass("on")){
+              $(this).find(".child-chk").each(function(){
+                if($(this).attr("data-del") == "Y"){
+                  $(this).show()
+                  $(this).data("del", "N")
+                  $(this).attr("data-del", "N")
+                }
+              });
+            }
+          });
+        });
+        
+        // ~ 전체 적용하기 ~
+        $(".trip-sel-area.resrch .srch-btn").on("click", function() {
+          if(tripRoomApply1()) { // 객실 성공했을 때만!
+            resrchBarApply();
+            $(".trip-sel-area.resrch").fadeOut(200).removeClass("on");
+            $("body").removeClass("stop-scroll");
+          }
+        });
+
+        // ~ 전체 뒤로가기 ~
+        $(".trip-sel-area.resrch .close-btn").on("click", function() {
+          $(".trip-sel-area.resrch").fadeOut(200).removeClass("on");
+          $("body").removeClass("stop-scroll");
+          
+          $(".trip-input-val .val").text(prevInputVal);
+          $(".trip-input-div .srch-input input").val(prevInputVal);
+          $(".trip-input-div .srch-input input").attr("value", prevInputVal);
+          $(".trip-input-div .srch-input input").data("place", prevInputVal);
+          $(".trip-input-div .srch-input input").attr("data-place",prevInputVal);
+
+          $(".trip-sel-area .trip-sel-wrap .trip-date .checkin-wrap .chk-in-out .date-txt").remove();
+          $(".trip-sel-area .trip-sel-wrap .trip-date .checkin-wrap .chk-in-out").eq(0).append(_prevChkInDate);
+          $(".trip-sel-area .trip-sel-wrap .trip-date .checkin-wrap .chk-in-out").eq(1).append(_prevChkOutDate);
+
+          resrchCalendarFunc();
+        });
+      }
+      tripSelAreaResrch();
+    }
+
+    // 객실 적용하기 버튼 클릭
+    function tripRoomApply1() {
+        let isSuccessful = true;  // 성공 여부 반환 (상세 검색바에서만 필요!)
+
+        const hasChild = $(".child-chk-div").filter(function(){
+          return $(this).hasClass("on");
+        }).length;
+        if(hasChild == 0){
+          if(!$(".trip-sel-area").hasClass("resrch")) { // 메인 검색바에서만...
+            $("body").removeClass("stop-scroll");
+            $(".trip-sel-area .trip-sel-wrap .trip-room").removeClass("on");
+            $(".trip-sel-area .trip-sel-wrap .trip-room .room-info-sel").fadeOut();
+          }
+        }
+
+        let isAlertShown = false;
+        $(".child-chk-div").each(function(){
+          if($(this).hasClass("on")){
+            $(this).find(".child-chk[data-del='N']").each(function(){
+              if(!isAlertShown && $(this).find(".form-input input:read-only").val() == ""){
+                // IOS Safari 키패드 이슈
+                setTimeout(() => {
+                  alert(`${$(this).find(".tit").text()}의 만 나이를 입력해 주세요.`);
+                  $(this).find(".form-input:nth-of-type(1) input").focus();
+                }, 0);
+                isAlertShown = true;
+                isSuccessful = false; // 실패로 설정 (상세 검색바에서만 필요!)
+                return;
+              }
+
+              $(this).attr('data-yn', "Y");
+              $(this).data('yn', "Y");
+              
+              const emptyInputs = $(this).parents(".room-con-wrap").find(".child-chk-div.on .child-chk[data-del='N'] .form-input:nth-of-type(1) input").filter(function(){
+                return $(this).val().trim() === '';
+              }).length; // 만 나이를 계산하지 않은 input
+
+              if(emptyInputs == 0){ // 만 나이를 모두 계산 했을 경우
+                if(!$(".trip-sel-area").hasClass("resrch")) { // 메인 검색바에서만...
+                  $("body").removeClass("stop-scroll");
+                  $(".trip-sel-area .trip-sel-wrap .trip-room").removeClass("on");
+                  $(".trip-sel-area .trip-sel-wrap .trip-room .room-info-sel").fadeOut();
+                }
+              }
+            });
+          }
+
+          $(this).find(".child-chk").each(function(q){
+            if($(this).data("del") == "Y"){
+              $(this).remove();
+            }
+
+            if(q == 0 && $(this).data("yn") == "Y" && !$(this).parents(".child-chk-div").hasClass("on")){
+              $(this).data("yn") == "N";
+              $(this).find("input").val("")
+            }
+          })
+        });
+
+        $(".trip-sel-area .trip-sel-wrap .trip-room .room-info-sel .room-con-box").attr('data-yn', "Y");
+        $(".room-num").find(".form-input input").attr("data-val", _roomNum)
+        $(".room-num").find(".form-input input").data("val", _roomNum)
+        _totalAdultNum = 0;
+        _totalChildNum = 0;
+        $(".room-con-box").each(function(){
+          if($(this).data("del") == "Y"){
+            $(this).remove(); // 삭제 시켰던 객실 리스트는 아예 지우기
+          }
+
+          // 삭제 된 적 없는 리스트의 성인 총 합, 아동 총 합 구하기
+          if($(this).data("del") == "N"){
+            $(this).find(".adult").each(function(){
+              _totalAdultNum += Number($(this).find("input").val())
+              $(this).find("input").data('prev', $(this).find("input").val())
+              $(this).find("input").attr('data-prev', $(this).find("input").val())
+            })
+            $(this).find(".child").each(function(){
+              _totalChildNum += Number($(this).find("input").val())
+              $(this).find("input").data('prev', $(this).find("input").val())
+              $(this).find("input").attr('data-prev', $(this).find("input").val())
+            })
+          }
+          
+        })
+
+        $(".room-info").eq(0).find(".num").text(_roomNum) // 객실 수 총 합
+        $(".room-info").eq(1).find(".num").text(_totalAdultNum) // 성인 수 총 합
+        $(".room-info").eq(2).find(".num").text(_totalChildNum) // 아동 수 총 합
+
+        return isSuccessful; // 성공 여부 반환 (상세 검색바에서만 필요!)
+      }
+    // ---- 상단 검색 바 (서브페이지, hasClass "resrch") END ----
+
+    // 스켈레톤
+    // setTimeout(() => {
+    //     commonScript.skeletonFn();
+    //   }, 1000);
+  </script>
+</html>

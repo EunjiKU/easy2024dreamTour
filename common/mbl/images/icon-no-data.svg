@@ -1,0 +1,14 @@
+<svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Mo/ico-etc-warning" clip-path="url(#clip0_5310_14069)">
+<circle id="Ellipse" cx="28" cy="28" r="27" fill="white" stroke="#E3E5E8" stroke-width="2"/>
+<g id="Union">
+<path d="M28 16C26.8954 16 26 16.8266 26 17.8462V32.6154C26 33.635 26.8954 34.4615 28 34.4615C29.1046 34.4615 30 33.635 30 32.6154V17.8462C30 16.8266 29.1046 16 28 16Z" fill="#004D45"/>
+<path d="M28 40C29.1046 40 30 39.1734 30 38.1538C30 37.1342 29.1046 36.3077 28 36.3077C26.8954 36.3077 26 37.1342 26 38.1538C26 39.1734 26.8954 40 28 40Z" fill="#004D45"/>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_5310_14069">
+<rect width="56" height="56" fill="white"/>
+</clipPath>
+</defs>
+</svg>

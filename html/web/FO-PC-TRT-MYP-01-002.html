@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>현대드림투어 호텔 HUB</title>
+    <link rel="shortcut icon" href="/common/web/images/favicon.ico" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no,maximum-scale=1.0,minimum-scale=1.0,target-densitydpi=medium-dpi" />
+		<meta name="keywords" content="각 페이지마다 유니크한 현대드림투어 호텔 HUB keywords"/>
+		<meta name="description" content="각 페이지마다 유니크한 현대드림투어 호텔 HUB description"/>
+		<meta name="format-detection" content="telephone=no, address=no, email=no">
+		<meta property="og:site_name" content="현대드림투어 호텔 HUB" id="og-sitename-value"/>
+		<meta property="og:type" content="website" id="og-type-value"/>
+		<meta property="og:url" content="URL" id="og-url-value"/>
+		<meta property="og:title" content="NOTICE | 현대드림투어 호텔 HUB" id="og-title-value"/>
+		<meta property="og:description" content="현대드림투어 호텔 HUB 홈페이지에 방문하신 것을 환영합니다." id="og-description-value"/>
+		<meta property="og:image" content="img URL" id="og-image-value"/>
+		<!-- <meta name="twitter:url" content="URL" id="twitter-url-value"/>
+		<meta name="twitter:title" content="Main" id="twitter-title-value"/>
+		<meta name="twitter:image" content="img URL" />
+		<meta name="twitter:description" content="현대드림투어 호텔 HUB 홈페이지에 방문하신 것을 환영합니다." id="twitter-discription-value"/> -->
+		
+		<link rel="stylesheet" href="/common/web/css/jquery-ui.css" />
+		<link rel="stylesheet" href="/common/web/css/swiper.css" />
+		<link rel="stylesheet" href="/common/web/css/common.css" />
+		<link rel="stylesheet" href="/common/web/css/style.css" />
+
+		<script type="text/javascript" src="/common/web/js/jquery-1.12.4.min.js"></script>
+		<script type="text/javascript" src="/common/web/js/gsap.min.js"></script>
+		<script type="text/javascript" src="/common/web/js/ScrollTrigger.min.js"></script>
+		<script type="text/javascript" src="/common/web/js/swiper.min.js"></script>
+		<script type="text/javascript" src="/common/web/js/jquery-ui-1.12.1.custom.min.js"></script>
+    <script type="text/javascript" src="/common/web/js/script.js"></script>
+	</head>
+
+	<body>
+    <div id="wrap">
+      <header id="header"></header>
+
+      <div class="cont-wrap">
+        <div class="inner">
+          <div class="bread-crumb">
+            <a href="javascript:" class="home"></a>
+            <a href="javascript:"><span class="f-body-r3">마이페이지</span></a>
+            <a href="javascript:"><span class="f-body-r3">정보관리</span></a>
+            <a href="javascript:"><span class="f-body-r3">호텔예약</span></a>
+          </div>
+
+          <div class="mypage-area">
+            <div class="left">
+              <p class="f-t1">마이페이지</p>
+              <div class="mypage-menu">
+                <p class="f-body-b1">
+                  <a href="javascript:">예약조회</a>
+                </p>
+                <p class="f-body-r2">
+                  <a href="javascript:">레일예약</a>
+                </p>
+                <p class="f-body-r2 on"><!-- 활성화 된 메뉴에 on class 추가 -->
+                  <a href="javascript:">호텔예약</a>
+                </p>
+              </div>
+              <div class="mypage-menu">
+                <p class="f-body-b1">
+                  <a href="javascript:">정보관리</a>
+                </p>
+                <p class="f-body-r2">
+                  <a href="javascript:">사용자 정보</a>
+                </p>
+                <p class="f-body-r2">
+                  <a href="javascript:">찜 내역</a>
+                </p>
+              </div>
+            </div>
+            <div class="right">
+              <div class="mypage-sec">
+                <p class="f-t1 no-bdr">호텔 예약내역 조회</p>
+                <div class="reserve-check">
+                  <div class="check-div">
+                    <p class="f-body-m2">검색 키워드</p>
+                    <div class="flex-box">
+                      <div class="form-select">
+                        <select>
+                          <option value="1">전체</option>
+                          <option value="2">투숙객명</option>
+                          <option value="3">예약번호</option>
+                          <option value="4">호텔명</option>
+                          <option value="5">담당자명</option>
+                        </select>
+                      </div>
+                      <div class="form-input">
+                        <input type="text" placeholder="검색어를 입력해주세요.">
+                        <div class="input-btn-wrap">
+                          <button class="delete-btn" type="button" title="삭제"></button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="check-div">
+                    <p class="f-body-m2">검색기간</p>
+                    <div class="flex-box">
+                      <div class="form-select">
+                        <select>
+                          <option value="1">예약일</option>
+                          <option value="2">체크인</option>
+                          <option value="3">체크아웃</option>
+                          <option value="4">취소마감일</option>
+                        </select>
+                      </div>
+                      <div class="form-date-w">
+                        <!-- 2024-12-05 태그 오류 수정 -->
+                        <div class="form-date">
+                          <input type="text">
+                        </div>
+                        <div class="form-date">
+                          <input type="text">
+                        </div>
+                        <!-- // 2024-12-05 태그 오류 수정 -->
+                      </div>
+                      <div class="period-btn">
+                        <button type="button" class="on"><span class="f-body-m2">직접입력</span></button>
+                        <button type="button"><span class="f-body-m2">전일</span></button>
+                        <button type="button"><span class="f-body-m2">1주일</span></button>
+                        <button type="button"><span class="f-body-m2">1개월</span></button>
+                        <button type="button"><span class="f-body-m2">3개월</span></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="check-div">
+                    <p class="f-body-m2">예약상태</p>
+                    <div class="opt-group">
+                      <div class="form-checkbox">
+                        <input type="checkbox" class="Chk-All" id="Chk1-1" name="">
+                        <label for="Chk1-1">전체</label>
+                      </div>
+                      <div class="form-checkbox">
+                        <input type="checkbox" id="Chk1-2" name="">
+                        <label for="Chk1-2">예약대기</label>
+                      </div>
+                      <div class="form-checkbox">
+                        <input type="checkbox" id="Chk1-3" name="">
+                        <label for="Chk1-3">예약확정</label>
+                      </div>
+                      <div class="form-checkbox">
+                        <input type="checkbox" id="Chk1-4" name="">
+                        <label for="Chk1-4">취소대기</label>
+                      </div>
+                      <div class="form-checkbox">
+                        <input type="checkbox" id="Chk1-5" name="">
+                        <label for="Chk1-5">예약취소</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="check-div">
+                    <p class="f-body-m2">결제상태</p>
+                    <div class="opt-group">
+                      <div class="form-checkbox">
+                        <input type="checkbox" class="Chk-All" id="Chk2-1" name="">
+                        <label for="Chk2-1">전체</label>
+                      </div>
+                      <div class="form-checkbox">
+                        <input type="checkbox" id="Chk2-2" name="">
+                        <label for="Chk2-2">미결제</label>
+                      </div>
+                      <div class="form-checkbox">
+                        <input type="checkbox" id="Chk2-3" name="">
+                        <label for="Chk2-3">부분결제</label>
+                      </div>
+                      <div class="form-checkbox">
+                        <input type="checkbox" id="Chk2-4" name="">
+                        <label for="Chk2-4">결제완료</label>
+                      </div>
+                      <div class="form-checkbox">
+                        <input type="checkbox" id="Chk2-5" name="">
+                        <label for="Chk2-5">결제취소</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="btn-wrap">
+                    <a href="javascript:" class="btn-border-round gray"><span>초기화</span></a>
+                    <a href="javascript:" class="btn-round-s"><span>조회하기</span></a>
+                  </div>
+                </div>
+                <div class="opt-group">
+                  <div class="check-result">
+                    <div class="btn-wrap">
+                      <a href="javascript:" class="btn-border-square gray"><span>입금 확인 요청</span></a>
+                      <a href="javascript:" class="btn-border-square gray"><span>바우처</span></a>
+                      <a href="javascript:" class="btn-border-square gray"><span>여행사 상세 인보이스</span></a>
+                      <a href="javascript:" class="btn-border-square gray"><span>여행사 요약 인보이스</span></a>
+                      <a href="javascript:" class="btn-border-square gray"><span>고객 인보이스</span></a>
+                      <a href="javascript:" class="btn-border-square gray"><span>엑셀 다운로드</span></a>
+                    </div>
+                    <p class="total-count f-body-r2">총<span class="f-body-b2 green-txt">0</span>건의 검색결과가 있습니다.</p>
+                    <div class="form-about">
+                      <div class="form-checkbox">
+                        <input type="checkbox" class="Chk-All" id="reserve-all" name="">
+                        <label for="reserve-all"><span>전체 선택</span></label>
+                      </div>
+                      <div class="toggle-btn">
+                        <p class="toggle-txt f-body-m5">예약내역 전체 펼쳐보기</p>
+                        <p class="toggle-area"></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="no-data-area">
+                    <p class="txt f-body-m1">조회된 게시물이 없습니다.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer></footer>
+
+      <!-- 우측 하단 퀵메뉴 -->
+      <div class="quick-fixed-area">
+        <div class="quick-area">
+          <a href="javascript:" class="recent-srch" onClick="openPopup('.recent-srch-pop', this)"></a>
+          <a href="javascript:" class="like" onClick="openPopup('.hotel-like-pop', this)"></a>
+          <a href="javascript:" class="reserve"></a>
+        </div>
+        <button type="button" class="btn-top" title="상단으로 이동"></button>
+      </div>
+    </div>
+	</body>
+</html>

@@ -1,0 +1,1362 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>현대드림투어 호텔 HUB</title>
+    <link rel="shortcut icon" href="/common/mbl/images/favicon.ico" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no,maximum-scale=1.0,minimum-scale=1.0,target-densitydpi=medium-dpi" />
+		<meta name="keywords" content="각 페이지마다 유니크한 현대드림투어 호텔 HUB keywords"/>
+		<meta name="description" content="각 페이지마다 유니크한 현대드림투어 호텔 HUB description"/>
+		<meta name="format-detection" content="telephone=no, address=no, email=no">
+		<meta property="og:site_name" content="현대드림투어 호텔 HUB" id="og-sitename-value"/>
+		<meta property="og:type" content="website" id="og-type-value"/>
+		<meta property="og:url" content="URL" id="og-url-value"/>
+		<meta property="og:title" content="NOTICE | 현대드림투어 호텔 HUB" id="og-title-value"/>
+		<meta property="og:description" content="현대드림투어 호텔 HUB 홈페이지에 방문하신 것을 환영합니다." id="og-description-value"/>
+		<meta property="og:image" content="img URL" id="og-image-value"/>
+		<!-- <meta name="twitter:url" content="URL" id="twitter-url-value"/>
+		<meta name="twitter:title" content="Main" id="twitter-title-value"/>
+		<meta name="twitter:image" content="img URL" />
+		<meta name="twitter:description" content="현대드림투어 호텔 HUB 홈페이지에 방문하신 것을 환영합니다." id="twitter-discription-value"/> -->
+		
+		<link rel="stylesheet" href="/common/mbl/css/swiper.css" />
+		<link rel="stylesheet" href="/common/mbl/css/common.css" />
+		<link rel="stylesheet" href="/common/mbl/css/style.css" />
+
+		<script type="text/javascript" src="/common/mbl/js/jquery-1.12.4.min.js"></script>
+		<script type="text/javascript" src="/common/mbl/js/gsap.min.js"></script>
+		<script type="text/javascript" src="/common/mbl/js/ScrollTrigger.min.js"></script>
+		<script type="text/javascript" src="/common/mbl/js/swiper.min.js"></script>
+		<script type="text/javascript" src="/common/mbl/js/jquery-ui-1.12.1.custom.min.js"></script>
+    <script type="text/javascript" src="/common/mbl/js/script.js"></script>
+
+    <!-- @ input range 사용하는 곳은 해당 스크립트 추가 필요 -->
+    <script type="text/javascript" src="/common/mbl/js/jquery.ui.touch-punch.min.js"></script>
+	</head>
+
+	<body>
+    <div id="wrap">
+
+      <div class="cont-wrap">
+        <div class="inner">
+          <!-- @ script.js '// ---- 상단 검색 바 (서브페이지, hasClass "resrch") START ----' 주석처리 부분에 기능 구현 -->
+          <!-- 상단 비주얼 및 검색 바 -->
+          <div class="resrch-bar">
+            <div class="resrch-wrap">
+              <a class="resrch-cont" href="javascript:" title="검색 조건 변경 팝업">
+                <div class="top-div">
+                  <ul class="line-txt">
+                    <li class="line">
+                      <p class="tit f-body-b3"></p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bottom-div">
+                  <div class="line-txt f-body-r5">
+                    <span class="year"></span>-<span class="month"></span>-<span class="date"></span>
+                    ~
+                    <span class="year"></span>-<span class="month"></span>-<span class="date"></span>
+                    (<span class="stay"></span>박)<span class="bar"></span>
+                    객실 <span class="num">0</span>개 ・ 성인 <span class="num">0</span>명 ・ 아동 <span class="num">0</span>명</div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="trip-sel-area resrch">
+            <div class="trip-sel-wrap">
+              <div class="pop-tit-wrap">
+                <a href="javascript:" class="close-btn prev-btn"></a>
+                <p class="tit f-body-b1">검색조건 변경</p>
+              </div>
+              <div class="scroll-area">
+                <div class="trip-input-wrap">
+                  <!-- 목적지 입력 -->
+                  <div class="trip-input-div">
+                    <div class="trip-input">
+                      <a href="javascript:" class="trip-input-val">
+                        <p class="on val f-body-m3">지역, 숙소 이름 또는 랜드마크 입력</p>
+                      </a>
+                      <div class="trip-recent-srch">
+                        <div class="resrch-popup">
+                          <div class="pop-tit-wrap">
+                            <a href="javascript:" class="prev-btn"></a>
+                            <p class="tit f-body-b1">목적지 검색</p>
+                          </div>
+                          <div class="top-area">
+                            <div class="srch-input form-input">
+                              <input type="text" placeholder="지역, 숙소 이름 또는 랜드마크 입력" value="" data-place="">
+                              <div class="input-btn-wrap">
+                                <button class="delete-btn" type="button" title="삭제"></button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="scroll-area">
+                            <!-- 검색어 입력 전 -->
+                            <div class="srch-before on"><!-- on class 추가하면 해당 화면 보입니다. -->
+                              <div class="recent-srch-wrap">
+                                <div class="tit-wrap">
+                                  <p class="title">최근 검색어</p>
+                                  <div class="toggle-btn on">
+                                    <p class="toggle-txt f-body-r3">최근 검색어</p>
+                                    <p class="toggle-area"></p>
+                                  </div>
+                                </div>
+                                <div class="recent-word">
+                                  <button type="button" class="word swiper-slide"><span class="txt">파리</span></button>
+                                  <button type="button" class="word swiper-slide"><span class="txt">인천광역시</span></button>
+                                  <button type="button" class="word swiper-slide"><span class="txt">힐튼 경주</span></button>
+                                  <button type="button" class="word swiper-slide"><span class="txt">노보텔 방콕 수완나품</span></button>
+                                  <button type="button" class="word swiper-slide"><span class="txt">하노이</span></button>
+                                </div>
+                              </div>
+                              <div class="main-city-wrap tab-func-area">
+                                <div class="tit-wrap">
+                                  <p class="title">주요 추천 도시</p>
+                                </div>
+                                <div class="white-acco-area">
+                                  <div class="acco-list on">
+                                    <a href="javascript:" class="acco-tit"><p class="tit">국내</p></a>
+                                    <div class="acco-con">
+                                      <div class="acco-inner">
+                                        <button type="button" class="city">
+                                          <span class="txt">부산</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">제주</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">인천</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">울산</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">경남</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">울산</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">강원</span>
+                                        </button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="acco-list">
+                                    <a href="javascript:" class="acco-tit"><p class="tit">아시아</p></a>
+                                    <div class="acco-con">
+                                      <div class="acco-inner">
+                                        <button type="button" class="city">
+                                          <span class="txt">부산</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">라스베가스</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">삿포로</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">방콕</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">인천</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">파타야</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">도쿄</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">파리</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">파타야</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">도쿄</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">파리</span>
+                                        </button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="acco-list">
+                                    <a href="javascript:" class="acco-tit"><p class="tit">홍콩/중국</p></a>
+                                    <div class="acco-con">
+                                      <div class="acco-inner">
+                                        <button type="button" class="city">
+                                          <span class="txt">부산</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">라스베가스</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">삿포로</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">방콕</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">인천</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">파타야</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">도쿄</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">파리</span>
+                                        </button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="acco-list">
+                                    <a href="javascript:" class="acco-tit"><p class="tit">일본</p></a>
+                                    <div class="acco-con">
+                                      <div class="acco-inner">
+                                        <button type="button" class="city">
+                                          <span class="txt">부산</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">라스베가스</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">삿포로</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">방콕</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">인천</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">파타야</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">도쿄</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">파리</span>
+                                        </button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="acco-list">
+                                    <a href="javascript:" class="acco-tit"><p class="tit">남태평양</p></a>
+                                    <div class="acco-con">
+                                      <div class="acco-inner">
+                                        <button type="button" class="city">
+                                          <span class="txt">부산</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">라스베가스</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">삿포로</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">방콕</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">인천</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">파타야</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">도쿄</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">파리</span>
+                                        </button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="acco-list">
+                                    <a href="javascript:" class="acco-tit"><p class="tit">유럽</p></a>
+                                    <div class="acco-con">
+                                      <div class="acco-inner">
+                                        <button type="button" class="city">
+                                          <span class="txt">부산</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">라스베가스</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">삿포로</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">방콕</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">인천</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">파타야</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">도쿄</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">파리</span>
+                                        </button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="acco-list">
+                                    <a href="javascript:" class="acco-tit"><p class="tit">미주/캐나다</p></a>
+                                    <div class="acco-con">
+                                      <div class="acco-inner">
+                                        <button type="button" class="city">
+                                          <span class="txt">부산</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">라스베가스</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">삿포로</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">방콕</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">인천</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">파타야</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">도쿄</span>
+                                        </button>
+                                        <button type="button" class="city">
+                                          <span class="txt">파리</span>
+                                        </button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- // 검색어 입력 전 -->
+                            <!-- 검색어 입력 후 -->
+                            <div class="srch-after"><!-- on class 추가하면 해당 화면 보입니다. -->
+                              <div class="place-area city">
+                                <!--
+                                  도시/지역 - city
+                                  호텔 - hotel
+                                  지하철/기차역 - subway
+                                  랜드마크 - landmark
+                                  공항 - airport
+                                -->
+                                <p class="tit">도시/지역</p>
+                                <div class="place-wrap">
+                                  <button type="button">
+                                    <span class="destination txt"><span class="keyword">신주쿠</span></span>
+                                    <span class="location"><span class="keyword">도쿄, 일본</span></span>
+                                  </button>
+                                </div>
+                              </div>
+                              <div class="place-area hotel">
+                                <p class="tit">호텔</p>
+                                <div class="place-wrap">
+                                  <button type="button">
+                                    <span class="destination txt"><span class="keyword">신주쿠</span> 워싱턴 호텔 메인</span>
+                                    <span class="location">도쿄, 일본</span>
+                                  </button>
+                                  <button type="button">
+                                    <span class="destination txt"><span class="keyword">신주쿠</span> 프린스 호텔</span>
+                                    <span class="location">도쿄, 일본</span>
+                                  </button>
+                                  <button type="button">
+                                    <span class="destination txt"><span class="keyword">신주쿠</span> 그레이서리 신주쿠</span>
+                                    <span class="location">도쿄, 일본</span>
+                                  </button>
+                                  <button type="button">
+                                    <span class="destination txt">캄튼 <span class="keyword">신주쿠</span> 도쿄, IHG 호텔</span>
+                                    <span class="location">도쿄, 일본</span>
+                                  </button>
+                                </div>
+                              </div>
+                              <div class="place-area subway">
+                                <p class="tit">지하철/기차역</p>
+                                <div class="place-wrap">
+                                  <button type="button">
+                                    <span class="destination txt"><span class="keyword">신주쿠</span>역</span>
+                                    <span class="location">도쿄, 일본</span>
+                                  </button>
+                                  <button type="button">
+                                    <span class="destination txt"><span class="keyword">신주쿠</span> 니시구치역</span>
+                                    <span class="location">도쿄, 일본</span>
+                                  </button>
+                                </div>
+                              </div>
+                              <div class="place-area landmark">
+                                <p class="tit">랜드마크</p>
+                                <div class="place-wrap">
+                                  <button type="button">
+                                    <span class="destination txt"><span class="keyword">신주쿠</span>아일랜드</span>
+                                    <span class="location">도쿄, 일본</span>
+                                  </button>
+                                </div>
+                              </div>
+                              <div class="place-area airport">
+                                <p class="tit">공항</p>
+                                <div class="place-wrap">
+                                  <button type="button">
+                                    <span class="destination txt"><span class="keyword">신주쿠</span>아일랜드</span>
+                                    <span class="location">도쿄, 일본</span>
+                                  </button>
+                                </div>
+                              </div>
+                              <!-- 검색 결과 없을 때 -->
+                              <div class="no-place-area">
+                                <p class="f-body-m2">입력하신 내용이 다르거나, 검색결과가 없습니다.</p>
+                              </div>
+                              <!-- // 검색 결과 없을 때 -->
+                            </div>
+                            <!-- // 검색어 입력 후 -->
+                          </div>
+                        </div>
+                        <div class="bg-pop"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="trip-select-div">
+                    <!-- 체크인, 체크아웃, 숙박일수 -->
+                    <div class="trip-date">
+                      <div class="date-info-wrap">
+                        <div class="checkin-wrap">
+                          <div class="chk-in-out">
+                            <p class="txt f-body-r5">체크인</p>
+                            <p class="date-txt">
+                              <span class="year"></span>-<span class="month"></span>-<span class="date"></span>
+                              (<span class="day"></span>)
+                            </p>
+                          </div>
+                          <div class="chk-in-out">
+                            <p class="txt f-body-r5">체크아웃</p>
+                            <p class="date-txt">
+                              <span class="year"></span>-<span class="month"></span>-<span class="date"></span>
+                              (<span class="day"></span>)
+                            </p>
+                          </div>
+                        </div>
+                        <div class="stay-wrap">
+                          <div class="form-select no-bdr">
+                            <select>
+                              <option value="1">1박</option>
+                              <option value="2">2박</option>
+                              <option value="3">3박</option>
+                              <option value="4">4박</option>
+                              <option value="5">5박</option>
+                              <option value="6">6박</option>
+                              <option value="7">7박</option>
+                              <option value="8">8박</option>
+                              <option value="9">9박</option>
+                              <option value="10">10박</option>
+                              <option value="11">11박</option>
+                              <option value="12">12박</option>
+                              <option value="13">13박</option>
+                              <option value="14">14박</option>
+                              <option value="15">15박</option>
+                              <option value="16">16박</option>
+                              <option value="17">17박</option>
+                              <option value="18">18박</option>
+                              <option value="19">19박</option>
+                              <option value="20">20박</option>
+                              <option value="21">21박</option>
+                              <option value="22">22박</option>
+                              <option value="23">23박</option>
+                              <option value="24">24박</option>
+                              <option value="25">25박</option>
+                              <option value="26">26박</option>
+                              <option value="27">27박</option>
+                              <option value="28">28박</option>
+                              <option value="29">29박</option>
+                              <option value="30">30박</option>
+                              <option value="31">31박</option>
+                              <option value="32">32박</option>
+                              <option value="33">33박</option>
+                              <option value="34">34박</option>
+                              <option value="35">35박</option>
+                              <option value="36">36박</option>
+                              <option value="37">37박</option>
+                              <option value="38">38박</option>
+                              <option value="39">39박</option>
+                              <option value="40">40박</option>
+                              <option value="41">41박</option>
+                              <option value="42">42박</option>
+                              <option value="43">43박</option>
+                              <option value="44">44박</option>
+                              <option value="45">45박</option>
+                              <option value="46">46박</option>
+                              <option value="47">47박</option>
+                              <option value="48">48박</option>
+                              <option value="49">49박</option>
+                              <option value="50">50박</option>
+                              <option value="51">51박</option>
+                              <option value="52">52박</option>
+                              <option value="53">53박</option>
+                              <option value="54">54박</option>
+                              <option value="55">55박</option>
+                              <option value="56">56박</option>
+                              <option value="57">57박</option>
+                              <option value="58">58박</option>
+                              <option value="59">59박</option>
+                              <option value="60">60박</option>
+                              <option value="61">61박</option>
+                              <option value="62">62박</option>
+                              <option value="63">63박</option>
+                              <option value="64">64박</option>
+                              <option value="65">65박</option>
+                              <option value="66">66박</option>
+                              <option value="67">67박</option>
+                              <option value="68">68박</option>
+                              <option value="69">69박</option>
+                              <option value="70">70박</option>
+                              <option value="71">71박</option>
+                              <option value="72">72박</option>
+                              <option value="73">73박</option>
+                              <option value="74">74박</option>
+                              <option value="75">75박</option>
+                              <option value="76">76박</option>
+                              <option value="77">77박</option>
+                              <option value="78">78박</option>
+                              <option value="79">79박</option>
+                              <option value="80">80박</option>
+                              <option value="81">81박</option>
+                              <option value="82">82박</option>
+                              <option value="83">83박</option>
+                              <option value="84">84박</option>
+                              <option value="85">85박</option>
+                              <option value="86">86박</option>
+                              <option value="87">87박</option>
+                              <option value="88">88박</option>
+                              <option value="89">89박</option>
+                              <option value="90">90박</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="calendar-wrap">
+                        <div class="resrch-popup">
+                          <div class="pop-tit-wrap">
+                            <a href="javascript:" class="prev-btn"></a>
+                            <p class="tit f-body-b1">체크인/체크아웃 선택</p>
+                          </div>
+                          <div class="top-area">
+                            <div class="choice-box">
+                              <div class="checkin-txt">
+                                <div class="chk-in-out">
+                                  <p class="f-body-r5">체크인</p>
+                                  <p class="date-txt">
+                                    <span class="year">24</span>-<span class="month">10</span>-<span class="date">04</span>
+                                    (<span class="day">금</span>)
+                                  </p>
+                                </div>
+                                <div class="chk-in-out">
+                                  <p class="f-body-r5">체크아웃</p>
+                                  <p class="date-txt">
+                                    <span class="year">24</span>-<span class="month">10</span>-<span class="date">05</span>
+                                    (<span class="day">토</span>)
+                                  </p>
+                                </div>
+                              </div>
+                              <div class="form-select no-bdr">
+                                <select>
+                                  <option value="0" disabled hidden>0박</option>
+                                  <option value="1">1박</option>
+                                  <option value="2">2박</option>
+                                  <option value="3">3박</option>
+                                  <option value="4">4박</option>
+                                  <option value="5">5박</option>
+                                  <option value="6">6박</option>
+                                  <option value="7">7박</option>
+                                  <option value="8">8박</option>
+                                  <option value="9">9박</option>
+                                  <option value="10">10박</option>
+                                  <option value="11">11박</option>
+                                  <option value="12">12박</option>
+                                  <option value="13">13박</option>
+                                  <option value="14">14박</option>
+                                  <option value="15">15박</option>
+                                  <option value="16">16박</option>
+                                  <option value="17">17박</option>
+                                  <option value="18">18박</option>
+                                  <option value="19">19박</option>
+                                  <option value="20">20박</option>
+                                  <option value="21">21박</option>
+                                  <option value="22">22박</option>
+                                  <option value="23">23박</option>
+                                  <option value="24">24박</option>
+                                  <option value="25">25박</option>
+                                  <option value="26">26박</option>
+                                  <option value="27">27박</option>
+                                  <option value="28">28박</option>
+                                  <option value="29">29박</option>
+                                  <option value="30">30박</option>
+                                  <option value="31">31박</option>
+                                  <option value="32">32박</option>
+                                  <option value="33">33박</option>
+                                  <option value="34">34박</option>
+                                  <option value="35">35박</option>
+                                  <option value="36">36박</option>
+                                  <option value="37">37박</option>
+                                  <option value="38">38박</option>
+                                  <option value="39">39박</option>
+                                  <option value="40">40박</option>
+                                  <option value="41">41박</option>
+                                  <option value="42">42박</option>
+                                  <option value="43">43박</option>
+                                  <option value="44">44박</option>
+                                  <option value="45">45박</option>
+                                  <option value="46">46박</option>
+                                  <option value="47">47박</option>
+                                  <option value="48">48박</option>
+                                  <option value="49">49박</option>
+                                  <option value="50">50박</option>
+                                  <option value="51">51박</option>
+                                  <option value="52">52박</option>
+                                  <option value="53">53박</option>
+                                  <option value="54">54박</option>
+                                  <option value="55">55박</option>
+                                  <option value="56">56박</option>
+                                  <option value="57">57박</option>
+                                  <option value="58">58박</option>
+                                  <option value="59">59박</option>
+                                  <option value="60">60박</option>
+                                  <option value="61">61박</option>
+                                  <option value="62">62박</option>
+                                  <option value="63">63박</option>
+                                  <option value="64">64박</option>
+                                  <option value="65">65박</option>
+                                  <option value="66">66박</option>
+                                  <option value="67">67박</option>
+                                  <option value="68">68박</option>
+                                  <option value="69">69박</option>
+                                  <option value="70">70박</option>
+                                  <option value="71">71박</option>
+                                  <option value="72">72박</option>
+                                  <option value="73">73박</option>
+                                  <option value="74">74박</option>
+                                  <option value="75">75박</option>
+                                  <option value="76">76박</option>
+                                  <option value="77">77박</option>
+                                  <option value="78">78박</option>
+                                  <option value="79">79박</option>
+                                  <option value="80">80박</option>
+                                  <option value="81">81박</option>
+                                  <option value="82">82박</option>
+                                  <option value="83">83박</option>
+                                  <option value="84">84박</option>
+                                  <option value="85">85박</option>
+                                  <option value="86">86박</option>
+                                  <option value="87">87박</option>
+                                  <option value="88">88박</option>
+                                  <option value="89">89박</option>
+                                  <option value="90">90박</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="day">
+                              <p>일</p>
+                              <p>월</p>
+                              <p>화</p>
+                              <p>수</p>
+                              <p>목</p>
+                              <p>금</p>
+                              <p>토</p>
+                            </div>
+                          </div>
+                          <div class="scroll-area">
+                            <!-- 달력 -->
+                            <div class="calendar-div">
+                              <div class="calendar on">
+                                <p class="year-month-div">
+                                  <span class="year">2024</span>-<span class="month">12</span>
+                                </p>
+                                <div class="week-div">
+                                  <a href="javascript:"><span class="date">1</span></a>
+                                  <a href="javascript:"><span class="date">2</span></a>
+                                  <a href="javascript:"><span class="date">3</span></a>
+                                  <a href="javascript:"><span class="date">4</span></a>
+                                  <a href="javascript:"><span class="date">5</span></a>
+                                  <a href="javascript:"><span class="date">6</span></a>
+                                  <a href="javascript:"><span class="date">7</span></a>
+                                  <a href="javascript:"><span class="date">8</span></a>
+                                  <a href="javascript:"><span class="date">9</span></a>
+                                  <a href="javascript:"><span class="date">10</span></a>
+                                  <a href="javascript:"><span class="date">11</span></a>
+                                  <a href="javascript:"><span class="date">12</span></a>
+                                  <a href="javascript:"><span class="date">13</span></a>
+                                  <a href="javascript:"><span class="date">14</span></a>
+                                  <a href="javascript:"><span class="date">15</span></a>
+                                  <a href="javascript:"><span class="date">16</span></a>
+                                  <a href="javascript:"><span class="date">17</span></a>
+                                  <a href="javascript:"><span class="date">18</span></a>
+                                  <a href="javascript:"><span class="date">19</span></a>
+                                  <a href="javascript:"><span class="date">20</span></a>
+                                  <a href="javascript:"><span class="date">21</span></a>
+                                  <a href="javascript:"><span class="date">22</span></a>
+                                  <a href="javascript:"><span class="date">23</span></a>
+                                  <a href="javascript:"><span class="date">24</span></a>
+                                  <a href="javascript:" class="spe"><span class="date">25</span></a>
+                                  <a href="javascript:"><span class="date">26</span></a>
+                                  <a href="javascript:"><span class="date">27</span></a>
+                                  <a href="javascript:"><span class="date">28</span></a>
+                                  <a href="javascript:"><span class="date">29</span></a>
+                                  <a href="javascript:"><span class="date">30</span></a>
+                                  <a href="javascript:"><span class="date">31</span></a>
+                                  <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                  <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                  <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                  <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                </div>
+                                <div class="holiday-div">
+                                  <p class="holiday"><span>12-25</span> 성탄절</p>
+                                </div>
+                              </div>
+                              <div class="calendar">
+                                <p class="year-month-div">
+                                  <span class="year">2025</span>-<span class="month">01</span>
+                                </p>
+                                <div class="week-div">
+                                  <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                  <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                  <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                  <a href="javascript:" class="spe"><span class="date">1</span></a>
+                                  <a href="javascript:"><span class="date">2</span></a>
+                                  <a href="javascript:"><span class="date">3</span></a>
+                                  <a href="javascript:"><span class="date">4</span></a>
+                                  <a href="javascript:"><span class="date">5</span></a>
+                                  <a href="javascript:"><span class="date">6</span></a>
+                                  <a href="javascript:"><span class="date">7</span></a>
+                                  <a href="javascript:"><span class="date">8</span></a>
+                                  <a href="javascript:"><span class="date">9</span></a>
+                                  <a href="javascript:"><span class="date">10</span></a>
+                                  <a href="javascript:"><span class="date">11</span></a>
+                                  <a href="javascript:"><span class="date">12</span></a>
+                                  <a href="javascript:"><span class="date">13</span></a>
+                                  <a href="javascript:"><span class="date">14</span></a>
+                                  <a href="javascript:"><span class="date">15</span></a>
+                                  <a href="javascript:"><span class="date">16</span></a>
+                                  <a href="javascript:"><span class="date">17</span></a>
+                                  <a href="javascript:"><span class="date">18</span></a>
+                                  <a href="javascript:"><span class="date">19</span></a>
+                                  <a href="javascript:"><span class="date">20</span></a>
+                                  <a href="javascript:"><span class="date">21</span></a>
+                                  <a href="javascript:"><span class="date">22</span></a>
+                                  <a href="javascript:"><span class="date">23</span></a>
+                                  <a href="javascript:"><span class="date">24</span></a>
+                                  <a href="javascript:"><span class="date">25</span></a>
+                                  <a href="javascript:"><span class="date">26</span></a>
+                                  <a href="javascript:"><span class="date">27</span></a>
+                                  <a href="javascript:" class="spe"><span class="date">28</span></a>
+                                  <a href="javascript:" class="spe"><span class="date">29</span></a>
+                                  <a href="javascript:" class="spe"><span class="date">30</span></a>
+                                  <a href="javascript:"><span class="date">31</span></a>
+                                  <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                </div>
+                                <div class="holiday-div">
+                                  <p class="holiday"><span>01-28</span> 설날 연휴</p>
+                                  <p class="holiday"><span>01-29</span> 설날</p>
+                                  <p class="holiday"><span>01-30</span> 설날 연휴</p>
+                                </div>
+                              </div>
+                              <div class="calendar">
+                                <p class="year-month-div">
+                                  <span class="year">2025</span>-<span class="month">02</span>
+                                </p>
+                                <div class="week-div">
+                                  <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                  <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                  <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                  <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                  <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                  <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                  <a href="javascript:" class="spe"><span class="date">1</span></a>
+                                  <a href="javascript:"><span class="date">2</span></a>
+                                  <a href="javascript:" class="spe"><span class="date">3</span></a>
+                                  <a href="javascript:"><span class="date">4</span></a>
+                                  <a href="javascript:"><span class="date">5</span></a>
+                                  <a href="javascript:"><span class="date">6</span></a>
+                                  <a href="javascript:"><span class="date">7</span></a>
+                                  <a href="javascript:"><span class="date">8</span></a>
+                                  <a href="javascript:" class="spe"><span class="date">9</span></a>
+                                  <a href="javascript:"><span class="date">10</span></a>
+                                  <a href="javascript:"><span class="date">11</span></a>
+                                  <a href="javascript:"><span class="date">12</span></a>
+                                  <a href="javascript:"><span class="date">13</span></a>
+                                  <a href="javascript:"><span class="date">14</span></a>
+                                  <a href="javascript:"><span class="date">15</span></a>
+                                  <a href="javascript:"><span class="date">16</span></a>
+                                  <a href="javascript:"><span class="date">17</span></a>
+                                  <a href="javascript:"><span class="date">18</span></a>
+                                  <a href="javascript:"><span class="date">19</span></a>
+                                  <a href="javascript:"><span class="date">20</span></a>
+                                  <a href="javascript:"><span class="date">21</span></a>
+                                  <a href="javascript:"><span class="date">22</span></a>
+                                  <a href="javascript:"><span class="date">23</span></a>
+                                  <a href="javascript:"><span class="date">24</span></a>
+                                  <a href="javascript:"><span class="date">25</span></a>
+                                  <a href="javascript:"><span class="date">26</span></a>
+                                  <a href="javascript:"><span class="date">27</span></a>
+                                  <a href="javascript:"><span class="date">28</span></a>
+                                  <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                </div>
+                                <!-- 공휴일 안내 -->
+                                <div class="holiday-div">
+                                  <p class="holiday"><span>10-03</span> 개천절</p>
+                                  <p class="holiday"><span>10-09</span> 한글날</p>
+                                </div>
+                              </div>
+                              <div class="calendar">
+                                <p class="year-month-div">
+                                  <span class="year">2025</span>-<span class="month">03</span>
+                                </p>
+                                <div class="week-div">
+                                  <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                  <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                  <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                  <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                  <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                  <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                  <a href="javascript:" class="spe"><span class="date">1</span></a>
+                                  <a href="javascript:"><span class="date">2</span></a>
+                                  <a href="javascript:" class="spe"><span class="date">3</span></a>
+                                  <a href="javascript:"><span class="date">4</span></a>
+                                  <a href="javascript:"><span class="date">5</span></a>
+                                  <a href="javascript:"><span class="date">6</span></a>
+                                  <a href="javascript:"><span class="date">7</span></a>
+                                  <a href="javascript:"><span class="date">8</span></a>
+                                  <a href="javascript:" class="spe"><span class="date">9</span></a>
+                                  <a href="javascript:"><span class="date">10</span></a>
+                                  <a href="javascript:"><span class="date">11</span></a>
+                                  <a href="javascript:"><span class="date">12</span></a>
+                                  <a href="javascript:"><span class="date">13</span></a>
+                                  <a href="javascript:"><span class="date">14</span></a>
+                                  <a href="javascript:"><span class="date">15</span></a>
+                                  <a href="javascript:"><span class="date">16</span></a>
+                                  <a href="javascript:"><span class="date">17</span></a>
+                                  <a href="javascript:"><span class="date">18</span></a>
+                                  <a href="javascript:"><span class="date">19</span></a>
+                                  <a href="javascript:"><span class="date">20</span></a>
+                                  <a href="javascript:"><span class="date">21</span></a>
+                                  <a href="javascript:"><span class="date">22</span></a>
+                                  <a href="javascript:"><span class="date">23</span></a>
+                                  <a href="javascript:"><span class="date">24</span></a>
+                                  <a href="javascript:"><span class="date">25</span></a>
+                                  <a href="javascript:"><span class="date">26</span></a>
+                                  <a href="javascript:"><span class="date">27</span></a>
+                                  <a href="javascript:"><span class="date">28</span></a>
+                                  <a href="javascript:"><span class="date">29</span></a>
+                                  <a href="javascript:"><span class="date">30</span></a>
+                                  <a href="javascript:"><span class="date">31</span></a>
+                                  <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                  <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                  <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                  <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                  <a href="javascript:" class="disabled"><span class="date"></span></a>
+                                </div>
+                                <!-- 공휴일 안내 -->
+                                <div class="holiday-div">
+                                  <p class="holiday"><span>10-03</span> 개천절</p>
+                                  <p class="holiday"><span>10-09</span> 한글날</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="fixed-btn-wrap">
+                            <a href="javascript:" class="apply-btn"><span class="f-body-b1">적용하기</span></a>
+                          </div>
+                        </div>
+                        <div class="bg-pop"></div>
+                      </div>
+                    </div>
+                    <!-- 객실 -->
+                    <div class="trip-room">
+                      <div class="room-info-sel">
+                        <div class="room-tit-wrap">
+                          <p class="f-body-b1">객실 수</p>
+                          <div class="plus-minus-input room-num">
+                            <button type="button" class="minus disabled"></button>
+                            <div class="form-input">
+                              <input type="number" value="1" data-val="1">
+                            </div>
+                            <button type="button" class="plus"></button>
+                          </div>
+                        </div>
+                        <div class="room-con-wrap">
+                          <div class="room-con-box" data-yn="N" data-del="N">
+                            <div class="room-con-div">
+                              <p class="title f-body-b1">객실 <span class="num">1</span></p>
+                              <div class="person-div">
+                                <p class="f-body-b2">성인</p>
+                                <div class="person plus-minus-input">
+                                  <button type="button" class="minus"></button>
+                                  <div class="form-input adult">
+                                    <input type="number" value="2" data-val="2">
+                                  </div>
+                                  <button type="button" class="plus"></button>
+                                </div>
+                              </div>
+                              <div class="person-div">
+                                <div class="child-tit-wrap">
+                                  <p class="f-body-b2">아동</p>
+                                  <div class="f-body-r5">
+                                    <span>만 0~17세</span>
+                                    <div class="tooltip-wrap">
+                                      <button class="tooltip-btn" type="button"></button>
+                                      <div class="tooltip-box dot-txt-w">
+                                        <p class="dot-txt f-body-r3">침대를 공유하는 조건이며, 보조침대는 제공되지 않습니다.</p>
+                                        <p class="dot-txt f-body-r3">아동조식은 불포함 사항이며, 이용 시 현장에서 직접 결제하셔야 합니다.</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                
+                                <div class="person plus-minus-input">
+                                  <button type="button" class="minus disabled"></button>
+                                  <div class="form-input child">
+                                    <input type="number" value="0" data-val="0">
+                                  </div>
+                                  <button type="button" class="plus"></button>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="child-chk-div">
+                              <div class="child-chk" data-del="N" data-yn="N">
+                                <p class="tit f-body-b2">아동 <span class="num">1</span></p>
+                                <div class="form-input birth">
+                                  <input type="text" placeholder="생년월일 8자리" maxlength="10" />
+                                </div>
+                                <button type="button" class="btn-square-l gray"><span>확인</span></button>
+                                <div class="form-input">
+                                  <input type="text" readonly />
+                                </div>
+                              </div>
+                            </div>
+                            <button type="button" class="delete-btn"><img src="/common/mbl/images/icon-delete-btn-gray-bg.svg" alt=""></button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="trip-btn-wrap">
+                <button class="srch-btn" type="button"><span>적용하기</span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+	</body>
+  <!-- 개발쪽에서 하단 스크립트 내용이 담긴 todayCheckFn() 함수 호출을 하고 있습니다.
+    하단 스크립트는 퍼블 보여주기 용도로만 기재된 스크립트입니다. -->
+  <script>
+    $(".year-month-div .month").each(function(){
+      if(new Date().getMonth() + 1 == parseInt($(this).text()) && new Date().getFullYear() == parseInt($(this).parents(".year-month-div").find(".year").text())){
+        $(this).closest(".calendar").find(".week-div > a").each(function(){
+          if(parseInt($(this).text()) == new Date().getDate()){
+            $(this).addClass("today");
+            $(this).append("<span>오늘</span>")
+          }
+        })
+      }
+    });
+    
+    $(".calendar .week-div .today").prevAll("a").addClass("disabled"); // 오늘 날짜 기준 전 날짜들은 전부 disabled 처리
+
+    // ---- 상단 검색 바 (서브페이지, hasClass "resrch") START ----
+    if($(".trip-sel-area").hasClass("resrch")) {
+      // @ 더미 데이터
+      const dummyData = {input: "신주쿠", check: {checkin: "2025-01-23-월", checkout: "2025-01-26-목"}, room: [{adult: 2, child: ["2024-05-05"]}, {adult: 7, child: ["2022-05-05", "2020-12-08"]}, {adult: 8, child: []}]}
+      
+      // @ 데이터 불러오고, 호출 함수
+      function tripSelAreaResrch() {
+        //  ## 목적지 SET ##
+        // @ 더미 데이터 넣기
+        $(".trip-input-div .trip-input .val").text(dummyData.input);
+
+        let tripInputVal = $(".trip-input-div .trip-input .val").text();
+        let popTripInput = $(".trip-input-div .srch-input input");
+        var $date = $(".calendar .week-div > a").not(".disabled"); // disabled를 제외한 달력 날짜
+        $(".trip-input-div .trip-input .val").addClass("on");
+        popTripInput.val(tripInputVal);
+        popTripInput.attr("value", tripInputVal);
+        popTripInput.attr("data-place", tripInputVal)
+        popTripInput.data("place", tripInputVal)
+
+        // ## 체크인/체크아웃 & n박 SET ##
+        let checkIn = $(".date-info-wrap .chk-in-out").eq(0);
+        let checOut = $(".date-info-wrap .chk-in-out").eq(1);
+        let popCheckIn = $(".calendar-wrap .chk-in-out").eq(0);
+        let popChecOut = $(".calendar-wrap .chk-in-out").eq(1);
+
+        // @ 더미 데이터 넣기
+        const [dataInYear, dataInMonth, dataInDate, dataInDay] = dummyData.check.checkin.split('-');
+        const [dataOutYear, dataOutMonth, dataOutDate, dataOutDay] = dummyData.check.checkout.split('-');
+        checkIn.find(".year").text(dataInYear);
+        checkIn.find(".month").text(dataInMonth);
+        checkIn.find(".date").text(dataInDate);
+        checkIn.find(".day").text(dataInDay);
+        checOut.find(".year").text(dataOutYear);
+        checOut.find(".month").text(dataOutMonth);
+        checOut.find(".date").text(dataOutDate);
+        checOut.find(".day").text(dataOutDay);
+        
+        const resrchCalendarFunc = () => {
+          checkIn = $(".date-info-wrap .chk-in-out").eq(0);
+          checOut = $(".date-info-wrap .chk-in-out").eq(1);
+          popCheckIn = $(".calendar-wrap .chk-in-out").eq(0);
+          popChecOut = $(".calendar-wrap .chk-in-out").eq(1);
+
+          // 팝업 내부 달력 표시 (체크인, 체크아웃...리셋)
+          $(".calendar .week-div .in span").not(".date").remove();
+          $(".calendar .week-div .out span").not(".date").remove();
+          $(".calendar .week-div a").removeClass("ing")
+          $(".calendar .week-div a").removeClass("check in")
+          $(".calendar .week-div a").removeClass("check out");
+
+          // 달력날짜를 팝업 내부 달력날짜에 넣기
+          popCheckIn.find(".year").text(checkIn.find(".year").text());
+          popCheckIn.find(".month").text(checkIn.find(".month").text());
+          popCheckIn.find(".date").text(checkIn.find(".date").text());
+          popCheckIn.find(".day").text(checkIn.find(".day").text());
+          popChecOut.find(".year").text(checOut.find(".year").text());
+          popChecOut.find(".month").text(checOut.find(".month").text());
+          popChecOut.find(".date").text(checOut.find(".date").text());
+          popChecOut.find(".day").text(checOut.find(".day").text());
+  
+          // $ 받아온 날짜에 맞춰 체크인, 체크아웃 class 추가 
+          chkInOutFn();
+          
+          // $ 체크인, 체크아웃 월 및 년도 셋팅
+          checkInMonth = parseInt($(".calendar .week-div .check.in").closest(".calendar").find(".month").text());
+          checkInYear = parseInt($(".calendar .week-div .check.in").closest(".calendar").find(".year").text());
+          checkOutMonth = parseInt($(".calendar .week-div .check.out").closest(".calendar").find(".month").text());
+          checkOutYear = parseInt($(".calendar .week-div .check.out").closest(".calendar").find(".year").text());
+  
+          // $ 체크인/체크아웃 사이 캘린더 ing 체크
+          $date.each(function(q){ // 체크아웃 클릭
+            if(checkOutYear <= checkInYear){ // 체크아웃 년도와 체크인 년도 비교
+              $date.removeClass("ing");
+
+              if(checkOutMonth > checkInMonth){ // 체크아웃 월과 체크인 월 비교
+                $(".calendar .week-div .check.out").prevAll("a").addClass("ing");
+                $(".calendar .week-div .check.in").nextUntil($(".calendar .week-div .check.out")).addClass("ing");
+                $(".calendar .week-div .check.in").closest(".calendar").nextUntil($(".calendar .week-div .check.out").closest(".calendar")).find(".week-div > a").addClass("ing"); // ex) 9-11월인 경우 10월 전체 다 체크
+              }else if(checkOutMonth < checkInMonth){
+                $(".calendar .week-div .check.out").prevAll("a").addClass("ing");
+                $(".calendar .week-div .check.in").closest(".calendar").nextUntil($(".calendar .week-div .check.out").closest(".calendar")).find(".week-div > a").addClass("ing"); // ex) 9-11월인 경우 10월 전체 다 체크
+              }
+
+              $(".calendar .week-div .disabled").removeClass("ing");
+            }else{
+              $(".calendar .week-div .check.in").closest(".calendar").nextUntil($(".calendar .week-div .check.out").closest(".calendar")).find(".week-div > a").addClass("ing");
+              $(".calendar .week-div .check.out").prevAll("a").addClass("ing");
+            }
+
+            $(".calendar .week-div .check.in").nextUntil($(".calendar .week-div .check.out")).addClass("ing");
+            $(".calendar .week-div .disabled").removeClass("ing");
+          });
+
+          // n박
+          $(".date-info-wrap .stay-wrap .form-select select").val($(".calendar .week-div .ing").length + 1);
+          $(".calendar-wrap .choice-box select").val($(".calendar .week-div .ing").length + 1);
+        }
+          
+        // 해당 체크인 캘린더에 on클래스 추가 & scroll 이동
+        $(".checkin-wrap").on("click", function() {
+          setTimeout(() => {
+            $(".calendar.on").removeClass("on");
+            $(".calendar .week-div .check.in").parents(".calendar").addClass("on");
+            $(".calendar-wrap .scroll-area").scrollTop($(".calendar.on").position().top);
+          }, 0);
+        });
+
+        resrchCalendarFunc();
+
+        // ## 객실 SET ##
+        // $(".room-con-wrap").empty();  // 객실 아이템 초기화
+        let nowRoom;  // 현재 객실
+        var newRoom = $(".trip-sel-area .room-con-box:last").clone(true); // 객실
+        var childInfoClone = $(".trip-sel-area .trip-room .room-con-box:last-child .child-chk:last-child").clone(true);
+        _roomNum = 0; // 객실 수 합계 초기화
+        _totalAdultNum = 0; // 성인 수 합계 초기화
+        _totalChildNum = 0; // 아동 수 합계 초기화
+        let age = 0;  // 만 나이 계산
+
+        $(dummyData.room).each((idx, item) => {
+          // 객실 아이템 셋팅
+          $(".room-con-wrap").append(newRoom);
+          nowRoom = $(".trip-sel-area .room-con-box:last"); // 현재 each 돌고 있는 객실
+          newRoom = $(".trip-sel-area .room-con-box:last").clone(true); // 새로운 복사본 생성
+          // 객실 아이템 셋팅 - 성인/아동
+          nowRoom.attr("data-yn", "Y");
+          nowRoom.data("yn", "Y");
+          nowRoom.find(".adult input").val(item.adult);
+          nowRoom.find(".adult input").attr("value", item.adult);
+          nowRoom.find(".adult input").data("prev", item.adult);
+          nowRoom.find(".adult input").attr("data-prev", item.adult);
+          nowRoom.find(".adult input").data("val", item.adult);
+          nowRoom.find(".adult input").attr("data-val",item.adult)
+          nowRoom.find(".child input").val(item.child.length);
+          nowRoom.find(".child input").attr("value", item.child.length);
+          nowRoom.find(".child input").data("prev", item.child.length);
+          nowRoom.find(".child input").attr("data-prev", item.child.length);
+          nowRoom.find(".child input").data("val", item.child.length);
+          nowRoom.find(".child input").attr("data-val",item.child.length)
+          nowRoom.find(".title .num").text(idx + 1);
+          // 객실 아이템 셋팅 - 아동
+          if(item.child.length > 0) {
+            nowRoom.find(".child-chk-div").addClass("on");
+            $(item.child).each((childIdx, childItem) => {
+              if(childIdx > 0) {
+                nowRoom.find(".child-chk-div").append(childInfoClone);
+                childInfoClone = $(".trip-sel-area .trip-room .child-chk:last").clone(true); // 새로운 복사본 생성
+              }
+              
+              // 만 나이 계산
+              age = calcFullAgeFn(childItem.replace(/\D/g, ""));
+              // 하이픈
+              // hyphenDate = childItem.toString().replace(/(\d{4})(\d{2})(\d{2})/, "$1-$2-$3");
+              
+              nowRoom.find(".child-chk-div .child-chk").eq(childIdx).attr("data-yn", "Y");
+              nowRoom.find(".child-chk-div .child-chk").eq(childIdx).data("yn", "Y");
+              // nowRoom.find(".child-chk-div .child-chk").eq(childIdx).attr("data-del", "N");
+              // nowRoom.find(".child-chk-div .child-chk").eq(childIdx).data("del", "N");
+              nowRoom.find(".child-chk-div .child-chk").eq(childIdx).find(".tit .num").text(childIdx + 1);
+              nowRoom.find(".child-chk-div .child-chk").eq(childIdx).find(".form-input").eq(0).find("input").val(childItem);
+              nowRoom.find(".child-chk-div .child-chk").eq(childIdx).find(".form-input").eq(0).find("input").attr("value", childItem);
+              nowRoom.find(".child-chk-div .child-chk").eq(childIdx).find(".form-input").eq(0).find("input").data("val", childItem);
+              nowRoom.find(".child-chk-div .child-chk").eq(childIdx).find(".form-input").eq(0).find("input").attr("data-val",childItem);
+              nowRoom.find(".child-chk-div .child-chk").eq(childIdx).find(".form-input").eq(1).find("input").val(`만 ${age}세`);
+              nowRoom.find(".child-chk-div .child-chk").eq(childIdx).find(".form-input").eq(1).find("input").attr("value", `만 ${age}세`);
+              nowRoom.find(".child-chk-div .child-chk").eq(childIdx).find(".form-input").eq(1).find("input").data("val", `만 ${age}세`);
+              nowRoom.find(".child-chk-div .child-chk").eq(childIdx).find(".form-input").eq(1).find("input").attr("data-val", `만 ${age}세`);
+            });
+          }
+          // 객실 아이템 셋팅 - 성인/아동 버튼 disabled 여부 (성인+아동=최대9명)
+          if(item.adult == 1) {
+            nowRoom.find(".person-div").eq(0).find(".minus").addClass("disabled");
+          } else {
+            nowRoom.find(".person-div").eq(0).find(".minus").removeClass("disabled");
+          }
+          if(item.child.length == 0) {
+            nowRoom.find(".person-div").eq(1).find(".minus").addClass("disabled");
+          } else {
+            nowRoom.find(".person-div").eq(1).find(".minus").removeClass("disabled");
+          }
+          if(item.adult + item.child.length == 9) {
+            nowRoom.find(".person-div").eq(0).find(".plus").addClass("disabled");
+            nowRoom.find(".person-div").eq(1).find(".plus").addClass("disabled");
+          }
+          
+          // 객실 수 합계
+          _roomNum++;
+          // 성인 수 합계
+          _totalAdultNum += item.adult;
+          // 아동 수 합계
+          _totalChildNum += item.child.length;
+        });
+
+        // 객실 수 합계 셋팅
+        $(".trip-sel-area .room-num .form-input input").val(_roomNum);
+        $(".trip-sel-area .room-num .form-input input").attr("value", _roomNum);
+        $(".trip-sel-area .room-num .form-input input").data("val", _roomNum);
+        $(".trip-sel-area .room-num .form-input input").attr("data-val", _roomNum);
+        
+        // 객실 버튼 disabled 여부 (1개면 - disabled, 8개면 + disabled / 최소1 최대9)
+        if (_roomNum >= 2 && _roomNum <= 7) {
+          $(".trip-sel-area .trip-room .room-tit-wrap button.plus").removeClass("disabled");
+          $(".trip-sel-area .trip-room .room-tit-wrap button.minus").removeClass("disabled");
+        } else if(_roomNum === 1) {
+          $(".trip-sel-area .trip-room .room-tit-wrap button.minus").addClass("disabled");
+          $(".trip-sel-area .trip-room .room-tit-wrap button.plus").removeClass("disabled");
+        } else if(_roomNum === 8) {
+          $(".trip-sel-area .trip-room .room-tit-wrap button.minus").removeClass("disabled");
+          $(".trip-sel-area .trip-room .room-tit-wrap button.plus").addClass("disabled");
+        }
+
+        // ## 상단 검색바 적용하기 ##
+        const resrchBarApply = () => {
+          // 목적지 셋팅
+          $(".resrch-bar .top-div .tit").text($(".trip-input-div .trip-input .val").text());
+          // 체크인 셋팅
+          $(".resrch-bar .bottom-div .year").eq(0).text(checkIn.find(".year").text());
+          $(".resrch-bar .bottom-div .month").eq(0).text(checkIn.find(".month").text());
+          $(".resrch-bar .bottom-div .date").eq(0).text(checkIn.find(".date").text());
+          // 체크아웃 셋팅
+          $(".resrch-bar .bottom-div .year").eq(1).text(checOut.find(".year").text());
+          $(".resrch-bar .bottom-div .month").eq(1).text(checOut.find(".month").text());
+          $(".resrch-bar .bottom-div .date").eq(1).text(checOut.find(".date").text());
+          // 박 수 셋팅
+          $(".resrch-bar .bottom-div .stay").text($(".calendar .week-div .ing").length + 1);
+          // 객실 수 합계 셋팅
+          $(".resrch-bar .bottom-div .num").eq(0).text(_roomNum);
+          // 성인 수 합계 셋팅
+          $(".resrch-bar .bottom-div .num").eq(1).text(_totalAdultNum);
+          // 아동 수 합계 셋팅
+          $(".resrch-bar .bottom-div .num").eq(2).text(_totalChildNum);
+        }
+        setTimeout(() => {
+          resrchBarApply();
+        }, 0);
+
+        // 이전 값 저장
+        let prevInputVal;
+        let _prevChkInDate;
+        let _prevChkOutDate;
+        
+        $(".resrch-bar").on("click", function() {
+          $(".trip-sel-area.resrch").fadeIn(200).addClass("on");
+          $("body").addClass("stop-scroll");
+          prevInputVal = $.trim($(".trip-input-val .val").text());
+          _prevChkInDate = $(".checkin-wrap .chk-in-out").eq(0).find(".date-txt").clone();
+          _prevChkOutDate = $(".checkin-wrap .chk-in-out").eq(1).find(".date-txt").clone();
+
+          $(".child-chk-div").each(function(){
+            if($(this).hasClass("on")){
+              $(this).find(".child-chk").each(function(){
+                if($(this).attr("data-del") == "Y"){
+                  $(this).show()
+                  $(this).data("del", "N")
+                  $(this).attr("data-del", "N")
+                }
+              });
+            }
+          });
+        });
+        
+        // ~ 전체 적용하기 ~
+        $(".trip-sel-area.resrch .srch-btn").on("click", function() {
+          if(tripRoomApply1()) { // 객실 성공했을 때만!
+            resrchBarApply();
+            $(".trip-sel-area.resrch").fadeOut(200).removeClass("on");
+            $("body").removeClass("stop-scroll");
+          }
+        });
+
+        // ~ 전체 뒤로가기 ~
+        $(".trip-sel-area.resrch .close-btn").on("click", function() {
+          $(".trip-sel-area.resrch").fadeOut(200).removeClass("on");
+          $("body").removeClass("stop-scroll");
+          
+          $(".trip-input-val .val").text(prevInputVal);
+          $(".trip-input-div .srch-input input").val(prevInputVal);
+          $(".trip-input-div .srch-input input").attr("value", prevInputVal);
+          $(".trip-input-div .srch-input input").data("place", prevInputVal);
+          $(".trip-input-div .srch-input input").attr("data-place",prevInputVal);
+
+          $(".trip-sel-area .trip-sel-wrap .trip-date .checkin-wrap .chk-in-out .date-txt").remove();
+          $(".trip-sel-area .trip-sel-wrap .trip-date .checkin-wrap .chk-in-out").eq(0).append(_prevChkInDate);
+          $(".trip-sel-area .trip-sel-wrap .trip-date .checkin-wrap .chk-in-out").eq(1).append(_prevChkOutDate);
+
+          resrchCalendarFunc();
+        });
+      }
+      tripSelAreaResrch();
+    }
+
+    // 객실 적용하기 버튼 클릭
+    function tripRoomApply1() {
+        let isSuccessful = true;  // 성공 여부 반환 (상세 검색바에서만 필요!)
+
+        const hasChild = $(".child-chk-div").filter(function(){
+          return $(this).hasClass("on");
+        }).length;
+        if(hasChild == 0){
+          if(!$(".trip-sel-area").hasClass("resrch")) { // 메인 검색바에서만...
+            $("body").removeClass("stop-scroll");
+            $(".trip-sel-area .trip-sel-wrap .trip-room").removeClass("on");
+            $(".trip-sel-area .trip-sel-wrap .trip-room .room-info-sel").fadeOut();
+          }
+        }
+
+        let isAlertShown = false;
+        $(".child-chk-div").each(function(){
+          if($(this).hasClass("on")){
+            $(this).find(".child-chk[data-del='N']").each(function(){
+              if(!isAlertShown && $(this).find(".form-input input:read-only").val() == ""){
+                // IOS Safari 키패드 이슈
+                setTimeout(() => {
+                  alert(`${$(this).find(".tit").text()}의 만 나이를 입력해 주세요.`);
+                  $(this).find(".form-input:nth-of-type(1) input").focus();
+                }, 0);
+                isAlertShown = true;
+                isSuccessful = false; // 실패로 설정 (상세 검색바에서만 필요!)
+                return;
+              }
+
+              $(this).attr('data-yn', "Y");
+              $(this).data('yn', "Y");
+              
+              const emptyInputs = $(this).parents(".room-con-wrap").find(".child-chk-div.on .child-chk[data-del='N'] .form-input:nth-of-type(1) input").filter(function(){
+                return $(this).val().trim() === '';
+              }).length; // 만 나이를 계산하지 않은 input
+
+              if(emptyInputs == 0){ // 만 나이를 모두 계산 했을 경우
+                if(!$(".trip-sel-area").hasClass("resrch")) { // 메인 검색바에서만...
+                  $("body").removeClass("stop-scroll");
+                  $(".trip-sel-area .trip-sel-wrap .trip-room").removeClass("on");
+                  $(".trip-sel-area .trip-sel-wrap .trip-room .room-info-sel").fadeOut();
+                }
+              }
+            });
+          }
+
+          $(this).find(".child-chk").each(function(q){
+            if($(this).data("del") == "Y"){
+              $(this).remove();
+            }
+
+            if(q == 0 && $(this).data("yn") == "Y" && !$(this).parents(".child-chk-div").hasClass("on")){
+              $(this).data("yn") == "N";
+              $(this).find("input").val("")
+            }
+          })
+        });
+
+        $(".trip-sel-area .trip-sel-wrap .trip-room .room-info-sel .room-con-box").attr('data-yn', "Y");
+        $(".room-num").find(".form-input input").attr("data-val", _roomNum)
+        $(".room-num").find(".form-input input").data("val", _roomNum)
+        _totalAdultNum = 0;
+        _totalChildNum = 0;
+        $(".room-con-box").each(function(){
+          if($(this).data("del") == "Y"){
+            $(this).remove(); // 삭제 시켰던 객실 리스트는 아예 지우기
+          }
+
+          // 삭제 된 적 없는 리스트의 성인 총 합, 아동 총 합 구하기
+          if($(this).data("del") == "N"){
+            $(this).find(".adult").each(function(){
+              _totalAdultNum += Number($(this).find("input").val())
+              $(this).find("input").data('prev', $(this).find("input").val())
+              $(this).find("input").attr('data-prev', $(this).find("input").val())
+            })
+            $(this).find(".child").each(function(){
+              _totalChildNum += Number($(this).find("input").val())
+              $(this).find("input").data('prev', $(this).find("input").val())
+              $(this).find("input").attr('data-prev', $(this).find("input").val())
+            })
+          }
+          
+        })
+
+        $(".room-info").eq(0).find(".num").text(_roomNum) // 객실 수 총 합
+        $(".room-info").eq(1).find(".num").text(_totalAdultNum) // 성인 수 총 합
+        $(".room-info").eq(2).find(".num").text(_totalChildNum) // 아동 수 총 합
+
+        return isSuccessful; // 성공 여부 반환 (상세 검색바에서만 필요!)
+      }
+    // ---- 상단 검색 바 (서브페이지, hasClass "resrch") END ----
+  </script>
+</html>

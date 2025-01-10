@@ -1,0 +1,1103 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>현대드림투어 호텔 HUB</title>
+    <link rel="shortcut icon" href="/common/mbl/images/favicon.ico" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no,maximum-scale=1.0,minimum-scale=1.0,target-densitydpi=medium-dpi" />
+		<meta name="keywords" content="각 페이지마다 유니크한 현대드림투어 호텔 HUB keywords"/>
+		<meta name="description" content="각 페이지마다 유니크한 현대드림투어 호텔 HUB description"/>
+		<meta name="format-detection" content="telephone=no, address=no, email=no">
+		<meta property="og:site_name" content="현대드림투어 호텔 HUB" id="og-sitename-value"/>
+		<meta property="og:type" content="website" id="og-type-value"/>
+		<meta property="og:url" content="URL" id="og-url-value"/>
+		<meta property="og:title" content="NOTICE | 현대드림투어 호텔 HUB" id="og-title-value"/>
+		<meta property="og:description" content="현대드림투어 호텔 HUB 홈페이지에 방문하신 것을 환영합니다." id="og-description-value"/>
+		<meta property="og:image" content="img URL" id="og-image-value"/>
+		<!-- <meta name="twitter:url" content="URL" id="twitter-url-value"/>
+		<meta name="twitter:title" content="Main" id="twitter-title-value"/>
+		<meta name="twitter:image" content="img URL" />
+		<meta name="twitter:description" content="현대드림투어 호텔 HUB 홈페이지에 방문하신 것을 환영합니다." id="twitter-discription-value"/> -->
+		
+		<link rel="stylesheet" href="/common/mbl/css/swiper.css" />
+		<link rel="stylesheet" href="/common/mbl/css/common.css" />
+		<link rel="stylesheet" href="/common/mbl/css/style.css" />
+
+		<script type="text/javascript" src="/common/mbl/js/jquery-1.12.4.min.js"></script>
+		<script type="text/javascript" src="/common/mbl/js/gsap.min.js"></script>
+		<script type="text/javascript" src="/common/mbl/js/ScrollTrigger.min.js"></script>
+		<script type="text/javascript" src="/common/mbl/js/swiper.min.js"></script>
+		<script type="text/javascript" src="/common/mbl/js/jquery-ui-1.12.1.custom.min.js"></script>
+    <script type="text/javascript" src="/common/mbl/js/script.js"></script>  
+
+    <!-- @ input range 사용하는 곳은 해당 스크립트 추가 필요 -->
+    <script type="text/javascript" src="/common/mbl/js/jquery.ui.touch-punch.min.js"></script>
+	</head>
+
+	<body class="overflow:hidden">
+    <div id="wrap">
+			<!-- 지도보기 팝업 -->
+      <div class="on map-pop full-pop layer-popup">
+        <div class="pop-area">
+          <div class="pop-wrap">
+            <div class="pop-fixed">
+              <div class="pop-head">
+                <p class="f-body-b1">지도에서 숙소보기</p>
+              </div>
+            </div>
+            <div class="scroll-area" tabindex="0">
+              <div class="pop-cont">
+								<div class="pop-map-area">
+									<!-- @@ 지도 api 들어가는 영역 -->
+									<div class="map-area">
+										<img src="/common/mbl/images/@img-map.jpg" alt="">
+									</div>
+									<!-- // @@ 지도 api 들어가는 영역 -->
+									
+									<!-- <a href="javascript:" class="marker-btn on" style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%)"><span>532,100</span>원</a>
+									<a href="javascript:" class="marker-btn" style="position:absolute; top:30%; left:65%; transform:translate(-50%, -50%)"><span>마감임박</span></a>
+									<a href="javascript:" class="marker-btn" style="position:absolute; top:15%; left:20%; transform:translate(-50%, -50%)"></a> -->
+									
+
+									<div class="room-area">
+										<a href="javascript:" class="filter-btn" onClick="openPopup('.filters-pop', this)"></a>
+										<!-- <div class="half-hotel-item on">
+											<div class="top-div">
+												<button class="like-btn large" type="button" ></button>
+												<div class="img-wrap">
+													<img src="/common/mbl/images/@img-compare-list-img.jpg" alt="">
+												</div>
+												<div class="txt-wrap">
+													<div class="names">
+														<p class="e-name f-body-b2">The Westin</p>
+														<p class="k-name f-body-r3">햄프턴 바이 힐튼 </p>
+													</div>
+													<ul class="line-txt">
+														<p class="stars"><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span></p>
+														<li class="line">
+														</li>
+														<div class="line">
+															<p class="rating f-body-b5">4.2</p>
+														</div>
+													</ul>
+													<div class="infos">
+														<div class="prices">
+															<p class="f-body-r4 txt">조식포함</p>
+															<div class="price"><span class="money f-body-b2">532,100</span><span class="f-body-b3">원</span></div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<a href="javascript:" class="btn-border-square"><span>요금 더보기</span></a>
+										</div>
+										<div class="half-hotel-item">
+											<div class="top-div">
+												<button class="like-btn large" type="button" ></button>
+												<div class="img-wrap">
+													<img src="/common/mbl/images/@img-compare-list-img.jpg" alt="">
+												</div>
+												<div class="txt-wrap">
+													<div class="names">
+														<p class="e-name f-body-b2">The Westin</p>
+														<p class="k-name f-body-r3">햄프턴 바이 힐튼 </p>
+													</div>
+													<ul class="line-txt">
+														<p class="stars"><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span></p>
+														<li class="line">
+														</li>
+														<div class="line">
+															<p class="rating f-body-b5">4.2</p>
+														</div>
+													</ul>
+													<div class="infos">
+														<div class="prices">
+															<div class="price"><span class="money f-body-b2">마감임박</span></div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<a href="javascript:" class="btn-border-square"><span>요금 더보기</span></a>
+										</div>
+										<div class="half-hotel-item">
+											<div class="top-div">
+												<button class="like-btn large" type="button" ></button>
+												<div class="img-wrap">
+													<img src="/common/mbl/images/@img-compare-list-img.jpg" alt="">
+												</div>
+												<div class="txt-wrap">
+													<div class="names">
+														<p class="e-name f-body-b2">The Westin The Westin The Westin The Westin</p>
+														<p class="k-name f-body-r4">햄프턴 바이 힐튼 햄프턴 바이 힐튼 햄프턴 바이 힐튼</p>
+													</div>
+													<ul class="line-txt">
+														<p class="stars"><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span></p>
+														<li class="line">
+														</li>
+														<div class="line">
+															<p class="rating f-body-b4">4.7</p>
+														</div>
+													</ul>
+												</div>
+											</div>
+											<a href="javascript:" class="btn-border-square"><span>요금 더보기</span></a>
+										</div> -->
+                    <div class="no-data-area">
+                      <p class="txt f-body-m2">검색 조건에 맞는 숙소가 없습니다.</p>
+                      <p class="sub f-body-r3">목적지를 다시 검색하거나, 필터를 삭제해 보세요.</p>
+                    </div>
+									</div>
+								</div>
+							</div>
+            </div>
+          </div>
+          <div class="pop-btn-wrap">
+            <button class="popclose-btn" type="button" title="팝업 닫기"></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- @ 해당 기능은 script.js에 스크립트 구현되어있습니다. 구현된 스크립트 미사용 시, 편하게 주석처리 후 작업해주시면 됩니다. (주석 // ---- 필터 START ----) -->
+      <!-- @ 필터 팝업 내에 있는 input id는 기존 바닥페이지 input id값에 'pop-'가 추가되어 id값이 지어지도록 script.js -->
+      <!-- 필터 팝업 -->
+      <div class="filters-pop full-pop layer-popup">
+        <div class="pop-area">
+          <div class="pop-wrap">
+            <div class="pop-fixed">
+              <div class="pop-head">
+                <p class="f-body-b1">검색 필터</p>
+              </div>
+            </div>
+            <div class="scroll-area" tabindex="0">
+              <div class="pop-cont">
+                <aside class="filter-area">
+                  <div class="filter-list">
+                    <div class="filter">
+                      <div class="tit-wrap">
+                        <p class="tit f-body-b2">호텔명 검색</p>
+                        <button class="reset-btn" type="button" title="초기화"></button>
+                      </div>
+                      <div class="filter-wrap">
+                        <div class="srch-input form-input">
+                          <input type="text" maxlength="100" placeholder="Hilton">
+                          <div class="input-btn-wrap">
+                            <button class="delete-btn" type="button" title="삭제"></button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="filter">
+                      <div class="tit-wrap">
+                        <p class="tit f-body-b2">호텔 성급</p>
+                        <button class="reset-btn" type="button" title="초기화"></button>
+                      </div>
+                      <div class="filter-wrap">
+                        <div class="opt-group">
+                          <div class="form-checkbox">
+                            <input type="checkbox" id="Star1-5" name="">
+                            <label for="Star1-5"><p class="stars"><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span></p></label>
+                          </div>
+                          <div class="form-checkbox">
+                            <input type="checkbox" id="Star1-4" name="">
+                            <label for="Star1-4"><p class="stars"><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span></p></label>
+                          </div>
+                          <div class="form-checkbox">
+                            <input type="checkbox" id="Star1-3" name="">
+                            <label for="Star1-3"><p class="stars"><span class="star"></span><span class="star"></span><span class="star"></span></p></label>
+                          </div>
+                          <div class="form-checkbox">
+                            <input type="checkbox" id="Star1-2" name="">
+                            <label for="Star1-2"><p class="stars"><span class="star"></span><span class="star"></span></p></label>
+                          </div>
+                          <div class="form-checkbox">
+                            <input type="checkbox" id="Star1-1" name="">
+                            <label for="Star1-1"><p class="stars"><span class="star"></span></p></label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="filter">
+                      <div class="tit-wrap">
+                        <p class="tit f-body-b2">숙소유형</p>
+                        <button class="reset-btn" type="button" title="초기화"></button>
+                      </div>
+                      <div class="filter-wrap">
+                        <div class="opt-group">
+                          <div class="form-checkbox">
+                            <input type="checkbox" id="HotelType-1" name="">
+                            <label for="HotelType-1"><span>Hotel</span></label>
+                          </div>
+                          <div class="form-checkbox">
+                            <input type="checkbox" id="HotelType-2" name="" >
+                            <label for="HotelType-2"><span>Resort</span></label>
+                          </div>
+                          <div class="form-checkbox">
+                            <input type="checkbox" id="HotelType-3" name="">
+                            <label for="HotelType-3"><span>Apartment</span></label>
+                          </div>
+                          <div class="form-checkbox">
+                            <input type="checkbox" id="HotelType-4" name="">
+                            <label for="HotelType-4"><span>Ryokan</span></label>
+                          </div>
+                          <div class="form-checkbox">
+                            <input type="checkbox" id="HotelType-5" name="">
+                            <label for="HotelType-5"><span>Villa Hostal</span></label>
+                          </div>
+                          <div class="form-checkbox">
+                            <input type="checkbox" id="HotelType-6" name="">
+                            <label for="HotelType-6"><span>Residence</span></label>
+                          </div>
+                          <div class="form-checkbox">
+                            <input type="checkbox" id="HotelType-7" name="">
+                            <label for="HotelType-7"><span>All-inclusive property</span></label>
+                          </div>
+                          <div class="form-checkbox">
+                            <input type="checkbox" id="HotelType-8" name="">
+                            <label for="HotelType-8"><span>기타</span></label>
+                          </div>
+                        </div>
+                        <div class="btn-wrap">
+                          <button type="button" class="icon-txt-btn close"><span>더보기</span></button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="filter">
+                      <div class="tit-wrap">
+                        <p class="tit f-body-b2">위치</p>
+                        <button class="reset-btn" type="button" title="초기화"></button>
+                      </div>
+                      <div class="filter-wrap">
+                        <div class="opt-group">
+                          <div class="form-radio">
+                            <input type="radio" id="Location-1" name="Location">
+                            <label for="Location-1"><span>관광명소1</span></label>
+                          </div>
+                          <div class="form-radio">
+                            <input type="radio" id="Location-2" name="Location">
+                            <label for="Location-2"><span>관광명소1</span></label>
+                          </div>
+                          <div class="form-radio">
+                            <input type="radio" id="Location-3" name="Location">
+                            <label for="Location-3"><span>관광명소1</span></label>
+                          </div>
+                          <div class="form-radio">
+                            <input type="radio" id="Location-4" name="Location">
+                            <label for="Location-4"><span>공항1</span></label>
+                          </div>
+                          <div class="form-radio">
+                            <input type="radio" id="Location-5" name="Location">
+                            <label for="Location-5"><span>공항2</span></label>
+                          </div>
+                          <div class="form-radio">
+                            <input type="radio" id="Location-6" name="Location">
+                            <label for="Location-6"><span>공항3</span></label>
+                          </div>
+                          <div class="form-radio">
+                            <input type="radio" id="Location-7" name="Location">
+                            <label for="Location-7"><span>기차역1</span></label>
+                          </div>
+                          <div class="form-radio">
+                            <input type="radio" id="Location-8" name="Location">
+                            <label for="Location-8"><span>기차역2</span></label>
+                          </div>
+                          <div class="form-radio">
+                            <input type="radio" id="Location-9" name="Location">
+                            <label for="Location-9"><span>기차역3</span></label>
+                          </div>
+                          <div class="form-radio">
+                            <input type="radio" id="Location-10" name="Location">
+                            <label for="Location-10"><span>기차역4</span></label>
+                          </div>
+                          <div class="form-radio">
+                            <input type="radio" id="Location-11" name="Location">
+                            <label for="Location-11"><span>지하철역1</span></label>
+                          </div>
+                          <div class="form-radio">
+                            <input type="radio" id="Location-12" name="Location">
+                            <label for="Location-12"><span>지하철역2</span></label>
+                          </div>
+                          <div class="form-radio">
+                            <input type="radio" id="Location-13" name="Location">
+                            <label for="Location-13"><span>지하철역3</span></label>
+                          </div>
+                          <div class="form-radio">
+                            <input type="radio" id="Location-14" name="Location">
+                            <label for="Location-14"><span>지하철역4</span></label>
+                          </div>
+                          <div class="form-radio">
+                            <input type="radio" id="Location-15" name="Location">
+                            <label for="Location-15"><span>지하철역5</span></label>
+                          </div>
+                          <div class="form-radio">
+                            <input type="radio" id="Location-16" name="Location">
+                            <label for="Location-16"><span>지하철역6</span></label>
+                          </div>
+                          <div class="form-radio">
+                            <input type="radio" id="Location-17" name="Location">
+                            <label for="Location-17"><span>지하철역7</span></label>
+                          </div>
+                          <div class="form-radio">
+                            <input type="radio" id="Location-18" name="Location">
+                            <label for="Location-18"><span>지하철역8</span></label>
+                          </div>
+                          <div class="form-radio">
+                            <input type="radio" id="Location-19" name="Location">
+                            <label for="Location-19"><span>지하철역9</span></label>
+                          </div>
+                          <div class="form-radio">
+                            <input type="radio" id="Location-20" name="Location">
+                            <label for="Location-20"><span>지하철역10</span></label>
+                          </div>
+                        </div>
+                        <div class="btn-wrap">
+                          <button type="button" class="icon-txt-btn open" onClick="openPopup('.location-pop', this)"><span>더보기</span></button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="filter">
+                      <div class="tit-wrap">
+                        <p class="tit f-body-b2">편의시설 및 서비스</p>
+                        <button class="reset-btn" type="button" title="초기화"></button>
+                      </div>
+                      <div class="filter-wrap">
+                        <div class="opt-group">
+                          <div class="form-checkbox">
+                            <input type="checkbox" id="Service-1" name="">
+                            <label for="Service-1"><span>호텔 편의시설1</span></label>
+                          </div>
+                          <div class="form-checkbox">
+                            <input type="checkbox" id="Service-2" name="">
+                            <label for="Service-2"><span>호텔 편의시설2</span></label>
+                          </div>
+                          <div class="form-checkbox">
+                            <input type="checkbox" id="Service-3" name="">
+                            <label for="Service-3"><span>호텔 편의시설3</span></label>
+                          </div>
+                          <div class="form-checkbox">
+                            <input type="checkbox" id="Service-4" name="">
+                            <label for="Service-4"><span>호텔 편의시설4</span></label>
+                          </div>
+                          <div class="form-checkbox">
+                            <input type="checkbox" id="Service-5" name="">
+                            <label for="Service-5"><span>객실 편의시설1</span></label>
+                          </div>
+                          <div class="form-checkbox">
+                            <input type="checkbox" id="Service-6" name="">
+                            <label for="Service-6"><span>객실 편의시설2</span></label>
+                          </div>
+                        </div>
+                        <div class="btn-wrap">
+                          <button type="button" class="icon-txt-btn open" onClick="openPopup('.servicetype-pop', this)"><span>더보기</span></button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="filter">
+                      <div class="tit-wrap">
+                        <p class="tit f-body-b2">호텔 체인</p>
+                        <button class="reset-btn" type="button" title="초기화"></button>
+                      </div>
+                      <div class="filter-wrap">
+                        <div class="opt-group">
+                          <div class="form-checkbox">
+                            <input type="checkbox" id="HotelChain-1" name="">
+                            <label for="HotelChain-1"><span>APA Hotels</span></label>
+                          </div>
+                          <div class="form-checkbox">
+                            <input type="checkbox" id="HotelChain-2" name="">
+                            <label for="HotelChain-2"><span>APA Hotels</span></label>
+                          </div>
+                          <div class="form-checkbox">
+                            <input type="checkbox" id="HotelChain-3" name="">
+                            <label for="HotelChain-3"><span>APA Hotels</span></label>
+                          </div>
+                          <div class="form-checkbox">
+                            <input type="checkbox" id="HotelChain-4" name="">
+                            <label for="HotelChain-4"><span>Mitsui Garden Hotels</span></label>
+                          </div>
+                          <div class="form-checkbox">
+                            <input type="checkbox" id="HotelChain-5" name="">
+                            <label for="HotelChain-5"><span>Mitsui Garden Hotels</span></label>
+                          </div>
+                          <div class="form-checkbox">
+                            <input type="checkbox" id="HotelChain-6" name="">
+                            <label for="HotelChain-6"><span>Mitsui Garden Hotels</span></label>
+                          </div>
+                          <div class="form-checkbox">
+                            <input type="checkbox" id="HotelChain-7" name="">
+                            <label for="HotelChain-7"><span>JR Kyusye Hotels</span></label>
+                          </div>
+                          <div class="form-checkbox">
+                            <input type="checkbox" id="HotelChain-8" name="">
+                            <label for="HotelChain-8"><span>JR Kyusye Hotels</span></label>
+                          </div>
+                          <div class="form-checkbox">
+                            <input type="checkbox" id="HotelChain-9" name="">
+                            <label for="HotelChain-9"><span>JR Kyusye Hotels</span></label>
+                          </div>
+                          <div class="form-checkbox">
+                            <input type="checkbox" id="HotelChain-10" name="">
+                            <label for="HotelChain-10"><span>Preferred Hotels</span></label>
+                          </div>
+                          <div class="form-checkbox">
+                            <input type="checkbox" id="HotelChain-11" name="">
+                            <label for="HotelChain-11"><span>Preferred Hotels</span></label>
+                          </div>
+                          <div class="form-checkbox">
+                            <input type="checkbox" id="HotelChain-12" name="">
+                            <label for="HotelChain-12"><span>Preferred Hotels</span></label>
+                          </div>
+                          <div class="form-checkbox">
+                            <input type="checkbox" id="HotelChain-13" name="">
+                            <label for="HotelChain-13"><span>VIA INN HOTEL</span></label>
+                          </div>
+                          <div class="form-checkbox">
+                            <input type="checkbox" id="HotelChain-14" name="">
+                            <label for="HotelChain-14"><span>VIA INN HOTEL</span></label>
+                          </div>
+                          <div class="form-checkbox">
+                            <input type="checkbox" id="HotelChain-15" name="">
+                            <label for="HotelChain-15"><span>VIA INN HOTEL</span></label>
+                          </div>
+                          <div class="form-checkbox">
+                            <input type="checkbox" id="HotelChain-16" name="">
+                            <label for="HotelChain-16"><span>Toyoko Inn </span></label>
+                          </div>
+                          <div class="form-checkbox">
+                            <input type="checkbox" id="HotelChain-17" name="">
+                            <label for="HotelChain-17"><span>Toyoko Inn </span></label>
+                          </div>
+                          <div class="form-checkbox">
+                            <input type="checkbox" id="HotelChain-18" name="">
+                            <label for="HotelChain-18"><span>Toyoko Inn </span></label>
+                          </div>
+                        </div>
+                        <div class="btn-wrap">
+                          <button type="button" class="icon-txt-btn open" onClick="openPopup('.brandtype-pop', this)"><span>더보기</span></button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="filter">
+                      <div class="tit-wrap">
+                        <p class="tit f-body-b2">장애인 편의시설</p>
+                        <button class="reset-btn" type="button" title="초기화"></button>
+                      </div>
+                      <div class="filter-wrap">
+                        <div class="opt-group">
+                          <div class="form-checkbox">
+                            <input type="checkbox" id="DisabledFacilities-1" name="">
+                            <label for="DisabledFacilities-1"><span>장애인 지원 욕실</span></label>
+                          </div>
+                          <div class="form-checkbox">
+                            <input type="checkbox" id="DisabledFacilities-2" name="">
+                            <label for="DisabledFacilities-2"><span>휠체어 이용 가능 공용 화장실</span></label>
+                          </div>
+                          <div class="form-checkbox">
+                            <input type="checkbox" id="DisabledFacilities-3" name="">
+                            <label for="DisabledFacilities-3"><span>장애인 지원 전화 키트</span></label>
+                          </div>
+                          <div class="form-checkbox">
+                            <input type="checkbox" id="DisabledFacilities-4" name="">
+                            <label for="DisabledFacilities-4"><span>올인 샤워 시설</span></label>
+                          </div>
+                          <div class="form-checkbox">
+                            <input type="checkbox" id="DisabledFacilities-5" name="">
+                            <label for="DisabledFacilities-5"><span>휠체어 이용 가능 스파</span></label>
+                          </div>
+                          <div class="form-checkbox">
+                            <input type="checkbox" id="DisabledFacilities-6" name="">
+                            <label for="DisabledFacilities-6"><span>승강 좌변기</span></label>
+                          </div>
+                          <div class="form-checkbox">
+                            <input type="checkbox" id="DisabledFacilities-7" name="">
+                            <label for="DisabledFacilities-7"><span>장애인 지원 객실</span></label>
+                          </div>
+                          <div class="form-checkbox">
+                            <input type="checkbox" id="DisabledFacilities-8" name="">
+                            <label for="DisabledFacilities-8"><span>휠체어 이용 가능 주차장</span></label>
+                          </div>
+                          <div class="form-checkbox">
+                            <input type="checkbox" id="DisabledFacilities-9" name="">
+                            <label for="DisabledFacilities-9"><span>장애인 지원 욕조</span></label>
+                          </div>
+                          <div class="form-checkbox">
+                            <input type="checkbox" id="DisabledFacilities-10" name="">
+                            <label for="DisabledFacilities-10"><span>점자표지</span></label>
+                          </div>
+                          <div class="form-checkbox">
+                            <input type="checkbox" id="DisabledFacilities-11" name="">
+                            <label for="DisabledFacilities-11"><span>휠체어 이용 가능 통로</span></label>
+                          </div>
+                          <div class="form-checkbox">
+                            <input type="checkbox" id="DisabledFacilities-12" name="">
+                            <label for="DisabledFacilities-12"><span>은 카운터</span></label>
+                          </div>
+                          <div class="form-checkbox">
+                            <input type="checkbox" id="DisabledFacilities-13" name="">
+                            <label for="DisabledFacilities-13"><span>청취 보조 기기 이용 가능</span></label>
+                          </div>
+                          <div class="form-checkbox">
+                            <input type="checkbox" id="DisabledFacilities-14" name="">
+                            <label for="DisabledFacilities-14"><span>휠체어 이용 가능 피트니스</span></label>
+                          </div>
+                          <div class="form-checkbox">
+                            <input type="checkbox" id="DisabledFacilities-15" name="">
+                            <label for="DisabledFacilities-15"><span>낮은 싱크대</span></label>
+                          </div>
+                        </div>
+                        <div class="btn-wrap">
+                          <button type="button" class="icon-txt-btn open" onClick="openPopup('.disabilities-pop', this)"><span>더보기</span></button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="filter">
+                      <div class="tit-wrap">
+                        <p class="tit f-body-b2">총 요금 범위</p>
+                        <button class="reset-btn" type="button" title="초기화"></button>
+                      </div>
+                      <div class="filter-wrap">
+                        <div class="form-range">
+                          <!-- @ data-range 값 입력 -->
+                          <!-- 
+                            min: 최소값
+                            max: 최대값
+                            minValue: 초기값 설정
+                            maxValue: 초기값 설정
+                          -->
+                          <div class="slider-range" data-range='{"min": 0, "max": 875500, "minValue": 0, "maxValue" : 875500}'></div>
+                          <div class="form-group">
+                            <div class="form-input more"><!-- @ input 숫자 콤마, num 클래스 추가 -->
+                              <input type="text" class="num">
+                              <span class="unit">원</span>
+                            </div>
+                            <span class="dash"></span>
+                            <div class="form-input less">
+                              <input type="text" class="num">
+                              <span class="unit">원</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </aside>
+              </div>
+            </div>
+            <div class="pop-button">
+              <div class="btn-wrap">
+                <button class="all reset-btn btn-border-round-l gray" type="butotn" title="전체 초기화"><span>전체 초기화</span></button>
+                <button class="srch-btn btn-round-l" type="button"><span>적용하기</span></button>
+              </div>
+            </div>
+          </div>
+          <div class="pop-btn-wrap">
+            <button class="popclose-btn" type="button" title="팝업 닫기"></button>
+          </div>
+        </div>
+      </div>
+      <!-- 필터 팝업 - 위치 (location-pop) -->
+      <div class="location-pop filter-pop full-pop layer-popup">
+        <div class="pop-area">
+          <div class="pop-wrap tab-func-area">
+            <div class="pop-fixed">
+              <div class="pop-head">
+                <p class="f-body-b1">위치</p>
+              </div>
+            </div>
+            <div class="tab-wrap tab-btn-area">
+              <div class="swiper-container">
+                <div class="swiper-wrapper">
+                  <a class="on tab tab-btn swiper-slide" href="javascript:"><span>관광명소</span></a>
+                  <a class="tab tab-btn swiper-slide" href="javascript:"><span>공항</span></a>
+                  <a class="tab tab-btn swiper-slide" href="javascript:"><span>기차역</span></a>
+                  <a class="tab tab-btn swiper-slide" href="javascript:"><span>지하철역</span></a>
+                </div>
+              </div>
+            </div>
+            <div class="scroll-area" tabindex="0">
+              <div class="pop-cont">
+                <div class="tab-con-area">
+                  <div class="on tab-con">
+                    <ul class="opt-group">
+                      <li>
+                        <div class="form-radio">
+                          <input type="radio" id="pop-Location-1" name="pop-Location">
+                          <label for="pop-Location-1"><span>관광명소1</span></label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="form-radio">
+                          <input type="radio" id="pop-Location-2" name="pop-Location">
+                          <label for="pop-Location-2"><span>관광명소1</span></label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="form-radio">
+                          <input type="radio" id="pop-Location-3" name="pop-Location">
+                          <label for="pop-Location-3"><span>관광명소1</span></label>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="tab-con">
+                    <ul class="opt-group">
+                      <li>
+                        <div class="form-radio">
+                          <input type="radio" id="pop-Location-4" name="pop-Location">
+                          <label for="pop-Location-4"><span>공항1</span></label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="form-radio">
+                          <input type="radio" id="pop-Location-5" name="pop-Location">
+                          <label for="pop-Location-5"><span>공항2</span></label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="form-radio">
+                          <input type="radio" id="pop-Location-6" name="pop-Location">
+                          <label for="pop-Location-6"><span>공항3</span></label>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="tab-con">
+                    <ul class="opt-group">
+                      <li>
+                        <div class="form-radio">
+                          <input type="radio" id="pop-Location-7" name="pop-Location">
+                          <label for="pop-Location-7"><span>기차역1</span></label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="form-radio">
+                          <input type="radio" id="pop-Location-8" name="pop-Location">
+                          <label for="pop-Location-8"><span>기차역2</span></label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="form-radio">
+                          <input type="radio" id="pop-Location-9" name="pop-Location">
+                          <label for="pop-Location-9"><span>기차역3</span></label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="form-radio">
+                          <input type="radio" id="pop-Location-10" name="pop-Location">
+                          <label for="pop-Location-10"><span>기차역4</span></label>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="tab-con">
+                    <ul class="opt-group">
+                      <li>
+                        <div class="form-radio">
+                          <input type="radio" id="pop-Location-11" name="pop-Location">
+                          <label for="pop-Location-11"><span>지하철역1</span></label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="form-radio">
+                          <input type="radio" id="pop-Location-12" name="pop-Location">
+                          <label for="pop-Location-12"><span>지하철역2</span></label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="form-radio">
+                          <input type="radio" id="pop-Location-13" name="pop-Location">
+                          <label for="pop-Location-13"><span>지하철역3</span></label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="form-radio">
+                          <input type="radio" id="pop-Location-14" name="pop-Location">
+                          <label for="pop-Location-14"><span>지하철역4</span></label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="form-radio">
+                          <input type="radio" id="pop-Location-15" name="pop-Location">
+                          <label for="pop-Location-15"><span>지하철역5</span></label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="form-radio">
+                          <input type="radio" id="pop-Location-16" name="pop-Location">
+                          <label for="pop-Location-16"><span>지하철역6</span></label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="form-radio">
+                          <input type="radio" id="pop-Location-17" name="pop-Location">
+                          <label for="pop-Location-17"><span>지하철역7</span></label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="form-radio">
+                          <input type="radio" id="pop-Location-18" name="pop-Location">
+                          <label for="pop-Location-18"><span>지하철역8</span></label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="form-radio">
+                          <input type="radio" id="pop-Location-19" name="pop-Location">
+                          <label for="pop-Location-19"><span>지하철역9</span></label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="form-radio">
+                          <input type="radio" id="pop-Location-20" name="pop-Location">
+                          <label for="pop-Location-20"><span>지하철역10</span></label>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="pop-button">
+              <div class="btn-wrap align-center">
+                <button class="reset-btn btn-border-round-l gray"><span>초기화</span></button>
+                <button class="srch-btn btn-round-l"><span>적용하기</span></button>
+              </div>
+            </div>
+          </div>
+          <div class="pop-btn-wrap">
+            <button class="popclose-btn" type="button" title="팝업 닫기"></button>
+          </div>
+        </div>
+      </div>
+      <!-- 필터 팝업 - 편의시설/서비스 (servicetype-pop) -->
+      <div class="servicetype-pop filter-pop full-pop layer-popup">
+        <div class="pop-area">
+          <div class="pop-wrap tab-func-area">
+            <div class="pop-fixed">
+              <div class="pop-head">
+                <p class="f-body-b1">편의시설 및 서비스</p>
+              </div>
+            </div>
+            <div class="tab-wrap tab-btn-area">
+              <div class="swiper-container">
+                <div class="swiper-wrapper">
+                  <a class="on tab tab-btn swiper-slide" href="javascript:"><span>호텔 편의시설</span></a>
+                  <a class="tab tab-btn swiper-slide" href="javascript:"><span>객실 편의시설</span></a>
+                </div>
+              </div>
+            </div>
+            <div class="scroll-area" tabindex="0">
+              <div class="pop-cont">
+                <div class="tab-con-area">
+                  <div class="on tab-con">
+                    <ul class="opt-group">
+                      <li>
+                        <div class="form-checkbox">
+                          <input type="checkbox" id="pop-Service-1" name="">
+                          <label for="pop-Service-1"><span>호텔 편의시설1</span></label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="form-checkbox">
+                          <input type="checkbox" id="pop-Service-2" name="">
+                          <label for="pop-Service-2"><span>호텔 편의시설2</span></label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="form-checkbox">
+                          <input type="checkbox" id="pop-Service-3" name="">
+                          <label for="pop-Service-3"><span>호텔 편의시설3</span></label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="form-checkbox">
+                          <input type="checkbox" id="pop-Service-4" name="">
+                          <label for="pop-Service-4"><span>호텔 편의시설4</span></label>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="tab-con">
+                    <ul class="opt-group">
+                      <li>
+                        <div class="form-checkbox">
+                          <input type="checkbox" id="pop-Service-5" name="">
+                          <label for="pop-Service-5"><span>객실 편의시설1</span></label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="form-checkbox">
+                          <input type="checkbox" id="pop-Service-6" name="">
+                          <label for="pop-Service-6"><span>객실 편의시설2</span></label>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="pop-button">
+              <div class="btn-wrap align-center">
+                <button class="reset-btn btn-border-round-l gray"><span>초기화</span></button>
+                <button class="srch-btn btn-round-l"><span>적용하기</span></button>
+              </div>
+            </div>
+          </div>
+          <div class="pop-btn-wrap">
+            <button class="popclose-btn" type="button" title="팝업 닫기"></button>
+          </div>
+        </div>
+      </div>
+      <!-- 필터 팝업 - 호텔 체인 (brandtype-pop) -->
+      <div class="brandtype-pop filter-pop full-pop layer-popup">
+        <div class="pop-area">
+          <div class="pop-wrap">
+            <div class="pop-fixed">
+              <div class="pop-head">
+                <p class="f-body-b1">호텔 체인</p>
+              </div>
+            </div>
+            <div class="scroll-area" tabindex="0">
+              <div class="pop-cont">
+                <ul class="opt-group">
+                  <li>
+                    <div class="form-checkbox">
+                      <input type="checkbox" id="pop-HotelChain-1" name="">
+                      <label for="pop-HotelChain-1"><span>APA Hotels</span></label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="form-checkbox">
+                      <input type="checkbox" id="pop-HotelChain-2" name="">
+                      <label for="pop-HotelChain-2"><span>APA Hotels</span></label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="form-checkbox">
+                      <input type="checkbox" id="pop-HotelChain-3" name="">
+                      <label for="pop-HotelChain-3"><span>APA Hotels</span></label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="form-checkbox">
+                      <input type="checkbox" id="pop-HotelChain-4" name="">
+                      <label for="pop-HotelChain-4"><span>Mitsui Garden Hotels</span></label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="form-checkbox">
+                      <input type="checkbox" id="pop-HotelChain-5" name="">
+                      <label for="pop-HotelChain-5"><span>Mitsui Garden Hotels</span></label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="form-checkbox">
+                      <input type="checkbox" id="pop-HotelChain-6" name="">
+                      <label for="pop-HotelChain-6"><span>Mitsui Garden Hotels</span></label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="form-checkbox">
+                      <input type="checkbox" id="pop-HotelChain-7" name="">
+                      <label for="pop-HotelChain-7"><span>JR Kyusye Hotels</span></label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="form-checkbox">
+                      <input type="checkbox" id="pop-HotelChain-8" name="">
+                      <label for="pop-HotelChain-8"><span>JR Kyusye Hotels</span></label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="form-checkbox">
+                      <input type="checkbox" id="pop-HotelChain-9" name="">
+                      <label for="pop-HotelChain-9"><span>JR Kyusye Hotels</span></label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="form-checkbox">
+                      <input type="checkbox" id="pop-HotelChain-10" name="">
+                      <label for="pop-HotelChain-10"><span>Preferred Hotels</span></label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="form-checkbox">
+                      <input type="checkbox" id="pop-HotelChain-11" name="">
+                      <label for="pop-HotelChain-11"><span>Preferred Hotels</span></label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="form-checkbox">
+                      <input type="checkbox" id="pop-HotelChain-12" name="">
+                      <label for="pop-HotelChain-12"><span>Preferred Hotels</span></label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="form-checkbox">
+                      <input type="checkbox" id="pop-HotelChain-13" name="">
+                      <label for="pop-HotelChain-13"><span>VIA INN HOTEL</span></label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="form-checkbox">
+                      <input type="checkbox" id="pop-HotelChain-14" name="">
+                      <label for="pop-HotelChain-14"><span>VIA INN HOTEL</span></label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="form-checkbox">
+                      <input type="checkbox" id="pop-HotelChain-15" name="">
+                      <label for="pop-HotelChain-15"><span>VIA INN HOTEL</span></label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="form-checkbox">
+                      <input type="checkbox" id="pop-HotelChain-16" name="">
+                      <label for="pop-HotelChain-16"><span>Toyoko Inn </span></label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="form-checkbox">
+                      <input type="checkbox" id="pop-HotelChain-17" name="">
+                      <label for="pop-HotelChain-17"><span>Toyoko Inn </span></label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="form-checkbox">
+                      <input type="checkbox" id="pop-HotelChain-18" name="">
+                      <label for="pop-HotelChain-18"><span>Toyoko Inn </span></label>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="pop-button">
+              <div class="btn-wrap align-center">
+                <button class="reset-btn btn-border-round-l gray"><span>초기화</span></button>
+                <button class="srch-btn btn-round-l"><span>적용하기</span></button>
+              </div>
+            </div>
+          </div>
+          <div class="pop-btn-wrap">
+            <button class="popclose-btn" type="button" title="팝업 닫기"></button>
+          </div>
+        </div>
+      </div>
+      <!-- 필터 팝업 - 장애인 편의시설 (disabilities-pop) -->
+      <div class="disabilities-pop filter-pop full-pop layer-popup">
+        <div class="pop-area">
+          <div class="pop-wrap">
+            <div class="pop-fixed">
+              <div class="pop-head">
+                <p class="f-body-b1">장애인 편의시설</p>
+              </div>
+            </div>
+            <div class="scroll-area" tabindex="0">
+              <div class="pop-cont">
+                <ul class="opt-group">
+                  <li>
+                    <div class="form-checkbox">
+                      <input type="checkbox" id="pop-DisabledFacilities-1" name="">
+                      <label for="pop-DisabledFacilities-1"><span>장애인 지원 욕실</span></label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="form-checkbox">
+                      <input type="checkbox" id="pop-DisabledFacilities-2" name="">
+                      <label for="pop-DisabledFacilities-2"><span>휠체어 이용 가능 공용 화장실</span></label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="form-checkbox">
+                      <input type="checkbox" id="pop-DisabledFacilities-3" name="">
+                      <label for="pop-DisabledFacilities-3"><span>장애인 지원 전화 키트</span></label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="form-checkbox">
+                      <input type="checkbox" id="pop-DisabledFacilities-4" name="">
+                      <label for="pop-DisabledFacilities-4"><span>올인 샤워 시설</span></label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="form-checkbox">
+                      <input type="checkbox" id="pop-DisabledFacilities-5" name="">
+                      <label for="pop-DisabledFacilities-5"><span>휠체어 이용 가능 스파</span></label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="form-checkbox">
+                      <input type="checkbox" id="pop-DisabledFacilities-6" name="">
+                      <label for="pop-DisabledFacilities-6"><span>승강 좌변기</span></label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="form-checkbox">
+                      <input type="checkbox" id="pop-DisabledFacilities-7" name="">
+                      <label for="pop-DisabledFacilities-7"><span>장애인 지원 객실</span></label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="form-checkbox">
+                      <input type="checkbox" id="pop-DisabledFacilities-8" name="">
+                      <label for="pop-DisabledFacilities-8"><span>휠체어 이용 가능 주차장</span></label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="form-checkbox">
+                      <input type="checkbox" id="pop-DisabledFacilities-9" name="">
+                      <label for="pop-DisabledFacilities-9"><span>장애인 지원 욕조</span></label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="form-checkbox">
+                      <input type="checkbox" id="pop-DisabledFacilities-10" name="">
+                      <label for="pop-DisabledFacilities-10"><span>점자표지</span></label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="form-checkbox">
+                      <input type="checkbox" id="pop-DisabledFacilities-11" name="">
+                      <label for="pop-DisabledFacilities-11"><span>휠체어 이용 가능 통로</span></label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="form-checkbox">
+                      <input type="checkbox" id="pop-DisabledFacilities-12" name="">
+                      <label for="pop-DisabledFacilities-12"><span>은 카운터</span></label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="form-checkbox">
+                      <input type="checkbox" id="pop-DisabledFacilities-13" name="">
+                      <label for="pop-DisabledFacilities-13"><span>청취 보조 기기 이용 가능</span></label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="form-checkbox">
+                      <input type="checkbox" id="pop-DisabledFacilities-14" name="">
+                      <label for="pop-DisabledFacilities-14"><span>휠체어 이용 가능 피트니스</span></label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="form-checkbox">
+                      <input type="checkbox" id="pop-DisabledFacilities-15" name="">
+                      <label for="pop-DisabledFacilities-15"><span>낮은 싱크대</span></label>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="pop-button">
+              <div class="btn-wrap align-center">
+                <button class="reset-btn btn-border-round-l gray"><span>초기화</span></button>
+                <button class="srch-btn btn-round-l"><span>적용하기</span></button>
+              </div>
+            </div>
+          </div>
+          <div class="pop-btn-wrap">
+            <button class="popclose-btn" type="button" title="팝업 닫기"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+	</body>
+</html>

@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>현대드림투어 호텔 HUB</title>
+    <link rel="shortcut icon" href="/common/web/images/favicon.ico" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no,maximum-scale=1.0,minimum-scale=1.0,target-densitydpi=medium-dpi" />
+		<meta name="keywords" content="각 페이지마다 유니크한 현대드림투어 호텔 HUB keywords"/>
+		<meta name="description" content="각 페이지마다 유니크한 현대드림투어 호텔 HUB description"/>
+		<meta name="format-detection" content="telephone=no, address=no, email=no">
+		<meta property="og:site_name" content="현대드림투어 호텔 HUB" id="og-sitename-value"/>
+		<meta property="og:type" content="website" id="og-type-value"/>
+		<meta property="og:url" content="URL" id="og-url-value"/>
+		<meta property="og:title" content="NOTICE | 현대드림투어 호텔 HUB" id="og-title-value"/>
+		<meta property="og:description" content="현대드림투어 호텔 HUB 홈페이지에 방문하신 것을 환영합니다." id="og-description-value"/>
+		<meta property="og:image" content="img URL" id="og-image-value"/>
+		<!-- <meta name="twitter:url" content="URL" id="twitter-url-value"/>
+		<meta name="twitter:title" content="Main" id="twitter-title-value"/>
+		<meta name="twitter:image" content="img URL" />
+		<meta name="twitter:description" content="현대드림투어 호텔 HUB 홈페이지에 방문하신 것을 환영합니다." id="twitter-discription-value"/> -->
+		
+		<link rel="stylesheet" href="/common/web/css/jquery-ui.css" />
+		<link rel="stylesheet" href="/common/web/css/swiper.css" />
+		<link rel="stylesheet" href="/common/web/css/common.css" />
+		<link rel="stylesheet" href="/common/web/css/style.css" />
+
+		<script type="text/javascript" src="/common/web/js/jquery-1.12.4.min.js"></script>
+		<script type="text/javascript" src="/common/web/js/gsap.min.js"></script>
+		<script type="text/javascript" src="/common/web/js/ScrollTrigger.min.js"></script>
+		<script type="text/javascript" src="/common/web/js/swiper.min.js"></script>
+		<script type="text/javascript" src="/common/web/js/jquery-ui-1.12.1.custom.min.js"></script>
+    <script type="text/javascript" src="/common/web/js/script.js"></script>
+	</head>
+
+	<body>
+    <div id="wrap">
+      <!-- @ 필터 팝업 내에 있는 input id는 기존 바닥페이지 input id값에 'pop-'가 추가되어 id값이 지어지도록 script.js -->
+      <!-- 필터 팝업 - 위치 (location-pop) -->
+      <div class="on location-pop filter-pop center-pop w720 layer-popup">
+        <div class="pop-area">
+          <div class="pop-wrap tab-func-area">
+            <div class="pop-fixed">
+              <div class="pop-head">
+                <p class="f-t3">위치</p>
+              </div>
+            </div>
+            <div class="filter-pop-wrap">
+              <div class="border-tab-menu tab-btn-area">
+                <!-- @ chk클래스 추가, 값이 선택된 TAB에 *표시 -->
+                <a href="javascript:" class="on tab-btn f-body-b2"><span class="f-body-b2"><span>관광명소</span></a>
+                <a href="javascript:" class="tab-btn f-body-b2"><span>공항</span></a>
+                <a href="javascript:" class="tab-btn f-body-b2"><span>기차역</span></a>
+                <a href="javascript:" class="tab-btn f-body-b2"><span>지하철역</span></a>
+              </div>
+              <div class="scroll-area" tabindex="0">
+                <div class="in">
+                  <div class="pop-cont">
+                    <div class="tab-con-area">
+                      <div class="on tab-con">
+                        <ul class="opt-group grid">
+                          <li>
+                            <div class="form-radio">
+                              <input type="radio" id="pop-Location-1" name="pop-Location">
+                              <label for="pop-Location-1"><span>관광명소1</span></label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="form-radio">
+                              <input type="radio" id="pop-Location-2" name="pop-Location">
+                              <label for="pop-Location-2"><span>관광명소1</span></label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="form-radio">
+                              <input type="radio" id="pop-Location-3" name="pop-Location">
+                              <label for="pop-Location-3"><span>관광명소1</span></label>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="tab-con">
+                        <ul class="opt-group grid">
+                          <li>
+                            <div class="form-radio">
+                              <input type="radio" id="pop-Location-4" name="pop-Location">
+                              <label for="pop-Location-4"><span>공항1</span></label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="form-radio">
+                              <input type="radio" id="pop-Location-5" name="pop-Location">
+                              <label for="pop-Location-5"><span>공항2</span></label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="form-radio">
+                              <input type="radio" id="pop-Location-6" name="pop-Location">
+                              <label for="pop-Location-6"><span>공항3</span></label>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="tab-con">
+                        <ul class="opt-group grid">
+                          <li>
+                            <div class="form-radio">
+                              <input type="radio" id="pop-Location-7" name="pop-Location">
+                              <label for="pop-Location-7"><span>기차역1</span></label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="form-radio">
+                              <input type="radio" id="pop-Location-8" name="pop-Location">
+                              <label for="pop-Location-8"><span>기차역2</span></label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="form-radio">
+                              <input type="radio" id="pop-Location-9" name="pop-Location">
+                              <label for="pop-Location-9"><span>기차역3</span></label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="form-radio">
+                              <input type="radio" id="pop-Location-10" name="pop-Location">
+                              <label for="pop-Location-10"><span>기차역4</span></label>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="tab-con">
+                        <ul class="opt-group grid">
+                          <li>
+                            <div class="form-radio">
+                              <input type="radio" id="pop-Location-11" name="pop-Location">
+                              <label for="pop-Location-11"><span>지하철역1</span></label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="form-radio">
+                              <input type="radio" id="pop-Location-12" name="pop-Location">
+                              <label for="pop-Location-12"><span>지하철역2</span></label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="form-radio">
+                              <input type="radio" id="pop-Location-13" name="pop-Location">
+                              <label for="pop-Location-13"><span>지하철역3</span></label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="form-radio">
+                              <input type="radio" id="pop-Location-14" name="pop-Location">
+                              <label for="pop-Location-14"><span>지하철역4</span></label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="form-radio">
+                              <input type="radio" id="pop-Location-15" name="pop-Location">
+                              <label for="pop-Location-15"><span>지하철역5</span></label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="form-radio">
+                              <input type="radio" id="pop-Location-16" name="pop-Location">
+                              <label for="pop-Location-16"><span>지하철역6</span></label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="form-radio">
+                              <input type="radio" id="pop-Location-17" name="pop-Location">
+                              <label for="pop-Location-17"><span>지하철역7</span></label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="form-radio">
+                              <input type="radio" id="pop-Location-18" name="pop-Location">
+                              <label for="pop-Location-18"><span>지하철역8</span></label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="form-radio">
+                              <input type="radio" id="pop-Location-19" name="pop-Location">
+                              <label for="pop-Location-19"><span>지하철역9</span></label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="form-radio">
+                              <input type="radio" id="pop-Location-20" name="pop-Location">
+                              <label for="pop-Location-20"><span>지하철역10</span></label>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="btn-wrap">
+                <button class="reset-btn btn-border-round gray"><span>초기화</span></button>
+                <button class="srch-btn btn-round-s"><span>검색</span></button>
+              </div>
+            </div>
+          </div>
+          <div class="pop-btn-wrap">
+            <button class="popclose-btn" type="button" title="팝업 닫기"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+	</body>
+</html>

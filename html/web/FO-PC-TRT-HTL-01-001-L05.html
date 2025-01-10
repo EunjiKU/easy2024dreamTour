@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>현대드림투어 호텔 HUB</title>
+    <link rel="shortcut icon" href="/common/web/images/favicon.ico" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no,maximum-scale=1.0,minimum-scale=1.0,target-densitydpi=medium-dpi" />
+		<meta name="keywords" content="각 페이지마다 유니크한 현대드림투어 호텔 HUB keywords"/>
+		<meta name="description" content="각 페이지마다 유니크한 현대드림투어 호텔 HUB description"/>
+		<meta name="format-detection" content="telephone=no, address=no, email=no">
+		<meta property="og:site_name" content="현대드림투어 호텔 HUB" id="og-sitename-value"/>
+		<meta property="og:type" content="website" id="og-type-value"/>
+		<meta property="og:url" content="URL" id="og-url-value"/>
+		<meta property="og:title" content="NOTICE | 현대드림투어 호텔 HUB" id="og-title-value"/>
+		<meta property="og:description" content="현대드림투어 호텔 HUB 홈페이지에 방문하신 것을 환영합니다." id="og-description-value"/>
+		<meta property="og:image" content="img URL" id="og-image-value"/>
+		<!-- <meta name="twitter:url" content="URL" id="twitter-url-value"/>
+		<meta name="twitter:title" content="Main" id="twitter-title-value"/>
+		<meta name="twitter:image" content="img URL" />
+		<meta name="twitter:description" content="현대드림투어 호텔 HUB 홈페이지에 방문하신 것을 환영합니다." id="twitter-discription-value"/> -->
+		
+		<link rel="stylesheet" href="/common/web/css/jquery-ui.css" />
+		<link rel="stylesheet" href="/common/web/css/swiper.css" />
+		<link rel="stylesheet" href="/common/web/css/common.css" />
+		<link rel="stylesheet" href="/common/web/css/style.css" />
+
+		<script type="text/javascript" src="/common/web/js/jquery-1.12.4.min.js"></script>
+		<script type="text/javascript" src="/common/web/js/gsap.min.js"></script>
+		<script type="text/javascript" src="/common/web/js/ScrollTrigger.min.js"></script>
+		<script type="text/javascript" src="/common/web/js/swiper.min.js"></script>
+		<script type="text/javascript" src="/common/web/js/jquery-ui-1.12.1.custom.min.js"></script>
+    <script type="text/javascript" src="/common/web/js/script.js"></script>  
+
+		<style>
+      .pop-map .marker-con{position:absolute;}
+    </style>
+	</head>
+
+	<body class="stop-scroll">
+    <div id="wrap">
+      <!-- 지도 팝업 -->
+      <div class="layer-popup center-pop w1280 on">
+        <div class="pop-area">
+          <div class="pop-wrap">
+            <div class="pop-fixed">
+              <div class="pop-head">
+                <p class="f-t3">지도 보기 - Hampton by Hilton Humberside Airport</p>
+              </div>
+            </div>
+						<div class="scroll-area">
+							<div class="in">
+								<div class="pop-cont">
+									<div class="pop-map">
+										<!-- @@ 지도 api 영역 -->
+										<div class="map-div">
+											<img src="/common/web/images/@img-map.jpg" alt="">
+										</div>
+										<!-- // @@ 지도 api 영역 -->
+		
+										<!-- @@ 마커 영역 -->
+										<div class="marker-wrap">
+											<!-- 
+												보여지는 마커에 on class가 붙습니다.
+												가격이 없는 경우 marker-btn 안에 span 태그 삭제 부탁드립니다.
+											-->
+											<div class="hotel-marker on" style="position:absolute; top:70%; left:50%; transform:translate(-50%, -50%)">
+												<div class="marker-con like-hotel-list">
+													<p class="img"><img src="/common/web/images/@img-like-lodging-01.jpg" alt=""></p>
+													<div class="txt-wrap">
+														<p class="f-body-b1">Lotte Hotel Seoul</p>
+														<p class="f-body-r3">서울</p>
+														<ul class="line-txt">
+															<li class="line">
+																<p class="stars">
+																	<span class="star"></span>
+																	<span class="star"></span>
+																	<span class="star"></span>
+																	<span class="star"></span>
+																	<span class="star"></span>
+																</p>
+															</li>
+															<div class="line">
+																<p class="rating f-body-b3">4.2</p>
+															</div>
+														</ul>
+														<div class="infos"><!-- 가격 있을 때 -->
+															<div class="price"><span class="money f-body-b1">마감임박</span></div>
+														</div>
+														<a href="javascript:" class="btn-border-square"><span>요금 더보기</span></a>
+													</div>
+													<button class="like-btn"></button>
+												</div>
+												<p class="marker-btn"><span class="f-body-b3">마감임박</span></p>
+											</div>
+											<div class="hotel-marker" style="position:absolute; top:80%; left:20%; transform:translate(-50%, -50%)">
+												<div class="marker-con like-hotel-list">
+													<p class="img"><img src="/common/web/images/@img-like-lodging-01.jpg" alt=""></p>
+													<div class="txt-wrap">
+														<p class="f-body-b1">The Westin Josun Seoul</p>
+														<p class="f-body-r3">햄프턴 바이 힐튼 험버사이드 에어포트</p>
+														<ul class="line-txt">
+															<li class="line">
+																<p class="stars">
+																	<span class="star"></span>
+																	<span class="star"></span>
+																	<span class="star"></span>
+																	<span class="star"></span>
+																	<span class="star"></span>
+																</p>
+															</li>
+															<div class="line">
+																<p class="rating f-body-b3">4.2</p>
+															</div>
+														</ul>
+														<div class="infos"><!-- 가격 있을 때 -->
+															<!-- ❗ @ 스켈레톤 추가 기능 : (2025-01-06)
+																조식여부/가격이 로드완료되면 개별적으로 스켈레톤 삭제
+															-->
+															<!-- @ 스켈레톤 -->
+															<div class="skeleton-loading">
+                                <div class="skeleton-txt"></div>
+                                <div class="skeleton-txt"></div>
+                              </div>
+															<p class="txt f-body-r3">조식포함</p>
+															<div class="price"><span class="money f-body-b1">236,190</span><span class="f-body-b2">원</span></div>
+														</div>
+														<a href="javascript:" class="btn-border-square"><span>요금 더보기</span></a>
+													</div>
+													<button class="like-btn"></button>
+												</div>
+												<p class="marker-btn">
+													<span class="f-body-b3">236,190원</span>
+													<!-- 2025-01-09 스켈레톤 예시 화면 추가 -->
+                          <span class="skeleton-loading each">
+                            <span class="skeleton-txt"></span>
+                          </span>
+                          <!-- // 2025-01-09 스켈레톤 예시 화면 추가 -->
+												</p>
+											</div>
+											<div class="hotel-marker" style="position:absolute; top:65%; left:75%; transform:translate(-50%, -50%)">
+												<div class="marker-con like-hotel-list">
+													<p class="img"><img src="/common/web/images/@img-like-lodging-01.jpg" alt=""></p>
+													<div class="txt-wrap">
+														<p class="f-body-b1">The Westin Josun Seoul</p>
+														<p class="f-body-r3">햄프턴 바이 힐튼 험버사이드 에어포트</p>
+														<ul class="line-txt">
+															<li class="line">
+																<p class="stars">
+																	<span class="star"></span>
+																	<span class="star"></span>
+																	<span class="star"></span>
+																	<span class="star"></span>
+																	<span class="star"></span>
+																</p>
+															</li>
+															<div class="line">
+																<p class="rating f-body-b3">4.2</p>
+															</div>
+														</ul>
+														<a href="javascript:" class="btn-border-square"><span>요금 더보기</span></a>
+													</div>
+													<button class="like-btn"></button>
+												</div>
+												<p class="marker-btn"></p><!-- 가격 없을 때 -->
+											</div>
+										</div>
+										<!-- // @@ 마커 영역 -->
+									</div>
+								</div>
+							</div>
+						</div>
+          </div>
+          <div class="pop-btn-wrap">
+            <button class="popclose-btn" type="button" title="팝업 닫기"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+	</body>
+</html>

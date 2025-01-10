@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>퍼블리싱 스타일 가이드</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  <link rel="stylesheet" href="../..//common/web/css/swiper.css"/>
+  <link rel="stylesheet" href="../assets/styles/shCore.css"/>
+	<link rel="Stylesheet" href="../assets/styles/shCoreEclipse.css"/>
+  <link rel="stylesheet" href="../assets/css/index.css"/>
+  <link rel="stylesheet" href="../..//common/web/css/common.css"/>
+  <link rel="stylesheet" href="../..//common/web/css/main.css"/>
+  <link rel="stylesheet" href="../..//common/web/css/fonts.css"/>
+  <script type="text/javascript" src="../..//common/web/js/jquery-1.12.4.min.js"></script>
+  <script src="../assets/scripts/XRegExp.js"></script> <!-- XRegExp is bundled with the final shCore.js during build -->
+	<script src="../assets/scripts/shCore.js"></script>
+	<script src="../assets/scripts/shBrushJScript.js"></script>
+	<script src="../assets/scripts/shBrushXml.js"></script>
+	<script src="../assets/scripts/shBrushCss.js"></script>
+  <script type="text/javascript" src="../..//common/web/js/gsap.min.js"></script>
+  <script type="text/javascript" src="../..//common/web/js/ScrollTrigger.min.js"></script>
+  <script type="text/javascript" src="../..//common/web/js/Draggable.min.js"></script>
+  <script type="text/javascript" src="../..//common/web/js/swiper.min.js"></script>
+  <script type="text/javascript" src="../..//common/web/js/script.js"></script>
+  <script type="text/javascript">SyntaxHighlighter.all();</script>
+  <style>
+    body{background:#fff;}
+    #wrap{overflow:visible; top:auto; left:auto; height:auto; transform: none; min-width:100%; max-height: none;}
+
+    .color-list {display: flex; flex-wrap: wrap; row-gap: 10px;}
+    .color-list ~ .color-list {margin-top: 30px;}
+    .color-list .colors .color {width: 80px; height: 80px;}
+    .color-list.wide .colors .color {width: 150px; height: 80px;}
+    .color-list .colors .names {margin-top: 4px;}
+    .color-list .colors .names span {display: block; font-size: 14px;}
+    .color-list .colors .names span.use {font-weight: 600;}
+    .color-list .colors .names span.name {font-weight: 600;}
+    .color-list .colors .names span.hex {color: #666}
+    .color-list.circle {display: grid; grid-template-columns: repeat(5, 1fr);}
+    .color-list.circle .colors {text-align: center;}
+    .color-list.circle .colors .color {width: 50px; height: 50px; margin: 0 auto; border-radius: 100%;}
+    .color-list.circle .colors .th {font-weight: 600;}
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <header>
+      <h1>현대드림투어 가이드</h1>
+      <div class="btn-wrap">
+        <a href="../../worklist.html">작업현황판  <i class="fas fa-angle-right"></i></a>
+      </div>
+    </header>
+    <div id="contents">
+      <aside>
+        <a href="../guide-intro.html">기본 정책 <i class="fas fa-angle-right"></i></a>
+        <a href="../guide-markup.html">마크업 규칙 <i class="fas fa-angle-right"></i></a>
+        <a href="../guide-css.html">CSS 규칙 <i class="fas fa-angle-right"></i></a>
+        <a href="../guide-naming.html">네이밍 규칙 <i class="fas fa-angle-right"></i></a>
+        <a href="javascript:" class="active">스타일 가이드 <i class="fas fa-angle-right"></i></a>
+        <ul class="guide-list">
+          <li><a href="./form.html">FORM</a></li>
+          <li><a href="./typography.html">TYPOGRAPHY</a></li>
+          <li><a href="./color.html" class="active">COLOR</a></li>
+          <li><a href="./button.html">BUTTON</a></li>
+          <li><a href="./popup.html">POPUP</a></li>
+          <li><a href="./table.html">TABLE</a></li>
+        </ul>
+      </aside>
+      <!-- 가이드 Start -->
+      <div class="content-area">
+        <h2>컬러 가이드</h2>
+        <p>
+          TRT 브랜드 아이덴티티 컬러의 Deep Green(#004D45)을 Core Color(Primary Color)로 지정합니다.<br/>
+          명암비 기반으로 생성된 색상을 사용하여 다양한 상황에 사용하는 색상 시스템을 만들어 사용합니다. 컬러별 단계 10단계(때로는 11단계 / 25-900)을 지원하고 디자인 색상 토큰으로 사용합니다.
+        </p>
+        <br/>
+        <section>
+          <div class="ex-box">
+            <h3>Root Color</h3>
+            <p class="info">프로젝트에서 사용하는 컬러 값들을 css root에 변수로 지정하여 사용합니다.</p>
+            <div class="exs">
+              <h4>Gray</h4>
+              <div class="ex">
+                <ul class="color-list wide">
+                  <li class="colors">
+                    <div class="color" style="background-color: #1A1A1A;"></div>
+                    <p class="names">
+                      <span class="name">--Color-Gray-90</span>
+                      <span class="hex">#1A1A1A</span>
+                    </p>
+                  </li>
+                  <li class="colors">
+                    <div class="color" style="background-color: #4D4D4D;"></div>
+                    <p class="names">
+                      <span class="name">--Color-Gray-70</span>
+                      <span class="hex">#4D4D4D</span>
+                    </p>
+                  </li>
+                  <li class="colors">
+                    <div class="color" style="background-color: #666;"></div>
+                    <p class="names">
+                      <span class="name">--Color-Gray-60</span>
+                      <span class="hex">#666666</span>
+                    </p>
+                  </li>
+                  <li class="colors">
+                    <div class="color" style="background-color: #808080;"></div>
+                    <p class="names">
+                      <span class="name">--Color-Gray-50</span>
+                      <span class="hex">#808080</span>
+                    </p>
+                  </li>
+                  <li class="colors">
+                    <div class="color" style="background-color: #999999;"></div>
+                    <p class="names">
+                      <span class="name">--Color-Gray-40</span>
+                      <span class="hex">#999999</span>
+                    </p>
+                  </li>
+                  <li class="colors">
+                    <div class="color" style="background-color: #CCCCCC;"></div>
+                    <p class="names">
+                      <span class="name">--Color-Gray-30</span>
+                      <span class="hex">#CCCCCC</span>
+                    </p>
+                  </li>
+                  <li class="colors">
+                    <div class="color" style="background-color: #D9D9D9;"></div>
+                    <p class="names">
+                      <span class="name">--Color-Gray-20</span>
+                      <span class="hex">#D9D9D9</span>
+                    </p>
+                  </li>
+                  <li class="colors">
+                    <div class="color" style="background-color: #E5E5E5;"></div>
+                    <p class="names">
+                      <span class="name">--Color-Gray-10</span>
+                      <span class="hex">#E5E5E5</span>
+                    </p>
+                  </li>
+                  <li class="colors">
+                    <div class="color" style="background-color: #F2F2F2;"></div>
+                    <p class="names">
+                      <span class="name">--Color-Gray-5</span>
+                      <span class="hex">#F2F2F2</span>
+                    </p>
+                  </li>
+                  <li class="colors">
+                    <div class="color" style="background-color: #FFFFFF; border: 1px solid #ccc;"></div>
+                    <p class="names">
+                      <span class="name">--Color-Gray-White</span>
+                      <span class="hex">#FFFFFF</span>
+                    </p>
+                  </li>
+                </ul>
+              </div>
+              <script type="syntaxhighlighter" class="brush: css;">
+                :root {
+                  --Color-Gray-90: #1A1A1A;
+                  --Color-Gray-70: #4D4D4D;
+                  --Color-Gray-60: #666;
+                  --Color-Gray-50: #808080;
+                  --Color-Gray-40: #999;
+                  --Color-Gray-30: #CCC;
+                  --Color-Gray-20: #D9D9D9;
+                  --Color-Gray-10: #E5E5E5;
+                  --Color-Gray-5: #F2F2F2;
+                  --Color-Gray-White: #FFF;
+                }
+              </script>
+            </div>
+            <div class="exs">
+              <h4>Primary</h4>
+              <div class="ex">
+                <ul class="color-list wide">
+                  <li class="colors">
+                    <div class="color" style="background-color: #003E37;"></div>
+                    <p class="names">
+                      <span class="name">--Color-Primary-900</span>
+                      <span class="hex">#003E37</span>
+                    </p>
+                  </li>
+                  <li class="colors">
+                    <div class="color" style="background-color: #004D45;"></div>
+                    <p class="names">
+                      <span class="name">--Color-Primary-800</span>
+                      <span class="hex">#004D45</span>
+                    </p>
+                  </li>
+                  <li class="colors">
+                    <div class="color" style="background-color: #1C615A;"></div>
+                    <p class="names">
+                      <span class="name">--Color-Primary-700</span>
+                      <span class="hex">#1C615A</span>
+                    </p>
+                  </li>
+                  <li class="colors">
+                    <div class="color" style="background-color: #E3EBEA;"></div>
+                    <p class="names">
+                      <span class="name">--Color-Primary-50</span>
+                      <span class="hex">#E3EBEA</span>
+                    </p>
+                  </li>
+                  <li class="colors">
+                    <div class="color" style="background-color: #F2F7F7;"></div>
+                    <p class="names">
+                      <span class="name">--Color-Primary-25</span>
+                      <span class="hex">#F2F7F7</span>
+                    </p>
+                  </li>
+                </ul>
+              </div>
+              <script type="syntaxhighlighter" class="brush: css;">
+                :root {
+                  --Color-Primary-900: #003E37;
+                  --Color-Primary-800: #004D45;
+                  --Color-Primary-700: #1C615A;
+                  --Color-Primary-50: #E3EBEA;
+                  --Color-Primary-25: #F2F7F7;
+                }
+              </script>
+            </div>
+            <div class="exs">
+              <h4>Default</h4>
+              <div class="ex">
+                <ul class="color-list wide">
+                  <li class="colors">
+                    <div class="color" style="background-color: #FA4157;"></div>
+                    <p class="names">
+                      <span class="name">--Color-Red-400</span>
+                      <span class="hex">#FA4157</span>
+                    </p>
+                  </li>
+                  <li class="colors">
+                    <div class="color" style="background-color: #006BB2;"></div>
+                    <p class="names">
+                      <span class="name">--Color-Blue-600</span>
+                      <span class="hex">#006BB2</span>
+                    </p>
+                  </li>
+                  <li class="colors">
+                    <div class="color" style="background-color: #C6DDEC;"></div>
+                    <p class="names">
+                      <span class="name">--Color-Blue-100</span>
+                      <span class="hex">#C6DDEC</span>
+                    </p>
+                  </li>
+                  <li class="colors">
+                    <div class="color" style="background-color: #EEF3F6;"></div>
+                    <p class="names">
+                      <span class="name">--Color-Blue-50</span>
+                      <span class="hex">#EEF3F6</span>
+                    </p>
+                  </li>
+                  <li class="colors">
+                    <div class="color" style="background-color: #E6B300;"></div>
+                    <p class="names">
+                      <span class="name">--Color-Yellow-700</span>
+                      <span class="hex">#E6B300</span>
+                    </p>
+                  </li>
+                </ul>
+              </div>
+              <script type="syntaxhighlighter" class="brush: css;">
+                :root {
+                  --Color-Red-400: #FA4157;
+                  --Color-Blue-600: #006BB2;
+                  --Color-Blue-100: #C6DDEC;
+                  --Color-Blue-50: #EEF3F6;
+                  --Color-Yellow-700: #E6B300;
+                }
+              </script>
+            </div>
+            <div class="exs">
+              <h4>Neutral</h4>
+              <div class="ex">
+                <ul class="color-list wide">
+                  <li class="colors">
+                    <div class="color" style="background-color: #2E3238;"></div>
+                    <p class="names">
+                      <span class="name">--Color-Neutral-800</span>
+                      <span class="hex">#2E3238</span>
+                    </p>
+                  </li>
+                  <li class="colors">
+                    <div class="color" style="background-color: #454B54;"></div>
+                    <p class="names">
+                      <span class="name">--Color-Neutral-700</span>
+                      <span class="hex">#454B54</span>
+                    </p>
+                  </li>
+                  <li class="colors">
+                    <div class="color" style="background-color: #5C6470;"></div>
+                    <p class="names">
+                      <span class="name">--Color-Neutral-600</span>
+                      <span class="hex">#5C6470</span>
+                    </p>
+                  </li>
+                  <li class="colors">
+                    <div class="color" style="background-color: #737D8C;"></div>
+                    <p class="names">
+                      <span class="name">--Color-Neutral-500</span>
+                      <span class="hex">#737D8C</span>
+                    </p>
+                  </li>
+                  <li class="colors">
+                    <div class="color" style="background-color: #E3E5E8;"></div>
+                    <p class="names">
+                      <span class="name">--Color-Neutral-100</span>
+                      <span class="hex">#E3E5E8</span>
+                    </p>
+                  </li>
+                  <li class="colors">
+                    <div class="color" style="background-color: #F4F5F6;"></div>
+                    <p class="names">
+                      <span class="name">--Color-Neutral-50</span>
+                      <span class="hex">#F4F5F6</span>
+                    </p>
+                  </li>
+                  <li class="colors">
+                    <div class="color" style="background-color: #F5F7F9;"></div>
+                    <p class="names">
+                      <span class="name">--Color-Neutral-25</span>
+                      <span class="hex">#F5F7F9</span>
+                    </p>
+                  </li>
+                </ul>
+              </div>
+              <script type="syntaxhighlighter" class="brush: css;">
+                :root {
+                  --Color-Neutral-800: #2E3238;
+                  --Color-Neutral-700: #454B54;
+                  --Color-Neutral-600: #5C6470;
+                  --Color-Neutral-500: #737D8C;
+                  --Color-Neutral-100: #E3E5E8;
+                  --Color-Neutral-50: #F4F5F6;
+                  --Color-Neutral-25: #F5F7F9;
+                }
+              </script>
+            </div>
+            <div class="exs">
+              <h4>Button</h4>
+              <div class="ex">
+                <ul class="color-list wide">
+                  <li class="colors">
+                    <div class="color" style="background-color: #004D45; width: 170px;"></div>
+                    <p class="names">
+                      <span class="name">--Color-Primary-800</span>
+                      <span class="hex">#004D45</span>
+                    </p>
+                  </li>
+                  <li class="colors">
+                    <div class="color" style="background-color: #5C6470; width: 170px;"></div>
+                    <p class="names">
+                      <span class="name">--Color-Neutral-600</span>
+                      <span class="hex">#5C6470</span>
+                    </p>
+                  </li>
+                </ul>
+              </div>
+              <script type="syntaxhighlighter" class="brush: css;">
+                :root {
+                  --Color-Primary-800: #004D45;
+                  --Color-Neutral-600: #5C6470;
+                }
+              </script>
+            </div>
+            <div class="exs">
+              <h4>BG</h4>
+              <div class="ex">
+                <ul class="color-list wide">
+                  <li class="colors">
+                    <div class="color" style="background-color: #2E3238;"></div>
+                    <p class="names">
+                      <span class="name">--Color-Neutral-800</span>
+                      <span class="hex">#2E3238</span>
+                    </p>
+                  </li>
+                  <li class="colors">
+                    <div class="color" style="background-color: #F2F2F2;"></div>
+                    <p class="names">
+                      <span class="name">--Color-Gray-5</span>
+                      <span class="hex">#F2F2F2</span>
+                    </p>
+                  </li>
+                </ul>
+              </div>
+              <script type="syntaxhighlighter" class="brush: css;">
+                :root {
+                  --Color-Neutral-800: #2E3238;
+                  --Color-Gray-5: #F2F2F2;
+                }
+              </script>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div class="ex-box">
+            <h3>Semantic Color</h3>
+            <div class="exs">
+              <h4>Text</h4>
+              <p class="info">
+                타이틀, 본문, 주석 등의 텍스트는 Emphasis Level에 따라 Highest, Mid, Low, Lowest 로 정의합니다.<br/>
+                버튼이나 강조하는 텍스트를 사용해야 하는 경우 Primary 컬러를 사용합니다.<br/>
+                에러, 경고 등의 텍스트에서는 Red 컬러를 사용하고 텍스트 링크중 활성화 표시를 해야하는 경우 Blue 컬러를 사용합니다.
+              </p>
+              <div class="ex">
+                <ul class="color-list wide">
+                  <li class="colors">
+                    <div class="color" style="background-color: #1A1A1A;"></div>
+                    <p class="names">
+                      <span class="use">Highest</span>
+                      <span class="name">Gray 90</span>
+                      <span class="hex">#1A1A1A</span>
+                    </p>
+                  </li>
+                  <li class="colors">
+                    <div class="color" style="background-color: #4D4D4D;"></div>
+                    <p class="names">
+                      <span class="use">Medium</span>
+                      <span class="name">--Color-Gray-70</span>
+                      <span class="hex">#4D4D4D</span>
+                    </p>
+                  </li>
+                  <li class="colors">
+                    <div class="color" style="background-color: #666666;"></div>
+                    <p class="names">
+                      <span class="use">Low</span>
+                      <span class="name">Gray 60</span>
+                      <span class="hex">#666666</span>
+                    </p>
+                  </li>
+                  <li class="colors">
+                    <div class="color" style="background-color: #808080;"></div>
+                    <p class="names">
+                      <span class="use">Lowest</span>
+                      <span class="name">Gray 50</span>
+                      <span class="hex">#808080</span>
+                    </p>
+                  </li>
+                  <li class="colors">
+                    <div class="color" style="background-color: #FFFFFF; border: 1px solid #ccc;"></div>
+                    <p class="names">
+                      <span class="use">White</span>
+                      <span class="name">White</span>
+                      <span class="hex">#FFFFFF</span>
+                    </p>
+                  </li>
+                  <li class="colors">
+                    <div class="color" style="background-color: #004D45;"></div>
+                    <p class="names">
+                      <span class="use">Primary</span>
+                      <span class="name">Primary 800</span>
+                      <span class="hex">#004D45</span>
+                    </p>
+                  </li>
+                  <li class="colors">
+                    <div class="color" style="background-color: #FA4156;"></div>
+                    <p class="names">
+                      <span class="use">Nagative</span>
+                      <span class="name">Red 400</span>
+                      <span class="hex">#FA4156</span>
+                    </p>
+                  </li>
+                  <li class="colors">
+                    <div class="color" style="background-color: #006BB2;"></div>
+                    <p class="names">
+                      <span class="use">Link</span>
+                      <span class="name">Blue 600</span>
+                      <span class="hex">#006BB2</span>
+                    </p>
+                  </li>
+                </ul>
+              </div>
+              <script type="syntaxhighlighter" class="brush: css;">
+              </script>
+            </div>
+            <div class="exs">
+              <h4>Icon</h4>
+              <div class="ex">
+                <ul class="color-list wide">
+                  <li class="colors">
+                    <div class="color" style="background-color: #004D45;"></div>
+                    <p class="names">
+                      <span class="use">Primary</span>
+                      <span class="name">Primary 800</span>
+                      <span class="hex">#004D45</span>
+                    </p>
+                  </li>
+                  <li class="colors">
+                    <div class="color" style="background-color: #1a1a1a;"></div>
+                    <p class="names">
+                      <span class="use">Secondary</span>
+                      <span class="name">Gray 90</span>
+                      <span class="hex">#1a1a1a</span>
+                    </p>
+                  </li>
+                  <li class="colors">
+                    <div class="color" style="background-color: #999999;"></div>
+                    <p class="names">
+                      <span class="use">Tertiary</span>
+                      <span class="name">Gray 40</span>
+                      <span class="hex">#999999</span>
+                    </p>
+                  </li>
+                  <li class="colors">
+                    <div class="color" style="background-color: #cccccc;"></div>
+                    <p class="names">
+                      <span class="use">Fourth</span>
+                      <span class="name">Gray 30</span>
+                      <span class="hex">#cccccc</span>
+                    </p>
+                  </li>
+                  <li class="colors">
+                    <div class="color" style="background-color: #FFFFFF; border: 1px solid #ccc"></div>
+                    <p class="names">
+                      <span class="use">White</span>
+                      <span class="name"><White/span>
+                      <span class="hex">#FFFFFF</span>
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="exs">
+              <h4>Table</h4>
+              <p class="info">Table의 Top/Bottom Line과 구분선에 사용합니다.</p>
+              <div class="ex">
+                <ul class="color-list wide">
+                  <li class="colors">
+                    <div class="color" style="background-color: #1a1a1a;"></div>
+                    <p class="names">
+                      <span class="use">Topline</span>
+                      <span class="name">Gray 90</span>
+                      <span class="hex">#1a1a1a</span>
+                    </p>
+                  </li>
+                  <li class="colors">
+                    <div class="color" style="background-color: #e5e5e5;"></div>
+                    <p class="names">
+                      <span class="use">Line</span>
+                      <span class="name">Gray 10</span>
+                      <span class="hex">#e5e5e5</span>
+                    </p>
+                  </li>
+                  <li class="colors">
+                    <div class="color" style="background-color: #F2F7F7;"></div>
+                    <p class="names">
+                      <span class="use">Title_bg</span>
+                      <span class="name">Primary 25</span>
+                      <span class="hex">#F2F7F7</span>
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="exs">
+              <h4>Border</h4>
+              <p class="info">
+                Secondary Button, Checkbox, Radio Button 등은 시인성을 높이기 위해 Border-Secondary를 적용합니다.<br/>
+                Selectbox, Inputbox, Card, List 등의 경우엔 Border-Tertiary를 적용합니다.
+              </p>
+              <div class="ex">
+                <ul class="color-list wide">
+                  <li class="colors">
+                    <div class="color" style="border: 1px solid #004d45;"></div>
+                    <p class="names">
+                      <span class="use">Primary</span>
+                      <span class="name">Primary 800</span>
+                      <span class="hex">#004d45</span>
+                    </p>
+                  </li>
+                  <li class="colors">
+                    <div class="color" style="border: 1px solid #1a1a1a;"></div>
+                    <p class="names">
+                      <span class="use">Black</span>
+                      <span class="name">Gray 90</span>
+                      <span class="hex">#1a1a1a</span>
+                    </p>
+                  </li>
+                  <li class="colors">
+                    <div class="color" style="border: 1px solid #cccccc;"></div>
+                    <p class="names">
+                      <span class="use">Secondary</span>
+                      <span class="name">Gray 30</span>
+                      <span class="hex">#cccccc</span>
+                    </p>
+                  </li>
+                  <li class="colors">
+                    <div class="color" style="border: 1px solid #d9d9d9;"></div>
+                    <p class="names">
+                      <span class="use">Tertiary</span>
+                      <span class="name">Gray 20</span>
+                      <span class="hex">#d9d9d9</span>
+                    </p>
+                  </li>
+                  <li class="colors">
+                    <div class="color" style="border: 1px solid #E3E5E8;"></div>
+                    <p class="names">
+                      <span class="use">Fourth</span>
+                      <span class="name">Neutral 100</span>
+                      <span class="hex">#E3E5E8</span>
+                    </p>
+                  </li>
+                  <li class="colors">
+                    <div class="color" style="border: 1px solid #FA4156;"></div>
+                    <p class="names">
+                      <span class="use">Error</span>
+                      <span class="name">Red 400</span>
+                      <span class="hex">#FA4156</span>
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="exs">
+              <h4>Divider</h4>
+              <div class="ex">
+                <ul class="color-list wide">
+                  <li class="colors">
+                    <div class="color" style="background-color: #d9d9d9;"></div>
+                    <p class="names">
+                      <span class="use">Default</span>
+                      <span class="name">Gray 20</span>
+                      <span class="hex">#d9d9d9</span>
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="exs">
+              <h4>Button</h4>
+              <p class="info">Button은 스타일 및 쓰임새에 따라 Button, Action Button, Text Button, Icon Button의 4가지로 분류합니다. CTA 버튼이나 강조하는 버튼은 Primary Color를 사용합니다.</p>
+              <div class="ex">
+                <ul class="color-list wide">
+                  <li class="colors">
+                    <div class="color" style="background-color: #004d45;"></div>
+                    <p class="names">
+                      <span class="use">Primary</span>
+                      <span class="name">Primary 800</span>
+                      <span class="hex">#004d45</span>
+                    </p>
+                  </li>
+                  <li class="colors">
+                    <div class="color" style="background-color: #fff; border: 1px solid #ccc"></div>
+                    <p class="names">
+                      <span class="use">Secondary</span>
+                      <span class="name">White / Gray 30</span>
+                      <span class="hex">#FFFFFF / #CCCCCC</span>
+                    </p>
+                  </li>
+                  <li class="colors">
+                    <div class="color" style="background-color: #1a1a1a;"></div>
+                    <p class="names">
+                      <span class="use">Tertiary</span>
+                      <span class="name">Gray 90</span>
+                      <span class="hex">#1a1a1a</span>
+                    </p>
+                  </li>
+                  <li class="colors">
+                    <div class="color" style="background-color: #5C6470;"></div>
+                    <p class="names">
+                      <span class="use">Fourth</span>
+                      <span class="name">Neutral 600</span>
+                      <span class="hex">#5C6470</span>
+                    </p>
+                  </li>
+                  <li class="colors">
+                    <div class="color" style="background-color: #e5e5e5;"></div>
+                    <p class="names">
+                      <span class="use">Disabled</span>
+                      <span class="name">Gray 10</span>
+                      <span class="hex">#e5e5e5</span>
+                    </p>
+                  </li>
+                </ul>
+                <ul class="color-list circle">
+                  <li class="colors">
+                  </li>
+                  <li class="colors">
+                    <p class="th">Enabled</p>
+                  </li>
+                  <li class="colors">
+                    <p class="th">Hover</p>
+                  </li>
+                  <li class="colors">
+                    <p class="th">Pressed</p>
+                  </li>
+                  <li class="colors">
+                    <p class="th">Disabled</p>
+                  </li>
+                  <li class="colors">
+                    <p class="th">Primary</p>
+                  </li>
+                  <li class="colors">
+                    <div class="color" style="background-color: #004D45;"></div>
+                    <p class="names">
+                      <span class="name">Primary 800</span>
+                      <span class="hex">#004D45</span>
+                    </p>
+                  </li>
+                  <li class="colors">
+                    <div class="color" style="background-color: #008072;"></div>
+                    <p class="names">
+                      <span class="name">Primary 700</span>
+                      <span class="hex">#008072</span>
+                    </p>
+                  </li>
+                  <li class="colors">
+                    <div class="color" style="background-color: #00312C;"></div>
+                    <p class="names">
+                      <span class="name">Primary 900</span>
+                      <span class="hex">#00312C</span>
+                    </p>
+                  </li>
+                  <li class="colors">
+                    <div class="color" style="background-color: #E5E5E5;"></div>
+                    <p class="names">
+                      <span class="name">Gray 10</span>
+                      <span class="hex">#E5E5E5</span>
+                    </p>
+                  </li>
+                  <li class="colors">
+                    <p class="th">Secondary</p>
+                  </li>
+                  <li class="colors">
+                    <div class="color" style="background-color: #FFF; border: 1px solid #ccc"></div>
+                    <p class="names">
+                      <span class="name">Gray 30</span>
+                      <span class="hex">#FFFFFF / #CCCCCC</span>
+                    </p>
+                  </li>
+                  <li class="colors">
+                    <div class="color" style="background-color: #F2F2F2; border: 1px solid #ccc"></div>
+                    <p class="names">
+                      <span class="name">Gray 10 / Gray 30</span>
+                      <span class="hex">#F2F2F2 / #CCCCCC</span>
+                    </p>
+                  </li>
+                  <li class="colors">
+                    <div class="color" style="background-color: #F2F2F2; border: 1px solid #808080"></div>
+                    <p class="names">
+                      <span class="name">Gray 10 / Gray 50</span>
+                      <span class="hex">#F2F2F2 / #808080</span>
+                    </p>
+                  </li>
+                  <li class="colors">
+                    <div class="color" style="background-color: #E5E5E5;"></div>
+                    <p class="names">
+                      <span class="name">Gray 10 / Gray 30</span>
+                      <span class="hex">#E5E5E5</span>
+                    </p>
+                  </li>
+                  <li class="colors">
+                    <p class="th">Tertiary</p>
+                  </li>
+                  <li class="colors">
+                    <div class="color" style="background-color: #000000;"></div>
+                    <p class="names">
+                      <span class="name">Gray 90</span>
+                      <span class="hex">#000000</span>
+                    </p>
+                  </li>
+                  <li class="colors">
+                    <div class="color" style="background-color: #4D4D4D;"></div>
+                    <p class="names">
+                      <span class="name">Gray 70</span>
+                      <span class="hex">#4D4D4D</span>
+                    </p>
+                  </li>
+                  <li class="colors">
+                    <div class="color" style="background-color: #1A1A1A;"></div>
+                    <p class="names">
+                      <span class="name">Gray 90</span>
+                      <span class="hex">#1A1A1A</span>
+                    </p>
+                  </li>
+                  <li class="colors">
+                    <div class="color" style="background-color: #E5E5E5;"></div>
+                    <p class="names">
+                      <span class="name">Gray 10</span>
+                      <span class="hex">#E5E5E5</span>
+                    </p>
+                  </li>
+                  <li class="colors">
+                    <p class="th">Fourth</p>
+                  </li>
+                  <li class="colors">
+                    <div class="color" style="background-color: #5C6470;"></div>
+                    <p class="names">
+                      <span class="name">Neutral 600</span>
+                      <span class="hex">#5C6470</span>
+                    </p>
+                  </li>
+                  <li class="colors">
+                    <div class="color" style="background-color: #737D8C;"></div>
+                    <p class="names">
+                      <span class="name">Neutral 500</span>
+                      <span class="hex">#737D8C</span>
+                    </p>
+                  </li>
+                  <li class="colors">
+                    <div class="color" style="background-color: #454B54;"></div>
+                    <p class="names">
+                      <span class="name">Neutral 700</span>
+                      <span class="hex">#454B54</span>
+                    </p>
+                  </li>
+                  <li class="colors">
+                    <div class="color" style="background-color: #E3E5E8;"></div>
+                    <p class="names">
+                      <span class="name">Neutral 100</span>
+                      <span class="hex">#E3E5E8</span>
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="exs">
+              <h4>Interaction</h4>
+              <p class="info">Checkbox, Radio Button 등 기능이 있는 요소에 사용됩니다.</p>
+              <div class="ex">
+                <ul class="color-list wide">
+                  <li class="colors">
+                    <div class="color" style="background-color: #004d45;"></div>
+                    <p class="names">
+                      <span class="use">Primary</span>
+                      <span class="name">Primary 800</span>
+                      <span class="hex">#004d45</span>
+                    </p>
+                  </li>
+                  <li class="colors">
+                    <div class="color" style="background-color: #CCCCCC;"></div>
+                    <p class="names">
+                      <span class="use">Secondary</span>
+                      <span class="name">Gray 30</span>
+                      <span class="hex">#CCCCCC</span>
+                    </p>
+                  </li>
+                  <li class="colors">
+                    <div class="color" style="background-color: #FA4157;"></div>
+                    <p class="names">
+                      <span class="use">Nagative</span>
+                      <span class="name">Red 400</span>
+                      <span class="hex">#FA4157</span>
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="exs">
+              <h4>Background</h4>
+              <p class="info">콘텐츠 섹션의 배경, 정보를 전달하는 박스의 컬러 등 상황에 따라 배경 컬러를 사용합니다.</p>
+              <div class="ex">
+                <ul class="color-list wide">
+                  <li class="colors">
+                    <div class="color" style="background-color: #004d45;"></div>
+                    <p class="names">
+                      <span class="use">bg-1</span>
+                      <span class="name">Primary 800</span>
+                      <span class="hex">#004d45</span>
+                    </p>
+                  </li>
+                  <li class="colors">
+                    <div class="color" style="background-color: #1a1a1a;"></div>
+                    <p class="names">
+                      <span class="use">bg-2</span>
+                      <span class="name">Gray 90</span>
+                      <span class="hex">#1a1a1a</span>
+                    </p>
+                  </li>
+                  <li class="colors">
+                    <div class="color" style="background-color: #f2f2f2;"></div>
+                    <p class="names">
+                      <span class="use">bg-3</span>
+                      <span class="name">Gray 5</span>
+                      <span class="hex">#f2f2f2</span>
+                    </p>
+                  </li>
+                  <li class="colors">
+                    <div class="color" style="background-color: #F1F2F3;"></div>
+                    <p class="names">
+                      <span class="use">bg-4</span>
+                      <span class="name">Neutral 50</span>
+                      <span class="hex">#F1F2F3</span>
+                    </p>
+                  </li>
+                  <li class="colors">
+                    <div class="color" style="background-color: #F2F7F7;"></div>
+                    <p class="names">
+                      <span class="use">bg-5</span>
+                      <span class="name">Primary 25</span>
+                      <span class="hex">#F2F7F7</span>
+                    </p>
+                  </li>
+                  <li class="colors">
+                    <div class="color" style="background-color: #FFFFFF; border: 1px solid #ccc"></div>
+                    <p class="names">
+                      <span class="use">White</span>
+                      <span class="name">White</span>
+                      <span class="hex">#FFFFFF</span>
+                    </p>
+                  </li>
+                  <li class="colors">
+                    <div class="color" style="background-color: ;"></div>
+                    <p class="names">
+                      <span class="use">bg-6</span>
+                      <span class="name">Neutral 800</span>
+                      <span class="hex">#2E3238</span>
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

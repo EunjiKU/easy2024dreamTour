@@ -1,0 +1,43 @@
+@charset "UTF-8";
+@import url("./common.css");
+
+.cont-sec:has(.flow-swiper-wrap){position:relative;}
+
+/* 비주얼 및 검색 바 */
+.trip-sel-area{position:relative; padding:132px 0; z-index:2;}
+.trip-sel-area .visual{position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); width:100vw; min-width: 1580px; height:100%;}
+.trip-sel-area .visual:after{display:block; content:""; position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.1)}
+.trip-sel-area .visual img{width:100%; height:100%; object-fit: cover;}
+
+/* 주요 추천 도시 */
+.flow-swiper-wrap{overflow:hidden;}
+.flow-swiper{position:relative; width:100%; height:240px; transition-timing-function: linear}
+/* .flow-swiper .slide{overflow:hidden; position:absolute; top:0; left:0; width:200px; height:240px; border-radius:12px;} */
+.flow-swiper .slide{overflow:hidden; position:relative; margin-right:16px; width:200px; height:240px; border-radius:12px;}
+.flow-swiper .slide:after{display:block; content:""; position:absolute; top:0; left:0; width:100%; height:100%; background:linear-gradient(to bottom, rgba(0,0,0,0) 70%, rgba(0,0,0,0.7))}
+.flow-swiper .slide img{width:100%; height:100%; object-fit: cover;}
+.flow-swiper .slide .city{position:absolute; bottom:24px; left:0; z-index:1; padding:0 10px; width:100%; text-align: center; color:#fff;}
+.flow-control{display:none; align-items: center; justify-content: center; margin-top:32px;}
+.flow-control .progress-bar{position:relative; margin-right:33px; width:320px; height:2px; background:#d9d9d9;}
+.flow-control .progress-bar .bar{position:absolute; top:0; left:0; width:0; height:100%; background:var(--color-main)}
+.flow-control .btn{margin-right:24px; width:8px; height:8px;}
+.flow-control .btn.pause{background:url("../images/icon-pause-btn.svg") no-repeat center center;}
+.flow-control .btn.play{background:url("../images/icon-play-btn.svg") no-repeat center center;}
+.flow-control .slide-number{display:flex; align-items: center;}
+.flow-control .slide-number .current{color:var(--color-main)}
+.flow-arrow{display:none; align-items: center; column-gap: 10px; position:absolute; top:20px; right:0; z-index:1;}
+.flow-arrow > a{width:20px; height:20px;font-size:20px; border:1px solid red}
+.flow-swiper-wrap:has(.flow-swiper .slide:nth-child(7)) .flow-control{display:flex}
+.flow-swiper-wrap:has(.flow-swiper .slide:nth-child(7)) .flow-arrow{display:flex;}
+.swiper-button-next, .swiper-button-prev{border:1px solid red; z-index:10;}
+.swiper-pagination{bottom:0;}
+.swiper-pagination-progressbar{position:relative; margin-right:33px; width:320px; height:2px; background:#d9d9d9;}
+.swiper-pagination-progressbar .swiper-pagination-progressbar-fill{transition-timing-function: linear !important; background:var(--color-main)}
+
+/* 공지사항, FAQ */
+.cont-sec .half{display:flex; align-items: flex-start; column-gap: 84px;}
+.cont-sec .half > div{width:calc((100% - 84px) / 2);}
+.cont-sec .notice-list-wrap .list{display:flex; padding:16px 0; width:100%; border-bottom:1px solid #d9d9d9;}
+.cont-sec .notice-list-wrap .list .tit{overflow:hidden; width:calc(100% - 100px); text-overflow: ellipsis; white-space: nowrap; color:var(--text-normal); font-size:16px;}
+.cont-sec .notice-list-wrap .list .tit span{margin-right:5px; color:var(--color-main); font-family: "NotoSansKR-Bold";}
+.cont-sec .notice-list-wrap .list .date{width:100px; text-align: right; color:var(--text-weak); font-family: "Inter-Regular"; letter-spacing: 0px;}

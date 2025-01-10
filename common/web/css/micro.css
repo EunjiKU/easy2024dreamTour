@@ -1,0 +1,285 @@
+@charset "UTF-8";
+@import url("./fonts.css");
+
+* {margin: 0; padding: 0; -webkit-box-sizing: border-box; box-sizing: border-box; -webkit-print-color-adjust: exact !important; print-color-adjust: exact; word-break: keep-all; word-wrap: break-word; overflow-wrap: break-word; -webkit-overflow-scrolling: touch;}
+html {width: 100%; height: 100%; font-size: .052vw; font-style: normal;}
+body {position: relative; height: 100%; font-family: "NotoSansKR-Regular", "Inter-Regular", "맑은 고딕", "Malgun Gothic", sans-serif; font-weight: 400; font-size: 16rem; color: var(--Color-Gray-90); letter-spacing: -0.5rem; line-height: 150%; -webkit-text-size-adjust: 100%; -moz-text-size-adjust: 100%; -ms-text-size-adjust: 100%; -webkit-overflow-scrolling: touch; -webkit-print-color-adjust: exact !important; background:var(--Color-Gray-White)}
+body, div, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, p, form, fieldset, table, tr, th, td {margin: 0; padding: 0; font-weight: normal;}
+ul, ol, li {list-style: none;}
+a {text-decoration: none;}
+img, fieldset {border: none; vertical-align: top;}
+img::selection {background: transparent;}
+legend, caption {visibility: hidden; overflow: hidden; width: 0; height: 0; font-size: 0; line-height: 0;}
+textarea, button {vertical-align: middle;}
+
+button {background: none; border: none; padding: 0; margin: 0; font-family: "NotoSansKR-Regular", "맑은 고딕", "Malgun Gothic", sans-serif; font-size: 16rem; cursor: pointer; overflow: visible; white-space: nowrap;}
+
+
+
+/* --------------------------------------------- 공통 스타일 - START --------------------------------------------- */
+.only-pc {display: block;}
+.only-mob {display: none;}
+
+@media all and (min-width: 1920px) {
+  html {font-size:min(0.052vw, 16px)}
+}
+
+@media all and (max-width: 1023px) {
+  html {font-size: .130vw;}
+
+  .only-pc {display: none;}
+  .only-mob {display: block;}
+}
+
+@media all and (max-width: 599px) {
+  html {font-size: .256vw;}
+}
+
+body.stop-scroll {overflow: hidden; height: 100%; min-height: 100%; touch-action: none;}
+.inner {padding: 0 214rem;}
+
+.scroll-motion:not(:has(.motion)) {position: relative; top: 80rem; opacity: 0; transition: top ease .6s, opacity ease .4s;}
+.scroll-motion.active:not(:has(.motion)) {top: 0; opacity: 1;}
+.scroll-motion .motion {position: relative; top: 80rem; opacity: 0; transition: top ease .6s, opacity ease .4s;}
+.scroll-motion.active .motion {top: 0; opacity: 1;}
+.scroll-motion .motion:nth-child(2) {transition-delay: .1s;}
+.scroll-motion .motion:nth-child(3) {transition-delay: .2s;}
+/* --------------------------------------------- 공통 스타일 - END --------------------------------------------- */
+
+
+
+/* --------------------------------------------- 헤더 - START --------------------------------------------- */
+.micro header {position: fixed; top: 50rem; left: 0; right: 0; z-index: 10; width: 100%; padding: 54rem 0 14rem;}
+.micro header .inner {display: flex; justify-content: space-between; align-items: center; padding: 0 60rem;}
+.micro header .logo {height: 36rem;}
+.micro header .logo a {display: block; height: 100%;}
+.micro header .logo a img {display: block; height: 100%;}
+.micro header .all-menu nav {display: flex; align-items: center; gap: 64rem;}
+.micro header .all-menu nav a {color: #fff; font-family: "Inter-Bold", "NotoSansKR-Bold"; font-size: 20rem; line-height: normal; letter-spacing: 0;}
+.micro header .ham-btn, .micro header .close-btn {display: none;}
+
+
+@media all and (max-width: 1023px) {
+  .micro header {height: 52rem; padding: 0;}
+  .micro header .inner {height: 100%;}
+  .micro header .logo {position: relative; z-index: 11; height: 16rem;}
+  .micro header .all-menu {display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; width: 100%; height: 100%; padding: 108rem 20rem 56rem; background-color: #111;}
+  .micro header .all-menu nav {flex-direction: column; align-items: flex-start; gap: 20rem;}
+  .micro header .all-menu nav a {font-size: 28rem;}
+  .micro header .ham-btn, .micro header .close-btn {display: block; width: 24rem; height: 24rem; background: url("") no-repeat center center / 100% auto;}
+  .micro header .ham-btn {background-image: url("/common/web/micro-img/micro-icon-hambuger.svg");}
+  .micro header .close-btn {position: absolute; top: 14rem; right: 20rem; background-image: url("/common/web/micro-img/micro-icon-close.svg");}
+}
+/* --------------------------------------------- 헤더 - END --------------------------------------------- */
+
+
+
+
+/* --------------------------------------------- 섹션 - START --------------------------------------------- */
+/* 비주얼 섹션 */
+.micro .visual-sec {position: relative; height: 200dvh;}
+.micro .visual-sec .bg-wrap {position: absolute; top: 0; left: 0; right: 0; bottom: 0; width: 100%; height: 230dvh;}
+.micro .visual-sec .bg-wrap img {width: 100%; height: 100%; object-fit: cover;}
+.micro .visual-sec .pin-wrap {position: sticky; z-index: 1; top: 0; width: 100%; height: 100dvh;}
+.micro .visual-sec .slogans .slogan {position: absolute; top: calc(50% + 48rem); left: 50%; transform: translate(-50%,-100%); width: 100%;}
+.micro .visual-sec .slogans .slogan .txt {color: #FFF; text-align: center; line-height: 120%; text-transform: uppercase; overflow: hidden;}
+.micro .visual-sec .slogans .slogan.en .txt span i {font-family: "Didot";}
+.micro .visual-sec .slogans .slogan.en .txt {font-family: "Inter-Bold", "NotoSansKR-Bold"; font-size: 96rem; letter-spacing: 0;}
+.micro .visual-sec .slogans .slogan.kr .txt {font-family: "Inter-Bold", "NotoSansKR-Bold"; font-size: 90rem; letter-spacing: -1.8rem;}
+.micro .visual-sec .slogans .slogan .txt > span {display: inline-block; position: relative; transform: translateY(100%); transition: transform .6s ease;}
+.micro .visual-sec .slogans .slogan.on .txt > span {transform: translateY(0);}
+.micro .visual-sec .slogans .slogan {opacity: 0; visibility: hidden;}
+.micro .visual-sec .slogans .slogan.on {opacity: 1; visibility: visible;}
+.micro .visual-sec .slogans .slogan.remove {opacity: 0; visibility: hidden;}
+.micro .visual-sec .slogans .slogan:first-child {transition: opacity .4s ease, visibility .4s ease;}
+.micro .visual-sec .slogans .slogan.en .txt ~ .txt {margin-top: 2rem;}
+.micro .visual-sec .slogans .slogan.kr .txt ~ .txt {margin-top: 6rem;}
+.micro .visual-sec .spinner-wrap {opacity: 0; position: absolute; left: 50%; bottom: 90rem; transform: translateX(-50%); transition: opacity .4s ease; transition-delay: .4s;}
+.micro .visual-sec .spinner-wrap.on {opacity: 1;}
+.micro .visual-sec .spinner-wrap .spinner {width: 196rem; height: 196rem; border-radius: 50%; background: conic-gradient(#0000 10%,#fff); -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 2px),#000 0); animation: spinner-motion 1.5s infinite linear;}
+.micro .visual-sec .spinner-wrap .txt {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: #fff; font-family: "Inter-Bold", "NotoSansKR-Bold"; font-size: 18rem; line-height: normal; letter-spacing: 0; text-transform: uppercase;}
+@keyframes spinner-motion {to {transform: rotate(1turn);}}
+
+@media all and (max-width: 1023px) {
+  .micro .visual-sec .slogans .slogan.en .txt {font-size: 46rem;}
+  .micro .visual-sec .slogans .slogan.kr .txt {font-size: 42rem; letter-spacing: -0.84rem;}
+  .micro .visual-sec .spinner-wrap  {bottom: 40rem;}
+  .micro .visual-sec .spinner-wrap .spinner {width: 100rem; height: 100rem;}
+  .micro .visual-sec .spinner-wrap .txt {font-size: 14rem;}
+}
+
+/* 소개 섹션 */
+.micro .introduce-sec {position: relative; padding: 160rem 0 610rem; background-color: #010103; overflow: hidden;}
+.micro .introduce-sec .bg-wrap {position: absolute; top: 0; left: 0; right: 0; height: 100dvh; width: 100%;}
+.micro .introduce-sec .bg-wrap .pin-in {width: 100%; height: 100%; background-color: #000;}
+.micro .introduce-sec .bg-wrap .pin-in video {width: 100%; height: 100%; object-fit: cover;}
+.micro .introduce-sec .info-wrap .txt {color: #FFF; font-family: "Inter-Regular", "NotoSansKR-Regular"; font-size: 56rem; line-height: 140%; letter-spacing: -2.24rem;;}
+.micro .introduce-sec .inner {position: relative; z-index: 1;}
+.micro .introduce-sec .introduce-list-wrap {position: relative; display: flex; justify-content: flex-end; margin-top: 132rem; margin-right: 102rem;}
+.micro .introduce-sec .introduce-list-wrap .introduce-circle {opacity: 0; position: absolute; /*top: -103rem; left: -84rem;*/ top: -103rem; left: calc(-214rem - 84rem); width: 210rem; height: 270rem; border-radius: 120rem; overflow: hidden;}
+.micro .introduce-sec .introduce-list-wrap:has(.introduce-list .item .item-box.active) .introduce-circle {opacity: 1; transition: opacity .4s ease; transition-delay: 1s;}
+.micro .introduce-sec .introduce-list-wrap .introduce-circle .item {opacity: 0; position: absolute; top: 0; left: 0; right: 0; bottom: 0; width: 100%; height: 100%; transition: opacity .4s ease;}
+.micro .introduce-sec .introduce-list-wrap .introduce-circle .item.on {opacity: 1;}
+.micro .introduce-sec .introduce-list-wrap .introduce-circle .item img {width: 100%; height: 100%; object-fit: cover;}
+.micro .introduce-sec .introduce-list-wrap .introduce-list {position: relative; z-index: 1; display: flex; flex-direction: column; justify-content: space-between; width: 632rem;}
+.micro .introduce-sec .introduce-list-wrap .introduce-list .item:nth-child(1) {width: 238rem;}
+.micro .introduce-sec .introduce-list-wrap .introduce-list .item:nth-child(2) {width: 328rem; margin-left: auto;}
+.micro .introduce-sec .introduce-list-wrap .introduce-list .item:nth-child(3) {width: 226rem;}
+.micro .introduce-sec .introduce-list-wrap .introduce-list .item:not(:last-child) {padding-bottom: 324rem;}
+.micro .introduce-sec .introduce-list-wrap .introduce-list .item p {color: #fff;}
+.micro .introduce-sec .introduce-list-wrap .introduce-list .item .item-box {width: 100%;}
+.micro .introduce-sec .introduce-list-wrap .introduce-list .item .type {font-family: "Inter-Bold", "NotoSansKR-Bold"; font-size: 36rem; line-height: 140%; letter-spacing: 0;}
+.micro .introduce-sec .introduce-list-wrap .introduce-list .item .num {display: flex; justify-content: space-between; font-family: "Inter-ExtraBold"; font-size: 120rem; line-height: 100%; letter-spacing: 0;}
+.micro .introduce-sec .introduce-list-wrap .introduce-list .item .num span {display: inline-block;}
+.micro .introduce-sec .introduce-list-wrap .introduce-list .item .txt {margin-top: 30rem; padding-top: 16rem; font-family: "Inter-Bold", "NotoSansKR-Bold"; font-size: 18rem; line-height: 150%; letter-spacing: -0.36rem; border-top: 1px solid rgba(217, 217, 217, .5);}
+.micro .introduce-sec .rolling-txt {position: absolute;  bottom: 0; z-index: 9; display: flex; align-items: center;} 
+.micro .introduce-sec .rolling-txt p {width: 100%; color: #fff; font-family: "Inter-Bold", "NotoSansKR-Bold"; font-size: 180rem; letter-spacing: 0; line-height: .7; white-space: nowrap; text-transform: uppercase; opacity: .5;}
+.micro .introduce-sec .rolling-txt p:nth-child(1) {animation: animate 20s linear infinite; animation-delay: -20s;}
+.micro .introduce-sec .rolling-txt p:nth-child(2) {animation: animate2 20s linear infinite; animation-delay: -10s;}
+@keyframes animate{
+  0% {transform: translateX(100%);}
+  100% {transform: translateX(-100%);}
+}
+@keyframes animate2{
+  0% {transform: translateX(0);}
+  100% {transform: translateX(-200%);}
+}
+
+@media all and (max-width: 1023px) {
+  .micro .introduce-sec {padding: 56rem 0 216rem;}
+  .micro .introduce-sec .info-wrap .txt {font-family: "Inter-Bold", "NotoSansKR-Bold"; font-size: 24rem; line-height: 140%; letter-spacing: -0.48rem;}
+  .micro .introduce-sec .introduce-list-wrap {justify-content: center; margin-top: 200rem; margin-right: 0;}
+  .micro .introduce-sec .introduce-list-wrap .introduce-circle {top: -61rem; left: -107rem; width: 126rem; height: 162rem;}
+  .micro .introduce-sec .introduce-list-wrap .introduce-list {width: 100%; max-width: 400rem;}
+  .micro .introduce-sec .introduce-list-wrap .introduce-list .item:not(:last-child) {padding-bottom: 160rem;}
+  .micro .introduce-sec .introduce-list-wrap .introduce-list .item:nth-child(1) {width: 146rem;}
+  .micro .introduce-sec .introduce-list-wrap .introduce-list .item:nth-child(2) {width: 175rem; margin-right: 40rem;}
+  .micro .introduce-sec .introduce-list-wrap .introduce-list .item:nth-child(3) {width: 123rem;}
+  .micro .introduce-sec .introduce-list-wrap .introduce-list .item .type {font-size: 20rem;}
+  .micro .introduce-sec .introduce-list-wrap .introduce-list .item .num {margin-top: 4rem; font-size: 64rem;}
+  .micro .introduce-sec .introduce-list-wrap .introduce-list .item .txt {margin-top: 24rem; padding-top: 16rem; font-family: "Inter-Medium", "NotoSansKR-Medium"; font-size: 14rem; line-height: 140%;}
+  .micro .introduce-sec .rolling-txt p {font-size: 80rem;}
+}
+
+/* 비즈니스 섹션 */
+.micro .business-sec {position: relative; background-color: #010103;}
+.micro .business-sec .business-list {position: relative; align-items: center; display: flex; flex: none; flex-direction: column; flex-wrap: nowrap; height: min-content; justify-content: center; overflow: visible; width: 100%; z-index: 2;}
+.micro .business-sec .business-list .item {position: sticky; align-items: center; display: flex; flex: none; flex-direction: column; flex-wrap: nowrap; height: 100dvh; justify-content: flex-start; overflow: hidden; top: 0; width: 100%; will-change: transform;}
+.micro .business-sec .business-list .item .motion-div {width: 100%; height: 100%; padding: 160rem 214rem 0; overflow: hidden;}
+.micro .business-sec .business-list .item .motion-div .txt-wrap {position: relative; z-index: 1; color: #fff;}
+.micro .business-sec .business-list .item .motion-div .txt-wrap .tits .tit {font-family: "Inter-Bold", "NotoSansKR-Bold"; font-size: 64rem; line-height: 140%; letter-spacing: -1.28rem;}
+.micro .business-sec .business-list .item .motion-div .txt-wrap .tits .e-tit {margin-top: 8rem; font-family: "Inter-Bold", "NotoSansKR-Bold"; font-size: 32rem; line-height: 140%; letter-spacing: 0;}
+.micro .business-sec .business-list .item .motion-div .txt-wrap .txt {margin-top: 40px; font-family: "Inter-Regular", "NotoSansKR-Regular"; font-size: 18rem; line-height: 150%; letter-spacing: -0.36rem;}
+.micro .business-sec .business-list .item .motion-div .bg-wrap {position: absolute; left: 0; top: 0; right: 0; bottom: 0; width: 100%; height: 100%;}
+.micro .business-sec .business-list .item .motion-div .bg-wrap img {width: 100%; height: 100%; object-fit: cover;}
+.micro .business-sec .business-list .item .motion-div .num {position: absolute; left: 214rem; bottom: -64rem; color: #fff; font-family: "Inter-ExtraBold"; font-size: 200rem; line-height: normal; letter-spacing: 0; opacity: .3;}
+.micro .business-sec .business-list .item:nth-child(1) .motion-div {background-color: #1E9D8B;}
+.micro .business-sec .business-list .item:nth-child(1) .circle-wrap {position: absolute; right: 214rem; top: 50%; transform: translateY(-50%); width: 736rem; height: 736rem; border-radius: 100%; overflow: hidden;}
+.micro .business-sec .business-list .item:nth-child(1) .circle-wrap img {width: 100%; height: 100%; object-fit: cover;}
+
+@media all and (max-width: 1023px) {
+  .micro .business-sec .business-list .item .motion-div {padding: 80rem 20rem 0;}
+  .micro .business-sec .business-list .item .motion-div .txt-wrap .tits .tit {font-size: 24rem; letter-spacing: -0.48rem;}
+  .micro .business-sec .business-list .item .motion-div .txt-wrap .tits .e-tit {font-size: 16rem;}
+  .micro .business-sec .business-list .item .motion-div .txt-wrap .txt {margin-top: 24rem; font-size: 14rem; line-height: 160%;}
+  .micro .business-sec .business-list .item .motion-div .num {left: 20rem; bottom: -22rem; font-size: 100rem;}
+  .micro .business-sec .business-list .item:nth-child(1) .circle-wrap {position: absolute; right: unset; left: 50%; top: unset; bottom: 125rem; transform: translate(-50%, 0); width: 260rem; height: 260rem;}
+  .micro .business-sec .business-list .item:nth-child(1) .circle-wrap img {width: 100%; height: 100%; object-fit: cover;}
+}
+
+/* 스와이퍼 섹션 */
+.micro .swiper-sec {position: relative; height: 150dvh;}
+.micro .swiper-sec .pin-wrap {position: sticky; top: 0; width: 100%; height: 100dvh;}
+.micro .swiper-sec .bg-list {position: absolute;  top: 0; left: 0; width: 100%; height: 100%;}
+.micro .swiper-sec .bg-list .bg-wrap .bg {width: 100%; height: 100%; object-fit: cover;}
+.micro .swiper-sec .circle-list {position: relative; z-index: 2; height: 100%;}
+.micro .swiper-sec .circle-list .swiper-slide {display: flex; align-items: center; justify-content: center;}
+.micro .swiper-sec .circle-list .circle-wrap {position: relative; z-index: 3; display: flex; align-items: center; justify-content: center; width: 888rem; height: 888rem; max-height: 90dvh; max-width: 90dvh; border-radius: 100%; overflow: hidden;}
+.micro .swiper-sec .circle-list .circle-wrap .bg {position: absolute; top: 0; left: 0; right: 0; bottom: 0; width: 100%; height: 100%;}
+.micro .swiper-sec .circle-list .circle-wrap .bg::before {content: ""; position: absolute; top: 0; left: 0; right: 0; bottom: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,.5);}
+.micro .swiper-sec .circle-list .circle-wrap .bg img {width: 100%; height: 100%; object-fit: cover;}
+.micro .swiper-sec .circle-list .circle-wrap .txt-wrap {position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%;}
+.micro .swiper-sec .circle-list .circle-wrap .txt-wrap .logo {height: 96rem;}
+.micro .swiper-sec .circle-list .circle-wrap .txt-wrap .logo img {height: 100%;}
+.micro .swiper-sec .circle-list .circle-wrap .txt-wrap .txts {margin-top: 120rem; color: #fff; text-align: center;}
+.micro .swiper-sec .circle-list .circle-wrap .txt-wrap .txts .tit {font-family: "Inter-Bold", "NotoSansKR-Bold"; font-size: 32rem; line-height: 140%; letter-spacing: -0.96rem;}
+.micro .swiper-sec .circle-list .circle-wrap .txt-wrap .txts .txt {margin-top: 24rem; font-family: "Inter-Regular", "NotoSansKR-Regular"; font-size: 16rem; line-height: 150%; letter-spacing: -0.32rem; text-transform: uppercase;}
+.micro .swiper-sec .circle-list .circle-wrap .txt-wrap .txts .link {display: flex; align-items: center; justify-content: center; margin: 60rem auto 0; width: 170rem; height: 56rem; color: #fff; font-family: "Inter-Bold", "NotoSansKR-Bold"; font-size: 16rem; line-height: 150%; border-radius: 28rem; background: rgba(255, 255, 255, .2); backdrop-filter: blur(10px); transition: color .2s ease, background .2s ease;}
+.micro .swiper-sec .circle-list .circle-wrap .txt-wrap .txts .link:hover {color: #1a1a1a; background: #fff;}
+.micro .swiper-sec .swiper-pagination {display: none;}
+.micro .swiper-sec .swiper-button-next::after, .micro .swiper-sec .swiper-button-prev::after {color: #fff; font-size: 20rem; font-family: "Inter-Bold", "NotoSansKR-Bold"; line-height: normal; letter-spacing: 0;}
+.micro .swiper-sec .swiper-button-prev::after {content: "PREV";}
+.micro .swiper-sec .swiper-button-next::after {content: "NEXT";}
+.micro .swiper-sec .swiper-button-next, .micro .swiper-sec .swiper-button-prev {visibility: visible; width: 188rem; border-top: 1px solid #fff; opacity: 1; transition: visibility .2s ease, opacity .2s ease;}
+.micro .swiper-sec .swiper-button-prev {left: 0; justify-content: flex-end;}
+.micro .swiper-sec .swiper-button-next {right: 0; justify-content: flex-start;}
+.micro .swiper-sec .swiper-button-disabled {visibility: hidden; opacity: 0;}
+
+@media all and (max-width: 1023px) {
+  .micro .swiper-sec .swiper-pagination {display: flex; justify-content: center; gap: 12rem; top: unset; bottom: 40rem; left: 50%; right: unset; transform: translate(-50%, 0);}
+  .micro .swiper-sec .swiper-pagination .swiper-pagination-bullet {flex-shrink: 0; width: 12rem; height: 12rem; opacity: 1; margin: 0; border: 1px solid #fff; background-color: #fff; transition: background .2s ease;}
+  .micro .swiper-sec .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {background-color: #004D45;}
+  .micro .swiper-sec .swiper-button-next, .micro .swiper-sec .swiper-button-prev {display: none;}
+  .micro .swiper-sec .circle-list .circle-wrap {width: 320rem; height: 320rem; padding: 0 36rem;}
+  .micro .swiper-sec .circle-list .circle-wrap .txt-wrap .logo {height: 32rem;}
+  .micro .swiper-sec .circle-list .circle-wrap .txt-wrap .txts {margin-top: 20rem;}
+  .micro .swiper-sec .circle-list .circle-wrap .txt-wrap .txts .tit {font-size: 20rem; letter-spacing: -0.6rem;}
+  .micro .swiper-sec .circle-list .circle-wrap .txt-wrap .txts .txt {margin-top: 6rem; font-size: 14rem; line-height: 160%;}
+  .micro .swiper-sec .circle-list .circle-wrap .txt-wrap .txts .link {width: 100rem; height: 40rem; margin-top: 28rem; color: #1a1a1a; font-size: 14rem; line-height: 140%; background: #fff;}
+}
+
+
+/* 컨택 섹션 */
+.micro .contact-sec {position: relative; padding-top: 314rem;}
+.micro .contact-sec .txt-wrap {color: #fff; text-align: center;}
+.micro .contact-sec .txt-wrap .type {margin-bottom: 24rem; color: #CA7700; font-family: "Inter-Bold", "NotoSansKR-Bold"; font-size: 18rem; line-height: 150%; letter-spacing: 0; text-transform: uppercase;}
+.micro .contact-sec .txt-wrap .tit {font-family: "Inter-Bold", "NotoSansKR-Bold"; font-size: 40rem; line-height: 150%; letter-spacing: -1.2rem;}
+.micro .contact-sec .txt-info {position: relative; display: flex; align-items: center; justify-content: center; gap: 40rem; margin-top: 220rem; padding: 32rem 0;}
+.micro .contact-sec .txt-info::before {content: ""; position: absolute; width: 100vw; top: 0; left: 50%; bottom: 0; transform:translateX(-50%); background: rgba(255, 255, 255, .1); backdrop-filter: blur(10px);}
+.micro .contact-sec .txt-info .txt {position: relative; z-index: 1; color: #fff; font-family: "Inter-Bold", "NotoSansKR-Bold"; font-size: 20rem; line-height: 150%; letter-spacing: 0;}
+.micro .contact-sec .bg-wrap {position: absolute; z-index: -1; top: 0; left: 0; right: 0; bottom: 0; pointer-events: none;}
+.micro .contact-sec .bg-wrap video {width: 100%; height: 100%; object-fit: cover;}
+
+@media all and (max-width: 1023px) {
+  .inner {padding: 0 20rem !important;}
+  .micro .contact-sec {padding: 178rem 0;}
+  .micro .contact-sec .txt-wrap .type {margin-bottom: 12rem; font-size: 16rem;}
+  .micro .contact-sec .txt-wrap .tit {font-size: 24rem; line-height: 140%; letter-spacing: -0.48rem;}
+  .micro .contact-sec .txt-info {flex-direction: column; gap: 12rem; margin-top: 40rem; padding: 0;}
+  .micro .contact-sec .txt-info::before {display: none;}
+  .micro .contact-sec .txt-info .txt {font-family: "Inter-Medium", "NotoSansKR-Medium"; font-size: 18rem;}
+}
+/* --------------------------------------------- 섹션 - END --------------------------------------------- */
+
+
+
+
+/* --------------------------------------------- Footer - START --------------------------------------------- */
+.micro footer {padding: 60rem 0; background-color: #fff;}
+.micro footer .inner {padding: 0 60rem;}
+.micro footer .top-area {display:flex; justify-content: space-between; align-items: center; margin-bottom: 80rem;}
+.micro footer .top-area .menus {display: flex; gap: 24rem;}
+.micro footer .top-area .menus a {color: #4D4D4D; font-family: "Inter-Bold", "NotoSansKR-Bold"; font-size: 20rem; line-height: 100%; letter-spacing: -0.6rem; transition: color .2s ease;}
+.micro footer .top-area .menus a:hover {color: #1a1a1a;}
+.micro footer .top-area .logos {display: flex; align-items: center; gap: 40rem;}
+.micro footer .bot-area .infos {display: flex; flex-direction: column; row-gap: 12rem;}
+.micro footer .bot-area .infos .info {display: flex; column-gap: 32rem;}
+.micro footer .bot-area .infos .info p {color: #4D4D4D; font-family: "Inter-Regular", "NotoSansKR-Regular"; font-size: 14rem; line-height: 150%; letter-spacing: -0.28rem;}
+.micro footer .bot-area .infos .info p a {color: #4D4D4D; text-decoration: underline; text-underline-offset: 3rem;}
+.micro footer .bot-area .infos .info p a:hover {text-decoration: none;}
+.micro footer .bot-area .copy {margin-top: 12rem; color: #4D4D4D; font-family: "Inter-Regular", "NotoSansKR-Regular"; font-size: 14rem; line-height: 150%; letter-spacing: 0;}
+
+@media all and (max-width: 1023px) {
+  .micro footer {padding: 40rem 0 60rem;}
+  .micro footer .top-area {flex-direction: column-reverse; align-items: flex-start;}
+  .micro footer .top-area .menus {flex-direction: column; gap: 20rem; margin-top: 56rem;}
+  .micro footer .top-area .menus a {font-size: 18rem; letter-spacing: -0.54rem;}
+  .micro footer .top-area .logos {gap: 24rem;}
+  .micro footer .bot-area .infos {row-gap: 8rem;}
+  .micro footer .bot-area .infos .info {flex-wrap: wrap; gap: 4rem 12rem;}
+  .micro footer .bot-area .infos .info p {line-height: 160%; opacity: .7;}
+  .micro footer .bot-area .infos .info p a {text-underline-offset: 2rem;}
+  .micro footer .bot-area .infos .info p a:hover {text-decoration: underline;}
+  .micro footer .bot-area .copy {margin-top: 20rem; opacity: .7;}
+}
+/* --------------------------------------------- Footer - END --------------------------------------------- */

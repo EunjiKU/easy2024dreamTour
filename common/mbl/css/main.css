@@ -1,0 +1,72 @@
+@charset "UTF-8";
+
+.cont-sec:has(.flow-swiper-wrap){position:relative;}
+.cont-sec .tit-wrap .icon-txt-btn span{color:var(--Color-Gray-50);}
+
+.swiper-button-next.circle-btn{right:0; top:-60px; margin-top:0;}
+.swiper-button-prev.circle-btn{left:auto; right:40px; top:-60px; margin-top:0;}
+
+/* 비주얼 및 검색 바 */
+.trip-sel-area{position:relative; z-index:2;}
+.trip-sel-area .visual{position:absolute; top:-120px; left:50%; transform:translateX(-50%); width:100vw; height:420px;}
+.trip-sel-area .visual:after{display:block; content:""; position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.1)}
+.trip-sel-area .visual img,
+.trip-sel-area .visual video{width:100%; height:100%; object-fit: cover;}
+
+/* 프로모션 */
+.promotion-swiper{position:relative;}
+.promotion-swiper .swiper-container{overflow:visible;}
+.promotion-swiper:has(.swiper-slide:nth-child(2)){padding-bottom:22px;}
+.promotion-swiper .swiper-slide{overflow:hidden; display:flex; flex-direction: column-reverse; align-items: center; margin-right:12px; width:100%; height:180px}
+.promotion-swiper .swiper-slide:last-child{margin-right:0;}
+.promotion-swiper .swiper-slide .txt-wrap{position:absolute; top:50%; left:20px; transform: translateY(-50%); width:calc(100% - 40px); z-index:1;}
+.promotion-swiper .swiper-slide .txt-wrap .f-body-b2{overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; width:100%; color:var(--Color-Gray-White)}
+.promotion-swiper .swiper-slide .txt-wrap .f-body-m5{overflow: hidden; text-overflow: ellipsis; white-space:nowrap; margin-top:8px; color:var(--Color-Gray-White);}
+.promotion-swiper .swiper-slide .txt-wrap .date{display:inline-block; padding:4px 8px 5px; margin-top:16px; color:var(--Color-Gray-White); background: var(--Color-Primary-800); border-radius: 13px;}
+.promotion-swiper .swiper-slide .img{overflow:hidden; position:relative; width:100%; height:auto; border-radius:12px;}
+.promotion-swiper .swiper-slide .img:after{display:block; content:""; position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.2)}
+.promotion-swiper .swiper-slide .img img{width:100%; height:100%; object-fit: cover;}
+.promotion-swiper .swiper-slide.done{cursor: auto;}
+.promotion-swiper .swiper-slide.done:before{display:block; content:""; position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.6); z-index:2; border-radius: 12px;}
+.promotion-swiper .swiper-slide.done:after{display:flex; align-items: center; justify-content: center; content:"종료"; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); width:60px; height:60px; font-family: "Inter-Bold", "NotoSansKR-Bold"; color:var(--Color-Gray-White); background:var(--Color-Primary-800); z-index:3; border-radius: 50%;}
+.promotion-swiper .swiper-pagination{display:none; left:50%; transform:translateX(-50%); bottom:0; height:8px;}
+.promotion-swiper:has(.swiper-slide:nth-child(3)) .swiper-pagination{display:flex;}
+.promotion-swiper .swiper-pagination-bullet{display:block; margin:0 4px; width: 6px; height: 6px; background:#CCDBDA; opacity:1;}
+.promotion-swiper .swiper-pagination-bullet-active{background:var(--Color-Primary-800)}
+
+/* 최근 예약 내역 */
+.booking-history-list .info-btn{position:absolute; bottom:22px; right:16px;}
+.booking-history-list .list .con-area .bot-area{padding-right:50px;}
+
+/* 최근 확인한 호텔 */
+.border-card-swiper{position:relative;}
+.border-card-swiper .swiper-container{overflow:visible; position:relative; width:100%;}
+.border-card-swiper .swiper-slide{overflow:hidden; display:flex; flex-direction: column; justify-content: space-between; row-gap: 16px; position:relative; padding:24px 20px; margin-right:12px; width:100%; min-height:196px; border-radius:12px; border:1px solid var(--Color-Gray-20)}
+.border-card-swiper .swiper-slide:has(:nth-child(2)){width:85%;}
+.border-card-swiper .swiper-slide:last-child{margin-right:0;}
+.border-card-swiper .swiper-slide .tit-wrap{flex-direction: column; align-items: flex-start; row-gap: 4px; margin-bottom:0; width:100%;}
+.border-card-swiper .swiper-slide .tit-wrap .f-body-b1{overflow: hidden; text-overflow: ellipsis; white-space: nowrap; width:100%;}
+.border-card-swiper .swiper-slide .tit-wrap .f-body-r3{overflow: hidden; text-overflow: ellipsis; white-space: nowrap; width:100%; color:var(--Color-Gray-70)}
+.border-card-swiper .swiper-slide .tit-wrap .stars{margin-top:8px;}
+.border-card-swiper .swiper-slide .txt-wrap .f-body-r3{color:var(--Color-Gray-60)}
+.border-card-swiper .swiper-slide .txt-wrap > *{color:var(--Color-Gray-50);}
+.border-card-swiper .swiper-slide .txt-wrap .f-body-r3:last-child{margin-top:8px;}
+
+/* 주요 추천 도시 */
+.gray-border-swiper{margin-bottom: 24px; width:100vw; left:-20px; padding:0 20px;}
+.flow-swiper-wrap{position:relative;}
+.flow-swiper{position:relative; width:100%; height:240px;}
+.flow-swiper-div{overflow:visible}
+.flow-swiper .swiper-slide{position:relative; margin-right:8px; width:184px; height:240px; border-radius:12px; box-shadow: none; transition:box-shadow 0.4s ease; background:url("/common/mbl/images/icon-main-recommend-city-no-img.svg") no-repeat center center var(--Color-Gray-5)}
+.flow-swiper .swiper-slide:after{display:block; content:""; position:absolute; top:0; left:0; width:100%; height:100%; background:linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(0,0,0,1)); opacity:0.7; border-radius:0 0 12px 12px;}
+.flow-swiper .swiper-slide:last-child{margin-right:0;}
+.flow-swiper .swiper-slide img{overflow:hidden; width:100%; height:100%; object-fit: cover; border-radius: 12px;}
+.flow-swiper .swiper-slide .f-body-b1{position:absolute; bottom:24px; left:0; z-index:1; padding:0 16px; width:100%; color:#fff;}
+
+/* 공지사항, FAQ */
+.cont-sec .notice-list-wrap .list{display:block; padding:20px 0; width:100%; border-bottom:1px solid var(--Color-Gray-10);}
+.cont-sec .notice-list-wrap .list:first-child{padding-top:0;}
+.cont-sec .notice-list-wrap .list .f-body-r3{overflow:hidden; width:100%; text-overflow: ellipsis; white-space: nowrap; color:var(--Color-Gray-70); font-size:15px;}
+.cont-sec .notice-list-wrap .list .f-body-r3 span{margin-right:5px; color:var(--Color-Primary-800); font-family: "NotoSansKR-Bold";}
+.cont-sec .notice-list-wrap .list.fixed .f-body-r3{padding-left:24px; background:url("/common/mbl/images/icon-notice-fixed.svg") no-repeat left top 2px;}
+.cont-sec .notice-list-wrap .list .date{margin-top:8px; font-size:14px; color:#666; font-family: "Inter-Regular"; letter-spacing: 0px;}

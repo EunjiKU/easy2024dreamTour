@@ -1,0 +1,76 @@
+@charset "UTF-8";
+
+/* NotoSansKR */
+@font-face {
+  font-family: "NotoSansKR-Bold";
+  /* src: url(/common/fonts/NotoSansKR-Bold.ttf) format("truetype"); */
+  src: url(/common/web/fonts/NotoSansKR-Bold.woff2) format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "NotoSansKR-SemiBold";
+  /* src: url(/common/fonts/NotoSansKR-SemiBold.ttf) format("truetype"); */
+  src: url(/common/web/fonts/NotoSansKR-SemiBold.woff2) format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "NotoSansKR-Medium";
+  /* src: url(/common/fonts/NotoSansKR-Medium.ttf) format("truetype"); */
+  src: url(/common/web/fonts/NotoSansKR-Medium.woff2) format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "NotoSansKR-Regular";
+  /* src: url(/common/fonts/NotoSansKR-Regular.ttf) format("truetype"); */
+  src: url(/common/web/fonts/NotoSansKR-Regular.woff2) format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Inter */
+@font-face {
+  font-family: "Inter-ExtraBold";
+  /* src: url(/common/web/fonts/Inter-ExtraBold.ttf) format("truetype"); */
+  src: url(/common/web/fonts/Inter-ExtraBold.woff2) format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter-Bold";
+  /* src: url(/common/web/fonts/Inter-Bold.ttf) format("truetype"); */
+  src: url(/common/web/fonts/Inter-Bold.woff2) format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter-SemiBold";
+  /* src: url(/common/web/fonts/Inter-SemiBold.ttf) format("truetype"); */
+  src: url(/common/web/fonts/Inter-SemiBold.woff2) format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter-Medium";
+  /* src: url(/common/web/fonts/Inter-Medium.ttf) format("truetype"); */
+  src: url(/common/web/fonts/Inter-Medium.woff2) format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter-Regular";
+  /* src: url(/common/web/fonts/Inter-Regular.ttf) format("truetype"); */
+  src: url(/common/web/fonts/Inter-Regular.woff2) format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Didot */
+@font-face {
+  font-family: "Didot";
+  src: url(/common/web/fonts/Didot.ttc) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
